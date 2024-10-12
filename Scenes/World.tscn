@@ -37,7 +37,7 @@ use_collision = true
 size = Vector3(100, 0.001, 100)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_kq0ye")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.6116, 1, 47.5333)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 1, 44)
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("3_o55q7")]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 1.4969, -0.0349305, -3.34988)
@@ -49,6 +49,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 1.5, 44)
 shape = SubResource("BoxShape3D_ddqhn")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.983627, 0, 0)
 mesh = SubResource("BoxMesh_cjdq4")
 skeleton = NodePath("../..")
 
