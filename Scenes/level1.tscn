@@ -25,12 +25,13 @@ shadow_enabled = true
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_l2e6s")]
 transform = Transform3D(1, 0, 0, 0, 0.999943, -0.0106812, 0, 0.0106812, 0.999943, 49, 0.994339, 50.5479)
+TOGGLE_CROUCH = false
 
 [node name="floor" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.926086, 0.0104859, 2.35734)
 material_override = ExtResource("2_o686w")
 use_collision = true
-size = Vector3(100, 0.001, 100)
+size = Vector3(200, 0.001, 200)
 
 [node name="Trunk_022" parent="." instance=ExtResource("3_u6kb4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.915, 0.0109856, 41.5618)
