@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v68axqykcri"
-path.s3tc="res://.godot/imported/forrest_ground_01_ao_1k.png-728293b9272eb5b32b32b9b1e0a01b25.s3tc.ctex"
+uid="uid://1e8lncikvh7r"
+path.s3tc="res://.godot/imported/roofMetal_typeB_roof.png-b11a84e0fcc7d96842ff6ca88beac8c2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "14d17904e8363c0efc09055e11359836"
+}
 
 [deps]
 
-source_file="res://textures/grass/forrest_ground_01_ao_1k.png"
-dest_files=["res://.godot/imported/forrest_ground_01_ao_1k.png-728293b9272eb5b32b32b9b1e0a01b25.s3tc.ctex"]
+source_file="res://models/forestMap/gubuk/roofMetal_typeB_roof.png"
+dest_files=["res://.godot/imported/roofMetal_typeB_roof.png-b11a84e0fcc7d96842ff6ca88beac8c2.s3tc.ctex"]
 
 [params]
 

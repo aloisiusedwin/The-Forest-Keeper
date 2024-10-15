@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://bkiomthxg4233"]
+
+[ext_resource type="PackedScene" uid="uid://j2467nunl73q" path="res://models/forestMap/gubuk/roofMetal_poles.glb" id="1_dpr4i"]
+[ext_resource type="PackedScene" uid="uid://wda5bef5podl" path="res://models/forestMap/gubuk/roofMetal_typeB.glb" id="2_x74gx"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xmk6g"]
+points = PackedVector3Array(-0.43, 0.69363, -0.43, -0.507937, -0.00786659, -0.507937, -0.507937, -0.00786659, -0.428587, -0.428587, -0.00786659, -0.507937, -0.507937, 0.706349, -0.507937, -0.507937, 0.706349, -0.428587, -0.428587, 0.706349, -0.507937, -0.43, 0.00485207, -0.43)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rxbv5"]
+points = PackedVector3Array(0.507937, 0.706349, -0.428587, 0.428587, -0.00786659, -0.507937, 0.43, 0.00485207, -0.43, 0.428587, 0.706349, -0.507937, 0.507937, -0.00786659, -0.507937, 0.507937, -0.00786659, -0.428587, 0.507937, 0.706349, -0.507937, 0.43, 0.69363, -0.43)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_eu3gl"]
+points = PackedVector3Array(-0.428587, 0.706349, 0.507937, -0.507937, -0.00786659, 0.428587, -0.507937, -0.00786659, 0.507937, -0.507937, 0.706349, 0.428587, -0.43, 0.00485207, 0.43, -0.428587, -0.00786659, 0.507937, -0.507937, 0.706349, 0.507937, -0.43, 0.69363, 0.43)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_godoi"]
+points = PackedVector3Array(0.507937, 0.706349, 0.507937, 0.43, 0.00485207, 0.43, 0.428587, -0.00786659, 0.507937, 0.507937, -0.00786659, 0.428587, 0.43, 0.69363, 0.43, 0.507937, -0.00786659, 0.507937, 0.428587, 0.706349, 0.507937, 0.507937, 0.706349, 0.428587)
+
+[node name="roofMetal_poles2" instance=ExtResource("1_dpr4i")]
+
+[node name="roofMetal_poles" parent="tmpParent" index="0"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.004354, 0, -0.0413167)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tmpParent/roofMetal_poles" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tmpParent/roofMetal_poles/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_xmk6g")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="tmpParent/roofMetal_poles/StaticBody3D" index="1"]
+shape = SubResource("ConvexPolygonShape3D_rxbv5")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="tmpParent/roofMetal_poles/StaticBody3D" index="2"]
+shape = SubResource("ConvexPolygonShape3D_eu3gl")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="tmpParent/roofMetal_poles/StaticBody3D" index="3"]
+shape = SubResource("ConvexPolygonShape3D_godoi")
+
+[node name="roofMetal_typeB2" parent="tmpParent" index="1" instance=ExtResource("2_x74gx")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -37.413, 3.484, 12.47)

@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v68axqykcri"
-path.s3tc="res://.godot/imported/forrest_ground_01_ao_1k.png-728293b9272eb5b32b32b9b1e0a01b25.s3tc.ctex"
+uid="uid://djkfkkqo8jx0q"
+path.s3tc="res://.godot/imported/old_wooden_table_1.png-ddc0520d58c499680e7de3769057c79c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "e0bda1b6184017999ca7d6714fb30c69"
+}
 
 [deps]
 
-source_file="res://textures/grass/forrest_ground_01_ao_1k.png"
-dest_files=["res://.godot/imported/forrest_ground_01_ao_1k.png-728293b9272eb5b32b32b9b1e0a01b25.s3tc.ctex"]
+source_file="res://models/forestMap/table/old_wooden_table_1.png"
+dest_files=["res://.godot/imported/old_wooden_table_1.png-ddc0520d58c499680e7de3769057c79c.s3tc.ctex"]
 
 [params]
 
@@ -24,8 +27,8 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=8
+roughness/src_normal="res://models/forestMap/table/old_wooden_table_2.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

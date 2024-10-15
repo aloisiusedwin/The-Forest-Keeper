@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v68axqykcri"
-path.s3tc="res://.godot/imported/forrest_ground_01_ao_1k.png-728293b9272eb5b32b32b9b1e0a01b25.s3tc.ctex"
+uid="uid://cawh0vrb48it4"
+path.s3tc="res://.godot/imported/torch_stick_0.png-d2eba1dbc0d3ea485866dc1eef974aab.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "2060626c6071d5465abb66db6ea4f54d"
+}
 
 [deps]
 
-source_file="res://textures/grass/forrest_ground_01_ao_1k.png"
-dest_files=["res://.godot/imported/forrest_ground_01_ao_1k.png-728293b9272eb5b32b32b9b1e0a01b25.s3tc.ctex"]
+source_file="res://models/forestMap/torchnew/torch_stick_0.png"
+dest_files=["res://.godot/imported/torch_stick_0.png-d2eba1dbc0d3ea485866dc1eef974aab.s3tc.ctex"]
 
 [params]
 

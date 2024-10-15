@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v68axqykcri"
-path.s3tc="res://.godot/imported/forrest_ground_01_ao_1k.png-728293b9272eb5b32b32b9b1e0a01b25.s3tc.ctex"
+uid="uid://b32n001bidvg8"
+path.s3tc="res://.godot/imported/roofMetal_poles_metal_wall.png-c37cf5f5b04b1e09c9f05321dca22304.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "b40477d676398be0d8ffbb86b3a64a93"
+}
 
 [deps]
 
-source_file="res://textures/grass/forrest_ground_01_ao_1k.png"
-dest_files=["res://.godot/imported/forrest_ground_01_ao_1k.png-728293b9272eb5b32b32b9b1e0a01b25.s3tc.ctex"]
+source_file="res://models/forestMap/gubuk/roofMetal_poles_metal_wall.png"
+dest_files=["res://.godot/imported/roofMetal_poles_metal_wall.png-c37cf5f5b04b1e09c9f05321dca22304.s3tc.ctex"]
 
 [params]
 

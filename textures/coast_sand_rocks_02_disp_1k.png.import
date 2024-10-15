@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v68axqykcri"
-path.s3tc="res://.godot/imported/forrest_ground_01_ao_1k.png-728293b9272eb5b32b32b9b1e0a01b25.s3tc.ctex"
+uid="uid://dxa28pvtf5s1h"
+path.s3tc="res://.godot/imported/coast_sand_rocks_02_disp_1k.png-30084fe4313fcc22d58da8930dd99071.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/grass/forrest_ground_01_ao_1k.png"
-dest_files=["res://.godot/imported/forrest_ground_01_ao_1k.png-728293b9272eb5b32b32b9b1e0a01b25.s3tc.ctex"]
+source_file="res://textures/coast_sand_rocks_02_disp_1k.png"
+dest_files=["res://.godot/imported/coast_sand_rocks_02_disp_1k.png-30084fe4313fcc22d58da8930dd99071.s3tc.ctex"]
 
 [params]
 
