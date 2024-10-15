@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v68axqykcri"
-path.s3tc="res://.godot/imported/forrest_ground_01_ao_1k.png-728293b9272eb5b32b32b9b1e0a01b25.s3tc.ctex"
+uid="uid://cweph05idxxxn"
+path.s3tc="res://.godot/imported/beech_tree_1.png-8dbd3328e998459d0d9a7bfd84f96726.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "d1079c1d7199473513cb7782fc1e2343"
+}
 
 [deps]
 
-source_file="res://textures/grass/forrest_ground_01_ao_1k.png"
-dest_files=["res://.godot/imported/forrest_ground_01_ao_1k.png-728293b9272eb5b32b32b9b1e0a01b25.s3tc.ctex"]
+source_file="res://models/forestMap/trees/beech/beech_tree_1.png"
+dest_files=["res://.godot/imported/beech_tree_1.png-8dbd3328e998459d0d9a7bfd84f96726.s3tc.ctex"]
 
 [params]
 

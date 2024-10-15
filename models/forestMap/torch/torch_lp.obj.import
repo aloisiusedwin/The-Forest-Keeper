@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://80a3fk48serg"
+path="res://.godot/imported/torch_lp.obj-745ac4c80ffd5d4dfe1d56ffe0dde48d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/torch_lp.obj-745ac4c80ffd5d4dfe1d56ffe0dde48d.mesh"]
+
+source_file="res://models/forestMap/torch/torch_lp.obj"
+dest_files=["res://.godot/imported/torch_lp.obj-745ac4c80ffd5d4dfe1d56ffe0dde48d.mesh", "res://.godot/imported/torch_lp.obj-745ac4c80ffd5d4dfe1d56ffe0dde48d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
