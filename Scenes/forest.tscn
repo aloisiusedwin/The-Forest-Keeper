@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://bsnnhn2fuq3rp"]
+[gd_scene load_steps=19 format=4 uid="uid://bsnnhn2fuq3rp"]
 
 [ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller.tscn" id="1_xqpnu"]
 [ext_resource type="Texture2D" uid="uid://o8bpwey0jmnf" path="res://textures/coast_sand_rocks_02_diff_1k.jpg" id="2_gb12d"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="8_fuifg"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="9_ujep3"]
 [ext_resource type="PackedScene" uid="uid://bayr6lsu8wc4a" path="res://models/forestMap/table/table.tscn" id="9_uswrp"]
+[ext_resource type="PackedScene" uid="uid://bhnss64dbmw7k" path="res://models/forestMap/paper/notes.tscn" id="10_22oq4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7esa4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -670,3 +671,6 @@ sgt_rotation_rand = 1.0
 sgt_dist_min = 0.25
 sgt_follow_normal = false
 metadata/SimpleGrassTextured = "2.0.5"
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("10_22oq4")]
+transform = Transform3D(0.911891, 0, -0.410432, 0, 1, 0, 0.410432, 0, 0.911891, 86.1375, 0.987961, 72.9697)
