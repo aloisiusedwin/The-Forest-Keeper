@@ -108,6 +108,9 @@ transform = Transform3D(0.999491, 0, -0.0318992, 0, 1, 0, 0.0318992, 0, 0.999491
 transform = Transform3D(-0.78152, 0.323187, -0.533645, 0, 0.855364, 0.518027, 0.62388, 0.404849, -0.668484, 0, 0, 0)
 light_color = Color(0.683479, 0.750172, 0.974586, 1)
 light_energy = 0.273
+light_volumetric_fog_energy = 2.616
+light_angular_distance = 0.3
+light_negative = true
 shadow_enabled = true
 shadow_blur = 5.045
 

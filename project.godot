@@ -68,6 +68,10 @@ crouch={
 ]
 }
 
+[physics]
+
+3d/default_gravity=15.0
+
 [shader_globals]
 
 sgt_player_position={
