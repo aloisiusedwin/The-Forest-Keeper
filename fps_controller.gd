@@ -12,7 +12,7 @@ const CROUCH_SPEED = 2.0
 const WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.5
 const JUMP_VELOCITY = 6
-const SENSITIVITY = 0.005
+const SENSITIVITY = 0.001 * 1.2 # Change only the second float
 
 var _is_crouching : bool = false
 
@@ -29,6 +29,9 @@ const FOV_CHANGE = 1.5
 @onready var camera = $Head/Camera3D
 
 func _ready():
+	
+	Global.player = self
+	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 	#add crouch check shapecast collision exception for CharacterBody3D node
@@ -58,6 +61,9 @@ func _headbob(time) -> Vector3:
 	return pos
 
 func _physics_process(delta: float) -> void:
+	
+	Global.debug.add_property("MovementSpeed", speed, 1)
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -83,8 +89,10 @@ func _physics_process(delta: float) -> void:
 			velocity.x = direction.x * speed
 			velocity.z = direction.z * speed
 		else:
-			velocity.x = lerp(velocity.x, direction.x * speed, delta * 8.0)
-			velocity.z = lerp(velocity.z, direction.z * speed, delta * 8.0)
+			velocity.x = direction.x * speed
+			velocity.z = direction.z * speed
+			#velocity.x = lerp(velocity.x, direction.x * speed, delta * 8.0)
+			#velocity.z = lerp(velocity.z, direction.z * speed, delta * 8.0)
 	else:
 		velocity.x = lerp(velocity.x, direction.x * speed, delta * 2.5)
 		velocity.y = lerp(velocity.y, direction.y * speed, delta * 2.5)
