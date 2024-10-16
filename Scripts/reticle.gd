@@ -7,8 +7,6 @@ extends CenterContainer
 func _ready():
 	queue_redraw()
 
-func _process(delta):
-	pass
 
 func _draw():
 	var center = size / 2
