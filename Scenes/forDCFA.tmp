@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://bsnnhn2fuq3rp"]
+[gd_scene load_steps=19 format=4 uid="uid://bsnnhn2fuq3rp"]
 
 [ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller.tscn" id="1_xqpnu"]
 [ext_resource type="Texture2D" uid="uid://o8bpwey0jmnf" path="res://textures/coast_sand_rocks_02_diff_1k.jpg" id="2_gb12d"]
@@ -11,7 +11,12 @@
 [ext_resource type="PackedScene" uid="uid://bayr6lsu8wc4a" path="res://models/forestMap/table/table.tscn" id="9_uswrp"]
 [ext_resource type="PackedScene" uid="uid://bhnss64dbmw7k" path="res://models/forestMap/paper/notes.tscn" id="10_22oq4"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7esa4"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
 [sub_resource type="Sky" id="Sky_h1j3r"]
+sky_material = SubResource("ProceduralSkyMaterial_7esa4")
 
 [sub_resource type="Environment" id="Environment_317tr"]
 background_mode = 2
@@ -38,6 +43,11 @@ adjustment_saturation = 1.4
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uudvv"]
 albedo_texture = ExtResource("2_gb12d")
 uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0jpvu"]
+emission_enabled = true
+emission = Color(0.754513, 0.248652, 0.223841, 1)
+emission_energy_multiplier = 3.16
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pkhja"]
 resource_local_to_scene = true
@@ -92,15 +102,14 @@ buffer = PackedFloat32Array(-0.652638, 0, -0.75767, 84.1358, 0, 1, 0, -0.0349301
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_xqpnu")]
 transform = Transform3D(0.999491, 0, -0.0318992, 0, 1, 0, 0.0318992, 0, 0.999491, 85.9096, 1.032, 75.6738)
-TOGGLE_CROUCH = false
 
 [node name="Maps" type="Node3D" parent="."]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Maps"]
-transform = Transform3D(-0.78152, 0.323187, -0.533644, 0, 0.855364, 0.518027, 0.62388, 0.404849, -0.668484, 0, 0, 0)
+transform = Transform3D(-0.78152, 0.323187, -0.533645, 0, 0.855364, 0.518027, 0.62388, 0.404849, -0.668484, 0, 0, 0)
 light_color = Color(0.683479, 0.750172, 0.974586, 1)
-light_energy = 0.0
-light_volumetric_fog_energy = 16.0
+light_energy = 0.273
+light_volumetric_fog_energy = 2.616
 light_angular_distance = 0.3
 light_negative = true
 shadow_enabled = true
@@ -373,11 +382,16 @@ transform = Transform3D(-1.97844, 0, 8.56958, 0, 8.795, 0, -8.56958, 0, -1.97844
 [node name="Sketchfab_Scene" parent="Maps/tree" instance=ExtResource("6_g86oi")]
 transform = Transform3D(10.63, 0, 0, 0, 10.63, 0, 0, 0, 10.63, 87.3294, -0.0349971, 79.7503)
 
+[node name="CSGSphere3D" type="CSGSphere3D" parent="Maps"]
+transform = Transform3D(80.395, 0, 0, 0, 80.102, 6.85731, 0, -6.85731, 80.102, -147.953, 149.402, -189.071)
+material_override = SubResource("StandardMaterial3D_0jpvu")
+cast_shadow = 0
+
 [node name="table" parent="Maps" instance=ExtResource("9_uswrp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86.2792, -0.0349302, 72.438)
 
 [node name="wall" type="CSGSphere3D" parent="Maps"]
-transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, -0.946183, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.946183, 0)
 
 [node name="Sketchfab_Scene3" parent="Maps/wall" instance=ExtResource("7_yk1fh")]
 transform = Transform3D(0.113567, 0, -0.99353, 0, 1, 0, 0.99353, 0, 0.113567, 87.2214, -0.264409, 81.0168)
