@@ -7,7 +7,6 @@ extends CharacterBody3D
 @export var TOGGLE_CROUCH : bool = true
 @export var CROUCH_SHAPECAST : Node3D
 @export_range(5,10, 0.1) var CROUCH_ANIMATION_SPEED : float = 7.0
-#var _is_crouching : bool = false
 
 #movement
 const JUMP_VELOCITY = 6
@@ -81,38 +80,3 @@ func update_input(delta: float, speed: float, acceleration: float, deceleration:
 	
 func update_velocity() -> void:
 	move_and_slide()
-
-#func _on_animation_player_animation_started(anim_name: StringName) -> void:
-	#if anim_name == "Crouch":
-		#_is_crouching = !_is_crouching
-#
-#func toggle_crouch():
-	#if _is_crouching == true and CROUCH_SHAPECAST.is_colliding() == false:
-		#crouching(false)
-	#elif _is_crouching == false:
-		#crouching(true)
-#
-#func _input(event):
-		#if event.is_action_pressed("crouch") and is_on_floor() and TOGGLE_CROUCH == true:
-			#toggle_crouch()
-		#if event.is_action_pressed("crouch") and _is_crouching == false and is_on_floor() and TOGGLE_CROUCH == false:
-			#crouching(true) #Hold to crouch
-		#if event.is_action_released("crouch") and TOGGLE_CROUCH == false:
-			#if CROUCH_SHAPECAST.is_colliding() == false:
-				#crouching(false) #Release to uncrouch
-			#elif CROUCH_SHAPECAST.is_colliding() == true:
-				#uncrouch_check()
-#
-#func crouching(state : bool):
-	#match state:
-		#true:
-			#ANIMATIONPLAYER.play("Crouch", 0, CROUCH_ANIMATION_SPEED)
-		#false:
-			#ANIMATIONPLAYER.play("Crouch", 0, -CROUCH_ANIMATION_SPEED, true)
-			#
-#func uncrouch_check():
-	#if CROUCH_SHAPECAST.is_colliding() == false and Input.is_action_pressed("crouch") == false:
-		#crouching(false)
-	#if CROUCH_SHAPECAST.is_colliding() == true:
-		#await get_tree().create_timer(0.1).timeout
-		#uncrouch_check()
