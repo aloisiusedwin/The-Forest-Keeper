@@ -1,6 +1,6 @@
 class_name StateMachine
 
-extends Node
+extends PlayerMovementState
 
 @export var CURRENT_STATE : State
 var states: Dictionary = {}
@@ -12,7 +12,8 @@ func _ready() -> void:
 			child.transition.connect(on_child_transition)
 		else:
 			push_warning("Incompatible child node")
-			
+	
+	await owner.ready
 	CURRENT_STATE.enter()
 
 func _process(delta):

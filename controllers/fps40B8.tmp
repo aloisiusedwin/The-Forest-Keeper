@@ -100,12 +100,11 @@ _data = {
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mspl4"]
 
-[node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("ANIMATIONPLAYER", "CROUCH_SHAPECAST")]
+[node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("ANIMATIONPLAYER")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 floor_max_angle = 1.22173
 script = ExtResource("1_0fn47")
 ANIMATIONPLAYER = NodePath("AnimationPlayer")
-CROUCH_SHAPECAST = NodePath("ShapeCast3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_o26h5")
@@ -135,7 +134,6 @@ libraries = {
 }
 
 [node name="ShapeCast3D" type="ShapeCast3D" parent="."]
-unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("SphereShape3D_mspl4")
 target_position = Vector3(0, 0.5, 0)
@@ -196,5 +194,10 @@ script = ExtResource("8_y64dx")
 
 [node name="CrouchingPlayerState" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("9_mvll2")
+SPEED = null
+ACCELERATION = null
+DECELERATION = null
+TOGGLE_CROUCH = null
+CROUCH_ANIMATION_SPEED = null
 
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]

@@ -11,4 +11,5 @@ func _process(delta):
 	pass
 
 func _draw():
-	draw_circle(Vector2(0,0), DOT_RADIUS, DOT_COLOR)
+	var center = size / 2
+	draw_circle(center, DOT_RADIUS, DOT_COLOR)
