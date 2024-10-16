@@ -12,9 +12,8 @@ extends CharacterBody3D
 @onready var CAMERA_CONTROLLER : Camera3D = $Head/Camera3D
 
 #movement
-const JUMP_VELOCITY = 6
 const SENSITIVITY = 0.2 # Change only the second float
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var gravity = 12
 
 #headbob
 const BOB_FREQUENCY = 2.0 #how often footsteps happen
@@ -63,7 +62,6 @@ func update_camera(delta) -> void:
 
 	CAMERA_CONTROLLER.transform.basis = Basis.from_euler(_camera_rotation)
 	global_transform.basis = Basis.from_euler(_player_rotation)
-	
 	CAMERA_CONTROLLER.rotation.z = 0.0
 
 	_rotation_input = 0.0
@@ -78,11 +76,7 @@ func _headbob(time) -> Vector3:
 func _physics_process(delta: float) -> void:
 	update_camera(delta)
 	Global.debug.add_property("Velocity","%.2f" % velocity.length(), 1)
-
-	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor() and !Input.is_action_just_pressed("crouch"):
-		velocity.y = JUMP_VELOCITY
-		
+	
 	#headbob
 	if !disable_headbob:
 		t_bob += delta * velocity.length() * float(is_on_floor())
