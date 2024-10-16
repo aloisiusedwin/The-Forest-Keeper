@@ -16,13 +16,13 @@
 [sub_resource type="Environment" id="Environment_317tr"]
 background_mode = 2
 sky = SubResource("Sky_h1j3r")
-tonemap_mode = 1
+tonemap_mode = 2
 tonemap_exposure = 0.2
 tonemap_white = 0.8
 glow_enabled = true
 fog_enabled = true
 fog_light_color = Color(0.899198, 0.855825, 0.875734, 1)
-fog_light_energy = 1.45
+fog_light_energy = 0.0
 fog_density = 0.0015
 volumetric_fog_enabled = true
 volumetric_fog_density = 0.0548
@@ -31,7 +31,7 @@ volumetric_fog_emission = Color(1, 1, 1, 1)
 volumetric_fog_emission_energy = 0.5
 volumetric_fog_ambient_inject = 1.55
 adjustment_enabled = true
-adjustment_brightness = 0.7
+adjustment_brightness = 0.65
 adjustment_contrast = 0.66
 adjustment_saturation = 1.4
 
@@ -658,5 +658,5 @@ sgt_dist_min = 0.25
 sgt_follow_normal = false
 metadata/SimpleGrassTextured = "2.0.5"
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("10_22oq4")]
+[node name="notes" parent="." instance=ExtResource("10_22oq4")]
 transform = Transform3D(0.911891, 0, -0.410432, 0, 1, 0, 0.410432, 0, 0.911891, 86.1375, 0.987961, 72.9697)
