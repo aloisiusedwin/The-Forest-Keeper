@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://4cbpynvikrmh"]
+[gd_scene load_steps=26 format=3 uid="uid://4cbpynvikrmh"]
 
 [ext_resource type="Script" path="res://fps_controller.gd" id="1_0fn47"]
+[ext_resource type="PackedScene" uid="uid://crxf2lgtbbrw3" path="res://models/weapons/pistol/pistol.tscn" id="2_bbrno"]
 [ext_resource type="Script" path="res://Scripts/reticle.gd" id="2_qyc3x"]
 [ext_resource type="Theme" uid="uid://b33d8vlpvjdwl" path="res://ui/themes/debug.tres" id="3_la0w7"]
 [ext_resource type="Script" path="res://Scripts/debug.gd" id="4_c544d"]
@@ -14,7 +15,7 @@
 [ext_resource type="Script" path="res://controllers/falling_player_state.gd" id="12_vs60y"]
 [ext_resource type="Script" path="res://Scripts/WeaponViewport.gd" id="14_mjbge"]
 [ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
-[ext_resource type="PackedScene" uid="uid://d1pv5j5sopsdj" path="res://meshes/weapons/machete/Machete.tscn" id="15_uu0km"]
+[ext_resource type="Script" path="res://models/weapons/pistol/pistol.gd" id="16_oudsu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o26h5"]
 
@@ -345,6 +346,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639871, 0)
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 cull_mask = 1047553
+current = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0821928, -0.447035)
@@ -436,25 +438,23 @@ script = ExtResource("11_b4oom")
 [node name="FallingPlayerState" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("12_vs60y")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="WeaponViewport" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="WeaponViewport"]
 transparent_bg = true
 handle_input_locally = false
 render_target_update_mode = 4
 script = ExtResource("14_mjbge")
 
-[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" node_paths=PackedStringArray("MAIN_CAMERA")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+[node name="Camera3D" type="Camera3D" parent="WeaponViewport/SubViewport" node_paths=PackedStringArray("MAIN_CAMERA")]
 cull_mask = 1047554
 script = ExtResource("15_c2n5p")
 MAIN_CAMERA = NodePath("../../../Head/Camera3D")
 
-[node name="Node3D" parent="SubViewportContainer/SubViewport/Camera3D" instance=ExtResource("15_uu0km")]
+[node name="Root Scene" parent="WeaponViewport/SubViewport/Camera3D" instance=ExtResource("2_bbrno")]
+transform = Transform3D(0.0106516, 0.00299769, 0.0589708, 0.000522875, 0.0599155, -0.00314016, -0.0590446, 0.00107137, 0.0106105, 0.34, -0.251, -0.59)
+script = ExtResource("16_oudsu")
 
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]

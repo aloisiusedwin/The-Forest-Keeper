@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://crxf2lgtbbrw3"]
+
+[ext_resource type="PackedScene" uid="uid://drtk0m5ijjt0e" path="res://models/weapons/pistol/Animated Pistol.glb" id="1_wqmrs"]
+
+[node name="Root Scene" instance=ExtResource("1_wqmrs")]
+
+[node name="Skeleton3D" parent="RootNode/PistolArmature" index="0"]
+bones/0/position = Vector3(0.0111887, 2.12148e-05, -0.0313582)
+bones/1/rotation = Quaternion(1.2123e-07, -0.707107, 1.2123e-07, 0.707107)
+bones/5/position = Vector3(-0.000113605, -0.0185235, 0.041183)
+bones/5/rotation = Quaternion(-0.583528, -1.60945e-07, 8.34509e-08, 0.812093)
+
+[node name="Muzzle" parent="RootNode/PistolArmature/Skeleton3D" index="0"]
+layers = 2
+
+[node name="AnimationPlayer" parent="." index="1"]
+unique_name_in_owner = true
