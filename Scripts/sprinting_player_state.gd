@@ -18,8 +18,8 @@ func update(delta):
 	PLAYER.update_gravity(delta)
 	PLAYER.update_input(delta, SPEED, ACCELERATION, DECELERATION)
 	PLAYER.update_velocity()
-	
-	if Input.is_action_just_released("sprint"):
+
+	if Input.is_action_just_released("sprint") or Input.is_action_pressed("down"):
 		transition.emit("WalkingPlayerState")
 		
 	if Input.is_action_just_pressed("crouch") and PLAYER.velocity.length() > 7:

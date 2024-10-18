@@ -11,6 +11,12 @@ extends CharacterBody3D
 @export var TILT_UPPER_LIMIT := deg_to_rad(60.0)
 @onready var CAMERA_CONTROLLER : Camera3D = $Head/Camera3D
 
+#pistol
+@onready var ANIMATIONPISTOL = $WeaponViewport/SubViewport/Camera3D/Weapon/AnimationPlayer
+@onready var gun_barrel = $WeaponViewport/SubViewport/Camera3D/Weapon/RayCast3D
+var bullet = load("res://models/weapons/pistol/bullet.tscn")
+var instance
+
 #movement
 const SENSITIVITY = 0.2 # Change only the second float
 var gravity = 12.0
@@ -108,3 +114,29 @@ func update_input(delta: float, speed: float, acceleration: float, deceleration:
 	
 func update_velocity() -> void:
 	move_and_slide()
+
+func _process(delta: float) -> void:
+	if !ANIMATIONPISTOL.is_playing():
+		if Input.is_action_just_pressed("attack"):
+			shoot()
+		if Input.is_action_just_pressed("reload"):
+			reload()
+
+func shoot():
+	ANIMATIONPISTOL.speed_scale = 3.0
+	ANIMATIONPISTOL.play("PistolArmature|Fire")
+	
+	instance = bullet.instantiate()
+	instance.position = gun_barrel.global_position
+	instance.transform.basis = gun_barrel.global_transform.basis
+	get_parent().add_child(instance)
+	
+	await ANIMATIONPISTOL.animation_finished
+	ANIMATIONPISTOL.speed_scale = 1.0
+
+func reload():
+	if ANIMATIONPISTOL.has_animation("PistolArmature|Reload"):
+		ANIMATIONPISTOL.play("PistolArmature|Reload")
+		await ANIMATIONPISTOL.animation_finished
+	else:
+		print("Animation not found")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://4cbpynvikrmh"]
+[gd_scene load_steps=25 format=3 uid="uid://4cbpynvikrmh"]
 
 [ext_resource type="Script" path="res://fps_controller.gd" id="1_0fn47"]
 [ext_resource type="PackedScene" uid="uid://crxf2lgtbbrw3" path="res://models/weapons/pistol/pistol.tscn" id="2_bbrno"]
@@ -15,7 +15,6 @@
 [ext_resource type="Script" path="res://controllers/falling_player_state.gd" id="12_vs60y"]
 [ext_resource type="Script" path="res://Scripts/WeaponViewport.gd" id="14_mjbge"]
 [ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
-[ext_resource type="Script" path="res://models/weapons/pistol/pistol.gd" id="16_oudsu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o26h5"]
 
@@ -453,8 +452,7 @@ cull_mask = 1047554
 script = ExtResource("15_c2n5p")
 MAIN_CAMERA = NodePath("../../../Head/Camera3D")
 
-[node name="Root Scene" parent="WeaponViewport/SubViewport/Camera3D" instance=ExtResource("2_bbrno")]
-transform = Transform3D(0.0106516, 0.00299769, 0.0589708, 0.000522875, 0.0599155, -0.00314016, -0.0590446, 0.00107137, 0.0106105, 0.34, -0.251, -0.59)
-script = ExtResource("16_oudsu")
+[node name="Weapon" parent="WeaponViewport/SubViewport/Camera3D" instance=ExtResource("2_bbrno")]
+transform = Transform3D(0.0749971, 5.71143e-06, 0.000654466, 0, 0.0749971, -0.00065449, -0.00065449, 0.000654465, 0.0749943, 0.28, -0.296, -0.685)
 
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
