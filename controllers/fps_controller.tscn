@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://4cbpynvikrmh"]
+[gd_scene load_steps=25 format=3 uid="uid://4cbpynvikrmh"]
 
 [ext_resource type="Script" path="res://fps_controller.gd" id="1_0fn47"]
 [ext_resource type="PackedScene" uid="uid://d6c2nsyc0w1r" path="res://meshes/weapons/machete/machetelowpoly.glb" id="2_3q8f1"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" path="res://Scripts/sliding_player_state.gd" id="10_ojgis"]
 [ext_resource type="Script" path="res://controllers/jumping_player_state.gd" id="11_b4oom"]
 [ext_resource type="Script" path="res://controllers/falling_player_state.gd" id="12_vs60y"]
+[ext_resource type="Script" path="res://Scripts/WeaponViewport.gd" id="14_mjbge"]
+[ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o26h5"]
 
@@ -336,10 +338,13 @@ mesh = SubResource("CapsuleMesh_5uvlm")
 skeleton = NodePath("../..")
 
 [node name="Head" type="Node3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639871, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+cull_mask = 1048574
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0821928, -0.447035)
@@ -435,5 +440,23 @@ script = ExtResource("11_b4oom")
 
 [node name="FallingPlayerState" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("12_vs60y")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+script = ExtResource("14_mjbge")
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" node_paths=PackedStringArray("MAIN_CAMERA")]
+cull_mask = 1048573
+script = ExtResource("15_c2n5p")
+MAIN_CAMERA = NodePath("../../../Head/Camera3D")
 
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]

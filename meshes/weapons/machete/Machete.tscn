@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1pv5j5sopsdj"]
+
+[ext_resource type="ArrayMesh" uid="uid://h2l28x0nl61g" path="res://meshes/weapons/machete/mesh_machete.res" id="1_i782f"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+layers = 2
+mesh = ExtResource("1_i782f")
