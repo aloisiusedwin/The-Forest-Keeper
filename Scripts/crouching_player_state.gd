@@ -33,6 +33,16 @@ func update(delta):
 		RELEASED = true
 		uncrouch()
 		
+#func crouching(state : bool):
+	#match state:
+		#true:
+			#ANIMATION.play("Crouch", 0, CROUCH_ANIMATION_SPEED)
+		#false:
+			#ANIMATION.play("Crouch", 0, -CROUCH_ANIMATION_SPEED, true)
+			#if ANIMATION.is_playing():
+				#await ANIMATION.animation_finished
+			#transition.emit("IdlePlayerState")
+
 func uncrouch():
 	if CROUCH_SHAPECAST.is_colliding() == false:
 		ANIMATION.play("Crouch", -1.0, -CROUCH_ANIMATION_SPEED, true)
@@ -45,4 +55,9 @@ func uncrouch():
 	elif CROUCH_SHAPECAST.is_colliding() == true:
 		await get_tree().create_timer(0.1).timeout
 		uncrouch()
-		
+		#if ANIMATION.is_playing():
+			#await ANIMATION.animation_finished
+		#transition.emit("IdlePlayerState")
+	#if CROUCH_SHAPECAST.is_colliding() == true:
+		#await get_tree().create_timer(0.1).timeout
+		#uncrouch()

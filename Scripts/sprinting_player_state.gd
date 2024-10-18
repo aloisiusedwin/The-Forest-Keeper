@@ -7,8 +7,7 @@ extends PlayerMovementState
 @export var DECELERATION: float = 0.25
 
 func enter(previous_state) -> void:
-	if ANIMATION.is_playing() and ANIMATION.current_animation == "JumpEnd":
-		await ANIMATION.animation_finished
+	pass
 
 func update(delta):
 	PLAYER.update_gravity(delta)
@@ -20,9 +19,3 @@ func update(delta):
 		
 	if Input.is_action_just_pressed("crouch") and PLAYER.velocity.length() > 7:
 		transition.emit("SlidingPlayerState")
-		
-	if Input.is_action_just_pressed("jump") and PLAYER.is_on_floor():
-		transition.emit("JumpingPlayerState")
-		
-	if PLAYER.velocity.y < -3.0 and !PLAYER.is_on_floor():
-		transition.emit("FallingPlayerState")
