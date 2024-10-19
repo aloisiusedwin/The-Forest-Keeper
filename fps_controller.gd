@@ -4,17 +4,19 @@ extends CharacterBody3D
 
 @export var ANIMATIONPLAYER : AnimationPlayer
 
-@export var TOGGLE_CROUCH : bool = true
-@onready var CROUCH_SHAPECAST : ShapeCast3D = %ShapeCast3D
-@export_range(5,10, 0.1) var CROUCH_ANIMATION_SPEED : float = 7.0
+#camera
 @export var TILT_LOWER_LIMIT := deg_to_rad(-40.0)
 @export var TILT_UPPER_LIMIT := deg_to_rad(60.0)
 @onready var CAMERA_CONTROLLER : Camera3D = $Head/Camera3D
+@onready var head = $Head
+@onready var camera = $Head/Camera3D
 
 #movement
-const JUMP_VELOCITY = 6
+@export var TOGGLE_CROUCH : bool = true
+@onready var CROUCH_SHAPECAST : ShapeCast3D = %ShapeCast3D
+@export_range(5,10, 0.1) var CROUCH_ANIMATION_SPEED : float = 7.0
 const SENSITIVITY = 0.2 # Change only the second float
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var gravity = 12.0
 
 #headbob
 const BOB_FREQUENCY = 2.0 #how often footsteps happen
@@ -34,11 +36,7 @@ var _player_rotation : Vector3
 var _camera_rotation : Vector3
 var _current_rotation : float
 
-@onready var head = $Head
-@onready var camera = $Head/Camera3D
-
 func _ready():
-	#add crouch check shapecast collision exception for CharacterBody3D node
 	CROUCH_SHAPECAST.add_exception($".")
 	Global.player = self
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -78,10 +76,6 @@ func _headbob(time) -> Vector3:
 func _physics_process(delta: float) -> void:
 	update_camera(delta)
 	Global.debug.add_property("Velocity","%.2f" % velocity.length(), 1)
-
-	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor() and !Input.is_action_just_pressed("crouch"):
-		velocity.y = JUMP_VELOCITY
 		
 	#headbob
 	if !disable_headbob:
@@ -113,3 +107,54 @@ func update_input(delta: float, speed: float, acceleration: float, deceleration:
 	
 func update_velocity() -> void:
 	move_and_slide()
+
+#PISTOL MECHANISM
+#signal update_ammo
+#@onready var ANIMATIONPISTOL = $WeaponViewport/SubViewport/Camera3D/Pistol/AnimationPlayer
+#@onready var gun_barrel = $WeaponViewport/SubViewport/Camera3D/Pistol/RayCast3D
+#var bullet = load("res://models/weapons/pistol/bullet.tscn")
+#var instance
+#
+##pistol ammo
+#var currentammo = 12
+#var reserveammo = 12
+#var magazine = 12
+#var maxammo = 36
+#
+#func _process(delta: float) -> void:
+	#if !ANIMATIONPISTOL.is_playing():
+		#if Input.is_action_just_pressed("attack"):
+			#shoot()
+		#if Input.is_action_just_pressed("reload"):
+			#reload()
+#
+#func shoot():
+	#if currentammo != 0:
+		#ANIMATIONPISTOL.speed_scale = 3.0
+		#ANIMATIONPISTOL.play("PistolArmature|Fire")
+		#
+		#instance = bullet.instantiate()
+		#instance.position = gun_barrel.global_position
+		#instance.transform.basis = gun_barrel.global_transform.basis
+		#get_parent().add_child(instance)
+		#currentammo -= 1
+		#await ANIMATIONPISTOL.animation_finished
+		#ANIMATIONPISTOL.speed_scale = 1.0
+		#emit_signal("update_ammo", currentammo, reserveammo)
+	#else:
+		#reload()
+#
+#func reload():
+	#if currentammo == magazine:
+		#return
+	#elif reserveammo != 0:
+		#ANIMATIONPISTOL.play("PistolArmature|Reload")
+		#await ANIMATIONPISTOL.animation_finished
+		#ANIMATIONPISTOL.play("PistolArmature|Slide")
+		#await ANIMATIONPISTOL.animation_finished
+		#var reloadammount = min(magazine - currentammo, magazine, reserveammo)
+		#currentammo = currentammo + reloadammount
+		#reserveammo = reserveammo - reloadammount
+		#emit_signal("update_ammo", currentammo, reserveammo)
+		#
+		#

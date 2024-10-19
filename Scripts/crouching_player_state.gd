@@ -26,22 +26,13 @@ func update(delta):
 	PLAYER.update_gravity(delta)
 	PLAYER.update_input(delta, SPEED, ACCELERATION, DECELERATION)
 	PLAYER.update_velocity()
-	
+
 	if Input.is_action_just_released("crouch"):
 		uncrouch()
 	elif Input.is_action_pressed("crouch") == false and !RELEASED:
 		RELEASED = true
 		uncrouch()
 		
-#func crouching(state : bool):
-	#match state:
-		#true:
-			#ANIMATION.play("Crouch", 0, CROUCH_ANIMATION_SPEED)
-		#false:
-			#ANIMATION.play("Crouch", 0, -CROUCH_ANIMATION_SPEED, true)
-			#if ANIMATION.is_playing():
-				#await ANIMATION.animation_finished
-			#transition.emit("IdlePlayerState")
 
 func uncrouch():
 	if CROUCH_SHAPECAST.is_colliding() == false:
@@ -50,14 +41,11 @@ func uncrouch():
 		if PLAYER.velocity.length() == 0:
 			transition.emit("IdlePlayerState")
 		else:
-			transition.emit("WalkingPlayerState")
+			if Input.is_action_pressed("sprint"):
+				transition.emit("SprintingPlayerState")
+			else:	
+				transition.emit("WalkingPlayerState")
 			
 	elif CROUCH_SHAPECAST.is_colliding() == true:
 		await get_tree().create_timer(0.1).timeout
 		uncrouch()
-		#if ANIMATION.is_playing():
-			#await ANIMATION.animation_finished
-		#transition.emit("IdlePlayerState")
-	#if CROUCH_SHAPECAST.is_colliding() == true:
-		#await get_tree().create_timer(0.1).timeout
-		#uncrouch()
