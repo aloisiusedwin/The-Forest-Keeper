@@ -12,8 +12,8 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [resource]
-MarginContainer/constants/margin_bottom = 10
-MarginContainer/constants/margin_left = 10
-MarginContainer/constants/margin_right = 10
-MarginContainer/constants/margin_top = 10
+MarginContainer/constants/margin_bottom = 9
+MarginContainer/constants/margin_left = 9
+MarginContainer/constants/margin_right = 18
+MarginContainer/constants/margin_top = 4
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_1fcui")

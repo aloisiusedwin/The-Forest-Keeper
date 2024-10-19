@@ -16,6 +16,7 @@ func _process(delta: float) -> void:
 		particles.emitting = true
 		await get_tree().create_timer(1.0).timeout
 		queue_free()
+		
 
 func _on_timer_timeout() -> void:
 	queue_free()

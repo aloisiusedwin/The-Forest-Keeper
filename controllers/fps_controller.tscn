@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://4cbpynvikrmh"]
+[gd_scene load_steps=28 format=3 uid="uid://4cbpynvikrmh"]
 
 [ext_resource type="Script" path="res://fps_controller.gd" id="1_0fn47"]
 [ext_resource type="PackedScene" uid="uid://crxf2lgtbbrw3" path="res://models/weapons/pistol/pistol.tscn" id="2_bbrno"]
@@ -15,6 +15,8 @@
 [ext_resource type="Script" path="res://controllers/falling_player_state.gd" id="12_vs60y"]
 [ext_resource type="Script" path="res://Scripts/WeaponViewport.gd" id="14_mjbge"]
 [ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
+[ext_resource type="Script" path="res://Scripts/HUD.gd" id="16_es48c"]
+[ext_resource type="Script" path="res://models/weapons/pistol/pistol.gd" id="16_iahad"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o26h5"]
 
@@ -324,6 +326,10 @@ _data = {
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mspl4"]
 
+[sub_resource type="SystemFont" id="SystemFont_styea"]
+font_names = PackedStringArray("MS Gothic")
+font_weight = 650
+
 [node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("ANIMATIONPLAYER")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 floor_max_angle = 1.22173
@@ -452,7 +458,44 @@ cull_mask = 1047554
 script = ExtResource("15_c2n5p")
 MAIN_CAMERA = NodePath("../../../Head/Camera3D")
 
-[node name="Weapon" parent="WeaponViewport/SubViewport/Camera3D" instance=ExtResource("2_bbrno")]
+[node name="Pistol" parent="WeaponViewport/SubViewport/Camera3D" instance=ExtResource("2_bbrno")]
 transform = Transform3D(0.0749971, 5.71143e-06, 0.000654466, 0, 0.0749971, -0.00065449, -0.00065449, 0.000654465, 0.0749943, 0.28, -0.296, -0.685)
+script = ExtResource("16_iahad")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("16_es48c")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme = ExtResource("3_la0w7")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="CurrentAmmo" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = SubResource("SystemFont_styea")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 2
+vertical_alignment = 2
 
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
+[connection signal="update_ammo" from="WeaponViewport/SubViewport/Camera3D/Pistol" to="CanvasLayer" method="_on_pistol_update_ammo"]

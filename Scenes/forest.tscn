@@ -92,10 +92,6 @@ buffer = PackedFloat32Array(-0.652638, 0, -0.75767, 84.1358, 0, 1, 0, -0.0349301
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_xqpnu")]
 transform = Transform3D(0.999491, 0, -0.0318992, 0, 1, 0, 0.0318992, 0, 0.999491, 85.9096, 1.032, 75.6738)
-TOGGLE_CROUCH = true
-CROUCH_ANIMATION_SPEED = 7.0
-TILT_LOWER_LIMIT = -0.698132
-TILT_UPPER_LIMIT = 1.0472
 
 [node name="Maps" type="Node3D" parent="."]
 
