@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var CurrentAmmo = $VBoxContainer/HBoxContainer/MarginContainer/CurrentAmmo
+@onready var CurrentAmmo = $HUD/HBoxContainer/MarginContainer/CurrentAmmo
 
 
 func _on_pistol_update_ammo(current,reserve) -> void:
