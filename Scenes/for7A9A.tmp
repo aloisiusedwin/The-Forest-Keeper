@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="8_fuifg"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="9_ujep3"]
 [ext_resource type="PackedScene" uid="uid://bayr6lsu8wc4a" path="res://models/forestMap/table/table.tscn" id="9_uswrp"]
-[ext_resource type="PackedScene" uid="uid://yy235khrswms" path="res://models/forestMap/paper/Note.tscn" id="10_rvr34"]
+[ext_resource type="PackedScene" uid="uid://c5t8xlxunqjdd" path="res://models/forestMap/paper/notes.tscn" id="10_22oq4"]
 
 [sub_resource type="Sky" id="Sky_h1j3r"]
 
@@ -657,5 +657,5 @@ sgt_dist_min = 0.25
 sgt_follow_normal = false
 metadata/SimpleGrassTextured = "2.0.5"
 
-[node name="Note" parent="Maps" instance=ExtResource("10_rvr34")]
-transform = Transform3D(0.867739, 0, -0.497019, 0, 1, 0, 0.497019, 0, 0.867739, 86.0536, 0.987957, 72.8194)
+[node name="Notes" parent="." instance=ExtResource("10_22oq4")]
+transform = Transform3D(0.828745, 0, -0.559627, 0, 1, 0, 0.559627, 0, 0.828745, 85.9839, 0.987954, 73.0299)
