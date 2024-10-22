@@ -402,7 +402,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("SphereShape3D_mspl4")
 target_position = Vector3(0, 0.5, 0)
 
-[node name="UserInterface" type="Control" parent="."]
+[node name="Crosshair" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -411,7 +411,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 
-[node name="Reticle" type="CenterContainer" parent="UserInterface"]
+[node name="Reticle" type="CenterContainer" parent="Crosshair"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -426,7 +426,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_qyc3x")
 
-[node name="DebugPanel" type="PanelContainer" parent="UserInterface"]
+[node name="DebugPanel" type="PanelContainer" parent="Crosshair"]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 0
 offset_left = 10.0
@@ -436,10 +436,10 @@ offset_bottom = 50.0
 theme = ExtResource("3_la0w7")
 script = ExtResource("4_c544d")
 
-[node name="MarginContainer" type="MarginContainer" parent="UserInterface/DebugPanel"]
+[node name="MarginContainer" type="MarginContainer" parent="Crosshair/DebugPanel"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/DebugPanel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Crosshair/DebugPanel/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 
@@ -470,22 +470,22 @@ script = ExtResource("11_b4oom")
 [node name="FallingPlayerState" type="Node" parent="PlayerStateMachine"]
 script = ExtResource("12_vs60y")
 
-[node name="WeaponViewport" type="SubViewportContainer" parent="."]
+[node name="Weapon" type="SubViewportContainer" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="SubViewport" type="SubViewport" parent="WeaponViewport"]
+[node name="SubViewport" type="SubViewport" parent="Weapon"]
 transparent_bg = true
 handle_input_locally = false
 render_target_update_mode = 4
 script = ExtResource("14_mjbge")
 
-[node name="Camera3D" type="Camera3D" parent="WeaponViewport/SubViewport" node_paths=PackedStringArray("MAIN_CAMERA")]
+[node name="Camera3D" type="Camera3D" parent="Weapon/SubViewport" node_paths=PackedStringArray("MAIN_CAMERA")]
 cull_mask = 1047554
 script = ExtResource("15_c2n5p")
 MAIN_CAMERA = NodePath("../../../Head/Camera3D")
 
-[node name="Pistol" parent="WeaponViewport/SubViewport/Camera3D" instance=ExtResource("2_bbrno")]
+[node name="Pistol" parent="Weapon/SubViewport/Camera3D" instance=ExtResource("2_bbrno")]
 transform = Transform3D(0.0749971, 5.71143e-06, 0.000654466, 0, 0.0749971, -0.00065449, -0.00065449, 0.000654465, 0.0749943, 0.28, -0.296, -0.685)
 script = ExtResource("16_iahad")
 
@@ -541,5 +541,20 @@ scale = Vector2(0.405, 0.405)
 texture = ExtResource("19_jdpca")
 stretch_mode = 3
 
+[node name="HitUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="HitUI"]
+visible = false
+layout_mode = 0
+offset_left = -150.0
+offset_top = -166.0
+offset_right = 2048.0
+offset_bottom = 1208.0
+color = Color(0.968627, 0, 0.0235294, 0.227451)
+
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
-[connection signal="update_ammo" from="WeaponViewport/SubViewport/Camera3D/Pistol" to="CanvasLayer" method="_on_pistol_update_ammo"]
+[connection signal="update_ammo" from="Weapon/SubViewport/Camera3D/Pistol" to="CanvasLayer" method="_on_pistol_update_ammo"]

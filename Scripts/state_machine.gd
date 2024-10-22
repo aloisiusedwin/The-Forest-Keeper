@@ -1,5 +1,4 @@
 class_name StateMachine
-
 extends PlayerMovementState
 
 @export var CURRENT_STATE : State
