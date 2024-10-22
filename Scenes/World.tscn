@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cfn8jcanr756u"]
+[gd_scene load_steps=31 format=3 uid="uid://cfn8jcanr756u"]
 
 [ext_resource type="Material" uid="uid://dvx5rrib5yuge" path="res://materials/grass.tres" id="1_ady3n"]
 [ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller.tscn" id="2_kq0ye"]
@@ -19,6 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://8kxdfefmv58e" path="res://models/low poly environment/trunk_01.tscn" id="17_avy3l"]
 [ext_resource type="PackedScene" uid="uid://cdnpg80dsw8rl" path="res://models/low poly environment/trunk_02.tscn" id="18_42vus"]
 [ext_resource type="PackedScene" uid="uid://b5ujf8j1y01fl" path="res://models/low poly environment/trunk_03.tscn" id="19_0avig"]
+[ext_resource type="PackedScene" uid="uid://yy235khrswms" path="res://models/forestMap/paper/Note.tscn" id="20_6kfny"]
+[ext_resource type="FontFile" uid="uid://bv1dsrscx02oo" path="res://Font/static/Montserrat-SemiBold.ttf" id="21_7jrpj"]
+[ext_resource type="Animation" uid="uid://dj827x1mo2o6q" path="res://Cutscene/intro_scene.res" id="22_rt750"]
+[ext_resource type="FontFile" uid="uid://bd2mthoqc1vfi" path="res://Font/static/Montserrat-Bold.ttf" id="23_4dv7b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_eos63"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -36,6 +40,51 @@ glow_enabled = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_ddqhn"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_cjdq4"]
+
+[sub_resource type="Animation" id="Animation_11v31"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(102.237, 12.421, 74.356)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cutscene/Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.493928, 1.56731, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Maps/DirectionalLight3D:light_energy")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t6g8f"]
+_data = {
+"RESET": SubResource("Animation_11v31"),
+"intro_scene": ExtResource("22_rt750")
+}
 
 [node name="World" type="Node3D"]
 
@@ -147,3 +196,43 @@ transform = Transform3D(-0.449076, 0, -3.11886, 0, 3.4172, 0, -1.31719, 0, 1.063
 
 [node name="Sketchfab_Scene3" parent="." instance=ExtResource("3_o55q7")]
 transform = Transform3D(2.09071, 0, -5.65096, 0.525112, 6.62737, 0.191969, 5.66053, -0.614802, 2.06937, 0.599953, -0.0349305, -28.903)
+
+[node name="NoteTutorial" parent="." instance=ExtResource("20_6kfny")]
+transform = Transform3D(0.867739, 0, -0.497019, 0, 1, 0, 0.497019, 0, 0.867739, 86.0536, 0.987957, 72.6613)
+
+[node name="NoteQuest" parent="." instance=ExtResource("20_6kfny")]
+transform = Transform3D(0.996516, 0, -0.0833994, 0, 1, 0, 0.0833994, 0, 0.996516, 87.066, 0.987957, 72.5844)
+
+[node name="Cutscene" type="Node3D" parent="."]
+
+[node name="Title Keeper" type="Label3D" parent="Cutscene"]
+transform = Transform3D(-0.0871558, 0, 0.996195, 0, 1, 0, -0.996196, 0, -0.0871558, 76.676, 3.211, 75.462)
+modulate = Color(1, 0, 0, 1)
+text = "KEEPER"
+font = ExtResource("21_7jrpj")
+font_size = 40
+uppercase = true
+
+[node name="Present" type="Label3D" parent="Cutscene"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 89.621, 7.876, 74.746)
+text = "Malas Ngoding Present"
+font = ExtResource("21_7jrpj")
+font_size = 40
+uppercase = true
+
+[node name="Camera3D" type="Camera3D" parent="Cutscene"]
+transform = Transform3D(0.00348634, -0.474085, 0.880472, 0, 0.880478, 0.474088, -0.999994, -0.00165283, 0.00306965, 102.237, 12.421, 74.356)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cutscene"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_t6g8f")
+}
+
+[node name="Title The Forest" type="Label3D" parent="Cutscene"]
+transform = Transform3D(-0.0871558, -0.121406, 0.98877, 0, 0.992546, 0.121869, -0.996195, 0.0106216, -0.0865062, 76.705, 3.411, 75.475)
+modulate = Color(0.454124, 0.59143, 0.157551, 1)
+text = "The Forest"
+font = ExtResource("23_4dv7b")
+font_size = 40
+uppercase = true
