@@ -541,5 +541,9 @@ scale = Vector2(0.405, 0.405)
 texture = ExtResource("19_jdpca")
 stretch_mode = 3
 
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
 [connection signal="update_ammo" from="WeaponViewport/SubViewport/Camera3D/Pistol" to="CanvasLayer" method="_on_pistol_update_ammo"]
