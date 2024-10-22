@@ -1,8 +1,9 @@
-[gd_scene load_steps=28 format=3 uid="uid://4cbpynvikrmh"]
+[gd_scene load_steps=30 format=3 uid="uid://4cbpynvikrmh"]
 
 [ext_resource type="Script" path="res://fps_controller.gd" id="1_0fn47"]
 [ext_resource type="PackedScene" uid="uid://crxf2lgtbbrw3" path="res://models/weapons/pistol/pistol.tscn" id="2_bbrno"]
 [ext_resource type="Script" path="res://Scripts/reticle.gd" id="2_qyc3x"]
+[ext_resource type="Script" path="res://Scripts/interact_ray.gd" id="2_y0lgd"]
 [ext_resource type="Theme" uid="uid://b33d8vlpvjdwl" path="res://ui/themes/debug.tres" id="3_la0w7"]
 [ext_resource type="Script" path="res://Scripts/debug.gd" id="4_c544d"]
 [ext_resource type="Script" path="res://Scripts/state_machine.gd" id="5_h3u6d"]
@@ -17,6 +18,7 @@
 [ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
 [ext_resource type="Script" path="res://Scripts/HUD.gd" id="16_es48c"]
 [ext_resource type="Script" path="res://models/weapons/pistol/pistol.gd" id="16_iahad"]
+[ext_resource type="Texture2D" uid="uid://lpy6vq78jb23" path="res://models/forestMap/paper/notes.png" id="19_vdg8q"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o26h5"]
 
@@ -364,6 +366,24 @@ spot_angle_attenuation = 0.68302
 [node name="ReflectionProbe" type="ReflectionProbe" parent="Head/Camera3D"]
 update_mode = 1
 
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+target_position = Vector3(0, 0, -1.505)
+script = ExtResource("2_y0lgd")
+
+[node name="Prompt" type="Label" parent="Head/Camera3D/RayCast3D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.5
+offset_top = -11.5
+offset_right = 33.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Message"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_tbcgx")
@@ -470,6 +490,8 @@ script = ExtResource("16_es48c")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 68.0
+offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 8
@@ -497,6 +519,15 @@ theme_override_fonts/font = SubResource("SystemFont_styea")
 theme_override_font_sizes/font_size = 32
 horizontal_alignment = 2
 vertical_alignment = 2
+
+[node name="Note" type="TextureRect" parent="CanvasLayer"]
+visible = false
+offset_left = 657.0
+offset_top = 182.0
+offset_right = 1298.0
+offset_bottom = 938.0
+texture = ExtResource("19_vdg8q")
+expand_mode = 1
 
 [node name="HitUI" type="Control" parent="."]
 layout_mode = 3
