@@ -513,5 +513,9 @@ offset_right = 2048.0
 offset_bottom = 1208.0
 color = Color(0.968627, 0, 0.0235294, 0.227451)
 
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
 [connection signal="update_ammo" from="Weapon/SubViewport/Camera3D/Pistol" to="CanvasLayer" method="_on_pistol_update_ammo"]
