@@ -18,7 +18,7 @@
 [ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
 [ext_resource type="Script" path="res://Scripts/HUD.gd" id="16_es48c"]
 [ext_resource type="Script" path="res://models/weapons/pistol/pistol.gd" id="16_iahad"]
-[ext_resource type="Texture2D" uid="uid://dggncwo0gashr" path="res://models/forestMap/paper/6bbfff73277fcf4c83ad2ce49a6ee972.jpg" id="19_60kjq"]
+[ext_resource type="Texture2D" uid="uid://c6d17l80uk7ku" path="res://models/forestMap/paper/notes.png" id="19_jdpca"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o26h5"]
 
@@ -343,6 +343,7 @@ ANIMATIONPLAYER = NodePath("AnimationPlayer")
 shape = SubResource("CapsuleShape3D_o26h5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+visible = false
 mesh = SubResource("CapsuleMesh_5uvlm")
 skeleton = NodePath("../..")
 
@@ -525,11 +526,20 @@ vertical_alignment = 2
 
 [node name="Notes" type="TextureRect" parent="CanvasLayer"]
 visible = false
-offset_left = 674.0
-offset_top = 227.0
-offset_right = 1238.0
-offset_bottom = 798.0
-texture = ExtResource("19_60kjq")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -402.0
+offset_right = 1127.0
+offset_bottom = 1598.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.405, 0.405)
+texture = ExtResource("19_jdpca")
+stretch_mode = 3
 
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
 [connection signal="update_ammo" from="WeaponViewport/SubViewport/Camera3D/Pistol" to="CanvasLayer" method="_on_pistol_update_ammo"]
