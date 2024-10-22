@@ -73,15 +73,15 @@ shader_parameter/texture_albedo = ExtResource("8_fuifg")
 [sub_resource type="ArrayMesh" id="ArrayMesh_pyw5n"]
 _surfaces = [{
 "aabb": AABB(-0.5, 0, -0.5, 1, 1, 1),
-"attribute_data": PackedByteArray("/wAA/wAAAAAAAAAAAAAA/wAAgD8AAIA/AAAA/wAAAAAAAIA//wAA/wAAgD8AAAAA/wAA/wAAAAAAAAAAAAAA/wAAgD8AAIA/AAAA/wAAAAAAAIA//wAA/wAAgD8AAAAA"),
+"attribute_data": PackedByteArray("AAAAAAAAAABVVVX/VlZW/1dXV/9XV1f/V1dX/1hYWP9YWFj/WFhY/1hYWP9ZWVn/V1dX/1hYWP9ZWVn/WFhY/1hYWP9ZWVn/WVlZ/1lZWf9YWFj/WFhY/1BQUP9OTk7/"),
 "format": 34359742495,
 "index_count": 12,
-"index_data": PackedByteArray("AAABAAIAAwABAAAABAAFAAYABwAFAAQA"),
+"index_data": PackedByteArray("AAAAAAAAAABVVVX/VlZW/1dXV/9XV1f/"),
 "material": SubResource("ShaderMaterial_pkhja"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray("AAAAvwAAgD8AAAAAAAAAPwAAAAAAAAAAAAAAvwAAAAAAAAAAAAAAPwAAgD8AAAAAAAAAAAAAgD8AAAC/AAAAAAAAAAAAAAA/AAAAAAAAAAAAAAC/AAAAAAAAgD8AAAA//3//f////7//f/9/////v/9//3////+//3//f////78AAP9//3//vwAA/3//f/+/AAD/f/9//78AAP9//3//vw==")
+"vertex_data": PackedByteArray("AAAAAAAAAABVVVX/VlZW/1dXV/9XV1f/V1dX/1hYWP9YWFj/WFhY/1hYWP9ZWVn/V1dX/1hYWP9ZWVn/WFhY/1hYWP9ZWVn/WVlZ/1lZWf9YWFj/WFhY/1BQUP9OTk7/SUlJ/0VFRf9ERET/Q0ND/0RERP9FRUX/RkZG/05OTv9PT0//T09P/05OTv9PT0//UlJS/0tLS/9NTU3/UFBQ/w==")
 }]
 metadata/GodotVersion = "4.3-stable (official)"
 
