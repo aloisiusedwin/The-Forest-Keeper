@@ -329,6 +329,7 @@ _data = {
 [sub_resource type="SystemFont" id="SystemFont_styea"]
 font_names = PackedStringArray("MS Gothic")
 font_weight = 650
+subpixel_positioning = 0
 
 [node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("ANIMATIONPLAYER")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

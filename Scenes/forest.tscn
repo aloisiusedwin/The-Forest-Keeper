@@ -657,5 +657,7 @@ sgt_dist_min = 0.25
 sgt_follow_normal = false
 metadata/SimpleGrassTextured = "2.0.5"
 
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Maps"]
+
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("10_22oq4")]
 transform = Transform3D(0.911891, 0, -0.410432, 0, 1, 0, 0.410432, 0, 0.911891, 86.1375, 0.987961, 72.9697)
