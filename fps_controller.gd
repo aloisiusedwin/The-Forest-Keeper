@@ -11,15 +11,12 @@ extends CharacterBody3D
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 
-@onready var hit_rect = $HitUI/ColorRect
-
 #movement
 @export var TOGGLE_CROUCH : bool = true
 @onready var CROUCH_SHAPECAST : ShapeCast3D = %ShapeCast3D
 @export_range(5,10, 0.1) var CROUCH_ANIMATION_SPEED : float = 7.0
 const SENSITIVITY = 0.2 # Change only the second float
 var gravity = 12.0
-const hit_stagger = 8.0
 
 #headbob
 const BOB_FREQUENCY = 2.0 #how often footsteps happen
@@ -111,8 +108,53 @@ func update_input(delta: float, speed: float, acceleration: float, deceleration:
 func update_velocity() -> void:
 	move_and_slide()
 
-func hit(dir):
-	hit_rect.visible = true
-	velocity += dir * 8.0
-	await get_tree().create_timer(0.4).timeout
-	hit_rect.visible = false
+#PISTOL MECHANISM
+#signal update_ammo
+#@onready var ANIMATIONPISTOL = $WeaponViewport/SubViewport/Camera3D/Pistol/AnimationPlayer
+#@onready var gun_barrel = $WeaponViewport/SubViewport/Camera3D/Pistol/RayCast3D
+#var bullet = load("res://models/weapons/pistol/bullet.tscn")
+#var instance
+#
+##pistol ammo
+#var currentammo = 12
+#var reserveammo = 12
+#var magazine = 12
+#var maxammo = 36
+#
+#func _process(delta: float) -> void:
+	#if !ANIMATIONPISTOL.is_playing():
+		#if Input.is_action_just_pressed("attack"):
+			#shoot()
+		#if Input.is_action_just_pressed("reload"):
+			#reload()
+#
+#func shoot():
+	#if currentammo != 0:
+		#ANIMATIONPISTOL.speed_scale = 3.0
+		#ANIMATIONPISTOL.play("PistolArmature|Fire")
+		#
+		#instance = bullet.instantiate()
+		#instance.position = gun_barrel.global_position
+		#instance.transform.basis = gun_barrel.global_transform.basis
+		#get_parent().add_child(instance)
+		#currentammo -= 1
+		#await ANIMATIONPISTOL.animation_finished
+		#ANIMATIONPISTOL.speed_scale = 1.0
+		#emit_signal("update_ammo", currentammo, reserveammo)
+	#else:
+		#reload()
+#
+#func reload():
+	#if currentammo == magazine:
+		#return
+	#elif reserveammo != 0:
+		#ANIMATIONPISTOL.play("PistolArmature|Reload")
+		#await ANIMATIONPISTOL.animation_finished
+		#ANIMATIONPISTOL.play("PistolArmature|Slide")
+		#await ANIMATIONPISTOL.animation_finished
+		#var reloadammount = min(magazine - currentammo, magazine, reserveammo)
+		#currentammo = currentammo + reloadammount
+		#reserveammo = reserveammo - reloadammount
+		#emit_signal("update_ammo", currentammo, reserveammo)
+		#
+		#
