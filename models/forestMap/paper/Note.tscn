@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://yy235khrswms"]
+[gd_scene load_steps=10 format=4 uid="uid://yy235khrswms"]
 
 [ext_resource type="Texture2D" uid="uid://jijvr3a64qhf" path="res://models/forestMap/paper/paper_0.png" id="1_3obg5"]
 [ext_resource type="Script" path="res://Scripts/interactable.gd" id="1_awqxx"]
 [ext_resource type="Texture2D" uid="uid://da8acqfrb0qtj" path="res://models/forestMap/paper/paper_1.png" id="2_2xjbw"]
 [ext_resource type="Texture2D" uid="uid://cspe80yrix2kk" path="res://models/forestMap/paper/paper_2.png" id="3_d0tiw"]
+[ext_resource type="PackedScene" uid="uid://bfj7va33g3w1u" path="res://models/forestMap/paper/paper.glb" id="5_10pph"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8vp8f"]
 resource_name = "aiStandardSurface2"
@@ -66,3 +67,6 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(3.805, 0, 0, 0, 3.805, 0, 0, 0, 3.805, 0, 0, 0)
 shape = SubResource("BoxShape3D_n4j08")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("5_10pph")]
+transform = Transform3D(2.37, 0, 0, 0, 2.37, 0, 0, 0, 2.37, -0.00670745, 0.019025, -0.017844)

@@ -729,7 +729,7 @@ font_size = 40
 uppercase = true
 
 [node name="Camera3D" type="Camera3D" parent="Cutscene"]
-transform = Transform3D(0.00349063, -0.474085, 0.880472, 0, 0.880478, 0.474088, -0.999994, -0.00165487, 0.00307343, 102.237, 12.421, 74.356)
+transform = Transform3D(0.00348634, -0.474085, 0.880472, 0, 0.880478, 0.474088, -0.999994, -0.00165283, 0.00306965, 102.237, 12.421, 74.356)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Cutscene"]
 root_node = NodePath("../..")
