@@ -18,7 +18,11 @@ extends CharacterBody3D
 @onready var CROUCH_SHAPECAST : ShapeCast3D = %ShapeCast3D
 @export_range(5,10, 0.1) var CROUCH_ANIMATION_SPEED : float = 7.0
 const SENSITIVITY = 0.2 # Change only the second float
+
 var gravity = 12.0
+var air_time = 0.0
+var fall_multiplier = 2.0
+
 const hit_stagger = 8.0
 
 #headbob
@@ -77,6 +81,11 @@ func _headbob(time) -> Vector3:
 	return pos
 
 func _physics_process(delta: float) -> void:
+	if is_on_floor():
+		air_time = 0.0
+	else:
+		air_time += delta
+	
 	update_camera(delta)
 	Global.debug.add_property("Velocity","%.2f" % velocity.length(), 1)
 		
@@ -90,7 +99,7 @@ func _physics_process(delta: float) -> void:
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
 
 func update_gravity(delta) -> void:
-	velocity.y -= gravity * delta
+	velocity.y -= (gravity + gravity * air_time * fall_multiplier) * delta
 	
 func update_input(delta: float, speed: float, acceleration: float, deceleration: float) -> void:
 	var input_dir = Input.get_vector("left", "right", "up", "down")

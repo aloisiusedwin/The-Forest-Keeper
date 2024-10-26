@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 @onready var anim_tree = $AnimationTree
 
+var health = 70
 const speed = 4
 const attack_range = 2.0
 @onready var nav_agent = $NavigationAgent3D
@@ -46,3 +47,13 @@ func _hit_finished():
 	if global_position.distance_to(player.global_position) < attack_range + 1.0:
 		var dir = global_position.direction_to(player.global_position)
 		player.hit(dir)
+
+
+func _on_area_3d_body_part_hit(dam):
+	print("hit hit")
+	health -= dam
+	if health <= 0:
+		anim_tree.set("parameters/root_motion_track", Vector3.ZERO)
+		anim_tree.set("parameters/conditions/dying", true)
+		await get_tree().create_timer(4.0).timeout
+		queue_free()	

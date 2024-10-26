@@ -384,6 +384,15 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Message"
 
+[node name="RayAim" type="RayCast3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006, -1.5)
+target_position = Vector3(0, 0, -100)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="RayAimEnd" type="Node3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -101.5)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_tbcgx")
@@ -480,7 +489,7 @@ script = ExtResource("15_c2n5p")
 MAIN_CAMERA = NodePath("../../../Head/Camera3D")
 
 [node name="Pistol" parent="Weapon/SubViewport/Camera3D" instance=ExtResource("2_bbrno")]
-transform = Transform3D(0.0749971, 5.71143e-06, 0.000654466, 0, 0.0749971, -0.00065449, -0.00065449, 0.000654465, 0.0749943, 0.28, -0.296, -0.685)
+transform = Transform3D(0.0749944, 7.9959e-06, 0.00091624, 0, 0.0749971, -0.00065449, -0.000916274, 0.000654441, 0.0749916, 0.28, -0.296, -0.685)
 script = ExtResource("16_iahad")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -491,7 +500,8 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 68.0
-offset_bottom = 68.0
+offset_right = -43.0
+offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 8

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://bsnnhn2fuq3rp"]
+[gd_scene load_steps=19 format=4 uid="uid://bsnnhn2fuq3rp"]
 
 [ext_resource type="Script" path="res://Scenes/forest.gd" id="1_b1oyq"]
 [ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller.tscn" id="1_xqpnu"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="8_fuifg"]
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="9_ujep3"]
 [ext_resource type="PackedScene" uid="uid://bayr6lsu8wc4a" path="res://models/forestMap/table/table.tscn" id="9_uswrp"]
+[ext_resource type="PackedScene" uid="uid://dq58xcv1vsqj7" path="res://models/enemies/tormenter/tormenter.tscn" id="11_bbirf"]
 
 [sub_resource type="Sky" id="Sky_h1j3r"]
 
@@ -714,14 +715,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.2185, 0.308349, 3.45426)
 [node name="Spawn15" type="Node3D" parent="Maps/SpawnPoint"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47487, 0.308349, 37.7912)
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
 [node name="EnemySpawnTimer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+
+[node name="Tormenter" parent="." instance=ExtResource("11_bbirf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.6455, -0.03493, 74.6818)
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]

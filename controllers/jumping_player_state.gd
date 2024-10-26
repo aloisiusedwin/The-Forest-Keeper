@@ -16,6 +16,9 @@ func update(delta):
 	PLAYER.update_input(delta, SPEED * INPUT_MULTIPLIER, ACCELERATION, DECELERATION)
 	PLAYER.update_velocity()
 	
+	if PLAYER.velocity.y < 0 and !PLAYER.is_on_floor():
+		transition.emit("FallingPlayerState")
+		
 	if PLAYER.is_on_floor():
 		ANIMATION.play("JumpEnd")
 		if Input.is_action_pressed("sprint"):

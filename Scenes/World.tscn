@@ -54,10 +54,10 @@ use_collision = true
 size = Vector3(100, 0.001, 100)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_kq0ye")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.5223, 1.2712, -47.9748)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.1988, 23.6289, -40.7873)
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("3_o55q7")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 1.4969, -0.0349305, -3.34988)
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 1.53383, -0.0349305, -3.28936)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(0.998125, 0, 0, 0, 0.998125, 0, 0, 0, 0.998125, 47.3045, 1.10122, 45.0686)
@@ -80,7 +80,7 @@ mesh = SubResource("BoxMesh_cjdq4")
 skeleton = NodePath("../..")
 
 [node name="bridge_side_wood2" parent="." instance=ExtResource("5_nddtd")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 46.4396, -0.00884605, 37.9453)
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -36.0467, 20.7739, -40.6933)
 
 [node name="Anthurium2" parent="." instance=ExtResource("5_t2y5s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.8152, -0.00629974, 48.012)

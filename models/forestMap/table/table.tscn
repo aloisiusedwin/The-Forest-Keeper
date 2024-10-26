@@ -11,6 +11,8 @@ points = PackedVector3Array(-61.257, 38.0668, 28.8385, -61.257, 38.0668, 26.8015
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/old_table_fbx/RootNode/old_table/old_table_old_table_0" index="0"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/old_table_fbx/RootNode/old_table/old_table_old_table_0/StaticBody3D" index="0"]
 shape = SubResource("ConvexPolygonShape3D_isjsh")
