@@ -195,6 +195,8 @@ shadow_mesh = SubResource("ArrayMesh_0lon2")
 
 [node name="Sketchfab_Scene" type="StaticBody3D"]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+collision_layer = 3
+collision_mask = 3
 
 [node name="Tree_0_Tree_0Mat_0" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, -2.22045e-18, 0, 2.22045e-18, 0.01, 0, 0, 0)

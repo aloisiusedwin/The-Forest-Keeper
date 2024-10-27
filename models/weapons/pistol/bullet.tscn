@@ -33,11 +33,13 @@ mesh = SubResource("BoxMesh_hpg14")
 surface_material_override/0 = SubResource("StandardMaterial3D_qtovr")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+transform = Transform3D(1.52162, 0, 0, 0, 1.52162, 0, 0, 0, 1.52162, 0, 0, 0)
 target_position = Vector3(0, 0, -0.6)
+collision_mask = 2
+collide_with_areas = true
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.295626, 0.176867, -0.688847)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.600779)
 material_override = SubResource("StandardMaterial3D_86r6i")
 emitting = false
 one_shot = true

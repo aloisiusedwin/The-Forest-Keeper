@@ -1,13 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhnss64dbmw7k"]
+[gd_scene load_steps=4 format=3 uid="uid://cwpybijb5cj4x"]
 
-[ext_resource type="PackedScene" uid="uid://bfj7va33g3w1u" path="res://models/forestMap/paper/paper.glb" id="1_mjyep"]
-[ext_resource type="Texture2D" uid="uid://jijvr3a64qhf" path="res://models/forestMap/paper/paper_0.png" id="2_qv0h6"]
+[ext_resource type="PackedScene" uid="uid://bfj7va33g3w1u" path="res://models/forestMap/paper/paper.glb" id="1_nvi6c"]
+[ext_resource type="Script" path="res://Scripts/interactable.gd" id="1_u8rny"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bexdn"]
-albedo_texture = ExtResource("2_qv0h6")
+[sub_resource type="BoxShape3D" id="BoxShape3D_avxjb"]
+size = Vector3(0.665, 0.04, 0.945)
 
-[node name="Sketchfab_Scene" instance=ExtResource("1_mjyep")]
+[node name="Notes" type="StaticBody3D"]
+script = ExtResource("1_u8rny")
 
-[node name="HD2L_MOD_Paper_aiStandardSurface2_0" parent="Sketchfab_model/paper_fbx/RootNode/HD2L_MOD_Paper" index="0"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_bexdn")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_avxjb")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_nvi6c")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00409484, -0.000271633, 0.00690237)

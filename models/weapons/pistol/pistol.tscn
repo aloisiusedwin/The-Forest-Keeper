@@ -1,11 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://crxf2lgtbbrw3"]
+[gd_scene load_steps=7 format=3 uid="uid://crxf2lgtbbrw3"]
 
 [ext_resource type="PackedScene" uid="uid://drtk0m5ijjt0e" path="res://models/weapons/pistol/Animated Pistol.glb" id="1_wqmrs"]
 [ext_resource type="Material" uid="uid://6bn61v5ig01k" path="res://models/weapons/pistol/metal.tres" id="2_tit2b"]
+[ext_resource type="Texture2D" uid="uid://bl578xrcxemrw" path="res://models/weapons/muzzleflash/m_2.png" id="3_5hk4l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c2h84"]
 albedo_color = Color(0.313726, 0.188235, 0.0941176, 1)
 metallic_specular = 0.26
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_l00dp"]
+flip_faces = true
+orientation = 0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ndwe"]
+transparency = 1
+albedo_texture = ExtResource("3_5hk4l")
+emission_enabled = true
+emission_energy_multiplier = 4.0
+emission_texture = ExtResource("3_5hk4l")
 
 [node name="Root Scene" instance=ExtResource("1_wqmrs")]
 transform = Transform3D(0.075, 0, 0, 0, 0.075, 0, 0, 0, 0.075, 0, 0, 0)
@@ -26,9 +38,24 @@ surface_material_override/1 = ExtResource("2_tit2b")
 surface_material_override/2 = SubResource("StandardMaterial3D_c2h84")
 surface_material_override/4 = ExtResource("2_tit2b")
 
-[node name="AnimationPlayer" parent="." index="1"]
+[node name="Muzzle Flash" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(3.53553, 3.53553, 0, -3.53553, 3.53553, 0, 0, 0, 5, 0, 2.15517, -9.62643)
+visible = false
+layers = 2
+mesh = SubResource("PlaneMesh_l00dp")
+surface_material_override/0 = SubResource("StandardMaterial3D_2ndwe")
+
+[node name="Muzzle Flash2" type="MeshInstance3D" parent="Muzzle Flash" index="0"]
+transform = Transform3D(0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 0, 0, 1, 0, 0, 0)
+visible = false
+layers = 2
+mesh = SubResource("PlaneMesh_l00dp")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_2ndwe")
+
+[node name="AnimationPlayer" parent="." index="2"]
 unique_name_in_owner = true
 
-[node name="RayCast3D" type="RayCast3D" parent="." index="2"]
+[node name="RayCast3D" type="RayCast3D" parent="." index="3"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0.00767549, 2.4347, -7.89596)
 target_position = Vector3(0, 0, -1)
