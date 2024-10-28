@@ -17,7 +17,7 @@ extends CharacterBody3D
 @export var TOGGLE_CROUCH : bool = true
 @onready var CROUCH_SHAPECAST : ShapeCast3D = %ShapeCast3D
 @export_range(5,10, 0.1) var CROUCH_ANIMATION_SPEED : float = 7.0
-const SENSITIVITY = 0.2 # Change only the second float
+const SENSITIVITY = 0.5 # Change only the second float
 
 var gravity = 12.0
 var air_time = 0.0
