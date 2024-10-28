@@ -1,0 +1,149 @@
+[gd_scene load_steps=25 format=3 uid="uid://cfn8jcanr756u"]
+
+[ext_resource type="Material" uid="uid://dvx5rrib5yuge" path="res://materials/grass.tres" id="1_ady3n"]
+[ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller.tscn" id="2_kq0ye"]
+[ext_resource type="PackedScene" uid="uid://buxbpi624u3q" path="res://models/forestMap/trees/beech/beech.tscn" id="3_o55q7"]
+[ext_resource type="PackedScene" uid="uid://6a0xvbhs7m01" path="res://models/bridge/tscn/bridge_woodside.tscn" id="5_nddtd"]
+[ext_resource type="PackedScene" uid="uid://ypmijk7hswtb" path="res://models/low poly environment/anthurium.tscn" id="5_t2y5s"]
+[ext_resource type="PackedScene" uid="uid://bvbgqn3a2fnvt" path="res://models/low poly environment/bell_flower.tscn" id="6_sudu6"]
+[ext_resource type="PackedScene" uid="uid://btcrkyyblty8l" path="res://models/low poly environment/daisy.tscn" id="8_eracq"]
+[ext_resource type="PackedScene" uid="uid://byhanfeatk32u" path="res://models/low poly environment/grass.tscn" id="9_exop5"]
+[ext_resource type="PackedScene" uid="uid://by4jr3g5ahnb7" path="res://models/low poly environment/plant.tscn" id="10_tt1if"]
+[ext_resource type="PackedScene" uid="uid://bpya6sok1xw2a" path="res://models/low poly environment/rock_01.tscn" id="11_2fnja"]
+[ext_resource type="PackedScene" uid="uid://blfde5uykcte0" path="res://models/low poly environment/rock_02.tscn" id="12_2ap3l"]
+[ext_resource type="PackedScene" uid="uid://c5q0opel5oo1m" path="res://models/low poly environment/rock_03.tscn" id="13_4c7et"]
+[ext_resource type="PackedScene" uid="uid://b63acp65wb4gb" path="res://models/low poly environment/rock_04.tscn" id="13_ghn42"]
+[ext_resource type="PackedScene" uid="uid://24afa45ucipt" path="res://models/low poly environment/rock_05.tscn" id="14_qdo1b"]
+[ext_resource type="PackedScene" uid="uid://bvbvelruu3u7h" path="res://models/low poly environment/rock_06.tscn" id="15_2glqj"]
+[ext_resource type="PackedScene" uid="uid://cm0eigmqtgvit" path="res://models/low poly environment/rose.tscn" id="16_hynyk"]
+[ext_resource type="PackedScene" uid="uid://8kxdfefmv58e" path="res://models/low poly environment/trunk_01.tscn" id="17_avy3l"]
+[ext_resource type="PackedScene" uid="uid://cdnpg80dsw8rl" path="res://models/low poly environment/trunk_02.tscn" id="18_42vus"]
+[ext_resource type="PackedScene" uid="uid://b5ujf8j1y01fl" path="res://models/low poly environment/trunk_03.tscn" id="19_0avig"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_eos63"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_cpjuj"]
+sky_material = SubResource("ProceduralSkyMaterial_eos63")
+
+[sub_resource type="Environment" id="Environment_pwl0c"]
+background_mode = 2
+sky = SubResource("Sky_cpjuj")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ddqhn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cjdq4"]
+
+[node name="World" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+light_energy = 0.72
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_pwl0c")
+
+[node name="floor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0354302, 0)
+material_override = ExtResource("1_ady3n")
+use_collision = true
+size = Vector3(100, 0.001, 100)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_kq0ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.1988, 23.6289, -40.7873)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("3_o55q7")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 1.53383, -0.0349305, -3.28936)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(0.998125, 0, 0, 0, 0.998125, 0, 0, 0, 0.998125, 47.3045, 1.10122, 45.0686)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_ddqhn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+mesh = SubResource("BoxMesh_cjdq4")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 1, 44)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("BoxShape3D_ddqhn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2/CollisionShape3D"]
+mesh = SubResource("BoxMesh_cjdq4")
+skeleton = NodePath("../..")
+
+[node name="bridge_side_wood2" parent="." instance=ExtResource("5_nddtd")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -36.0467, 20.7739, -40.6933)
+
+[node name="Anthurium2" parent="." instance=ExtResource("5_t2y5s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.8152, -0.00629974, 48.012)
+
+[node name="Anthurium3" parent="." instance=ExtResource("5_t2y5s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.2227, -0.03493, 47.9877)
+
+[node name="Anthurium4" parent="." instance=ExtResource("5_t2y5s")]
+transform = Transform3D(0.46481, 0.173655, -1.2428, -0.0722146, 1.75022, 0.114708, 1.33335, 0.0342559, 0.439457, 42.1557, -0.03493, 47.8926)
+
+[node name="Bell_flower" parent="." instance=ExtResource("6_sudu6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.0491, -0.03493, 49.2681)
+
+[node name="Daisy" parent="." instance=ExtResource("8_eracq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.8117, -0.0349305, 48.2877)
+
+[node name="Grass" parent="." instance=ExtResource("9_exop5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.2427, -0.0349305, 48.9256)
+
+[node name="Plant2" parent="." instance=ExtResource("10_tt1if")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.9287, -0.0349305, 45.7716)
+
+[node name="Rock_012" parent="." instance=ExtResource("11_2fnja")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.062, 0.446772, 44.6753)
+
+[node name="Rock_022" parent="." instance=ExtResource("12_2ap3l")]
+transform = Transform3D(1, 0, 0, 0, 0.621531, -0.78339, 0, 0.78339, 0.621531, 33.9753, 0.833961, 43.0697)
+
+[node name="Rock_032" parent="." instance=ExtResource("13_4c7et")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.6941, 0.377631, 41.3382)
+
+[node name="Rock_042" parent="." instance=ExtResource("13_ghn42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, 39)
+
+[node name="Rock_052" parent="." instance=ExtResource("14_qdo1b")]
+transform = Transform3D(-0.783471, 0.127409, -0.608227, -0.619992, -0.093763, 0.778985, 0.0422205, 0.987409, 0.152453, 35.278, 0.477873, 41.5837)
+
+[node name="Rock_06" parent="." instance=ExtResource("15_2glqj")]
+transform = Transform3D(0.996118, 0.088025, 0, -0.088025, 0.996118, 0, 0, 0, 1, 28.8981, 0.620538, 37.6845)
+
+[node name="Rose" parent="." instance=ExtResource("16_hynyk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.6807, -0.0349305, 40.246)
+
+[node name="Rose2" parent="." instance=ExtResource("16_hynyk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.8342, 2.09115, 35.2965)
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("3_o55q7")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 36.8064, -0.0349305, 29.5725)
+
+[node name="Trunk_012" parent="." instance=ExtResource("17_avy3l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.0592, -0.0349305, 34.6074)
+
+[node name="Trunk_022" parent="." instance=ExtResource("18_42vus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.5894, -0.0349305, 26.1686)
+
+[node name="Trunk_03" parent="." instance=ExtResource("19_0avig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.8315, -0.0349305, 31.5403)
+
+[node name="Trunk_04" parent="." instance=ExtResource("19_0avig")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.45802, -0.0349324, 29.1542)
+
+[node name="Trunk_05" parent="." instance=ExtResource("19_0avig")]
+transform = Transform3D(-0.449076, 0, -3.11886, 0, 3.4172, 0, -1.31719, 0, 1.06333, 24.0103, -0.0349343, -24.4643)
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("3_o55q7")]
+transform = Transform3D(2.09071, 0, -5.65096, 0.525112, 6.62737, 0.191969, 5.66053, -0.614802, 2.06937, 0.599953, -0.0349305, -28.903)
