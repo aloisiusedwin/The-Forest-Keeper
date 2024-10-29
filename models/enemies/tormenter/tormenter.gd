@@ -5,6 +5,7 @@ extends CharacterBody3D
 var health = 70
 const speed = 4
 const attack_range = 2.0
+const damage = 20.0
 @onready var nav_agent = $NavigationAgent3D
 
 var state_machine
@@ -46,7 +47,7 @@ func _target_in_range():
 func _hit_finished():
 	if global_position.distance_to(player.global_position) < attack_range + 1.0:
 		var dir = global_position.direction_to(player.global_position)
-		player.hit(dir)
+		player.hit(dir, damage)
 
 
 func _on_area_3d_body_part_hit(dam):

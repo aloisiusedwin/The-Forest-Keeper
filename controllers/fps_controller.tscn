@@ -552,7 +552,7 @@ offset_left = -150.0
 offset_top = -166.0
 offset_right = 2048.0
 offset_bottom = 1208.0
-color = Color(0.968627, 0, 0.0235294, 0.227451)
+color = Color(0.501961, 0.501961, 0.501961, 1)
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0

@@ -1,8 +1,17 @@
 class_name Player
-
 extends CharacterBody3D
-
 @export var ANIMATIONPLAYER : AnimationPlayer
+
+#Health
+var max_hp = 100
+var current_hp = 100
+@export var regen_delay : float = 5.0
+@export var regen_rate : float = 20.0
+@export var damage_taken : float = 0.0
+var last_hit_taken : float = 0.0
+var is_regen_active : bool = false
+var hp_percentage
+var red_alpha
 
 #camera
 @export var TILT_LOWER_LIMIT := deg_to_rad(-40.0)
@@ -47,6 +56,7 @@ func _ready():
 	CROUCH_SHAPECAST.add_exception($".")
 	Global.player = self
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	current_hp = max_hp
 
 func _unhandled_input(event):
 	_mouse_input = event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
@@ -79,6 +89,9 @@ func _headbob(time) -> Vector3:
 	pos.y = sin(time * BOB_FREQUENCY) * BOB_AMP
 	pos.x = cos(time * BOB_FREQUENCY/2) * BOB_AMP
 	return pos
+
+func _process(delta: float) -> void:
+	regen_hp(delta)
 
 func _physics_process(delta: float) -> void:
 	if is_on_floor():
@@ -120,8 +133,39 @@ func update_input(delta: float, speed: float, acceleration: float, deceleration:
 func update_velocity() -> void:
 	move_and_slide()
 
-func hit(dir):
-	hit_rect.visible = true
+func hit(dir, damage):
 	velocity += dir * 8.0
-	await get_tree().create_timer(0.4).timeout
-	hit_rect.visible = false
+	damage_taken = damage
+	current_hp -= damage_taken
+	last_hit_taken = 0.0
+	is_regen_active = false
+	
+	if current_hp <= 0:
+		die()
+	update_hit_effect()
+
+func regen_hp(delta):
+	if !is_regen_active:
+		last_hit_taken += delta
+		if last_hit_taken >= regen_delay:
+			is_regen_active = true
+	
+	if is_regen_active and current_hp < max_hp:
+		update_hit_effect()
+		current_hp += regen_rate * delta
+		if current_hp > max_hp:
+			current_hp = max_hp
+
+func update_hit_effect():
+	if current_hp < 100:
+		hit_rect.visible = true
+	else:
+		hit_rect.visible = false
+		
+	hp_percentage = float(current_hp) / max_hp
+	red_alpha = lerp(0.0, 0.4, 1.0 - hp_percentage) 
+	hit_rect.modulate = Color(1.0, 0.2, 0.2, red_alpha)
+	
+func die():
+	print("ded")
+	get_tree().reload_current_scene()
