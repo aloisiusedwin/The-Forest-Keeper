@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://cfn8jcanr756u"]
 
 [ext_resource type="Material" uid="uid://dvx5rrib5yuge" path="res://materials/grass.tres" id="1_ady3n"]
-[ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller.tscn" id="2_kq0ye"]
+[ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller/fps_controller.tscn" id="2_kq0ye"]
 [ext_resource type="PackedScene" uid="uid://buxbpi624u3q" path="res://models/forestMap/trees/beech/beech.tscn" id="3_o55q7"]
 [ext_resource type="PackedScene" uid="uid://6a0xvbhs7m01" path="res://models/bridge/tscn/bridge_woodside.tscn" id="5_nddtd"]
 [ext_resource type="PackedScene" uid="uid://ypmijk7hswtb" path="res://models/low poly environment/anthurium.tscn" id="5_t2y5s"]

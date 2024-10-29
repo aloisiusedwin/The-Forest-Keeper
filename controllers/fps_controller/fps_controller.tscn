@@ -1,22 +1,23 @@
-[gd_scene load_steps=30 format=3 uid="uid://4cbpynvikrmh"]
+[gd_scene load_steps=31 format=3 uid="uid://4cbpynvikrmh"]
 
-[ext_resource type="Script" path="res://fps_controller.gd" id="1_0fn47"]
+[ext_resource type="Script" path="res://controllers/fps_controller/fps_controller.gd" id="1_0fn47"]
 [ext_resource type="PackedScene" uid="uid://crxf2lgtbbrw3" path="res://models/weapons/pistol/pistol.tscn" id="2_bbrno"]
-[ext_resource type="Script" path="res://Scripts/reticle.gd" id="2_qyc3x"]
-[ext_resource type="Script" path="res://Scripts/interact_ray.gd" id="2_y0lgd"]
+[ext_resource type="Script" path="res://Scripts/UI/reticle.gd" id="2_qyc3x"]
+[ext_resource type="Script" path="res://Scripts/UI/interact_ray.gd" id="2_y0lgd"]
 [ext_resource type="Theme" uid="uid://b33d8vlpvjdwl" path="res://ui/themes/debug.tres" id="3_la0w7"]
-[ext_resource type="Script" path="res://Scripts/debug.gd" id="4_c544d"]
-[ext_resource type="Script" path="res://Scripts/state_machine.gd" id="5_h3u6d"]
-[ext_resource type="Script" path="res://Scripts/idle_player_state.gd" id="6_cthcc"]
-[ext_resource type="Script" path="res://Scripts/walking_player_state.gd" id="7_uykxy"]
-[ext_resource type="Script" path="res://Scripts/sprinting_player_state.gd" id="8_y64dx"]
-[ext_resource type="Script" path="res://Scripts/crouching_player_state.gd" id="9_mvll2"]
-[ext_resource type="Script" path="res://Scripts/sliding_player_state.gd" id="10_ojgis"]
-[ext_resource type="Script" path="res://controllers/jumping_player_state.gd" id="11_b4oom"]
-[ext_resource type="Script" path="res://controllers/falling_player_state.gd" id="12_vs60y"]
+[ext_resource type="PackedScene" uid="uid://b6y6l08yg5cxe" path="res://controllers/weapon_manager/weapon_manager.tscn" id="3_ofn50"]
+[ext_resource type="Script" path="res://Scripts/UI/debug.gd" id="4_c544d"]
+[ext_resource type="Script" path="res://Scripts/movement/state_machine.gd" id="5_h3u6d"]
+[ext_resource type="Script" path="res://Scripts/movement/idle_player_state.gd" id="6_cthcc"]
+[ext_resource type="Script" path="res://Scripts/movement/walking_player_state.gd" id="7_uykxy"]
+[ext_resource type="Script" path="res://Scripts/movement/sprinting_player_state.gd" id="8_y64dx"]
+[ext_resource type="Script" path="res://Scripts/movement/crouching_player_state.gd" id="9_mvll2"]
+[ext_resource type="Script" path="res://Scripts/movement/sliding_player_state.gd" id="10_ojgis"]
+[ext_resource type="Script" path="res://Scripts/movement/jumping_player_state.gd" id="11_b4oom"]
+[ext_resource type="Script" path="res://Scripts/movement/falling_player_state.gd" id="12_vs60y"]
 [ext_resource type="Script" path="res://Scripts/WeaponViewport.gd" id="14_mjbge"]
 [ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
-[ext_resource type="Script" path="res://Scripts/HUD.gd" id="16_es48c"]
+[ext_resource type="Script" path="res://Scripts/UI/HUD.gd" id="16_es48c"]
 [ext_resource type="Script" path="res://models/weapons/pistol/pistol.gd" id="16_iahad"]
 [ext_resource type="Texture2D" uid="uid://lpy6vq78jb23" path="res://models/forestMap/paper/notes.png" id="19_vdg8q"]
 
@@ -392,6 +393,13 @@ collide_with_areas = true
 
 [node name="RayAimEnd" type="Node3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -101.5)
+
+[node name="ViewModel" type="Node3D" parent="Head/Camera3D"]
+
+[node name="WeaponManager" parent="." node_paths=PackedStringArray("player", "bull_raycast", "view_model_container") instance=ExtResource("3_ofn50")]
+player = NodePath("..")
+bull_raycast = NodePath("../Head/Camera3D/RayAim")
+view_model_container = NodePath("../Head/Camera3D/ViewModel")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

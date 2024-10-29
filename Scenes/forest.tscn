@@ -1,8 +1,8 @@
 [gd_scene load_steps=19 format=4 uid="uid://bsnnhn2fuq3rp"]
 
 [ext_resource type="Script" path="res://Scenes/forest.gd" id="1_b1oyq"]
-[ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller.tscn" id="1_xqpnu"]
-[ext_resource type="Texture2D" uid="uid://o8bpwey0jmnf" path="res://textures/coast_sand_rocks_02_diff_1k.jpg" id="2_gb12d"]
+[ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller/fps_controller.tscn" id="1_xqpnu"]
+[ext_resource type="Texture2D" uid="uid://o8bpwey0jmnf" path="res://textures/sand/coast_sand_rocks_02_diff_1k.jpg" id="2_gb12d"]
 [ext_resource type="PackedScene" uid="uid://buxbpi624u3q" path="res://models/forestMap/trees/beech/beech.tscn" id="6_g86oi"]
 [ext_resource type="PackedScene" uid="uid://bkiomthxg4233" path="res://models/forestMap/gubuk/gubuk.tscn" id="7_8k8xh"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="7_tfgmx"]
