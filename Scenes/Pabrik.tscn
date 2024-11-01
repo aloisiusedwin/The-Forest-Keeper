@@ -77,7 +77,8 @@ background_mode = 2
 sky = SubResource("Sky_dymt5")
 tonemap_mode = 3
 glow_enabled = true
-volumetric_fog_density = 0.0275
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0235
 volumetric_fog_albedo = Color(0.625597, 0.625597, 0.625597, 1)
 
 [sub_resource type="Resource" id="Resource_hw2u8"]
