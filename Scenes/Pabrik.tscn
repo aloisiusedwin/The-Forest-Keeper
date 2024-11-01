@@ -3074,7 +3074,7 @@ light_color = Color(0.86, 0.86, 0.86, 1)
 shadow_enabled = true
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("3_eo0nq")]
-transform = Transform3D(0.155262, 0, 0.987873, 0, 1, 0, -0.987873, 0, 0.155262, 10.6345, 5.93241, -118.02)
+transform = Transform3D(0.997942, 0, 0.0641144, 0, 1, 0, -0.0641144, 0, 0.997942, -2.09354, -4.90022, 63.1242)
 
 [node name="QodotMap" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.96163, 0)
