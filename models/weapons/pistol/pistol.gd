@@ -35,7 +35,6 @@ func shoot():
 			instance.set_velocity(rayaim.get_collision_point())
 			if rayaim.get_collider().is_in_group("enemy"):
 				rayaim.get_collider().hit()
-				instance.queue_free()
 		else:
 			instance.set_velocity(rayaim_end.global_position)
 		muzzleflash.visible = !muzzleflash.visible

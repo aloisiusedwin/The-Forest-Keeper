@@ -1,7 +1,17 @@
-[gd_resource type="Resource" script_class="WeaponResource" load_steps=2 format=3 uid="uid://dr4khi2j5o4j2"]
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=4 format=3 uid="uid://dr4khi2j5o4j2"]
 
 [ext_resource type="Script" path="res://controllers/weapon_manager/weapon_resource.gd" id="1_q3lmk"]
+[ext_resource type="PackedScene" uid="uid://bfr8rsojsr42k" path="res://controllers/weapon_manager/Weapon/Pistol/pistol - viewmodel.tscn" id="3_demjq"]
+[ext_resource type="PackedScene" uid="uid://c7k2cygrtbmad" path="res://controllers/weapon_manager/Weapon/Pistol/pistol - worldmodel.tscn" id="3_j82m3"]
 
 [resource]
 script = ExtResource("1_q3lmk")
+view_model = ExtResource("3_demjq")
+world_model = ExtResource("3_j82m3")
+view_model_pos = Vector3(0.28, -0.296, -0.685)
+view_model_rot = Vector3(0.00872665, 0.0122173, 0)
+view_model_scale = Vector3(0.075, 0.075, 0.075)
+world_model_pos = Vector3(-1, -1, -1)
+world_model_rot = Vector3(-1, -1, -1)
+world_model_scale = Vector3(1, 1, 1)
 damage = 35

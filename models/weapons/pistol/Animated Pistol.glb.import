@@ -35,7 +35,7 @@ _subresources={
 "animations": {
 "PistolArmature|Fire": {
 "save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": "",
+"save_to_file/keep_custom_tracks": true,
 "save_to_file/path": "",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
@@ -1834,7 +1834,7 @@ _subresources={
 },
 "PistolArmature|Reload": {
 "save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": "",
+"save_to_file/keep_custom_tracks": true,
 "save_to_file/path": "",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
@@ -3633,7 +3633,7 @@ _subresources={
 },
 "PistolArmature|Slide": {
 "save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": "",
+"save_to_file/keep_custom_tracks": true,
 "save_to_file/path": "",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
@@ -5440,6 +5440,11 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/path": ""
+}
+},
+"nodes": {
+"PATH:RootNode/PistolArmature/Skeleton3D": {
+"rest_pose/external_animation_library": null
 }
 }
 }
