@@ -2,7 +2,7 @@ class_name SprintingPlayerState
 
 extends PlayerMovementState
 
-@export var SPEED: float = 8.5
+@export var SPEED: float = 7.5
 @export var ACCELERATION: float = 0.1
 @export var DECELERATION: float = 0.25
 

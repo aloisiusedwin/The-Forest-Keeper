@@ -1,8 +1,11 @@
-[gd_resource type="Resource" script_class="WeaponResource" load_steps=4 format=3 uid="uid://dr4khi2j5o4j2"]
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=7 format=3 uid="uid://dr4khi2j5o4j2"]
 
+[ext_resource type="AudioStream" uid="uid://ve30pm46teic" path="res://controllers/weapon_manager/Weapon/Pistol/sfx/equip.wav" id="1_ecpa5"]
 [ext_resource type="Script" path="res://controllers/weapon_manager/weapon_resource.gd" id="1_q3lmk"]
+[ext_resource type="AudioStream" uid="uid://c8a8crvdowftb" path="res://controllers/weapon_manager/Weapon/Pistol/sfx/reload.wav" id="2_l6ky8"]
 [ext_resource type="PackedScene" uid="uid://bfr8rsojsr42k" path="res://controllers/weapon_manager/Weapon/Pistol/pistol - viewmodel.tscn" id="3_demjq"]
 [ext_resource type="PackedScene" uid="uid://c7k2cygrtbmad" path="res://controllers/weapon_manager/Weapon/Pistol/pistol - worldmodel.tscn" id="3_j82m3"]
+[ext_resource type="AudioStream" uid="uid://376vdtyyh8jy" path="res://controllers/weapon_manager/Weapon/Pistol/sfx/shot.WAV" id="4_5hdp3"]
 
 [resource]
 script = ExtResource("1_q3lmk")
@@ -11,7 +14,20 @@ world_model = ExtResource("3_j82m3")
 view_model_pos = Vector3(0.28, -0.296, -0.685)
 view_model_rot = Vector3(0.00872665, 0.0122173, 0)
 view_model_scale = Vector3(0.075, 0.075, 0.075)
-world_model_pos = Vector3(-1, -1, -1)
-world_model_rot = Vector3(-1, -1, -1)
-world_model_scale = Vector3(1, 1, 1)
+world_model_pos = Vector3(0, -1.37862, 0)
+world_model_rot = Vector3(-1.52367, 1.33343, 0)
+world_model_scale = Vector3(0.07, 0.07, 0.07)
+view_equip_anim = "Rack"
+view_rack_anim = "Rack"
+view_shoot_anim = "Shoot"
+view_reload_anim = "Reload"
+shoot_sound = ExtResource("4_5hdp3")
+reload_sound = ExtResource("2_l6ky8")
+equip_sound = ExtResource("1_ecpa5")
 damage = 35
+current_ammo = 12
+reserve_ammo = 36
+magazine = 12
+maxammo = 36
+auto_fire = false
+fire_rate = 4.0

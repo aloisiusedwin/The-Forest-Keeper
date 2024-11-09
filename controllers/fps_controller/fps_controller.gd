@@ -65,8 +65,11 @@ func _unhandled_input(event):
 		_tilt_input = -event.relative.y * SENSITIVITY
 
 func _input(event):
-	if event.is_action_pressed("exit"):
-		get_tree().quit()
+	if event is InputEventMouseButton:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	elif event.is_action_pressed("exit"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
 func update_camera(delta) -> void:
 	_current_rotation = _rotation_input
 	_mouse_rotation.x += _tilt_input * delta
