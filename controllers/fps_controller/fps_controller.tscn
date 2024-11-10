@@ -1,7 +1,6 @@
-[gd_scene load_steps=32 format=3 uid="uid://4cbpynvikrmh"]
+[gd_scene load_steps=30 format=3 uid="uid://4cbpynvikrmh"]
 
 [ext_resource type="Script" path="res://controllers/fps_controller/fps_controller.gd" id="1_0fn47"]
-[ext_resource type="PackedScene" uid="uid://crxf2lgtbbrw3" path="res://models/weapons/pistol/pistol.tscn" id="2_bbrno"]
 [ext_resource type="Script" path="res://Scripts/UI/reticle.gd" id="2_qyc3x"]
 [ext_resource type="Script" path="res://Scripts/UI/interact_ray.gd" id="2_y0lgd"]
 [ext_resource type="Theme" uid="uid://b33d8vlpvjdwl" path="res://ui/themes/debug.tres" id="3_la0w7"]
@@ -19,7 +18,6 @@
 [ext_resource type="Script" path="res://Scripts/WeaponViewport.gd" id="14_mjbge"]
 [ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
 [ext_resource type="Script" path="res://Scripts/UI/HUD.gd" id="16_es48c"]
-[ext_resource type="Script" path="res://models/weapons/pistol/pistol.gd" id="16_iahad"]
 [ext_resource type="Texture2D" uid="uid://lpy6vq78jb23" path="res://models/forestMap/paper/notes.png" id="19_vdg8q"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o26h5"]
@@ -490,11 +488,6 @@ cull_mask = 1047554
 script = ExtResource("15_c2n5p")
 MAIN_CAMERA = NodePath("../../../Head/Camera3D")
 
-[node name="Pistol" parent="Weapon/SubViewport/Camera3D" instance=ExtResource("2_bbrno")]
-transform = Transform3D(0.0749944, 7.9959e-06, 0.00091624, 0, 0.0749971, -0.00065449, -0.000916274, 0.000654441, 0.0749916, 0.28, -0.296, -0.685)
-visible = false
-script = ExtResource("16_iahad")
-
 [node name="ViewModel" type="Node3D" parent="Weapon/SubViewport/Camera3D"]
 
 [node name="WorldModel" type="Node3D" parent="."]
@@ -573,4 +566,3 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
-[connection signal="update_ammo" from="Weapon/SubViewport/Camera3D/Pistol" to="CanvasLayer" method="_on_pistol_update_ammo"]

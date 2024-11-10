@@ -13,6 +13,8 @@ var current_weapon_world_model : Node3D
 @export var view_model_container : Node3D
 @export var world_model_container : Node3D
 
+var current_weapon_view_model_muzzle : Node3D
+
 @onready var audio_stream_player = $AudioStreamPlayer3D
 
 func update_weapon_model() -> void:
@@ -33,6 +35,7 @@ func update_weapon_model() -> void:
 			current_weapon_world_model.rotation = current_weapon.world_model_rot
 			current_weapon_world_model.scale = current_weapon.world_model_scale
 		current_weapon.is_equipped = true
+	current_weapon_view_model_muzzle = view_model_container.find_child("MuzzlePlace", true, false) if current_weapon_view_model else null
 
 func play_sound(sound : AudioStream):
 	if sound:
@@ -83,17 +86,36 @@ func get_anim() -> String:
 	if not anim_player: return ""
 	return anim_player.current_animation
 
-func is_animation_playing() -> bool:
+func is_animation_playing(exclude_anim: String = "") -> bool:
 	var anim_player: AnimationPlayer = current_weapon_view_model.get_node_or_null("AnimationPlayer")
 	if anim_player:
-		return anim_player.is_playing()
+		return anim_player.is_playing() and anim_player.current_animation != exclude_anim
 	return false
 
+func show_muzzle_flash():
+	$ViewMuzzleFlash.emitting = true
+
+func make_bullet_trail(target_pos : Vector3):
+	if current_weapon_view_model_muzzle == null:
+		return
+	var muzzle = current_weapon_view_model_muzzle
+	var bullet_dir = (target_pos - muzzle.global_position).normalized()
+	var start_pos = muzzle.global_position + bullet_dir * 0.25
+	
+	if (target_pos - start_pos).length() > 3.0:
+		var bullet_tracer = preload("res://controllers/weapon_manager/muzzleflash/bullet_tracer.tscn").instantiate()
+		player.add_sibling(bullet_tracer)
+		bullet_tracer.global_position = start_pos
+		bullet_tracer.target_pos = target_pos
+		bullet_tracer.look_at(target_pos)
+
 func _unhandled_input(event):
-	if current_weapon and is_inside_tree() and !is_animation_playing():
-		if event.is_action_pressed("attack") and allow_shoot:
+	if current_weapon and is_inside_tree():
+		if event.is_action_pressed("attack") and allow_shoot and !is_animation_playing("Reload"):
+			print("Trigger down")
 			current_weapon.trigger_down = true
 		elif event.is_action_released("attack"):
+			print("NOT Trigger down")
 			current_weapon.trigger_down = false
 		
 		if event.is_action_pressed("reload"):
@@ -102,8 +124,9 @@ func _unhandled_input(event):
 func _ready() -> void:
 	update_weapon_model()
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if current_weapon:
 		current_weapon.on_process(delta)
+	if current_weapon_view_model_muzzle:
+		$ViewMuzzleFlash.global_position = current_weapon_view_model_muzzle.global_position

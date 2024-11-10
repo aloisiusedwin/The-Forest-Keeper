@@ -78,23 +78,33 @@ func on_process(delta):
 		else:
 			reload_pressed()
 
+var shots_fired : int = 0
 func shot():
 	weapon_manager.play_anim(view_shoot_anim)
 	weapon_manager.play_sound(shoot_sound)
 	
 	var raycast = weapon_manager.bullet_raycast
-	var normal = raycast.get_collision_normal()
-	var point = raycast.get_collision_point()
-	
 	raycast.target_position = Vector3(0,0,-abs(raycast_distance))
 	raycast.force_raycast_update()
+	var bullet_target_pos = raycast.global_transform * raycast.target_position
 	
 	if raycast.is_colliding():
+		var object = raycast.get_collider()
+		var normal = raycast.get_collision_normal()
+		var point = raycast.get_collision_point()
+		bullet_target_pos = point
+		BulletDecalPool.spawn_bullet_decal(point, normal, object, raycast.global_basis)
+		
 		if raycast.get_collider().is_in_group("enemy"):
 				raycast.get_collider().hit(1)
 	
+	weapon_manager.show_muzzle_flash()
+	if shots_fired % 2 == 0:
+		weapon_manager.make_bullet_trail(bullet_target_pos)
+	
 	last_fire_time = Time.get_ticks_msec()
 	current_ammo -= 1
+	shots_fired += 1
 
 func get_amount_can_reload() -> int:
 	var reloadammount = min(magazine - current_ammo, magazine, reserve_ammo)
