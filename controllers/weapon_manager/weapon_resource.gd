@@ -15,6 +15,7 @@ extends Resource
 @export var view_rack_anim : String
 @export var view_shoot_anim : String
 @export var view_reload_anim : String
+@export var view_idle_anim : String
 
 #SFX
 @export var shoot_sound : AudioStream
@@ -67,7 +68,6 @@ func on_equip():
 func on_unequip():
 	pass
 
-var bullet = load("res://models/weapons/pistol/bullet.tscn")
 var instance
 var last_fire_time = -99999
 

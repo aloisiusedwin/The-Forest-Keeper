@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="MeleeWeaponResource" load_steps=7 format=3 uid="uid://t7ppj5xrrqfj"]
+
+[ext_resource type="AudioStream" uid="uid://ve30pm46teic" path="res://controllers/weapon_manager/Weapon/Pistol/sfx/equip.wav" id="1_0gnih"]
+[ext_resource type="Script" path="res://controllers/weapon_manager/melee_weapon_resource.gd" id="1_y1vq2"]
+[ext_resource type="AudioStream" uid="uid://by1walkfehk5k" path="res://controllers/weapon_manager/Weapon/Amanremu/sfx/cc0-swoosh.wav" id="2_1bgde"]
+[ext_resource type="PackedScene" uid="uid://ddwh7n0ppw6gg" path="res://controllers/weapon_manager/Weapon/Amanremu/amanremu viewmodel.tscn" id="2_xmnwj"]
+[ext_resource type="PackedScene" uid="uid://bh3w7sw5pao5v" path="res://controllers/weapon_manager/Weapon/Amanremu/amanremu worldmodel.tscn" id="3_qtjjd"]
+[ext_resource type="AudioStream" uid="uid://cxghowxfr7t3j" path="res://controllers/weapon_manager/Weapon/Amanremu/sfx/knifehit.wav" id="4_eev7p"]
+
+[resource]
+script = ExtResource("1_y1vq2")
+max_hit_dist = 2.3
+miss_sound = ExtResource("2_1bgde")
+view_model = ExtResource("2_xmnwj")
+world_model = ExtResource("3_qtjjd")
+view_model_pos = Vector3(1.151, 0.169, -2.121)
+view_model_rot = Vector3(-1.38405, 2.61799, 0.122173)
+view_model_scale = Vector3(0.6, 0.6, 0.6)
+world_model_pos = Vector3(-999, -2, -2)
+world_model_rot = Vector3(0, 0, 0)
+world_model_scale = Vector3(1, 1, 1)
+view_equip_anim = "Idle"
+view_rack_anim = ""
+view_shoot_anim = "Shoot"
+view_reload_anim = ""
+view_idle_anim = "Idle"
+shoot_sound = ExtResource("4_eev7p")
+equip_sound = ExtResource("1_0gnih")
+damage = 20
+current_ammo = 1
+reserve_ammo = 0
+magazine = 0
+maxammo = 0
+auto_fire = true
+fire_rate = 500.0

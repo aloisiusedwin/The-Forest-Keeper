@@ -1,6 +1,6 @@
 class_name BulletDecalPool
 
-const MAX_BULLET_DECALS = 1000
+const MAX_BULLET_DECALS = 100
 static var decal_pool := []
 
 static func spawn_bullet_decal(global_pos : Vector3, normal : Vector3, parent : Node3D, bullet_basis : Basis, texture_override = null):

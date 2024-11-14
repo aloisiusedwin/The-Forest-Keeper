@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=4 uid="uid://bkta2apcgmp2b"]
+[gd_scene load_steps=4 format=4 uid="uid://c588t4l576qie"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8rd88"]
 resource_name = "lambert2SG"
