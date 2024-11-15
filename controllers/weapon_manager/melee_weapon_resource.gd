@@ -15,7 +15,6 @@ func shot():
 	raycast.force_raycast_update()
 	
 	var bullet_target_pos = raycast.global_transform * raycast.target_position
-	var raycast_dir = (bullet_target_pos - raycast.global_position).normalized()
 	if raycast.is_colliding():
 		weapon_manager.play_sound(shoot_sound)
 		var obj = raycast.get_collider()
@@ -24,12 +23,10 @@ func shot():
 		bullet_target_pos = pt
 		BulletDecalPool.spawn_bullet_decal(pt, nrml, obj, raycast.global_basis, preload("res://controllers/weapon_manager/decal/knifedecal.png"))
 		
-		if obj.has_method("take_backstab_damage") and raycast_dir.dot(-obj.global_basis.z) > 0.4 and (obj.global_transform.affine_inverse() * raycast.global_position).z > 0.0:
-			obj.take_backstab_damage(self.damage)
+		if obj.is_in_group("enemy"):
 			#var blood_splatter = preload("res://FPSController/weapon_manager/knife/blood_splatter.tscn").instantiate()
 			#obj.add_sibling(blood_splatter)
 			#blood_splatter.global_position = pt
-		elif obj.is_in_group("enemy"):
 			raycast.get_collider().hit(1)
 	else:
 		weapon_manager.play_sound(miss_sound)

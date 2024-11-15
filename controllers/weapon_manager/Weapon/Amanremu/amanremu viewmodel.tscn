@@ -170,7 +170,6 @@ _data = {
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0.000836372, 1.94586, 0.00776815)
 
 [node name="Node3D" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Cube_001" type="Node3D" parent="Node3D"]
 transform = Transform3D(-0.0224089, 0.0613145, -0.0094479, -0.00191814, 0.0238331, 0.109502, 0.00108235, 1.31168, -0.00154801, -0.748817, 1.44258, -0.390914)
