@@ -13,7 +13,18 @@ var is_regen_active : bool = false
 var hp_percentage
 var red_alpha
 
-#camera
+#Health
+var max_hp = 100
+var current_hp = 100
+@export var regen_delay : float = 5.0
+@export var regen_rate : float = 20.0
+@export var damage_taken : float = 0.0
+var last_hit_taken : float = 0.0
+var is_regen_active : bool = false
+var hp_percentage
+var red_alpha
+
+# Camera settings
 @export var TILT_LOWER_LIMIT := deg_to_rad(-40.0)
 @export var TILT_UPPER_LIMIT := deg_to_rad(60.0)
 @onready var CAMERA_CONTROLLER : Camera3D = $Head/Camera3D
@@ -22,11 +33,17 @@ var red_alpha
 
 @onready var hit_rect = $HitUI/ColorRect
 
-#movement
+# Movement and crouching
 @export var TOGGLE_CROUCH : bool = true
 @onready var CROUCH_SHAPECAST : ShapeCast3D = %ShapeCast3D
 @export_range(5,10, 0.1) var CROUCH_ANIMATION_SPEED : float = 7.0
-const SENSITIVITY = 0.2 # Change only the second float
+const SENSITIVITY = 0.2
+const JOY_SENSITIVITY = 1.0  # Adjust rotation speed for joystick input
+const JOY_DEADZONE = 0.1     # Deadzone for joystick input to prevent drift
+
+# Movement speeds
+const WALK_SPEED = 5.0
+const SPRINT_SPEED = 8.5
 
 var gravity = 12.0
 var air_time = 0.0
@@ -34,16 +51,17 @@ var fall_multiplier = 2.0
 
 const hit_stagger = 8.0
 
-#headbob
-const BOB_FREQUENCY = 2.0 #how often footsteps happen
-const BOB_AMP = 0.08 #how far camera go when bobbing
+# Headbob
+const BOB_FREQUENCY = 2.0
+const BOB_AMP = 0.08
 var t_bob = 0.0
 var disable_headbob: bool = false
 
-#fov
+# FOV
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
 
+# Mouse and joystick input variables
 var _mouse_input : bool = false
 var _rotation_input : float
 var _tilt_input : float
@@ -59,6 +77,7 @@ func _ready():
 	current_hp = max_hp
 
 func _unhandled_input(event):
+	# Mouse input for camera rotation
 	_mouse_input = event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
 	if _mouse_input:
 		_rotation_input = -event.relative.x * SENSITIVITY
@@ -76,22 +95,23 @@ func update_camera(delta) -> void:
 	_mouse_rotation.x += _tilt_input * delta
 	_mouse_rotation.x = clamp(_mouse_rotation.x, TILT_LOWER_LIMIT, TILT_UPPER_LIMIT)
 	_mouse_rotation.y += _rotation_input * delta
-	
-	_player_rotation = Vector3(0.0,_mouse_rotation.y,0.0)
-	_camera_rotation = Vector3(_mouse_rotation.x,0.0,0.0)
+
+	_player_rotation = Vector3(0.0, _mouse_rotation.y, 0.0)
+	_camera_rotation = Vector3(_mouse_rotation.x, 0.0, 0.0)
 
 	CAMERA_CONTROLLER.transform.basis = Basis.from_euler(_camera_rotation)
 	global_transform.basis = Basis.from_euler(_player_rotation)
-	
+
 	CAMERA_CONTROLLER.rotation.z = 0.0
 
+	# Reset inputs after each frame to avoid accumulation
 	_rotation_input = 0.0
 	_tilt_input = 0.0
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
 	pos.y = sin(time * BOB_FREQUENCY) * BOB_AMP
-	pos.x = cos(time * BOB_FREQUENCY/2) * BOB_AMP
+	pos.x = cos(time * BOB_FREQUENCY / 2) * BOB_AMP
 	return pos
 
 func _process(delta: float) -> void:
@@ -117,11 +137,11 @@ func _physics_process(delta: float) -> void:
 
 func update_gravity(delta) -> void:
 	velocity.y -= (gravity + gravity * air_time * fall_multiplier) * delta
-	
+
 func update_input(delta: float, speed: float, acceleration: float, deceleration: float) -> void:
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	var direction = (head.transform.basis * transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
+
 	if is_on_floor():
 		if direction:
 			velocity.x = lerp(velocity.x, direction.x * speed, acceleration)
@@ -129,11 +149,10 @@ func update_input(delta: float, speed: float, acceleration: float, deceleration:
 		else:
 			velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
 			velocity.z = lerp(velocity.z, direction.z * speed, delta * 7.0)
-
 	else:
 		velocity.x = lerp(velocity.x, direction.x * speed, delta * 2.5)
 		velocity.y = lerp(velocity.y, direction.y * speed, delta * 2.5)
-	
+
 func update_velocity() -> void:
 	move_and_slide()
 
