@@ -13,17 +13,6 @@ var is_regen_active : bool = false
 var hp_percentage
 var red_alpha
 
-#Health
-var max_hp = 100
-var current_hp = 100
-@export var regen_delay : float = 5.0
-@export var regen_rate : float = 20.0
-@export var damage_taken : float = 0.0
-var last_hit_taken : float = 0.0
-var is_regen_active : bool = false
-var hp_percentage
-var red_alpha
-
 # Camera settings
 @export var TILT_LOWER_LIMIT := deg_to_rad(-40.0)
 @export var TILT_UPPER_LIMIT := deg_to_rad(60.0)
