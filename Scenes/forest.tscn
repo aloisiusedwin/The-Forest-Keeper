@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://bsnnhn2fuq3rp"]
+[gd_scene load_steps=20 format=4 uid="uid://bsnnhn2fuq3rp"]
 
 [ext_resource type="Script" path="res://Scenes/forest.gd" id="1_b1oyq"]
 [ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller/fps_controller.tscn" id="1_xqpnu"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://addons/simplegrasstextured/grass.gd" id="9_ujep3"]
 [ext_resource type="PackedScene" uid="uid://bayr6lsu8wc4a" path="res://models/forestMap/table/table.tscn" id="9_uswrp"]
 [ext_resource type="PackedScene" uid="uid://dq58xcv1vsqj7" path="res://models/enemies/tormenter/tormenter.tscn" id="11_bbirf"]
+[ext_resource type="PackedScene" uid="uid://cwpybijb5cj4x" path="res://models/forestMap/paper/notes.tscn" id="12_lgw4x"]
 
 [sub_resource type="Sky" id="Sky_h1j3r"]
 
@@ -721,5 +722,16 @@ autostart = true
 
 [node name="Tormenter" parent="." instance=ExtResource("11_bbirf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.6455, -0.03493, 74.6818)
+
+[node name="Notes" type="Node3D" parent="."]
+
+[node name="Notes2" parent="Notes" instance=ExtResource("12_lgw4x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.3939, 0.99283, 72.6859)
+isi_notes = "\"Sudah 5 hari berlalu semenjak itu, aku harap mereka baik-baik saja\""
+
+[node name="Notes" parent="Notes" instance=ExtResource("12_lgw4x")]
+transform = Transform3D(0.862911, 0, -0.505356, 0, 1, 0, 0.505356, 0, 0.862911, 86.5088, 0.992838, 72.7781)
+prompt_message = "Press E to Interact"
+isi_notes = "“Mereka datang tanpa henti”"
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
