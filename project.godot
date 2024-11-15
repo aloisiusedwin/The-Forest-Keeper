@@ -29,7 +29,7 @@ window/vsync/vsync_mode=0
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/simplegrasstextured/plugin.cfg")
+enabled=PackedStringArray("res://addons/qodot/plugin.cfg", "res://addons/simplegrasstextured/plugin.cfg")
 
 [input]
 
@@ -109,9 +109,9 @@ interact={
 3d_render/layer_1="main"
 3d_render/layer_2="weapon"
 
-[physics]
+[rendering]
 
-3d/default_gravity=15.0
+occlusion_culling/use_occlusion_culling=true
 
 [shader_globals]
 

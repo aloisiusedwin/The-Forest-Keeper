@@ -717,7 +717,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.2185, 0.308349, 3.45426)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.47487, 0.308349, 37.7912)
 
 [node name="EnemySpawnTimer" type="Timer" parent="."]
-wait_time = 5.0
 autostart = true
 
 [node name="Tormenter" parent="." instance=ExtResource("11_bbirf")]

@@ -26,7 +26,7 @@ var red_alpha
 @export var TOGGLE_CROUCH : bool = true
 @onready var CROUCH_SHAPECAST : ShapeCast3D = %ShapeCast3D
 @export_range(5,10, 0.1) var CROUCH_ANIMATION_SPEED : float = 7.0
-const SENSITIVITY = 0.2 # Change only the second float
+const SENSITIVITY = 0.5 # Change only the second float
 
 var gravity = 12.0
 var air_time = 0.0
@@ -76,13 +76,13 @@ func update_camera(delta) -> void:
 	_mouse_rotation.x += _tilt_input * delta
 	_mouse_rotation.x = clamp(_mouse_rotation.x, TILT_LOWER_LIMIT, TILT_UPPER_LIMIT)
 	_mouse_rotation.y += _rotation_input * delta
-	
+
 	_player_rotation = Vector3(0.0,_mouse_rotation.y,0.0)
 	_camera_rotation = Vector3(_mouse_rotation.x,0.0,0.0)
 
 	CAMERA_CONTROLLER.transform.basis = Basis.from_euler(_camera_rotation)
 	global_transform.basis = Basis.from_euler(_player_rotation)
-	
+
 	CAMERA_CONTROLLER.rotation.z = 0.0
 
 	_rotation_input = 0.0
@@ -102,26 +102,26 @@ func _physics_process(delta: float) -> void:
 		air_time = 0.0
 	else:
 		air_time += delta
-	
+
 	update_camera(delta)
 	Global.debug.add_property("Velocity","%.2f" % velocity.length(), 1)
-		
+
 	#headbob
 	if !disable_headbob:
 		t_bob += delta * velocity.length() * float(is_on_floor())
 		camera.transform.origin = _headbob(t_bob)
-	
+
 	var velocity_clamped = clamp(velocity.length(), 0.5, velocity.length() * 2)
 	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
 
 func update_gravity(delta) -> void:
 	velocity.y -= (gravity + gravity * air_time * fall_multiplier) * delta
-	
+
 func update_input(delta: float, speed: float, acceleration: float, deceleration: float) -> void:
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	var direction = (head.transform.basis * transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
+
 	if is_on_floor():
 		if direction:
 			velocity.x = lerp(velocity.x, direction.x * speed, acceleration)
@@ -133,7 +133,7 @@ func update_input(delta: float, speed: float, acceleration: float, deceleration:
 	else:
 		velocity.x = lerp(velocity.x, direction.x * speed, delta * 2.5)
 		velocity.y = lerp(velocity.y, direction.y * speed, delta * 2.5)
-	
+
 func update_velocity() -> void:
 	move_and_slide()
 
