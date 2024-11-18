@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcxvt1pq1fa86"
+uid="uid://cyaoknukdw1lj"
 path.s3tc="res://.godot/imported/large_industrial_storage_tanks_7.png-2f6f28f7892b830f80ae967a81a67f08.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "7b07b56a4b7a8788b605dfa567b2c491"
 }
 
 [deps]
