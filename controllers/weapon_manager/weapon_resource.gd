@@ -93,7 +93,8 @@ func shot():
 		var normal = raycast.get_collision_normal()
 		var point = raycast.get_collision_point()
 		bullet_target_pos = point
-		BulletDecalPool.spawn_bullet_decal(point, normal, object, raycast.global_basis)
+		if !object.is_in_group("enemy"):
+			BulletDecalPool.spawn_bullet_decal(point, normal, object, raycast.global_basis)
 		
 		if raycast.get_collider().is_in_group("enemy"):
 				raycast.get_collider().hit(1)

@@ -21,12 +21,13 @@ func shot():
 		var nrml = raycast.get_collision_normal()
 		var pt = raycast.get_collision_point()
 		bullet_target_pos = pt
-		BulletDecalPool.spawn_bullet_decal(pt, nrml, obj, raycast.global_basis, preload("res://controllers/weapon_manager/decal/knifedecal.png"))
+		if !obj.is_in_group("enemy"):
+			BulletDecalPool.spawn_bullet_decal(pt, nrml, obj, raycast.global_basis, preload("res://controllers/weapon_manager/decal/knifedecal.png"))
 		
 		if obj.is_in_group("enemy"):
-			#var blood_splatter = preload("res://FPSController/weapon_manager/knife/blood_splatter.tscn").instantiate()
-			#obj.add_sibling(blood_splatter)
-			#blood_splatter.global_position = pt
+			var blood_splatter = preload("res://controllers/weapon_manager/bloodsplatter/blood_splatter.tscn").instantiate()
+			obj.add_sibling(blood_splatter)
+			blood_splatter.global_position = pt
 			raycast.get_collider().hit(1)
 	else:
 		weapon_manager.play_sound(miss_sound)

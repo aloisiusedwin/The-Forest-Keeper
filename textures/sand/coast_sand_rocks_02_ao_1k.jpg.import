@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3t2r51coljbu"
-path="res://.godot/imported/coast_sand_rocks_02_ao_1k.jpg-1af0884bf0808a2731370e53dcbf41c5.ctex"
+path.s3tc="res://.godot/imported/coast_sand_rocks_02_ao_1k.jpg-1af0884bf0808a2731370e53dcbf41c5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,7 +12,7 @@ metadata={
 [deps]
 
 source_file="res://textures/sand/coast_sand_rocks_02_ao_1k.jpg"
-dest_files=["res://.godot/imported/coast_sand_rocks_02_ao_1k.jpg-1af0884bf0808a2731370e53dcbf41c5.ctex"]
+dest_files=["res://.godot/imported/coast_sand_rocks_02_ao_1k.jpg-1af0884bf0808a2731370e53dcbf41c5.s3tc.ctex"]
 
 [params]
 

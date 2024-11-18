@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://joe8qyr1j01t"
+uid="uid://dn574ejc0l7x3"
 path.s3tc="res://.godot/imported/oil_tank_0.png-2bc1c5c76111c46a1326323bcacdfcb5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "3e4a82482f0dac2fb4a57ae3ff5f3bc5"
 }
 
 [deps]

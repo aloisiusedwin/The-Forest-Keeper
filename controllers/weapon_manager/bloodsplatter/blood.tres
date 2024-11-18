@@ -1,0 +1,138 @@
+[gd_resource type="VisualShader" load_steps=14 format=3 uid="uid://cryfr8t8syueb"]
+
+[sub_resource type="Gradient" id="Gradient_ibhrc"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_42ke3"]
+gradient = SubResource("Gradient_ibhrc")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.1)
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_h25rs"]
+output_port_for_preview = 0
+texture = SubResource("GradientTexture2D_42ke3")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_cjmpk"]
+frequency = 0.0082
+fractal_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cl53h"]
+noise = SubResource("FastNoiseLite_cjmpk")
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_mvj5h"]
+output_port_for_preview = 0
+texture = SubResource("NoiseTexture2D_cl53h")
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_8fcat"]
+output_port_for_preview = 0
+operator = 2
+
+[sub_resource type="VisualShaderNodeFloatOp" id="VisualShaderNodeFloatOp_t64io"]
+output_port_for_preview = 0
+default_input_values = [0, 0.0, 1, 5.0]
+operator = 5
+
+[sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_7ushe"]
+output_port_for_preview = 0
+operator = 2
+
+[sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_gjxya"]
+constant = Color(0.999031, 0, 0.0769615, 1)
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_kl3qy"]
+constant = 0.94
+
+[sub_resource type="VisualShaderNodeFloatFunc" id="VisualShaderNodeFloatFunc_tuhqh"]
+output_port_for_preview = 0
+function = 31
+
+[sub_resource type="VisualShaderNodeBillboard" id="VisualShaderNodeBillboard_087ua"]
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+uniform sampler2D tex_frg_2;
+uniform sampler2D tex_frg_3;
+
+
+
+void vertex() {
+	mat4 n_out2p0;
+// GetBillboardMatrix:2
+	{
+		mat4 __mvm = VIEW_MATRIX * mat4(INV_VIEW_MATRIX[0], INV_VIEW_MATRIX[1], INV_VIEW_MATRIX[2], MODEL_MATRIX[3]);
+		n_out2p0 = __mvm;
+	}
+
+
+// Output:0
+	MODELVIEW_MATRIX = n_out2p0;
+
+
+}
+
+void fragment() {
+// ColorConstant:7
+	vec4 n_out7p0 = vec4(0.999031, 0.000000, 0.076962, 1.000000);
+
+
+// Texture2D:2
+	vec4 n_out2p0 = texture(tex_frg_2, UV);
+
+
+// Texture2D:3
+	vec4 n_out3p0 = texture(tex_frg_3, UV);
+
+
+// FloatOp:5
+	float n_in5p1 = 5.00000;
+	float n_out5p0 = pow(n_out3p0.x, n_in5p1);
+
+
+// FloatOp:4
+	float n_out4p0 = n_out2p0.x * n_out5p0;
+
+
+// VectorOp:6
+	vec3 n_out6p0 = vec3(n_out7p0.xyz) * vec3(n_out4p0);
+
+
+// FloatConstant:8
+	float n_out8p0 = 0.940000;
+
+
+// FloatFunc:9
+	float n_out9p0 = 1.0 - n_out4p0;
+
+
+// Output:0
+	ALBEDO = n_out6p0;
+	ALPHA = n_out8p0;
+	ALPHA_SCISSOR_THRESHOLD = n_out9p0;
+
+
+}
+"
+nodes/vertex/2/node = SubResource("VisualShaderNodeBillboard_087ua")
+nodes/vertex/2/position = Vector2(24.2513, 317.296)
+nodes/vertex/connections = PackedInt32Array(2, 0, 0, 10)
+nodes/fragment/0/position = Vector2(720, 120)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_h25rs")
+nodes/fragment/2/position = Vector2(-220, 160)
+nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_mvj5h")
+nodes/fragment/3/position = Vector2(-400, 660)
+nodes/fragment/4/node = SubResource("VisualShaderNodeFloatOp_8fcat")
+nodes/fragment/4/position = Vector2(160, 560)
+nodes/fragment/5/node = SubResource("VisualShaderNodeFloatOp_t64io")
+nodes/fragment/5/position = Vector2(-120, 760)
+nodes/fragment/6/node = SubResource("VisualShaderNodeVectorOp_7ushe")
+nodes/fragment/6/position = Vector2(400, 300)
+nodes/fragment/7/node = SubResource("VisualShaderNodeColorConstant_gjxya")
+nodes/fragment/7/position = Vector2(160, 360)
+nodes/fragment/8/node = SubResource("VisualShaderNodeFloatConstant_kl3qy")
+nodes/fragment/8/position = Vector2(400, 680)
+nodes/fragment/9/node = SubResource("VisualShaderNodeFloatFunc_tuhqh")
+nodes/fragment/9/position = Vector2(400, 840)
+nodes/fragment/connections = PackedInt32Array(2, 0, 4, 0, 3, 0, 5, 0, 5, 0, 4, 1, 4, 0, 6, 1, 7, 0, 6, 0, 6, 0, 0, 0, 8, 0, 0, 1, 4, 0, 9, 0, 9, 0, 0, 19)
