@@ -30,5 +30,8 @@ func _physics_process(delta: float) -> void:
 		if collider is Interactable:
 			prompt.text = collider.prompt_message
 			if Input.is_action_just_pressed("interact"):
-				collider.interact(self)  # Memanggil interact() dari Interactable
-				Notes(collider.isi_notes)  # Mengirim isi_notes ke fungsi Notes
+				if collider.name == "flashy" :
+					collider.interact(owner) 
+				else:
+					collider.interact(self)  # Memanggil interact() dari Interactable
+					Notes(collider.isi_notes)  # Mengirim isi_notes ke fungsi Notes

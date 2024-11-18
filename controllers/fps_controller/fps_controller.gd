@@ -26,7 +26,7 @@ var red_alpha
 @export var TOGGLE_CROUCH : bool = true
 @onready var CROUCH_SHAPECAST : ShapeCast3D = %ShapeCast3D
 @export_range(5,10, 0.1) var CROUCH_ANIMATION_SPEED : float = 7.0
-const SENSITIVITY = 0.5 # Change only the second float
+const SENSITIVITY = 0.2 # Change only the second float
 
 var gravity = 12.0
 var air_time = 0.0
@@ -39,6 +39,31 @@ const BOB_FREQUENCY = 2.0 #how often footsteps happen
 const BOB_AMP = 0.08 #how far camera go when bobbing
 var t_bob = 0.0
 var disable_headbob: bool = false
+
+#Audio
+signal stepped
+func _step(_is_on_floor:bool) -> bool:
+	if (is_on_floor):
+		emit_signal("stepped")
+		return true
+	return false
+
+#Flashlight
+@export_group("TORCH PARAMETERS")
+@export var click_audios: Array[AudioStream]
+@onready var camera_holder : Node3D = get_node(NodePath("Head"))
+
+@export var can_use_torch : bool = true
+@onready var torchloc : Node3D = get_node(NodePath("TorchHolder/Torchloc"))
+@onready var torch : Node3D = get_node(NodePath("TorchHolder/Torch"))
+@onready var torch_light : Node3D = get_node(NodePath("TorchHolder/Torch/TorchLight"))
+@onready var torch_timer : Timer = get_node(NodePath("Timers/TorchTimer"))
+@onready var torch_click_sfx : AudioStreamPlayer3D = get_node(NodePath("PlayerAudios/TorchClickSfx"))
+@export var torch_sway_speed : float = 15.0
+
+func random_torch_click() -> AudioStream:
+	return click_audios[randi() % click_audios.size()]
+
 
 #fov
 const BASE_FOV = 75.0
@@ -69,7 +94,21 @@ func _input(event):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	elif event.is_action_pressed("exit"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-
+	
+	if can_use_torch:
+		if Input.is_action_just_pressed("toggle_torch") and torch_light.visible == false and torch_timer.is_stopped():
+			torch_light.show()
+			torch_timer.start()
+			torch_click_sfx.stream = random_torch_click()
+			torch_click_sfx.play()
+		elif Input.is_action_just_pressed("toggle_torch") and torch_light.visible == true and torch_timer.is_stopped():
+			torch_light.hide()
+			torch_timer.start()
+			torch_click_sfx.stream = random_torch_click()
+			torch_click_sfx.play()
+		torch.visible = true
+	else :
+		torch.visible = false
 	
 func update_camera(delta) -> void:
 	_current_rotation = _rotation_input
@@ -110,7 +149,11 @@ func _physics_process(delta: float) -> void:
 	if !disable_headbob:
 		t_bob += delta * velocity.length() * float(is_on_floor())
 		camera.transform.origin = _headbob(t_bob)
-
+	
+	torch.global_transform.origin = torchloc.global_transform.origin
+	torch.rotation.y = lerp_angle(torch.rotation.y, rotation.y, torch_sway_speed * delta)
+	torch.rotation.x = lerp_angle(torch.rotation.x, camera_holder.rotation.x, torch_sway_speed * delta)
+	
 	var velocity_clamped = clamp(velocity.length(), 0.5, velocity.length() * 2)
 	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)

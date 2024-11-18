@@ -1,0 +1,27 @@
+[gd_scene load_steps=9 format=3 uid="uid://yx1jpt1c83k0"]
+
+[ext_resource type="Script" path="res://Player/Audios/player_audios.gd" id="1_wtvdi"]
+[ext_resource type="Resource" uid="uid://bvcwavmxm31su" path="res://Player/AudioInteracts/tile_audio_interact.tres" id="2_cy70d"]
+[ext_resource type="PhysicsMaterial" uid="uid://c58wxv6h52gbn" path="res://Player/PhysicsMaterials/tile.tres" id="3_hehkn"]
+[ext_resource type="PhysicsMaterial" uid="uid://t3o4mbgdvok8" path="res://Player/PhysicsMaterials/wood.tres" id="4_6qwwp"]
+[ext_resource type="PhysicsMaterial" uid="uid://bjrovvgawkb61" path="res://Player/PhysicsMaterials/carpet.tres" id="5_mo12t"]
+[ext_resource type="Resource" uid="uid://rbpsfr4t5jcm" path="res://Player/AudioInteracts/wood_audio_interact.tres" id="6_nadnp"]
+[ext_resource type="Resource" path="res://Player/AudioInteracts/carpet_audio_interact.tres" id="7_wqdy0"]
+[ext_resource type="AudioStream" uid="uid://tpf3n7p5bmqv" path="res://Audios/Player/Footsteps/Tile/Footsteps_Tile_Walk_01.wav" id="8_vydan"]
+
+[node name="PlayerAudios" type="Node3D"]
+script = ExtResource("1_wtvdi")
+audio_interact = ExtResource("2_cy70d")
+physic_materials = Array[PhysicsMaterial]([ExtResource("3_hehkn"), ExtResource("4_6qwwp"), ExtResource("5_mo12t")])
+audio_interacts = Array[Resource]([ExtResource("2_cy70d"), ExtResource("6_nadnp"), ExtResource("7_wqdy0")])
+
+[node name="TorchClickSfx" type="AudioStreamPlayer3D" parent="."]
+volume_db = -23.0
+
+[node name="FootstepSfx" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("8_vydan")
+attenuation_filter_db = -65.0
+
+[node name="GroundCheck" type="RayCast3D" parent="."]
+target_position = Vector3(0, -1.5, 0)
+debug_shape_custom_color = Color(1, 0, 1, 1)

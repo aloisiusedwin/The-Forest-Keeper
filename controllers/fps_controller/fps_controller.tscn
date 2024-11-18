@@ -1,17 +1,27 @@
-[gd_scene load_steps=30 format=3 uid="uid://4cbpynvikrmh"]
+[gd_scene load_steps=42 format=3 uid="uid://4cbpynvikrmh"]
 
 [ext_resource type="Script" path="res://controllers/fps_controller/fps_controller.gd" id="1_0fn47"]
 [ext_resource type="Script" path="res://Scripts/UI/reticle.gd" id="2_qyc3x"]
+[ext_resource type="AudioStream" uid="uid://bynj0q5svp4rj" path="res://Audios/Player/Flashlight/Click_1.mp3" id="2_sewi0"]
 [ext_resource type="Script" path="res://Scripts/UI/interact_ray.gd" id="2_y0lgd"]
 [ext_resource type="Theme" uid="uid://b33d8vlpvjdwl" path="res://ui/themes/debug.tres" id="3_la0w7"]
 [ext_resource type="PackedScene" uid="uid://b6y6l08yg5cxe" path="res://controllers/weapon_manager/weapon_manager.tscn" id="3_ofn50"]
+[ext_resource type="AudioStream" uid="uid://bxuyijbggpwnn" path="res://Audios/Player/Flashlight/Click_2.mp3" id="3_qp17n"]
 [ext_resource type="Script" path="res://Scripts/UI/debug.gd" id="4_c544d"]
+[ext_resource type="AudioStream" uid="uid://c6rkmboqkjtlt" path="res://Audios/Player/Flashlight/Click_3.mp3" id="4_drpku"]
 [ext_resource type="Script" path="res://Scripts/movement/state_machine.gd" id="5_h3u6d"]
+[ext_resource type="AudioStream" uid="uid://dlm3jeouy8hxy" path="res://Audios/Player/Flashlight/Click_4.mp3" id="5_wp6yf"]
+[ext_resource type="AudioStream" uid="uid://ctw54ou2c6kwk" path="res://Audios/Player/Flashlight/Click_5.mp3" id="6_66bgf"]
 [ext_resource type="Script" path="res://Scripts/movement/idle_player_state.gd" id="6_cthcc"]
+[ext_resource type="AudioStream" uid="uid://cg4j56t2lm2v3" path="res://Audios/Player/Flashlight/Click_6.mp3" id="7_cbe42"]
 [ext_resource type="Script" path="res://Scripts/movement/walking_player_state.gd" id="7_uykxy"]
+[ext_resource type="AudioStream" uid="uid://drr6ycqquf6yp" path="res://Audios/Player/Flashlight/Click_7.mp3" id="8_l1bkm"]
 [ext_resource type="Script" path="res://Scripts/movement/sprinting_player_state.gd" id="8_y64dx"]
 [ext_resource type="Script" path="res://Scripts/movement/crouching_player_state.gd" id="9_mvll2"]
+[ext_resource type="AudioStream" uid="uid://b8omvn32tbvea" path="res://Audios/Player/Flashlight/Click_8.mp3" id="9_n138e"]
+[ext_resource type="AudioStream" uid="uid://dyu6htwcth2a5" path="res://Audios/Player/Flashlight/Click_9.mp3" id="10_cxdcp"]
 [ext_resource type="Script" path="res://Scripts/movement/sliding_player_state.gd" id="10_ojgis"]
+[ext_resource type="AudioStream" uid="uid://c3irxsa5j8yxw" path="res://Audios/Player/Flashlight/Click_10.mp3" id="11_a0lwp"]
 [ext_resource type="Script" path="res://Scripts/movement/jumping_player_state.gd" id="11_b4oom"]
 [ext_resource type="Script" path="res://Scripts/movement/falling_player_state.gd" id="12_vs60y"]
 [ext_resource type="Script" path="res://Scripts/WeaponViewport.gd" id="14_mjbge"]
@@ -19,6 +29,8 @@
 [ext_resource type="Script" path="res://Scripts/UI/HUD.gd" id="16_es48c"]
 [ext_resource type="Resource" uid="uid://t7ppj5xrrqfj" path="res://controllers/weapon_manager/Weapon/Amanremu/amanremu.tres" id="17_uh4t7"]
 [ext_resource type="Texture2D" uid="uid://cheua48yfqomo" path="res://models/forestMap/paper/notes.png" id="19_vdg8q"]
+[ext_resource type="Script" path="res://Audios/player_audios.gd" id="30_f5fwt"]
+[ext_resource type="AudioStream" uid="uid://tpf3n7p5bmqv" path="res://Audios/Player/Footsteps/Tile/Footsteps_Tile_Walk_01.wav" id="31_ovj2n"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o26h5"]
 
@@ -338,6 +350,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 floor_max_angle = 1.22173
 script = ExtResource("1_0fn47")
 ANIMATIONPLAYER = NodePath("AnimationPlayer")
+click_audios = Array[AudioStream]([ExtResource("2_sewi0"), ExtResource("3_qp17n"), ExtResource("4_drpku"), ExtResource("5_wp6yf"), ExtResource("6_66bgf"), ExtResource("7_cbe42"), ExtResource("8_l1bkm"), ExtResource("9_n138e"), ExtResource("10_cxdcp"), ExtResource("11_a0lwp")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_o26h5")
@@ -355,13 +368,6 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 cull_mask = 1047553
 current = true
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0821928, -0.447035)
-light_energy = 7.009
-spot_range = 27.299
-spot_angle = 35.18
-spot_angle_attenuation = 0.68302
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="Head/Camera3D"]
 update_mode = 1
@@ -583,5 +589,43 @@ color = Color(0.501961, 0.501961, 0.501961, 1)
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="TorchHolder" type="Node3D" parent="."]
+
+[node name="Torchloc" type="Node3D" parent="TorchHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+
+[node name="Torch" type="Node3D" parent="TorchHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+top_level = true
+
+[node name="TorchLight" type="SpotLight3D" parent="TorchHolder/Torch"]
+visible = false
+light_energy = 3.0
+shadow_enabled = true
+shadow_opacity = 0.8
+spot_range = 15.0
+spot_angle = 40.0
+spot_angle_attenuation = 2.0
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="TorchTimer" type="Timer" parent="Timers"]
+wait_time = 0.3
+one_shot = true
+
+[node name="PlayerAudios" type="Node3D" parent="."]
+script = ExtResource("30_f5fwt")
+
+[node name="TorchClickSfx" type="AudioStreamPlayer3D" parent="PlayerAudios"]
+volume_db = -23.0
+
+[node name="FootstepSfx" type="AudioStreamPlayer3D" parent="PlayerAudios"]
+stream = ExtResource("31_ovj2n")
+attenuation_filter_db = -65.0
+
+[node name="GroundCheck" type="RayCast3D" parent="PlayerAudios"]
+target_position = Vector3(0, -1.5, 0)
+debug_shape_custom_color = Color(1, 0, 1, 1)
 
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
