@@ -1,7 +1,7 @@
 [gd_scene load_steps=919 format=4 uid="uid://bjyu5mwi0vdxq"]
 
 [ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1_p1rkj"]
-[ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller.tscn" id="3_eo0nq"]
+[ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller/fps_controller.tscn" id="3_eo0nq"]
 [ext_resource type="Resource" uid="uid://dgm276g7bw8q5" path="res://addons/qodot/game_definitions/fgd/base_classes/target_base_class.tres" id="3_u3bks"]
 [ext_resource type="Resource" uid="uid://ccdjpf5j25aua" path="res://addons/qodot/game_definitions/fgd/base_classes/targetname_base_class.tres" id="4_q4s3d"]
 [ext_resource type="Resource" uid="uid://c5o31v30rw7v5" path="res://addons/qodot/game_definitions/fgd/base_classes/light_base_class.tres" id="5_34o3a"]
@@ -21,7 +21,7 @@
 [ext_resource type="Resource" uid="uid://bu2f3lupsjhfp" path="res://addons/qodot/game_definitions/fgd/solid_classes/wall_solid_class.tres" id="19_u7afs"]
 [ext_resource type="Script" path="res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_file.gd" id="20_kvmhd"]
 [ext_resource type="Texture2D" uid="uid://c1mbbxa8hr5gb" path="res://textures/metal_5818.jpg" id="21_5cgp2"]
-[ext_resource type="Texture2D" uid="uid://o8bpwey0jmnf" path="res://textures/coast_sand_rocks_02_diff_1k.jpg" id="22_etv02"]
+[ext_resource type="Texture2D" uid="uid://o8bpwey0jmnf" path="res://textures/sand/coast_sand_rocks_02_diff_1k.jpg" id="22_etv02"]
 [ext_resource type="Texture2D" uid="uid://cmhy2r8vi6ngb" path="res://textures/Metal-3082.jpg" id="23_bg3gr"]
 [ext_resource type="Texture2D" uid="uid://co1mdphbpt2om" path="res://textures/Dirt-6939.jpg" id="24_2lbqi"]
 [ext_resource type="Texture2D" uid="uid://b7f0sv32cq35q" path="res://textures/Grunge-1383.jpg" id="25_5gj6g"]

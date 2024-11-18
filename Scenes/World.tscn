@@ -1,9 +1,8 @@
-[gd_scene load_steps=25 format=3 uid="uid://cfn8jcanr756u"]
+[gd_scene load_steps=24 format=3 uid="uid://cfn8jcanr756u"]
 
 [ext_resource type="Material" uid="uid://dvx5rrib5yuge" path="res://materials/grass.tres" id="1_ady3n"]
-[ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller.tscn" id="2_kq0ye"]
+[ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller/fps_controller.tscn" id="2_kq0ye"]
 [ext_resource type="PackedScene" uid="uid://buxbpi624u3q" path="res://models/forestMap/trees/beech/beech.tscn" id="3_o55q7"]
-[ext_resource type="PackedScene" uid="uid://6a0xvbhs7m01" path="res://models/bridge/tscn/bridge_woodside.tscn" id="5_nddtd"]
 [ext_resource type="PackedScene" uid="uid://ypmijk7hswtb" path="res://models/low poly environment/anthurium.tscn" id="5_t2y5s"]
 [ext_resource type="PackedScene" uid="uid://bvbgqn3a2fnvt" path="res://models/low poly environment/bell_flower.tscn" id="6_sudu6"]
 [ext_resource type="PackedScene" uid="uid://btcrkyyblty8l" path="res://models/low poly environment/daisy.tscn" id="8_eracq"]
@@ -78,9 +77,6 @@ shape = SubResource("BoxShape3D_ddqhn")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2/CollisionShape3D"]
 mesh = SubResource("BoxMesh_cjdq4")
 skeleton = NodePath("../..")
-
-[node name="bridge_side_wood2" parent="." instance=ExtResource("5_nddtd")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -36.0467, 20.7739, -40.6933)
 
 [node name="Anthurium2" parent="." instance=ExtResource("5_t2y5s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.8152, -0.00629974, 48.012)
