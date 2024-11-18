@@ -67,7 +67,7 @@
 [ext_resource type="PackedScene" uid="uid://yp0bjbdkmy1r" path="res://models/Industrial Assets/Industrial Assets/Baru/boat.tscn" id="65_ue6r1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cuxre"]
-sky_top_color = Color(0.986327, 0.963988, 0.957494, 1)
+sky_top_color = Color(0.106141, 3.9034e-05, 0.388619, 1)
 sky_horizon_color = Color(0.197937, 0.197937, 0.197937, 1)
 sky_energy_multiplier = 0.1
 ground_bottom_color = Color(0.888144, 0.718806, 0.670438, 1)
@@ -3166,6 +3166,7 @@ size = Vector3(149.19, 1, 315.785)
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.208155, -0.611304, -0.763531, 0.767613, -0.381692, 0.514861, -0.60617, -0.693267, 0.389794, 0, 0, 67.2165)
 light_color = Color(0.542697, 0.559506, 0.72032, 1)
+light_energy = 0.37
 light_indirect_energy = 1.355
 light_volumetric_fog_energy = 5.71
 shadow_enabled = true
@@ -9072,6 +9073,35 @@ transform = Transform3D(0.803882, -2.36703, -0.0306422, -0.000893652, 0.0320574,
 
 [node name="Boat6" parent="." instance=ExtResource("65_ue6r1")]
 transform = Transform3D(0.803882, -2.36703, -0.0306422, -0.000893652, 0.0320574, -2.49979, 2.36723, 0.803827, 0.00946201, -19.726, 6.37867, -116.117)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 45.3067, 8.09492, -35.0324)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 38.8415, 8.09492, -17.491)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 53.9715, 8.09492, -49.424)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 40.3514, 8.09492, -49.3126)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 40.3514, 8.09492, -49.3126)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.5287, 7.41297, -31.9159)
+omni_range = 33.1248
 
 [connection signal="trigger" from="QodotMap/entity_3_button" to="QodotMap/entity_2_mover" method="use"]
 [connection signal="trigger" from="QodotMap/entity_5_button" to="QodotMap/entity_4_mover" method="use"]
