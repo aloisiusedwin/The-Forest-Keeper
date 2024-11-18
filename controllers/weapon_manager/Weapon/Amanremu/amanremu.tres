@@ -1,16 +1,21 @@
-[gd_resource type="Resource" script_class="MeleeWeaponResource" load_steps=7 format=3 uid="uid://t7ppj5xrrqfj"]
+[gd_resource type="Resource" script_class="MeleeWeaponResource" load_steps=8 format=3 uid="uid://t7ppj5xrrqfj"]
 
 [ext_resource type="AudioStream" uid="uid://ve30pm46teic" path="res://controllers/weapon_manager/Weapon/Pistol/sfx/equip.wav" id="1_0gnih"]
 [ext_resource type="Script" path="res://controllers/weapon_manager/melee_weapon_resource.gd" id="1_y1vq2"]
 [ext_resource type="AudioStream" uid="uid://by1walkfehk5k" path="res://controllers/weapon_manager/Weapon/Amanremu/sfx/cc0-swoosh.wav" id="2_1bgde"]
+[ext_resource type="Texture2D" uid="uid://dda08bk6kw2sl" path="res://controllers/weapon_manager/Weapon/Amanremu/Amanremu.png" id="2_jqedy"]
 [ext_resource type="PackedScene" uid="uid://ddwh7n0ppw6gg" path="res://controllers/weapon_manager/Weapon/Amanremu/amanremu viewmodel.tscn" id="2_xmnwj"]
 [ext_resource type="PackedScene" uid="uid://bh3w7sw5pao5v" path="res://controllers/weapon_manager/Weapon/Amanremu/amanremu worldmodel.tscn" id="3_qtjjd"]
 [ext_resource type="AudioStream" uid="uid://cxghowxfr7t3j" path="res://controllers/weapon_manager/Weapon/Amanremu/sfx/knifehit.wav" id="4_eev7p"]
 
 [resource]
 script = ExtResource("1_y1vq2")
-max_hit_dist = 2.3
+max_hit_dist = 1
 miss_sound = ExtResource("2_1bgde")
+name = "Amanremu"
+icon = ExtResource("2_jqedy")
+slot = 3
+slot_priority = 1
 view_model = ExtResource("2_xmnwj")
 world_model = ExtResource("3_qtjjd")
 view_model_pos = Vector3(1.151, 0.169, -2.121)

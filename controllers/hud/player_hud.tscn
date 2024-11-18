@@ -1,0 +1,165 @@
+[gd_scene load_steps=9 format=3 uid="uid://dmlq5yqj6gle2"]
+
+[ext_resource type="Script" path="res://controllers/hud/player_hud.gd" id="1_a541y"]
+[ext_resource type="Texture2D" uid="uid://ciqgiet3fl5y1" path="res://controllers/hud/crosshair/crosshair-dot.svg" id="2_57b1i"]
+[ext_resource type="PackedScene" uid="uid://v7xvjhfmpqlu" path="res://controllers/hud/weapon_select_layout.tscn" id="2_x2f4m"]
+[ext_resource type="Theme" uid="uid://b33d8vlpvjdwl" path="res://ui/themes/debug.tres" id="3_ytdl3"]
+[ext_resource type="Script" path="res://Scripts/UI/debug.gd" id="4_g5p4y"]
+[ext_resource type="Script" path="res://Scripts/UI/HUD.gd" id="5_y6opg"]
+[ext_resource type="Texture2D" uid="uid://cheua48yfqomo" path="res://models/forestMap/paper/notes.png" id="6_27hqk"]
+
+[sub_resource type="SystemFont" id="SystemFont_cy55b"]
+font_names = PackedStringArray("MS Gothic")
+font_weight = 650
+subpixel_positioning = 0
+
+[node name="PlayerHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_a541y")
+weapon_select_layout = ExtResource("2_x2f4m")
+
+[node name="WeaponSwitchMenu" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -130.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="1" type="VBoxContainer" parent="WeaponSwitchMenu"]
+layout_mode = 2
+
+[node name="2" type="VBoxContainer" parent="WeaponSwitchMenu"]
+layout_mode = 2
+
+[node name="3" type="VBoxContainer" parent="WeaponSwitchMenu"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dot" type="TextureRect" parent="CenterContainer"]
+layout_mode = 2
+texture = ExtResource("2_57b1i")
+
+[node name="Debug" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="DebugPanel" type="PanelContainer" parent="Debug"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 50.0
+theme = ExtResource("3_ytdl3")
+script = ExtResource("4_g5p4y")
+
+[node name="MarginContainer" type="MarginContainer" parent="Debug/DebugPanel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Debug/DebugPanel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("5_y6opg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 68.0
+offset_right = -43.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme = ExtResource("3_ytdl3")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="CurrentAmmo" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = SubResource("SystemFont_cy55b")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Note" type="TextureRect" parent="CanvasLayer"]
+visible = false
+self_modulate = Color(0.623325, 0.601292, 0.582334, 1)
+offset_left = 657.0
+offset_top = 182.0
+offset_right = 1298.0
+offset_bottom = 938.0
+texture = ExtResource("6_27hqk")
+expand_mode = 1
+flip_v = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Note"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.5
+offset_top = -107.0
+offset_right = 244.5
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 23
+text = "JOKOHellooowww JOKOWII KSDAFBNKASHFBKJASDHFJKAHSDFK KAJSDHFKJASBDF KAJSHDFJKAHSDF KHJASDFJKLHASDJF KJASHDFJKADSF"
+autowrap_mode = 1
+
+[node name="HitUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="HitUI"]
+visible = false
+layout_mode = 0
+offset_left = -150.0
+offset_top = -166.0
+offset_right = 2048.0
+offset_bottom = 1208.0
+color = Color(0.501961, 0.501961, 0.501961, 1)

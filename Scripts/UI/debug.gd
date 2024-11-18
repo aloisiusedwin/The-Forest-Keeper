@@ -8,7 +8,6 @@ var frames_per_second : String
 func _ready():
 	
 	Global.debug = self
-	
 	visible = false
 	
 	

@@ -1,8 +1,8 @@
 extends RayCast3D
 
 @onready var prompt = $Prompt
-@onready var note = $"../../../CanvasLayer/Note"
-@onready var label2d = $"../../../CanvasLayer/Note/Label"
+@onready var note = $"../../../PlayerHUD/CanvasLayer/Note"
+@onready var label2d = $"../../../PlayerHUD/CanvasLayer/Note/Label"
 var showNote = false
 
 # Called when the node enters the scene tree for the first time.
