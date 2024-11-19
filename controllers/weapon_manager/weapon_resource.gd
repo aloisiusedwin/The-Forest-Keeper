@@ -1,6 +1,12 @@
 class_name WeaponResource
 extends Resource
 
+@export var name : String
+@export var icon : Texture2D
+
+@export_range(1,9) var slot : int = 1
+@export_range(1,10) var slot_priority : int = 1
+
 @export var view_model : PackedScene
 @export var world_model : PackedScene
 

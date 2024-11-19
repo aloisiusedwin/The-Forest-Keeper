@@ -3,7 +3,16 @@ extends Node3D
 
 @export var allow_shoot : bool = true
 
-@export var current_weapon : WeaponResource
+@export var current_weapon : WeaponResource :
+	set(v):
+		if v != current_weapon:
+			if current_weapon:
+				current_weapon.is_equipped = false
+			current_weapon = v;
+			if is_inside_tree():
+				update_weapon_model()
+@export var equipped_weapons : Array[WeaponResource]
+
 var current_weapon_view_model : Node3D
 var current_weapon_world_model : Node3D
 
@@ -18,6 +27,12 @@ var current_weapon_view_model_muzzle : Node3D
 @onready var audio_stream_player = $AudioStreamPlayer3D
 
 func update_weapon_model() -> void:
+	if current_weapon_view_model != null and is_instance_valid(current_weapon_view_model):
+		current_weapon_view_model.queue_free()
+		current_weapon_view_model.get_parent().remove_child(current_weapon_view_model)
+	if current_weapon_world_model != null and is_instance_valid(current_weapon_world_model):
+		current_weapon_world_model.queue_free()
+		current_weapon_world_model.get_parent().remove_child(current_weapon_world_model)
 	if current_weapon:
 		current_weapon.weapon_manager = self
 		if view_model_container and current_weapon.view_model:

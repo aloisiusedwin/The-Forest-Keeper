@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="WeaponResource" load_steps=7 format=3 uid="uid://dr4khi2j5o4j2"]
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=8 format=3 uid="uid://dr4khi2j5o4j2"]
 
 [ext_resource type="AudioStream" uid="uid://ve30pm46teic" path="res://controllers/weapon_manager/Weapon/Pistol/sfx/equip.wav" id="1_ecpa5"]
 [ext_resource type="Script" path="res://controllers/weapon_manager/weapon_resource.gd" id="1_q3lmk"]
+[ext_resource type="Texture2D" uid="uid://dai4ehxudhad2" path="res://controllers/weapon_manager/Weapon/Pistol/pistol.png" id="2_7kh7b"]
 [ext_resource type="AudioStream" uid="uid://c8a8crvdowftb" path="res://controllers/weapon_manager/Weapon/Pistol/sfx/reload.wav" id="2_l6ky8"]
 [ext_resource type="PackedScene" uid="uid://bfr8rsojsr42k" path="res://controllers/weapon_manager/Weapon/Pistol/pistol - viewmodel.tscn" id="3_demjq"]
 [ext_resource type="PackedScene" uid="uid://c7k2cygrtbmad" path="res://controllers/weapon_manager/Weapon/Pistol/pistol - worldmodel.tscn" id="3_j82m3"]
@@ -9,6 +10,10 @@
 
 [resource]
 script = ExtResource("1_q3lmk")
+name = "M1911"
+icon = ExtResource("2_7kh7b")
+slot = 2
+slot_priority = 1
 view_model = ExtResource("3_demjq")
 world_model = ExtResource("3_j82m3")
 view_model_pos = Vector3(0.28, -0.296, -0.685)

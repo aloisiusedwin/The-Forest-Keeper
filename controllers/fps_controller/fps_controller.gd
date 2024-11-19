@@ -20,7 +20,7 @@ var red_alpha
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 
-@onready var hit_rect = $HitUI/ColorRect
+@onready var hit_rect = $PlayerHUD/HitUI/ColorRect
 
 #movement
 @export var TOGGLE_CROUCH : bool = true
@@ -53,10 +53,10 @@ func _step(_is_on_floor:bool) -> bool:
 @export var click_audios: Array[AudioStream]
 @onready var camera_holder : Node3D = get_node(NodePath("Head"))
 
-@export var can_use_torch : bool = true
-@onready var torchloc : Node3D = get_node(NodePath("TorchHolder/Torchloc"))
-@onready var torch : Node3D = get_node(NodePath("TorchHolder/Torch"))
-@onready var torch_light : Node3D = get_node(NodePath("TorchHolder/Torch/TorchLight"))
+@export var can_use_torch : bool = false
+@onready var torchloc : Node3D = get_node(NodePath("Head/TorchHolder/Torchloc"))
+@onready var torch : Node3D = get_node(NodePath("Head/TorchHolder/Torch"))
+@onready var torch_light : Node3D = get_node(NodePath("Head/TorchHolder/Torch/TorchLight"))
 @onready var torch_timer : Timer = get_node(NodePath("Timers/TorchTimer"))
 @onready var torch_click_sfx : AudioStreamPlayer3D = get_node(NodePath("PlayerAudios/TorchClickSfx"))
 @export var torch_sway_speed : float = 15.0

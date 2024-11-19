@@ -1,13 +1,10 @@
-[gd_scene load_steps=42 format=3 uid="uid://4cbpynvikrmh"]
+[gd_scene load_steps=39 format=3 uid="uid://4cbpynvikrmh"]
 
 [ext_resource type="Script" path="res://controllers/fps_controller/fps_controller.gd" id="1_0fn47"]
-[ext_resource type="Script" path="res://Scripts/UI/reticle.gd" id="2_qyc3x"]
 [ext_resource type="AudioStream" uid="uid://bynj0q5svp4rj" path="res://Audios/Player/Flashlight/Click_1.mp3" id="2_sewi0"]
 [ext_resource type="Script" path="res://Scripts/UI/interact_ray.gd" id="2_y0lgd"]
-[ext_resource type="Theme" uid="uid://b33d8vlpvjdwl" path="res://ui/themes/debug.tres" id="3_la0w7"]
 [ext_resource type="PackedScene" uid="uid://b6y6l08yg5cxe" path="res://controllers/weapon_manager/weapon_manager.tscn" id="3_ofn50"]
 [ext_resource type="AudioStream" uid="uid://bxuyijbggpwnn" path="res://Audios/Player/Flashlight/Click_2.mp3" id="3_qp17n"]
-[ext_resource type="Script" path="res://Scripts/UI/debug.gd" id="4_c544d"]
 [ext_resource type="AudioStream" uid="uid://c6rkmboqkjtlt" path="res://Audios/Player/Flashlight/Click_3.mp3" id="4_drpku"]
 [ext_resource type="Script" path="res://Scripts/movement/state_machine.gd" id="5_h3u6d"]
 [ext_resource type="AudioStream" uid="uid://dlm3jeouy8hxy" path="res://Audios/Player/Flashlight/Click_4.mp3" id="5_wp6yf"]
@@ -26,11 +23,12 @@
 [ext_resource type="Script" path="res://Scripts/movement/falling_player_state.gd" id="12_vs60y"]
 [ext_resource type="Script" path="res://Scripts/WeaponViewport.gd" id="14_mjbge"]
 [ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
-[ext_resource type="Script" path="res://Scripts/UI/HUD.gd" id="16_es48c"]
 [ext_resource type="Resource" uid="uid://t7ppj5xrrqfj" path="res://controllers/weapon_manager/Weapon/Amanremu/amanremu.tres" id="17_uh4t7"]
-[ext_resource type="Texture2D" uid="uid://cheua48yfqomo" path="res://models/forestMap/paper/notes.png" id="19_vdg8q"]
+[ext_resource type="Resource" uid="uid://dr4khi2j5o4j2" path="res://controllers/weapon_manager/Weapon/Pistol/pistol.tres" id="24_1ngv6"]
+[ext_resource type="Script" path="res://controllers/weapon_manager/weapon_resource.gd" id="25_ufhcn"]
 [ext_resource type="Script" path="res://Audios/player_audios.gd" id="30_f5fwt"]
 [ext_resource type="AudioStream" uid="uid://tpf3n7p5bmqv" path="res://Audios/Player/Footsteps/Tile/Footsteps_Tile_Walk_01.wav" id="31_ovj2n"]
+[ext_resource type="PackedScene" uid="uid://dmlq5yqj6gle2" path="res://controllers/hud/player_hud.tscn" id="32_q0axe"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o26h5"]
 
@@ -340,11 +338,6 @@ _data = {
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mspl4"]
 
-[sub_resource type="SystemFont" id="SystemFont_styea"]
-font_names = PackedStringArray("MS Gothic")
-font_weight = 650
-subpixel_positioning = 0
-
 [node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("ANIMATIONPLAYER")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 floor_max_angle = 1.22173
@@ -399,6 +392,25 @@ collide_with_areas = true
 [node name="RayAimEnd" type="Node3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -101.5)
 
+[node name="TorchHolder" type="Node3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.639871, 0)
+
+[node name="Torchloc" type="Node3D" parent="Head/TorchHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+
+[node name="Torch" type="Node3D" parent="Head/TorchHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+top_level = true
+
+[node name="TorchLight" type="SpotLight3D" parent="Head/TorchHolder/Torch"]
+visible = false
+light_energy = 3.0
+shadow_enabled = true
+shadow_opacity = 0.8
+spot_range = 15.0
+spot_angle = 40.0
+spot_angle_attenuation = 2.0
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_tbcgx")
@@ -410,47 +422,6 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("SphereShape3D_mspl4")
 target_position = Vector3(0, 0.5, 0)
-
-[node name="Crosshair" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-
-[node name="Reticle" type="CenterContainer" parent="Crosshair"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("2_qyc3x")
-
-[node name="DebugPanel" type="PanelContainer" parent="Crosshair"]
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 210.0
-offset_bottom = 50.0
-theme = ExtResource("3_la0w7")
-script = ExtResource("4_c544d")
-
-[node name="MarginContainer" type="MarginContainer" parent="Crosshair/DebugPanel"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Crosshair/DebugPanel/MarginContainer"]
-unique_name_in_owner = true
-layout_mode = 2
 
 [node name="PlayerStateMachine" type="Node" parent="." node_paths=PackedStringArray("CURRENT_STATE")]
 script = ExtResource("5_h3u6d")
@@ -499,114 +470,12 @@ MAIN_CAMERA = NodePath("../../../Head/Camera3D")
 [node name="WorldModel" type="Node3D" parent="."]
 
 [node name="WeaponManager" parent="." node_paths=PackedStringArray("player", "bullet_raycast", "view_model_container", "world_model_container") instance=ExtResource("3_ofn50")]
-current_weapon = ExtResource("17_uh4t7")
+current_weapon = ExtResource("24_1ngv6")
+equipped_weapons = Array[ExtResource("25_ufhcn")]([ExtResource("24_1ngv6"), ExtResource("17_uh4t7")])
 player = NodePath("..")
 bullet_raycast = NodePath("../Head/Camera3D/RayAim")
 view_model_container = NodePath("../Weapon/SubViewport/Camera3D/ViewModel")
 world_model_container = NodePath("../WorldModel")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource("16_es48c")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 68.0
-offset_right = -43.0
-offset_bottom = -48.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 10
-theme = ExtResource("3_la0w7")
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/MarginContainer"]
-layout_mode = 2
-horizontal_alignment = 2
-vertical_alignment = 2
-
-[node name="CurrentAmmo" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 8
-theme_override_fonts/font = SubResource("SystemFont_styea")
-theme_override_font_sizes/font_size = 32
-horizontal_alignment = 2
-vertical_alignment = 2
-
-[node name="Note" type="TextureRect" parent="CanvasLayer"]
-visible = false
-self_modulate = Color(0.623325, 0.601292, 0.582334, 1)
-offset_left = 657.0
-offset_top = 182.0
-offset_right = 1298.0
-offset_bottom = 938.0
-texture = ExtResource("19_vdg8q")
-expand_mode = 1
-flip_v = true
-
-[node name="Label" type="Label" parent="CanvasLayer/Note"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -243.5
-offset_top = -107.0
-offset_right = 244.5
-offset_bottom = 71.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 23
-text = "JOKOHellooowww JOKOWII KSDAFBNKASHFBKJASDHFJKAHSDFK KAJSDHFKJASBDF KAJSHDFJKAHSDF KHJASDFJKLHASDJF KJASHDFJKADSF"
-autowrap_mode = 1
-
-[node name="HitUI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ColorRect" type="ColorRect" parent="HitUI"]
-visible = false
-layout_mode = 0
-offset_left = -150.0
-offset_top = -166.0
-offset_right = 2048.0
-offset_bottom = 1208.0
-color = Color(0.501961, 0.501961, 0.501961, 1)
-
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="TorchHolder" type="Node3D" parent="."]
-
-[node name="Torchloc" type="Node3D" parent="TorchHolder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
-
-[node name="Torch" type="Node3D" parent="TorchHolder"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
-top_level = true
-
-[node name="TorchLight" type="SpotLight3D" parent="TorchHolder/Torch"]
-visible = false
-light_energy = 3.0
-shadow_enabled = true
-shadow_opacity = 0.8
-spot_range = 15.0
-spot_angle = 40.0
-spot_angle_attenuation = 2.0
 
 [node name="Timers" type="Node" parent="."]
 
@@ -627,5 +496,9 @@ attenuation_filter_db = -65.0
 [node name="GroundCheck" type="RayCast3D" parent="PlayerAudios"]
 target_position = Vector3(0, -1.5, 0)
 debug_shape_custom_color = Color(1, 0, 1, 1)
+
+[node name="PlayerHUD" parent="." node_paths=PackedStringArray("player", "weapon_manager") instance=ExtResource("32_q0axe")]
+player = NodePath("..")
+weapon_manager = NodePath("../WeaponManager")
 
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
