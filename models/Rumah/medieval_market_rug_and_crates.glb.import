@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dujt7qdn33d3q"
-valid=false
+path="res://.godot/imported/medieval_market_rug_and_crates.glb-6c8953e7e1f38a221649fa9033024f43.scn"
 
 [deps]
 
 source_file="res://models/Rumah/medieval_market_rug_and_crates.glb"
+dest_files=["res://.godot/imported/medieval_market_rug_and_crates.glb-6c8953e7e1f38a221649fa9033024f43.scn"]
 
 [params]
 
