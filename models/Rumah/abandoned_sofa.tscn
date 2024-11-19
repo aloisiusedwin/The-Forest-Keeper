@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs5jrrklph8uc"]
+
+[ext_resource type="PackedScene" uid="uid://xohfh55841yo" path="res://models/Rumah/abandoned_sofa.glb" id="1_01j4v"]
+
+[node name="AbandonedSofa" type="Node3D"]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_01j4v")]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, -0.319507, -0.283152, -0.0857674)
