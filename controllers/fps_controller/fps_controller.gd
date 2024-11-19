@@ -14,7 +14,7 @@ var hp_percentage
 var red_alpha
 
 #camera
-@export var TILT_LOWER_LIMIT := deg_to_rad(-40.0)
+@export var TILT_LOWER_LIMIT := deg_to_rad(-70.0)
 @export var TILT_UPPER_LIMIT := deg_to_rad(60.0)
 @onready var CAMERA_CONTROLLER : Camera3D = $Head/Camera3D
 @onready var head = $Head
@@ -152,7 +152,7 @@ func _physics_process(delta: float) -> void:
 	
 	torch.global_transform.origin = torchloc.global_transform.origin
 	torch.rotation.y = lerp_angle(torch.rotation.y, rotation.y, torch_sway_speed * delta)
-	torch.rotation.x = lerp_angle(torch.rotation.x, camera_holder.rotation.x, torch_sway_speed * delta)
+	torch.rotation.x = lerp_angle(torch.rotation.x, camera.rotation.x, torch_sway_speed * delta)
 	
 	var velocity_clamped = clamp(velocity.length(), 0.5, velocity.length() * 2)
 	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
