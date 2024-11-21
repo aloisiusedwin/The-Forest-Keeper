@@ -5,7 +5,7 @@ extends Control
 @onready var soundSettings = $SoundOptions
 @onready var soundButton = $MarginContainer/HBoxContainer/VBoxContainer/Sound
 @onready var graphicsSettings = $GraphicsSettings
-@onready var graphicsButton = $MarginContainer/HBoxContainer/VBoxContainer/Graphics
+@onready var graphicsButton = $MarginContainer/HBoxContainer/VBoxContainer/Display
 @onready var controlSettings = $ControlsSettings
 @onready var controlButton = $MarginContainer/HBoxContainer/VBoxContainer/Controls
 @onready var marginContainer = $MarginContainer

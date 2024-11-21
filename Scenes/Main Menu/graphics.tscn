@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://ckyo13pja07mq"]
+[gd_scene load_steps=8 format=3 uid="uid://ckyo13pja07mq"]
 
 [ext_resource type="Script" path="res://Scripts/Main Menu/graphics.gd" id="1_iw8t8"]
+[ext_resource type="PackedScene" uid="uid://3jcqra0eopxk" path="res://Scenes/Main Menu/window_mode_button.tscn" id="2_jojwg"]
 
 [sub_resource type="Gradient" id="Gradient_e1lg2"]
 
@@ -9,6 +10,10 @@ gradient = SubResource("Gradient_e1lg2")
 fill_to = Vector2(0, 0)
 
 [sub_resource type="SystemFont" id="SystemFont_yedg8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6exja"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4rd6u"]
 
 [node name="GraphicsSettings" type="Control"]
 layout_mode = 3
@@ -55,7 +60,7 @@ layout_mode = 2
 size_flags_horizontal = 8
 theme_override_fonts/font = SubResource("SystemFont_yedg8")
 theme_override_font_sizes/font_size = 64
-text = "Graphic Settings"
+text = "Display Settings"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -76,3 +81,30 @@ size_flags_vertical = 0
 theme_override_font_sizes/font_size = 40
 text = "Back"
 flat = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.295
+anchor_top = 0.225
+anchor_right = 0.965
+anchor_bottom = 0.88
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 85
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+theme_override_styles/separator = SubResource("StyleBoxEmpty_6exja")
+
+[node name="window_mode_button" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_jojwg")]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+theme_override_styles/separator = SubResource("StyleBoxEmpty_4rd6u")
