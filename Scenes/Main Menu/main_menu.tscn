@@ -1,0 +1,97 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3kataebbwv4l"]
+
+[ext_resource type="Script" path="res://Scripts/Main Menu/main_menu.gd" id="1_eikdk"]
+[ext_resource type="PackedScene" uid="uid://bbt5vpvyc2uh4" path="res://Scenes/Main Menu/options.tscn" id="2_ba35u"]
+
+[sub_resource type="Gradient" id="Gradient_ov64k"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3vtnh"]
+gradient = SubResource("Gradient_ov64k")
+fill_to = Vector2(0, 0)
+
+[sub_resource type="SystemFont" id="SystemFont_v3lcy"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eikdk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_3vtnh")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 182
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 172
+theme_override_constants/margin_bottom = -103
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator2" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.882362, 0.294661, 0.827653, 1)
+theme_override_colors/font_shadow_color = Color(0.0962047, 0.0962048, 0.0962047, 1)
+theme_override_fonts/font = SubResource("SystemFont_v3lcy")
+theme_override_font_sizes/font_size = 64
+text = "THE FOREST KEEPER"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Play Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 40
+text = "Play"
+flat = true
+
+[node name="Options Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 40
+text = "Options"
+flat = true
+
+[node name="Exit Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+flat = true
+
+[node name="Options" parent="." instance=ExtResource("2_ba35u")]
+visible = false
+layout_mode = 1

@@ -1,0 +1,159 @@
+[gd_scene load_steps=8 format=3 uid="uid://6qxh8xgldh5k"]
+
+[ext_resource type="Script" path="res://Scripts/Main Menu/controls_settings.gd" id="1_e1x2p"]
+[ext_resource type="PackedScene" uid="uid://bxlh2e0iuev0n" path="res://Scenes/Main Menu/hotkey_rebind_button.tscn" id="2_pvndo"]
+
+[sub_resource type="Gradient" id="Gradient_cmepl"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rl2nb"]
+gradient = SubResource("Gradient_cmepl")
+fill_to = Vector2(0, 0)
+
+[sub_resource type="SystemFont" id="SystemFont_q2b8k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gmkyw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t0t6u"]
+
+[node name="ControlsSettings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e1x2p")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_rl2nb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 182
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 172
+theme_override_constants/margin_bottom = -103
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Separator2" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_fonts/font = SubResource("SystemFont_q2b8k")
+theme_override_font_sizes/font_size = 64
+text = "Controls Settings"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 430
+
+[node name="Separator" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Back"
+flat = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.295
+anchor_top = 0.225
+anchor_right = 0.965
+anchor_bottom = 0.88
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 70
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+theme_override_styles/separator = SubResource("StyleBoxEmpty_gmkyw")
+
+[node name="Hotkey_Rebind_Button" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_pvndo")]
+layout_mode = 2
+action_name = "up"
+
+[node name="Hotkey_Rebind_Button2" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_pvndo")]
+layout_mode = 2
+action_name = "down"
+
+[node name="Hotkey_Rebind_Button3" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_pvndo")]
+layout_mode = 2
+action_name = "left"
+
+[node name="Hotkey_Rebind_Button4" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_pvndo")]
+layout_mode = 2
+action_name = "right"
+
+[node name="Hotkey_Rebind_Button5" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_pvndo")]
+layout_mode = 2
+action_name = "sprint"
+
+[node name="Hotkey_Rebind_Button6" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_pvndo")]
+layout_mode = 2
+action_name = "jump"
+
+[node name="Hotkey_Rebind_Button7" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_pvndo")]
+layout_mode = 2
+action_name = "crouch"
+
+[node name="Hotkey_Rebind_Button8" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_pvndo")]
+layout_mode = 2
+action_name = "attack"
+
+[node name="Hotkey_Rebind_Button9" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_pvndo")]
+layout_mode = 2
+action_name = "reload"
+
+[node name="Hotkey_Rebind_Button10" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_pvndo")]
+layout_mode = 2
+action_name = "weapon_up"
+
+[node name="Hotkey_Rebind_Button11" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_pvndo")]
+layout_mode = 2
+action_name = "weapon_down"
+
+[node name="Hotkey_Rebind_Button12" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_pvndo")]
+layout_mode = 2
+action_name = "interact"
+
+[node name="Hotkey_Rebind_Button13" parent="ScrollContainer/VBoxContainer" instance=ExtResource("2_pvndo")]
+layout_mode = 2
+action_name = "toggle_torch"
+
+[node name="HSeparator2" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+theme_override_styles/separator = SubResource("StyleBoxEmpty_t0t6u")
