@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ckyo13pja07mq"]
+[gd_scene load_steps=9 format=3 uid="uid://ckyo13pja07mq"]
 
 [ext_resource type="Script" path="res://Scripts/Main Menu/graphics.gd" id="1_iw8t8"]
 [ext_resource type="PackedScene" uid="uid://3jcqra0eopxk" path="res://Scenes/Main Menu/window_mode_button.tscn" id="2_jojwg"]
@@ -9,7 +9,11 @@
 gradient = SubResource("Gradient_e1lg2")
 fill_to = Vector2(0, 0)
 
-[sub_resource type="SystemFont" id="SystemFont_yedg8"]
+[sub_resource type="SystemFont" id="SystemFont_s1ved"]
+font_names = PackedStringArray("JetBrainsMono NFM")
+
+[sub_resource type="SystemFont" id="SystemFont_mky0u"]
+font_names = PackedStringArray("JetBrainsMono Nerd Font")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6exja"]
 
@@ -58,8 +62,10 @@ layout_mode = 2
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-theme_override_fonts/font = SubResource("SystemFont_yedg8")
-theme_override_font_sizes/font_size = 64
+theme_override_colors/font_color = Color(0.603431, 0.574434, 0.565138, 1)
+theme_override_colors/font_shadow_color = Color(0.176, 0.44, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_s1ved")
+theme_override_font_sizes/font_size = 80
 text = "Display Settings"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
@@ -77,7 +83,8 @@ layout_mode = 2
 [node name="Back" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
-size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.650128, 0.650128, 0.650128, 1)
+theme_override_fonts/font = SubResource("SystemFont_mky0u")
 theme_override_font_sizes/font_size = 40
 text = "Back"
 flat = true
