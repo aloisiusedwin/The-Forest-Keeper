@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bbt5vpvyc2uh4"]
+[gd_scene load_steps=9 format=3 uid="uid://bbt5vpvyc2uh4"]
 
 [ext_resource type="Script" path="res://Scripts/Main Menu/options.gd" id="1_wvtbr"]
 [ext_resource type="PackedScene" uid="uid://b0yt7qppvpf8w" path="res://Scenes/Main Menu/sound_options.tscn" id="2_ckg0h"]
@@ -11,7 +11,11 @@
 gradient = SubResource("Gradient_40dmv")
 fill_to = Vector2(0, 0)
 
-[sub_resource type="SystemFont" id="SystemFont_c83j5"]
+[sub_resource type="SystemFont" id="SystemFont_2r2dl"]
+font_names = PackedStringArray("JetBrainsMono NFM")
+
+[sub_resource type="SystemFont" id="SystemFont_2gc8j"]
+font_names = PackedStringArray("JetBrainsMono Nerd Font")
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -56,9 +60,11 @@ layout_mode = 2
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-theme_override_fonts/font = SubResource("SystemFont_c83j5")
-theme_override_font_sizes/font_size = 64
-text = "GAME SETTINGS"
+theme_override_colors/font_color = Color(0.603431, 0.574434, 0.565138, 1)
+theme_override_colors/font_shadow_color = Color(0.176, 0.44, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_2r2dl")
+theme_override_font_sizes/font_size = 80
+text = "Settings"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -74,6 +80,8 @@ alignment = 1
 [node name="Sound" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.650128, 0.650128, 0.650128, 1)
+theme_override_fonts/font = SubResource("SystemFont_2gc8j")
 theme_override_font_sizes/font_size = 40
 text = "Sound"
 flat = true
@@ -81,6 +89,8 @@ flat = true
 [node name="Display" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.650128, 0.650128, 0.650128, 1)
+theme_override_fonts/font = SubResource("SystemFont_2gc8j")
 theme_override_font_sizes/font_size = 40
 text = "Display"
 flat = true
@@ -88,13 +98,17 @@ flat = true
 [node name="Controls" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.650128, 0.650128, 0.650128, 1)
+theme_override_fonts/font = SubResource("SystemFont_2gc8j")
 theme_override_font_sizes/font_size = 40
-text = "Controls"
+text = "Control"
 flat = true
 
 [node name="ExitToMenu" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.650128, 0.650128, 0.650128, 1)
+theme_override_fonts/font = SubResource("SystemFont_2gc8j")
 theme_override_font_sizes/font_size = 40
 text = "Back"
 flat = true

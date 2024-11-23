@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3kataebbwv4l"]
+[gd_scene load_steps=9 format=3 uid="uid://d3kataebbwv4l"]
 
 [ext_resource type="Script" path="res://Scripts/Main Menu/main_menu.gd" id="1_eikdk"]
 [ext_resource type="PackedScene" uid="uid://bbt5vpvyc2uh4" path="res://Scenes/Main Menu/options.tscn" id="2_ba35u"]
@@ -10,6 +10,16 @@ gradient = SubResource("Gradient_ov64k")
 fill_to = Vector2(0, 0)
 
 [sub_resource type="SystemFont" id="SystemFont_v3lcy"]
+font_names = PackedStringArray("JetBrainsMono NFM")
+
+[sub_resource type="SystemFont" id="SystemFont_g4n3v"]
+font_names = PackedStringArray("JetBrainsMono Nerd Font")
+
+[sub_resource type="SystemFont" id="SystemFont_ubt72"]
+font_names = PackedStringArray("JetBrainsMonoNL Nerd Font")
+
+[sub_resource type="SystemFont" id="SystemFont_ox5rg"]
+font_names = PackedStringArray("JetBrainsMonoNL Nerd Font")
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -54,10 +64,10 @@ layout_mode = 2
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-theme_override_colors/font_color = Color(0.882362, 0.294661, 0.827653, 1)
-theme_override_colors/font_shadow_color = Color(0.0962047, 0.0962048, 0.0962047, 1)
+theme_override_colors/font_color = Color(0.603431, 0.574434, 0.565138, 1)
+theme_override_colors/font_shadow_color = Color(0.176, 0.44, 0, 1)
 theme_override_fonts/font = SubResource("SystemFont_v3lcy")
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 80
 text = "THE FOREST KEEPER"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
@@ -74,6 +84,8 @@ alignment = 1
 [node name="Play Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.650128, 0.650128, 0.650128, 1)
+theme_override_fonts/font = SubResource("SystemFont_g4n3v")
 theme_override_font_sizes/font_size = 40
 text = "Play"
 flat = true
@@ -81,6 +93,8 @@ flat = true
 [node name="Options Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.65098, 0.65098, 0.65098, 1)
+theme_override_fonts/font = SubResource("SystemFont_ubt72")
 theme_override_font_sizes/font_size = 40
 text = "Options"
 flat = true
@@ -88,6 +102,8 @@ flat = true
 [node name="Exit Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.65098, 0.65098, 0.65098, 1)
+theme_override_fonts/font = SubResource("SystemFont_ox5rg")
 theme_override_font_sizes/font_size = 40
 text = "Exit"
 flat = true

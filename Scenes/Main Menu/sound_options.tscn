@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0yt7qppvpf8w"]
+[gd_scene load_steps=6 format=3 uid="uid://b0yt7qppvpf8w"]
 
 [ext_resource type="Script" path="res://Scripts/Main Menu/sound_options.gd" id="1_bk6j4"]
 
@@ -8,7 +8,12 @@
 gradient = SubResource("Gradient_ffqjq")
 fill_to = Vector2(0, 0)
 
-[sub_resource type="SystemFont" id="SystemFont_meex4"]
+[sub_resource type="SystemFont" id="SystemFont_iotg6"]
+font_names = PackedStringArray("JetBrainsMono NFM")
+
+[sub_resource type="SystemFont" id="SystemFont_m6m0k"]
+font_names = PackedStringArray("JetBrainsMono Nerd Font")
+subpixel_positioning = 0
 
 [node name="SoundOptions" type="Control"]
 layout_mode = 3
@@ -53,8 +58,10 @@ layout_mode = 2
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-theme_override_fonts/font = SubResource("SystemFont_meex4")
-theme_override_font_sizes/font_size = 64
+theme_override_colors/font_color = Color(0.603431, 0.574434, 0.565138, 1)
+theme_override_colors/font_shadow_color = Color(0.176, 0.44, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_iotg6")
+theme_override_font_sizes/font_size = 80
 text = "Sound Settings"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
@@ -72,7 +79,8 @@ layout_mode = 2
 [node name="Back" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
-size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.650128, 0.650128, 0.650128, 1)
+theme_override_fonts/font = SubResource("SystemFont_m6m0k")
 theme_override_font_sizes/font_size = 40
 text = "Back"
 flat = true

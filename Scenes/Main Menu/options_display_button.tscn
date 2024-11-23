@@ -1,4 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpw43irq71e7d"]
+[gd_scene load_steps=3 format=3 uid="uid://bpw43irq71e7d"]
+
+[sub_resource type="SystemFont" id="SystemFont_8cn60"]
+font_names = PackedStringArray("JetBrainsMono Nerd Font")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2emag"]
 
@@ -24,6 +27,8 @@ alignment = 1
 [node name="Label" type="Label" parent="HBoxContainer"]
 custom_minimum_size = Vector2(284.71, 30)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.65098, 0.65098, 0.65098, 1)
+theme_override_fonts/font = SubResource("SystemFont_8cn60")
 theme_override_font_sizes/font_size = 32
 text = "BASE_LABEL"
 vertical_alignment = 1
