@@ -1,6 +1,6 @@
 extends Node3D
 
-@export_node_path("Player") var controller_path := NodePath("../Maps/NavigationRegion3D/CharacterBody3D")
+@export_node_path("Player") var controller_path := NodePath("../Maps/NavigationRegion3D/Player")
 
 @onready var controller : Player = get_node(controller_path)
 @onready var animator : AnimationPlayer = get_node(NodePath("AnimationPlayer"))

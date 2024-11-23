@@ -131,6 +131,12 @@ func _unhandled_input(event):
 			current_weapon.reload_pressed()
 
 func _ready() -> void:
+	var pistol = load("res://controllers/weapon_manager/Weapon/Pistol/pistol.tres") as WeaponResource
+	var amanremu = load("res://controllers/weapon_manager/Weapon/Amanremu/amanremu.tres") as WeaponResource
+	var scene_name = get_tree().current_scene.name
+	if scene_name == "Forest" || scene_name == "Pabrik" :
+		equipped_weapons.append(amanremu)
+	
 	update_weapon_model()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

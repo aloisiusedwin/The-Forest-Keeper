@@ -3161,7 +3161,7 @@ shader_parameter/texture_normal = SubResource("NoiseTexture2D_4r67q")
 material = SubResource("ShaderMaterial_y13mi")
 size = Vector3(149.19, 1, 315.785)
 
-[node name="World" type="Node3D"]
+[node name="Pabrik" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.208155, -0.611304, -0.763531, 0.767613, -0.381692, 0.514861, -0.60617, -0.693267, 0.389794, 0, 0, 67.2165)

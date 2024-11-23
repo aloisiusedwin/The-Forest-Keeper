@@ -10,7 +10,7 @@ const damage = 20.0
 
 var state_machine
 var player = null
-@export var player_path := "/root/World/Maps/NavigationRegion3D/CharacterBody3D"
+@export var player_path := "/root/Forest/Maps/NavigationRegion3D/Player"
 
 
 func _ready():

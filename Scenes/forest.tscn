@@ -201,7 +201,7 @@ _data = {
 "pickup": SubResource("Animation_0hnyn")
 }
 
-[node name="World" type="Node3D"]
+[node name="Forest" type="Node3D"]
 script = ExtResource("1_b1oyq")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -237,7 +237,7 @@ metadata/SimpleGrassTextured = "2.0.5"
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Maps"]
 navigation_mesh = SubResource("NavigationMesh_btap5")
 
-[node name="CharacterBody3D" parent="Maps/NavigationRegion3D" instance=ExtResource("1_xqpnu")]
+[node name="Player" parent="Maps/NavigationRegion3D" instance=ExtResource("1_xqpnu")]
 transform = Transform3D(0.999491, 0, -0.0318992, 0, 1, 0, 0.0318992, 0, 0.999491, 85.9096, 1.032, 75.6738)
 
 [node name="floor" type="CSGBox3D" parent="Maps/NavigationRegion3D"]

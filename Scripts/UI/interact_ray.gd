@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		if collider is Interactable:
 			prompt.text = collider.prompt_message
 			if Input.is_action_just_pressed("interact"):
-				if collider.name == "flashy" || "lockeddoor":
+				if collider.name == "flashy" || collider.name == "lockeddoor":
 					collider.interact(owner) 
 				else:
 					collider.interact(self)  # Memanggil interact() dari Interactable

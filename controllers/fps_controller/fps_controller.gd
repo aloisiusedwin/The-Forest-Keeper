@@ -53,7 +53,7 @@ func _step(_is_on_floor:bool) -> bool:
 @export var click_audios: Array[AudioStream]
 @onready var camera_holder : Node3D = get_node(NodePath("Head"))
 
-@export var can_use_torch : bool = false
+@export var can_use_torch : bool = true
 @onready var torchloc : Node3D = get_node(NodePath("Head/TorchHolder/Torchloc"))
 @onready var torch : Node3D = get_node(NodePath("Head/TorchHolder/Torch"))
 @onready var torch_light : Node3D = get_node(NodePath("Head/TorchHolder/Torch/TorchLight"))
@@ -214,5 +214,14 @@ func update_hit_effect():
 	hit_rect.modulate = Color(1.0, 0.2, 0.2, red_alpha)
 	
 func die():
-	print("ded")
-	get_tree().reload_current_scene()
+	var scene_name = get_tree().current_scene.name
+	if scene_name == "Forest":
+		print("ded")
+		
+		get_tree().change_scene_to_file("res://Scenes/Rumah.tscn")
+	else:
+		get_tree().change_scene_to_file("res://Scenes/forest.tscn")
+
+
+func _on_escaped_body_entered(body: Node3D) -> void:
+	get_tree().change_scene_to_file("res://Scenes/Pabrik.tscn")

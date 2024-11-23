@@ -1,4 +1,4 @@
-[gd_scene load_steps=399 format=4 uid="uid://chfaxvavmm1d4"]
+[gd_scene load_steps=400 format=4 uid="uid://chfaxvavmm1d4"]
 
 [ext_resource type="Script" path="res://addons/qodot/src/nodes/qodot_map.gd" id="1_ql3uv"]
 [ext_resource type="Resource" uid="uid://dgm276g7bw8q5" path="res://addons/qodot/game_definitions/fgd/base_classes/target_base_class.tres" id="2_on6hi"]
@@ -47,6 +47,9 @@
 [ext_resource type="Texture2D" uid="uid://5jfcv8qa7xah" path="res://models/Rumah/old_wooden_table_and_chair_3.png" id="45_y35eq"]
 [ext_resource type="Texture2D" uid="uid://bkv560lldanbe" path="res://models/Rumah/old_wooden_table_and_chair_4.png" id="46_c3tbc"]
 [ext_resource type="Texture2D" uid="uid://bn84pnq6vtfil" path="res://models/Rumah/old_wooden_table_and_chair_5.png" id="47_q8iha"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xhhc7"]
+size = Vector3(1, 1.82117, 1)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_yxpy4"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -2346,6 +2349,13 @@ data = PackedVector3Array(20.3371, 75.9376, 21.2891, 20.2446, 80.7676, 23.2694, 
 
 [node name="Node3D" type="Node3D"]
 
+[node name="Escaped" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59098, 5.03344, -20.7574)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Escaped"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.410583, 0)
+shape = SubResource("BoxShape3D_xhhc7")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_elrk8")
 
@@ -3275,8 +3285,8 @@ shape = SubResource("ConvexPolygonShape3D_wh5yq")
 [node name="entity_9_brush_3_collision_shape" type="CollisionShape3D" parent="QodotMap/entity_9_func_group"]
 shape = SubResource("ConvexPolygonShape3D_0pca8")
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("24_6kwwt")]
-transform = Transform3D(-0.105292, 0, 0.994441, 0, 1, 0, -0.994441, 0, -0.105292, 21.0673, -6.59376, -9.80201)
+[node name="Player" parent="." instance=ExtResource("24_6kwwt")]
+transform = Transform3D(-0.105292, 0, 0.994441, 0, 1, 0, -0.994441, 0, -0.105292, 22.8485, -6.40764, -5.09692)
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("28_4xiio")]
 transform = Transform3D(0.0231995, 0, -0.849683, 0, 0.85, 0, 0.849683, 0, 0.0231995, -15.2248, -7.33128, 9.80829)
@@ -3380,9 +3390,9 @@ transform = Transform3D(0.977517, 0, 3.55271e-15, 0, 0.977517, 0, -3.55271e-15, 
 stream = ExtResource("37_y3bo6")
 
 [node name="Flashlight" type="Node3D" parent="."]
-transform = Transform3D(-0.647828, 0, -0.761787, 0, 1, 0, 0.761787, 0, -0.647828, -15.6205, -6.35941, 10.421)
+transform = Transform3D(-0.647828, 0, -0.761787, 0, 1, 0, 0.761787, 0, -0.647828, 15.3343, -7.39767, -11.0282)
 script = ExtResource("38_0t1ak")
-controller_path = NodePath("../CharacterBody3D")
+controller_path = NodePath("../Player")
 
 [node name="flashy" type="StaticBody3D" parent="Flashlight"]
 script = ExtResource("31_siptc")
@@ -3867,6 +3877,7 @@ transform = Transform3D(0.691265, 0, -0.494623, 0, 0.85, 0, 0.494623, 0, 0.69126
 [node name="Sketchfab_Scene9" parent="." instance=ExtResource("28_4xiio")]
 transform = Transform3D(0.715212, 0, -0.459316, 0, 0.85, 0, 0.459316, 0, 0.715212, -19.3239, -7.33128, 8.0797)
 
+[connection signal="body_entered" from="Escaped" to="Player" method="_on_escaped_body_entered"]
 [connection signal="interacted" from="BasementDoor/lockeddoor" to="BasementDoor" method="_on_door_interacted"]
 [connection signal="interacted" from="BasementDoor/LDoor_Key/lockeddoor" to="BasementDoor/LDoor_Key" method="_on_static_body_3d_interacted"]
 [connection signal="interacted" from="Flashlight/flashy" to="Flashlight" method="_on_static_body_3d_interacted"]
