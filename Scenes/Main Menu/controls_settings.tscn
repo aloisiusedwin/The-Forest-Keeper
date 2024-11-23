@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://6qxh8xgldh5k"]
+[gd_scene load_steps=8 format=3 uid="uid://6qxh8xgldh5k"]
 
 [ext_resource type="Script" path="res://Scripts/Main Menu/controls_settings.gd" id="1_e1x2p"]
 [ext_resource type="PackedScene" uid="uid://bxlh2e0iuev0n" path="res://Scenes/Main Menu/hotkey_rebind_button.tscn" id="2_pvndo"]
@@ -8,10 +8,6 @@
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_rl2nb"]
 gradient = SubResource("Gradient_cmepl")
 fill_to = Vector2(0, 0)
-
-[sub_resource type="SystemFont" id="SystemFont_vkquu"]
-font_names = PackedStringArray("JetBrainsMono NFM")
-subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_euft7"]
 font_names = PackedStringArray("JetBrainsMono Nerd Font")
@@ -50,25 +46,6 @@ theme_override_constants/margin_left = 182
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 172
 theme_override_constants/margin_bottom = -103
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 60
-
-[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Separator2" type="Control" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-theme_override_colors/font_color = Color(0.603431, 0.574434, 0.565138, 1)
-theme_override_colors/font_shadow_color = Color(0.176, 0.44, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_vkquu")
-theme_override_font_sizes/font_size = 80
-text = "Control Settings"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_mode = 2
