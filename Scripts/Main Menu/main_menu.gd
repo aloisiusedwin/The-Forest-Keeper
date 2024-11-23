@@ -6,7 +6,7 @@ extends Control
 @onready var options = $"Background/MarginContainer/HBoxContainer/VBoxContainer/Options Button"
 @onready var exit = $"Background/MarginContainer/HBoxContainer/VBoxContainer/Exit Button"
 @onready var optionMenu = $Options as OptionsMenu
-@onready var startLevel = preload("res://Scenes/forest.tscn") as PackedScene
+@onready var startLevel = preload("res://Scenes/Level/Forest/forest.tscn") as PackedScene
 @onready var marginContainer = $Background/MarginContainer
 @onready var subviewport = $Background/SubViewportContainer
 

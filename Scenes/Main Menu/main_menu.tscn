@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Main Menu/main_menu.gd" id="1_eikdk"]
 [ext_resource type="PackedScene" uid="uid://bbt5vpvyc2uh4" path="res://Scenes/Main Menu/options.tscn" id="2_ba35u"]
-[ext_resource type="PackedScene" uid="uid://b8xcddgpq70v2" path="res://Scenes/MainMenuBackground.tscn" id="3_0f5nt"]
+[ext_resource type="PackedScene" uid="uid://b8xcddgpq70v2" path="res://Scenes/Main Menu/MainMenuBackground.tscn" id="3_0f5nt"]
 
 [sub_resource type="SystemFont" id="SystemFont_d4lsy"]
 font_names = PackedStringArray("Melted Monster")
