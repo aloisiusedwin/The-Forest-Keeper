@@ -1,6 +1,7 @@
-[gd_scene load_steps=29 format=4 uid="uid://b8xcddgpq70v2"]
+[gd_scene load_steps=27 format=4 uid="uid://b8xcddgpq70v2"]
 
 [ext_resource type="Texture2D" uid="uid://jcw3qp1cgsye" path="res://textures/grass/forrest_ground_01_diff_1k.png" id="1_jjn7e"]
+[ext_resource type="Environment" uid="uid://b8wf8clhrykfh" path="res://Scenes/Main Menu/MainMenuBackground.tres" id="1_mg8w3"]
 [ext_resource type="PackedScene" uid="uid://bkiomthxg4233" path="res://models/forestMap/gubuk/gubuk.tscn" id="2_yr7o6"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="3_cjn6y"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="4_plc21"]
@@ -13,31 +14,6 @@
 [ext_resource type="Script" path="res://Scripts/UI/interactable.gd" id="11_w71if"]
 [ext_resource type="PackedScene" uid="uid://ddwh7n0ppw6gg" path="res://controllers/weapon_manager/Weapon/Amanremu/amanremu viewmodel.tscn" id="12_t8ufo"]
 [ext_resource type="PackedScene" uid="uid://bfr8rsojsr42k" path="res://controllers/weapon_manager/Weapon/Pistol/pistol - viewmodel.tscn" id="13_ukehf"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mh1ov"]
-sky_top_color = Color(0, 0, 0, 1)
-sky_horizon_color = Color(0, 0, 0, 1)
-sky_energy_multiplier = 0.0
-ground_bottom_color = Color(0, 0, 0, 1)
-ground_horizon_color = Color(0, 0, 0, 1)
-energy_multiplier = 4.25
-
-[sub_resource type="Sky" id="Sky_mdoil"]
-sky_material = SubResource("ProceduralSkyMaterial_mh1ov")
-
-[sub_resource type="Environment" id="Environment_fwoya"]
-background_mode = 2
-sky = SubResource("Sky_mdoil")
-tonemap_mode = 2
-tonemap_exposure = 0.35
-tonemap_white = 14.8
-ssr_enabled = true
-ssao_radius = 0.01
-glow_enabled = true
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.1645
-volumetric_fog_emission = Color(0.302184, 0.343639, 0.437532, 1)
-volumetric_fog_emission_energy = 2.2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ke2bd"]
 albedo_texture = ExtResource("1_jjn7e")
@@ -221,7 +197,7 @@ light_volumetric_fog_energy = 0.805
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_fwoya")
+environment = ExtResource("1_mg8w3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_ke2bd")

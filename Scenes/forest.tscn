@@ -1,8 +1,9 @@
-[gd_scene load_steps=26 format=4 uid="uid://bsnnhn2fuq3rp"]
+[gd_scene load_steps=25 format=4 uid="uid://bsnnhn2fuq3rp"]
 
 [ext_resource type="Script" path="res://Scenes/forest.gd" id="1_b1oyq"]
 [ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller/fps_controller.tscn" id="1_xqpnu"]
 [ext_resource type="Texture2D" uid="uid://o8bpwey0jmnf" path="res://textures/sand/coast_sand_rocks_02_diff_1k.jpg" id="2_gb12d"]
+[ext_resource type="Environment" uid="uid://b8wf8clhrykfh" path="res://Scenes/Main Menu/MainMenuBackground.tres" id="2_tt0es"]
 [ext_resource type="PackedScene" uid="uid://buxbpi624u3q" path="res://models/forestMap/trees/beech/beech.tscn" id="6_g86oi"]
 [ext_resource type="PackedScene" uid="uid://bkiomthxg4233" path="res://models/forestMap/gubuk/gubuk.tscn" id="7_8k8xh"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="7_tfgmx"]
@@ -14,27 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://cwpybijb5cj4x" path="res://models/forestMap/paper/notes.tscn" id="12_lgw4x"]
 [ext_resource type="Script" path="res://Scenes/Inventory/Flashlight/flashlight.gd" id="13_lqbtc"]
 [ext_resource type="Script" path="res://Scripts/UI/interactable.gd" id="14_74q1k"]
-
-[sub_resource type="Sky" id="Sky_sknmp"]
-
-[sub_resource type="Environment" id="Environment_mfvir"]
-background_mode = 2
-sky = SubResource("Sky_sknmp")
-tonemap_mode = 1
-tonemap_exposure = 0.2
-tonemap_white = 0.8
-glow_enabled = true
-fog_enabled = true
-fog_light_color = Color(0.724366, 0.708729, 0.702003, 1)
-fog_light_energy = 1.45
-fog_density = 0.0015
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.0548
-volumetric_fog_albedo = Color(0.703808, 0.703808, 0.703808, 1)
-volumetric_fog_emission = Color(0.589096, 0.589096, 0.589096, 1)
-volumetric_fog_emission_energy = 0.5
-volumetric_fog_length = 30.0
-volumetric_fog_detail_spread = 1.17688
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pkhja"]
 resource_local_to_scene = true
@@ -205,19 +185,9 @@ _data = {
 script = ExtResource("1_b1oyq")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_mfvir")
+environment = ExtResource("2_tt0es")
 
 [node name="Maps" type="Node3D" parent="."]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Maps"]
-transform = Transform3D(-0.78152, 0.323187, -0.533644, 0, 0.855364, 0.518027, 0.62388, 0.404849, -0.668484, 0, 0, 0)
-light_color = Color(0.637843, 0.712491, 0.970784, 1)
-light_energy = 0.0
-light_volumetric_fog_energy = 16.0
-light_angular_distance = 0.3
-light_negative = true
-shadow_enabled = true
-shadow_blur = 5.045
 
 [node name="SimpleGrassTextured" type="MultiMeshInstance3D" parent="Maps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00631714, 0, -0.116016)
@@ -867,6 +837,13 @@ libraries = {
 
 [node name="FlashlightSfx" type="AudioStreamPlayer3D" parent="Flashlight"]
 transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.770661, -0.468127, 0.432365, 0.135738, 0.783509, 0.606373, -0.622622, -0.40862, 0.667362, 0, 0, 0)
+light_color = Color(0.180283, 0.491931, 0.756555, 1)
+light_energy = 0.4
+light_volumetric_fog_energy = 0.805
+shadow_enabled = true
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
 [connection signal="interacted" from="Flashlight/flashy" to="Flashlight" method="_on_static_body_3d_interacted"]
