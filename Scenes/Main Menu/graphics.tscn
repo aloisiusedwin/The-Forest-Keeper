@@ -11,6 +11,7 @@ fill_to = Vector2(0, 0)
 
 [sub_resource type="SystemFont" id="SystemFont_mky0u"]
 font_names = PackedStringArray("JetBrainsMono Nerd Font")
+subpixel_positioning = 0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6exja"]
 
