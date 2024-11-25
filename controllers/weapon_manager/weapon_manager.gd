@@ -121,10 +121,8 @@ func make_bullet_trail(target_pos : Vector3):
 func _unhandled_input(event):
 	if current_weapon and is_inside_tree():
 		if event.is_action_pressed("attack") and allow_shoot:
-			print("Trigger down")
 			current_weapon.trigger_down = true
 		elif event.is_action_released("attack"):
-			print("NOT Trigger down")
 			current_weapon.trigger_down = false
 		
 		if event.is_action_pressed("reload"):

@@ -1,0 +1,868 @@
+f2b985f967f0bdb1e3adfa033ebc58fb
+::res://::1732520188
+human_hand.tscn::PackedScene::6948670274833697996::1732517617::0::1::::<><>::
+icon.svg::CompressedTexture2D::5971508811447118880::1732516603::1732516630::1::::<><>::
+README.md::TextFile::-1::1732516603::0::1::::<><>::
+tfklogo.png::CompressedTexture2D::7113827673850346653::1732519995::1732520193::1::::<><>::
+tfklogo.svg::CompressedTexture2D::265613870191227862::1732520147::1732520193::1::::<><>::
+tfktitle.png::CompressedTexture2D::5163325061113687360::1732519813::1732520010::1::::<><>::
+tfktitle.svg::CompressedTexture2D::3843107750767012752::1732519927::1732520195::1::::<><>::
+::res://addons/::1732516603
+::res://addons/qodot/::1732517356
+icon.png::CompressedTexture2D::4303817965049754646::1732516357::1732517356::1::::<><>::
+palette.lmp::Resource::4215014223586875623::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_palette_file.gd
+plugin.cfg::TextFile::-1::1732516357::0::1::::<><>::
+qodot_project_config.tres::Resource/QodotProjectConfig::817744215239847104::1732516357::0::1::::<><>::res://addons/qodot/src/util/qodot_project_config.gd
+::res://addons/qodot/example_scenes/::1732516357
+::res://addons/qodot/example_scenes/0-visuals/::1732516357
+::res://addons/qodot/example_scenes/0-visuals/0-structural-geometry/::1732517348
+0-structural-geometry.map::Resource::313146780448585140::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+0-structural-geometry.tscn::PackedScene::1709565390128941826::1732516357::0::1::::<><>::res://addons/qodot/src/nodes/qodot_map.gd<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres
+::res://addons/qodot/example_scenes/0-visuals/1-textures/::1732517348
+1-textures.map::Resource::5365009904910902972::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+1-textures.tscn::PackedScene::8456968617685425924::1732516357::0::1::::<><>::res://addons/qodot/src/nodes/qodot_map.gd<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres<>uid://bw7tponn4vieu::::res://addons/qodot/textures/base/grid.png<>uid://c31tbmy4phf2h::::res://addons/qodot/textures/base/checkerboard.png<>uid://qbhw21w1jneg::::res://addons/qodot/textures/base/uv_test.png
+::res://addons/qodot/example_scenes/0-visuals/2-materials/::1732517348
+2-materials.map::Resource::2362287929475946370::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+2-materials.tscn::PackedScene::8007014657456742629::1732516357::0::1::::<><>::res://addons/qodot/src/nodes/qodot_map.gd<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres<>res://addons/qodot/textures/materials/checkerboard_material.tres<>res://addons/qodot/textures/materials/grid_material.tres<>res://addons/qodot/textures/materials/uv_test_material.tres<>uid://vixaih7yaqwa::::res://addons/qodot/textures/shaders/tangent-test.tres
+::res://addons/qodot/example_scenes/0-visuals/3-auto-pbr/::1732517348
+3-auto-pbr.map::Resource::3599643161606621994::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+3-auto-pbr.tscn::PackedScene::4419324723498134653::1732516357::0::1::::<><>::res://addons/qodot/src/nodes/qodot_map.gd<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres<>uid://df7s57f6m26uf::::res://addons/qodot/textures/pbr/military-panel/military-panel_metallic.png<>uid://b3g5hqkvp4mqv::::res://addons/qodot/textures/pbr/military-panel/military-panel_normal.png<>uid://cpxl04ai0om41::::res://addons/qodot/textures/pbr/military-panel/military-panel_roughness.png<>uid://cshuyxat1wpeh::::res://addons/qodot/textures/pbr/military-panel/military-panel_ao.png<>uid://bqr2xncwk0api::::res://addons/qodot/textures/pbr/military-panel.png
+::res://addons/qodot/example_scenes/0-visuals/4-special-textures/::1732517348
+4-special-textures.map::Resource::9074506994503976472::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+4-special-textures.tscn::PackedScene::1072908542624844789::1732516357::0::1::::<><>::res://addons/qodot/src/nodes/qodot_map.gd<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres<>uid://c31tbmy4phf2h::::res://addons/qodot/textures/base/checkerboard.png<>uid://qbhw21w1jneg::::res://addons/qodot/textures/base/uv_test.png<>uid://bw7tponn4vieu::::res://addons/qodot/textures/base/grid.png
+::res://addons/qodot/example_scenes/1-interactivity/::1732516357
+::res://addons/qodot/example_scenes/1-interactivity/0-point-entities/::1732517348
+0-point-entities.map::Resource::3948378812856615276::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+0-point-entities.tscn::PackedScene::1887689969208820653::1732516357::0::1::::<><>::res://addons/qodot/src/nodes/qodot_map.gd<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres<>uid://c31tbmy4phf2h::::res://addons/qodot/textures/base/checkerboard.png<>uid://bw7tponn4vieu::::res://addons/qodot/textures/base/grid.png<>uid://b7ccfkajnmn64::::res://addons/qodot/game_definitions/fgd/point_classes/physics_ball.tscn<>res://addons/qodot/game_definitions/fgd/point_classes/physics_ball.gd
+::res://addons/qodot/example_scenes/1-interactivity/1-brush-entities/::1732517348
+1-brush-entities.map::Resource::2191035927232272337::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+1-brush-entities.tscn::PackedScene::4314149976300853281::1732516357::0::1::::<><>::res://addons/qodot/src/nodes/qodot_map.gd<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres<>uid://c31tbmy4phf2h::::res://addons/qodot/textures/base/checkerboard.png<>uid://qbhw21w1jneg::::res://addons/qodot/textures/base/uv_test.png<>uid://bw7tponn4vieu::::res://addons/qodot/textures/base/grid.png<>res://addons/qodot/game_definitions/fgd/solid_classes/physics.gd
+::res://addons/qodot/example_scenes/1-interactivity/2-worldspawn-layers/::1732517348
+2-worldspawn-layers.map::Resource::6797811943856641659::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+2-worldspawn-layers.tscn::PackedScene::2892293071312418402::1732516357::0::1::::<><>::res://addons/qodot/src/nodes/qodot_map.gd<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres<>uid://b7ccfkajnmn64::::res://addons/qodot/game_definitions/fgd/point_classes/physics_ball.tscn<>uid://bw7tponn4vieu::::res://addons/qodot/textures/base/grid.png<>uid://clidbhxth4icl::::res://addons/qodot/game_definitions/worldspawn_layers/liquid/lava.tres<>uid://b2f6ok8hsauat::::res://addons/qodot/game_definitions/worldspawn_layers/liquid/slime.tres<>uid://d4hwu1l0dcldv::::res://addons/qodot/game_definitions/worldspawn_layers/liquid/water.tres<>res://addons/qodot/textures/layers/slime.tres<>res://addons/qodot/textures/layers/lava.tres<>uid://c31tbmy4phf2h::::res://addons/qodot/textures/base/checkerboard.png<>res://addons/qodot/game_definitions/fgd/point_classes/physics_ball.gd<>res://addons/qodot/textures/layers/water.tres
+::res://addons/qodot/example_scenes/1-interactivity/3-basic-signal-wiring/::1732517348
+3-basic-signal-wiring.map::Resource::2019461530844496329::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+3-basic-signal-wiring.tscn::PackedScene::1754201009455252847::1732516357::0::1::::<><>::res://addons/qodot/src/nodes/qodot_map.gd<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres<>uid://b7ccfkajnmn64::::res://addons/qodot/game_definitions/fgd/point_classes/physics_ball.tscn<>res://addons/qodot/game_definitions/fgd/solid_classes/mover.gd<>uid://bw7tponn4vieu::::res://addons/qodot/textures/base/grid.png<>res://addons/qodot/game_definitions/fgd/solid_classes/button.gd<>res://addons/qodot/game_definitions/fgd/point_classes/physics_ball.gd<>uid://c31tbmy4phf2h::::res://addons/qodot/textures/base/checkerboard.png<>uid://qbhw21w1jneg::::res://addons/qodot/textures/base/uv_test.png
+::res://addons/qodot/example_scenes/1-interactivity/4-advanced-signal-wiring/::1732517348
+4-advanced-signal-wiring.map::Resource::5221392987205254433::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+4-advanced-signal-wiring.tscn::PackedScene::5520676679716296670::1732516357::0::1::::<><>::res://addons/qodot/src/nodes/qodot_map.gd<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres<>uid://b7ccfkajnmn64::::res://addons/qodot/game_definitions/fgd/point_classes/physics_ball.tscn<>res://addons/qodot/game_definitions/fgd/solid_classes/mover.gd<>uid://bw7tponn4vieu::::res://addons/qodot/textures/base/grid.png<>res://addons/qodot/game_definitions/fgd/solid_classes/button.gd<>res://addons/qodot/game_definitions/fgd/point_classes/physics_ball.gd<>uid://c31tbmy4phf2h::::res://addons/qodot/textures/base/checkerboard.png<>uid://qbhw21w1jneg::::res://addons/qodot/textures/base/uv_test.png
+::res://addons/qodot/example_scenes/2-miscallaneous/::1732516357
+::res://addons/qodot/example_scenes/2-miscallaneous/0-trenchbroom-group-hierarchy/::1732517348
+0-trenchbroom-group-hierarchy.map::Resource::2789933136041701711::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+0-trenchbroom-group-hierarchy.tscn::PackedScene::7514814830920271852::1732516357::0::1::::<><>::res://addons/qodot/src/nodes/qodot_map.gd<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres<>res://addons/qodot/textures/orrery/metal.tres<>uid://bw7tponn4vieu::::res://addons/qodot/textures/base/grid.png<>res://addons/qodot/game_definitions/fgd/solid_classes/rotate.gd<>res://addons/qodot/textures/orrery/sun.tres
+::res://addons/qodot/example_scenes/2-miscallaneous/1-runtime-map-building/::1732517348
+1-runtime-map-building.map::Resource::7383937629020681760::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+1-runtime-map-building.tscn::PackedScene::6050352078372374043::1732516357::0::1::::<><>::res://addons/qodot/src/nodes/qodot_map.gd<>res://addons/qodot/example_scenes/2-miscallaneous/1-runtime-map-building/orbit_arm.gd<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres
+orbit_arm.gd::GDScript::-1::1732516357::0::1::::OrbitArm<>Node3D<>::
+::res://addons/qodot/game_definitions/::1732516357
+trenchbroom_game_config.tres::Resource/TrenchBroomGameConfig::5580684544040128417::1732516357::0::1::::<><>::res://addons/qodot/game_definitions/brush_tags/detail_tag.tres<>uid://b2k2iutnsgjfy::::res://addons/qodot/icon.png<>uid://bd23tengu5m5u::::res://addons/qodot/game_definitions/brush_tags/trigger_tag.tres<>res://addons/qodot/src/resources/game-definitions/trenchbroom_game_config.gd<>uid://dpjjh0hst6xj::::res://addons/qodot/game_definitions/face_tags/clip_tag.tres<>uid://b3ec6041xnoec::::res://addons/qodot/game_definitions/face_tags/skip_tag.tres<>uid://c36hv0o6g0udo::::res://addons/qodot/game_definitions/fgd/qodot_fgd.tres
+::res://addons/qodot/game_definitions/brush_tags/::1732516357
+detail_tag.tres::Resource::-1::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/trenchbroom/trenchbroom_tag.gd
+trigger_tag.tres::Resource/TrenchBroomTag::2654459650324857456::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/trenchbroom/trenchbroom_tag.gd
+::res://addons/qodot/game_definitions/face_tags/::1732516357
+clip_tag.tres::Resource/TrenchBroomTag::242095128931482859::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/trenchbroom/trenchbroom_tag.gd
+skip_tag.tres::Resource/TrenchBroomTag::4360143969266497306::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/trenchbroom/trenchbroom_tag.gd
+::res://addons/qodot/game_definitions/fgd/::1732516357
+qodot_fgd.tres::Resource/QodotFGDFile::6802588556376867404::1732516357::0::1::::<><>::uid://dgm276g7bw8q5::::res://addons/qodot/game_definitions/fgd/base_classes/target_base_class.tres<>uid://cw4s1hnxqetee::::res://addons/qodot/game_definitions/fgd/solid_classes/func_group_solid_class.tres<>uid://ccdjpf5j25aua::::res://addons/qodot/game_definitions/fgd/base_classes/targetname_base_class.tres<>uid://c5o31v30rw7v5::::res://addons/qodot/game_definitions/fgd/base_classes/light_base_class.tres<>res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_file.gd<>uid://bu3h1cvdigp1i::::res://addons/qodot/game_definitions/fgd/point_classes/signal_point_class.tres<>uid://dy7undvxjvodx::::res://addons/qodot/game_definitions/fgd/solid_classes/illusionary_solid_class.tres<>uid://dbh35xj5q8gvc::::res://addons/qodot/game_definitions/fgd/point_classes/receiver_point_class.tres<>uid://dxp37dladbquv::::res://addons/qodot/game_definitions/fgd/solid_classes/worldspawn_solid_class.tres<>uid://ccwosedfa8v8d::::res://addons/qodot/game_definitions/fgd/point_classes/light_point_class.tres<>uid://bnbdy0cky2bo::::res://addons/qodot/game_definitions/fgd/solid_classes/group_solid_class.tres<>uid://ckg61cpr5p63l::::res://addons/qodot/game_definitions/fgd/solid_classes/button_solid_class.tres<>uid://b8aisardk4k4u::::res://addons/qodot/game_definitions/fgd/solid_classes/detail_solid_class.tres<>uid://b3yn012fy6782::::res://addons/qodot/game_definitions/fgd/solid_classes/mover_solid_class.tres<>uid://de6w02sa4ckl5::::res://addons/qodot/game_definitions/fgd/solid_classes/rotate_solid_class.tres<>uid://b70dbh5v15xno::::res://addons/qodot/game_definitions/fgd/solid_classes/trigger_solid_class.tres<>uid://bu2f3lupsjhfp::::res://addons/qodot/game_definitions/fgd/solid_classes/wall_solid_class.tres<>uid://v3fbh0xn5d2h::::res://addons/qodot/game_definitions/fgd/solid_classes/physics_solid_class.tres
+::res://addons/qodot/game_definitions/fgd/base_classes/::1732516357
+light_base_class.tres::Resource/QodotFGDBaseClass::6909155618927381192::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_base_class.gd
+targetname_base_class.tres::Resource/QodotFGDBaseClass::4919985737174980712::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_base_class.gd
+target_base_class.tres::Resource/QodotFGDBaseClass::7606865789114720258::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_base_class.gd
+::res://addons/qodot/game_definitions/fgd/point_classes/::1732516357
+demo_model_point_class.tres::Resource/QodotFGDPointClass::1835503971136974574::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_point_class.gd
+light.gd::GDScript::-1::1732516357::0::1::::QodotLight<>QodotEntity<>::
+light_point_class.tres::Resource/QodotFGDPointClass::4959517762396913953::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_point_class.gd<>res://addons/qodot/game_definitions/fgd/point_classes/light.gd<>uid://c5o31v30rw7v5::::res://addons/qodot/game_definitions/fgd/base_classes/light_base_class.tres
+physics_ball.gd::GDScript::-1::1732516357::0::1::::PhysicsBall<>PhysicsEntity<>::
+physics_ball.tscn::PackedScene::4636723324233594687::1732516357::0::1::::<><>::
+physics_ball_point_class.tres::Resource/QodotFGDPointClass::6179987416617154404::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_point_class.gd<>uid://b7ccfkajnmn64::::res://addons/qodot/game_definitions/fgd/point_classes/physics_ball.tscn<>res://addons/qodot/game_definitions/fgd/point_classes/physics_ball.gd
+receiver_point_class.tres::Resource/QodotFGDPointClass::7245656411936403692::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_point_class.gd<>uid://dgm276g7bw8q5::::res://addons/qodot/game_definitions/fgd/base_classes/target_base_class.tres<>uid://ccdjpf5j25aua::::res://addons/qodot/game_definitions/fgd/base_classes/targetname_base_class.tres
+signal_point_class.tres::Resource/QodotFGDPointClass::3848471720793159048::1732516357::0::1::::<><>::uid://dgm276g7bw8q5::::res://addons/qodot/game_definitions/fgd/base_classes/target_base_class.tres<>uid://ccdjpf5j25aua::::res://addons/qodot/game_definitions/fgd/base_classes/targetname_base_class.tres<>res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_point_class.gd
+timer_point_class.gd::GDScript::-1::1732516357::0::1::::TimerPoint<>QodotEntity<>::
+timer_point_class.tres::Resource/QodotFGDPointClass::7691061134415565298::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_point_class.gd
+::res://addons/qodot/game_definitions/fgd/solid_classes/::1732516357
+button.gd::GDScript::-1::1732516357::0::1::::<>Area3D<>::
+button_solid_class.tres::Resource/QodotFGDSolidClass::5489044856740057463::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_solid_class.gd<>res://addons/qodot/game_definitions/fgd/solid_classes/button.gd
+detail_solid_class.tres::Resource/QodotFGDSolidClass::4703170430393086654::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_solid_class.gd
+func_group_solid_class.tres::Resource/QodotFGDSolidClass::6378002607614455576::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_solid_class.gd
+group_solid_class.tres::Resource/QodotFGDSolidClass::97093128101013244::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_solid_class.gd
+illusionary_solid_class.tres::Resource/QodotFGDSolidClass::8911092132766912781::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_solid_class.gd
+mover.gd::GDScript::-1::1732516357::0::1::::<>CharacterBody3D<>::
+mover_solid_class.tres::Resource/QodotFGDSolidClass::4402088744986357589::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_solid_class.gd<>res://addons/qodot/game_definitions/fgd/solid_classes/mover.gd
+physics.gd::GDScript::-1::1732516357::0::1::::PhysicsEntity<>RigidBody3D<>::
+physics_solid_class.tres::Resource/QodotFGDSolidClass::1532074071617223049::1732516357::0::1::::<><>::res://addons/qodot/game_definitions/fgd/solid_classes/physics.gd<>res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_solid_class.gd
+rotate.gd::GDScript::-1::1732516357::0::1::::QodotRotateEntity<>CharacterBody3D<>::
+rotate_solid_class.tres::Resource/QodotFGDSolidClass::7505395000671548060::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_solid_class.gd<>res://addons/qodot/game_definitions/fgd/solid_classes/rotate.gd
+trigger.gd::GDScript::-1::1732516357::0::1::::<>Area3D<>::
+trigger_solid_class.tres::Resource/QodotFGDSolidClass::4684257475731514324::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_solid_class.gd<>res://addons/qodot/game_definitions/fgd/solid_classes/trigger.gd
+wall_solid_class.tres::Resource/QodotFGDSolidClass::3846289952365419421::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_solid_class.gd
+worldspawn_solid_class.tres::Resource/QodotFGDSolidClass::8806328516834328821::1732516357::0::1::::<><>::res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_solid_class.gd
+::res://addons/qodot/game_definitions/worldspawn_layers/::1732516357
+liquid.gd::GDScript::-1::1732516357::0::1::::LiquidLayer<>Area3D<>::
+::res://addons/qodot/game_definitions/worldspawn_layers/liquid/::1732516357
+lava.gd::GDScript::-1::1732516357::0::1::::LavaLayer<>LiquidLayer<>::
+lava.tres::Resource/QodotWorldspawnLayer::5561618010276969959::1732516357::0::1::::<><>::res://addons/qodot/src/resources/worldspawn_layer.gd<>res://addons/qodot/game_definitions/worldspawn_layers/liquid/lava.gd
+slime.gd::GDScript::-1::1732516357::0::1::::SlimeLayer<>LiquidLayer<>::
+slime.tres::Resource/QodotWorldspawnLayer::4293749155134875555::1732516357::0::1::::<><>::res://addons/qodot/src/resources/worldspawn_layer.gd<>res://addons/qodot/game_definitions/worldspawn_layers/liquid/slime.gd
+water.gd::GDScript::-1::1732516357::0::1::::WaterLayer<>LiquidLayer<>::
+water.tres::Resource/QodotWorldspawnLayer::9210562034319559239::1732516357::0::1::::<><>::res://addons/qodot/src/resources/worldspawn_layer.gd<>res://addons/qodot/game_definitions/worldspawn_layers/liquid/water.gd
+::res://addons/qodot/icons/::1732517356
+icon_qodot_node3d.svg::CompressedTexture2D::2948150285741080799::1732516357::1732517353::1::::<><>::
+icon_qodot_node.svg::CompressedTexture2D::6793227165022044195::1732516357::1732517356::1::::<><>::
+::res://addons/qodot/src/::1732516357
+qodot_plugin.gd::GDScript::-1::1732516357::0::1::::QodotPlugin<>EditorPlugin<>::
+::res://addons/qodot/src/core/::1732516357
+qodot.gd::GDScript::-1::1732516357::0::1::::Qodot<>RefCounted<>::
+qodot_geo_generator.gd::GDScript::-1::1732516357::0::1::::<>RefCounted<>::
+qodot_map_data.gd::GDScript::-1::1732516357::0::1::::QodotMapData<>RefCounted<>::
+qodot_map_parser.gd::GDScript::-1::1732516357::0::1::::QodotMapParser<>RefCounted<>::
+qodot_surface_gatherer.gd::GDScript::-1::1732516357::0::1::::QodotSurfaceGatherer<>RefCounted<>::
+::res://addons/qodot/src/import_plugins/::1732516357
+quake_map_import_plugin.gd::GDScript::-1::1732516357::0::1::::QuakeMapImportPlugin<>EditorImportPlugin<>::
+quake_palette_import_plugin.gd::GDScript::-1::1732516357::0::1::::QuakePaletteImportPlugin<>EditorImportPlugin<>::
+quake_wad_import_plugin.gd::GDScript::-1::1732516357::0::1::::QuakeWadImportPlugin<>EditorImportPlugin<>::
+::res://addons/qodot/src/nodes/::1732516357
+qodot_entity.gd::GDScript::-1::1732516357::0::1::::QodotEntity<>QodotNode3D<>::
+qodot_map.gd::GDScript::-1::1732516357::0::1::::QodotMap<>QodotNode3D<>::
+qodot_node3d.gd::GDScript::-1::1732516357::0::1::::QodotNode3D<>Node3D<>res://addons/qodot/icons/icon_qodot_node3d.svg::
+::res://addons/qodot/src/resources/::1732516357
+quake_map_file.gd::GDScript::-1::1732516357::0::1::::QuakeMapFile<>Resource<>::
+quake_palette_file.gd::GDScript::-1::1732516357::0::1::::QuakePaletteFile<>Resource<>::
+quake_wad_file.gd::GDScript::-1::1732516357::0::1::::QuakeWadFile<>Resource<>::
+worldspawn_layer.gd::GDScript::-1::1732516357::0::1::::QodotWorldspawnLayer<>Resource<>::
+::res://addons/qodot/src/resources/game-definitions/::1732516357
+trenchbroom_game_config.gd::GDScript::-1::1732516357::0::1::::TrenchBroomGameConfig<>Resource<>::
+::res://addons/qodot/src/resources/game-definitions/fgd/::1732516357
+qodot_fgd_base_class.gd::GDScript::-1::1732516357::0::1::::QodotFGDBaseClass<>QodotFGDClass<>::
+qodot_fgd_class.gd::GDScript::-1::1732516357::0::1::::QodotFGDClass<>Resource<>::
+qodot_fgd_file.gd::GDScript::-1::1732516357::0::1::::QodotFGDFile<>Resource<>::
+qodot_fgd_model_point_class.gd::GDScript::-1::1732516357::0::1::::QodotFGDModelPointClass<>QodotFGDPointClass<>::
+qodot_fgd_point_class.gd::GDScript::-1::1732516357::0::1::::QodotFGDPointClass<>QodotFGDClass<>::
+qodot_fgd_solid_class.gd::GDScript::-1::1732516357::0::1::::QodotFGDSolidClass<>QodotFGDClass<>::
+::res://addons/qodot/src/resources/game-definitions/trenchbroom/::1732516357
+trenchbroom_face_attrib.gd::GDScript::-1::1732516357::0::1::::TrenchBroomFaceAttrib<>Resource<>::
+trenchbroom_face_attrib_defaults.gd::GDScript::-1::1732516357::0::1::::TrenchBroomFaceAttribDefaults<>Resource<>::
+trenchbroom_tag.gd::GDScript::-1::1732516357::0::1::::TrenchBroomTag<>Resource<>::
+::res://addons/qodot/src/util/::1732516357
+qodot_editor_button.gd::GDScript::-1::1732516357::0::1::::QodotEditorButton<>EditorInspectorPlugin<>::
+qodot_project_config.gd::GDScript::-1::1732516357::0::1::::QodotProjectConfig<>Resource<>::
+qodot_texture_loader.gd::GDScript::-1::1732516357::0::1::::QodotTextureLoader<>RefCounted<>::
+qodot_util.gd::GDScript::-1::1732516357::0::1::::QodotUtil<>RefCounted<>::
+::res://addons/qodot/textures/::1732516357
+::res://addons/qodot/textures/base/::1732517356
+checkerboard.png::CompressedTexture2D::6792958888206592633::1732516357::1732517356::1::::<><>::
+grid.png::CompressedTexture2D::3997816497670471060::1732516357::1732517356::1::::<><>::
+uv_test.png::CompressedTexture2D::1125551641707912554::1732516357::1732517356::1::::<><>::
+::res://addons/qodot/textures/layers/::1732517356
+lava.png::CompressedTexture2D::6278954723491494119::1732516357::1732517356::1::::<><>::
+lava.tres::StandardMaterial3D::-1::1732516357::0::1::::<><>::
+slime.png::CompressedTexture2D::9046428312127563487::1732516357::1732517356::1::::<><>::
+slime.tres::StandardMaterial3D::-1::1732516357::0::1::::<><>::
+water.png::CompressedTexture2D::4514249969325759282::1732516357::1732517356::1::::<><>::
+water.tres::StandardMaterial3D::-1::1732516357::0::1::::<><>::
+::res://addons/qodot/textures/materials/::1732517356
+checkerboard_material.png::CompressedTexture2D::3810368368898848167::1732516357::1732517356::1::::<><>::
+checkerboard_material.tres::StandardMaterial3D::-1::1732516357::0::1::::<><>::res://addons/qodot/textures/materials/checkerboard_material.png
+grid_material.png::CompressedTexture2D::2971491687339174068::1732516357::1732517356::1::::<><>::
+grid_material.tres::StandardMaterial3D::-1::1732516357::0::1::::<><>::res://addons/qodot/textures/materials/grid_material.png
+uv_test_material.png::CompressedTexture2D::310633365650990606::1732516357::1732517356::1::::<><>::
+uv_test_material.tres::StandardMaterial3D::-1::1732516357::0::1::::<><>::res://addons/qodot/textures/materials/uv_test_material.png
+::res://addons/qodot/textures/orrery/::1732517356
+metal.png::CompressedTexture2D::1635230824848241745::1732516357::1732517356::1::::<><>::
+metal.tres::StandardMaterial3D::-1::1732516357::0::1::::<><>::
+planet.png::CompressedTexture2D::5187484155820737878::1732516357::1732517356::1::::<><>::
+planet.tres::StandardMaterial3D::-1::1732516357::0::1::::<><>::
+sun.png::CompressedTexture2D::7852726664507952814::1732516357::1732517356::1::::<><>::
+sun.tres::StandardMaterial3D::-1::1732516357::0::1::::<><>::
+::res://addons/qodot/textures/pbr/::1732517356
+military-panel.png::CompressedTexture2D::3546217722692229038::1732516357::1732517356::1::::<><>::
+::res://addons/qodot/textures/pbr/military-panel/::1732517356
+military-panel_ao.png::CompressedTexture2D::6051949604994203515::1732516357::1732517356::1::::<><>::
+military-panel_depth.png::CompressedTexture2D::2435984246511830471::1732516357::1732517356::1::::<><>::
+military-panel_emissive.png::CompressedTexture2D::2747755497903641844::1732516357::1732517356::1::::<><>::
+military-panel_metallic.png::CompressedTexture2D::7577414526983179745::1732516357::1732517356::1::::<><>::
+military-panel_normal.png::CompressedTexture2D::4365929439219684317::1732516357::1732517356::1::::<><>::
+military-panel_roughness.png::CompressedTexture2D::5873868765642727332::1732516357::1732517356::1::::<><>::
+::res://addons/qodot/textures/shaders/::1732517356
+tangent-test.png::CompressedTexture2D::8369999958819788034::1732516357::1732517356::1::::<><>::
+tangent-test.tres::ShaderMaterial::1491877661751243884::1732516357::0::1::::<><>::
+::res://addons/qodot/textures/special/::1732517356
+clip.png::CompressedTexture2D::8369999958819788034::1732516357::1732517356::1::::<><>::
+skip.png::CompressedTexture2D::3013576122456084822::1732516357::1732517356::1::::<><>::
+::res://addons/simplegrasstextured/::1732516635
+about.gd::GDScript::-1::1732516603::0::1::::<>AcceptDialog<>::
+about.tscn::PackedScene::4911781892099929477::1732516603::0::1::::<><>::res://addons/simplegrasstextured/about.gd<>uid://cl74usvfymgvs::::res://addons/simplegrasstextured/materials/icon.material<>uid://cubr1a55brlfp::::res://addons/simplegrasstextured/sgt_icon_48.svg
+clear_all_confirmation_dialog.gd::GDScript::-1::1732516603::0::1::::<>ConfirmationDialog<>::
+clear_all_confirmation_dialog.tscn::PackedScene::6655298708346297599::1732516603::0::1::::<><>::res://addons/simplegrasstextured/clear_all_confirmation_dialog.gd
+default_mesh.tres::ArrayMesh::1295522839817845829::1732516603::0::1::::<><>::
+default_mesh_builder.gd::GDScript::-1::1732516603::0::1::::<>RefCounted<>::
+global_parameters.gd::GDScript::-1::1732516603::0::1::::<>AcceptDialog<>::
+global_parameters.tscn::PackedScene::2458798723417736340::1732516603::0::1::::<><>::res://addons/simplegrasstextured/global_parameters.gd
+grass.gd::GDScript::-1::1732516603::0::1::::<>MultiMeshInstance3D<>::
+plugin.cfg::TextFile::-1::1732516603::0::1::::<><>::
+plugin.gd::GDScript::-1::1732516603::0::1::::<>EditorPlugin<>::
+sgt_icon.svg::CompressedTexture2D::3674741696772618351::1732516603::1732516635::1::::<><>::
+sgt_icon_48.svg::CompressedTexture2D::6179761285128679357::1732516603::1732516635::1::::<><>::
+sgt_inspector.gd::GDScript::-1::1732516603::0::1::::<>EditorInspectorPlugin<>::
+singleton.gd::GDScript::-1::1732516603::0::1::::<>Node3D<>::
+singleton.tscn::PackedScene::2771945727575370787::1732516603::0::1::::<><>::res://addons/simplegrasstextured/singleton.gd<>res://addons/simplegrasstextured/shaders/distance.gdshader<>res://addons/simplegrasstextured/shaders/motion1.gdshader<>res://addons/simplegrasstextured/shaders/motion2.gdshader<>res://addons/simplegrasstextured/shaders/normal.gdshader<>uid://cho4etu1eahnx::::res://addons/simplegrasstextured/images/normal.png<>uid://m77dlrqfdeef::::res://addons/simplegrasstextured/images/normal_frame.png<>res://addons/simplegrasstextured/shaders/blur1.gdshader<>res://addons/simplegrasstextured/shaders/blur2.gdshader<>uid://bovwvrkiruiat::::res://addons/simplegrasstextured/images/motion_frame.png<>uid://dk6rqq2wmb45o::::res://addons/simplegrasstextured/images/motion.png
+toolbar.gd::GDScript::-1::1732516603::0::1::::<>Control<>::
+toolbar.tscn::PackedScene::8439958543240164824::1732516603::0::1::::<><>::res://addons/simplegrasstextured/toolbar.gd<>uid://cl74usvfymgvs::::res://addons/simplegrasstextured/materials/icon.material<>uid://bsmcpupaj02v8::::res://addons/simplegrasstextured/sgt_icon.svg<>uid://der2mmxtog2mt::::res://addons/simplegrasstextured/toolbar_menu.tscn<>uid://clm6vd2es8xm7::::res://addons/simplegrasstextured/images/sgt_icon_radius.svg<>uid://tqiak77omdnr::::res://addons/simplegrasstextured/images/sgt_icon_density.svg<>uid://d28dlfkm62t6e::::res://addons/simplegrasstextured/images/sgt_icon_distance.svg
+toolbar_menu.gd::GDScript::-1::1732516603::0::1::::<>MenuButton<>::
+toolbar_menu.tscn::PackedScene::7476773302474954695::1732516603::0::1::::<><>::res://addons/simplegrasstextured/toolbar_menu.gd
+toolbar_up.gd::GDScript::-1::1732516603::0::1::::<>Control<>::
+toolbar_up.tscn::PackedScene::2788704064382556614::1732516603::0::1::::<><>::res://addons/simplegrasstextured/toolbar_up.gd<>uid://bsmcpupaj02v8::::res://addons/simplegrasstextured/sgt_icon.svg<>uid://der2mmxtog2mt::::res://addons/simplegrasstextured/toolbar_menu.tscn
+::res://addons/simplegrasstextured/images/::1732516635
+motion.png::CompressedTexture2D::7926207842513999046::1732516603::1732516635::1::::<><>::
+motion_frame.png::CompressedTexture2D::3413790611705667811::1732516603::1732516635::1::::<><>::
+normal.png::CompressedTexture2D::5294833527401528685::1732516603::1732516635::1::::<><>::
+normal_frame.png::CompressedTexture2D::910275117688840773::1732516603::1732516635::1::::<><>::
+pointer.png::CompressedTexture2D::2028199532254930808::1732516603::1732516635::1::::<><>::
+sgt_icon_density.svg::CompressedTexture2D::1367104385270064023::1732516603::1732516635::1::::<><>::
+sgt_icon_distance.svg::CompressedTexture2D::9122687368553934006::1732516603::1732516635::1::::<><>::
+sgt_icon_radius.svg::CompressedTexture2D::5571611108387928316::1732516603::1732516635::1::::<><>::
+wind_pattern.png::CompressedTexture2D::18393553257205938::1732516603::1732516635::1::::<><>::
+::res://addons/simplegrasstextured/materials/::1732516603
+grass.material::ShaderMaterial::8222375467503170076::1732516603::0::1::::<><>::res://addons/simplegrasstextured/shaders/grass.gdshader
+grass_unshaded.material::ShaderMaterial::3094928426551161515::1732516603::0::1::::<><>::res://addons/simplegrasstextured/shaders/grass_unshaded.gdshader
+icon.material::ShaderMaterial::5612776222323720372::1732516603::0::1::::<><>::
+position.material::ShaderMaterial::4894212141296346752::1732516603::0::1::::<><>::res://addons/simplegrasstextured/shaders/position.gdshader
+::res://addons/simplegrasstextured/shaders/::1732516603
+blur1.gdshader::Shader::-1::1732516603::0::1::::<><>::
+blur2.gdshader::Shader::-1::1732516603::0::1::::<><>::
+distance.gdshader::Shader::-1::1732516603::0::1::::<><>::
+grass.gdshader::Shader::-1::1732516603::0::1::::<><>::
+grass_unshaded.gdshader::Shader::-1::1732516603::0::1::::<><>::
+motion1.gdshader::Shader::-1::1732516603::0::1::::<><>::
+motion2.gdshader::Shader::-1::1732516603::0::1::::<><>::
+normal.gdshader::Shader::-1::1732516603::0::1::::<><>::
+position.gdshader::Shader::-1::1732516603::0::1::::<><>::
+::res://addons/simplegrasstextured/textures/::1732516635
+grassbushcc008.png::CompressedTexture2D::6821074585685753060::1732516603::1732516635::1::::<><>::
+::res://assets/::1732516638
+LOGOTYPE.png::CompressedTexture2D::7816112605827446809::1732516603::1732516638::1::::<><>::
+Screenshot 2024-10-13 163521.png::CompressedTexture2D::17586824501689190::1732516603::1732516636::1::::<><>::
+::res://Audios/::1732516357
+player_audios.gd::GDScript::-1::1732516357::0::1::::PlayerAudios<>Node3D<>::
+player_audios.tscn::PackedScene::1733608468000083717::1732516357::0::1::::<><>::res://Player/Audios/player_audios.gd<>uid://bvcwavmxm31su::::res://Player/AudioInteracts/tile_audio_interact.tres<>uid://c58wxv6h52gbn::::res://Player/PhysicsMaterials/tile.tres<>uid://t3o4mbgdvok8::::res://Player/PhysicsMaterials/wood.tres<>uid://bjrovvgawkb61::::res://Player/PhysicsMaterials/carpet.tres<>uid://rbpsfr4t5jcm::::res://Player/AudioInteracts/wood_audio_interact.tres<>res://Player/AudioInteracts/carpet_audio_interact.tres<>uid://tpf3n7p5bmqv::::res://Audios/Player/Footsteps/Tile/Footsteps_Tile_Walk_01.wav
+::res://Audios/Global/::1732517361
+atmosphere_hum_amb.wav::AudioStreamWAV::128904497255657924::1732516357::1732517361::1::::<><>::
+::res://Audios/Player/::1732516357
+::res://Audios/Player/Flashlight/::1732517348
+Click_1.mp3::AudioStreamMP3::4098381827155435079::1732516357::1732517348::1::::<><>::
+Click_2.mp3::AudioStreamMP3::4043523611162877431::1732516357::1732517348::1::::<><>::
+Click_3.mp3::AudioStreamMP3::6984418616330063805::1732516357::1732517348::1::::<><>::
+Click_4.mp3::AudioStreamMP3::7957828244751730634::1732516357::1732517348::1::::<><>::
+Click_5.mp3::AudioStreamMP3::6153719772358018582::1732516357::1732517348::1::::<><>::
+Click_6.mp3::AudioStreamMP3::5254443069651273090::1732516357::1732517348::1::::<><>::
+Click_7.mp3::AudioStreamMP3::8389492031091845411::1732516357::1732517348::1::::<><>::
+Click_8.mp3::AudioStreamMP3::4732320645200493044::1732516357::1732517348::1::::<><>::
+Click_9.mp3::AudioStreamMP3::8886977612852288050::1732516357::1732517348::1::::<><>::
+Click_10.mp3::AudioStreamMP3::6755718220217147484::1732516357::1732517348::1::::<><>::
+::res://Audios/Player/Footsteps/::1732516357
+::res://Audios/Player/Footsteps/Carpet/::1732517360
+Footstep Carpet Walking 1_01.wav::AudioStreamWAV::4308230374860411491::1732516357::1732517360::1::::<><>::
+Footstep Carpet Walking 1_02.wav::AudioStreamWAV::6702805005880840300::1732516357::1732517360::1::::<><>::
+Footstep Carpet Walking 1_03.wav::AudioStreamWAV::572594611640503364::1732516357::1732517360::1::::<><>::
+Footstep Carpet Walking 1_04.wav::AudioStreamWAV::6655930130049983046::1732516357::1732517360::1::::<><>::
+Footstep Carpet Walking 1_05.wav::AudioStreamWAV::6588180597005940133::1732516357::1732517360::1::::<><>::
+Footstep Carpet Walking 1_06.wav::AudioStreamWAV::6089444864873086940::1732516357::1732517360::1::::<><>::
+Footstep Carpet Walking 1_07.wav::AudioStreamWAV::223097403160767819::1732516357::1732517360::1::::<><>::
+Footstep Carpet Walking 1_08.wav::AudioStreamWAV::6421683153956779042::1732516357::1732517360::1::::<><>::
+Footstep Carpet Walking 1_09.wav::AudioStreamWAV::6916802266269998202::1732516357::1732517360::1::::<><>::
+Footstep Carpet Walking 1_10.wav::AudioStreamWAV::5006964328814960381::1732516357::1732517360::1::::<><>::
+::res://Audios/Player/Footsteps/Tile/::1732517360
+Footsteps_Tile_Walk_01.wav::AudioStreamWAV::1364908015585649709::1732516357::1732517360::1::::<><>::
+Footsteps_Tile_Walk_02.wav::AudioStreamWAV::4868523568411433478::1732516357::1732517360::1::::<><>::
+Footsteps_Tile_Walk_03.wav::AudioStreamWAV::1333132981298574646::1732516357::1732517360::1::::<><>::
+Footsteps_Tile_Walk_04.wav::AudioStreamWAV::5150294939146236580::1732516357::1732517360::1::::<><>::
+Footsteps_Tile_Walk_05.wav::AudioStreamWAV::8410327572575865317::1732516357::1732517360::1::::<><>::
+Footsteps_Tile_Walk_06.wav::AudioStreamWAV::4823662195220596090::1732516357::1732517360::1::::<><>::
+Footsteps_Tile_Walk_07.wav::AudioStreamWAV::4641129329129930232::1732516357::1732517360::1::::<><>::
+Footsteps_Tile_Walk_08.wav::AudioStreamWAV::4789475082980406703::1732516357::1732517360::1::::<><>::
+::res://Audios/Player/Footsteps/Wood/::1732517360
+Footsteps_Wood_Walk_01.wav::AudioStreamWAV::2282838557212838342::1732516357::1732517360::1::::<><>::
+Footsteps_Wood_Walk_02.wav::AudioStreamWAV::8324622458490703882::1732516357::1732517360::1::::<><>::
+Footsteps_Wood_Walk_04.wav::AudioStreamWAV::4310197482106477309::1732516357::1732517360::1::::<><>::
+Footsteps_Wood_Walk_06.wav::AudioStreamWAV::9213590856482792518::1732516357::1732517360::1::::<><>::
+Footsteps_Wood_Walk_08.wav::AudioStreamWAV::8965921909772960201::1732516357::1732517360::1::::<><>::
+::res://Audios/TestAudio/::1732517360
+close_gate_sfx.wav::AudioStreamWAV::4229804509540363477::1732516357::1732517360::1::::<><>::
+Door Close.wav::AudioStreamWAV::934006335413296845::1732516357::1732517360::1::::<><>::
+Door Open.wav::AudioStreamWAV::1833374935946540360::1732516357::1732517360::1::::<><>::
+door_unlock_sfx.wav::AudioStreamWAV::761909416479023749::1732516357::1732517360::1::::<><>::
+Item Pick up (Counter Strike Source) - Sound Effect for editing.wav::AudioStreamWAV::491676759216032214::1732516357::1732517360::1::::<><>::
+Light Switch Sound_01.wav::AudioStreamWAV::6614754522088056649::1732516357::1732517360::1::::<><>::
+Light Switch Sound_02.wav::AudioStreamWAV::220015558285726400::1732516357::1732517360::1::::<><>::
+lock_door_sfx.wav::AudioStreamWAV::8027957079346714036::1732516357::1732517360::1::::<><>::
+open_gate_sfx.wav::AudioStreamWAV::4472742220571425278::1732516357::1732517360::1::::<><>::
+::res://controllers/::1732516603
+::res://controllers/fps_controller/::1732519479
+fps_controller.gd::GDScript::-1::1732519479::0::1::::Player<>CharacterBody3D<>::
+fps_controller.tscn::PackedScene::2039694006520507155::1732519479::0::1::::<><>::res://controllers/fps_controller/fps_controller.gd<>uid://bynj0q5svp4rj::::res://Audios/Player/Flashlight/Click_1.mp3<>res://Scripts/UI/interact_ray.gd<>uid://b6y6l08yg5cxe::::res://controllers/weapon_manager/weapon_manager.tscn<>uid://bxuyijbggpwnn::::res://Audios/Player/Flashlight/Click_2.mp3<>uid://c6rkmboqkjtlt::::res://Audios/Player/Flashlight/Click_3.mp3<>res://Scripts/movement/state_machine.gd<>uid://dlm3jeouy8hxy::::res://Audios/Player/Flashlight/Click_4.mp3<>uid://ctw54ou2c6kwk::::res://Audios/Player/Flashlight/Click_5.mp3<>res://Scripts/movement/idle_player_state.gd<>uid://cg4j56t2lm2v3::::res://Audios/Player/Flashlight/Click_6.mp3<>res://Scripts/movement/walking_player_state.gd<>uid://drr6ycqquf6yp::::res://Audios/Player/Flashlight/Click_7.mp3<>res://Scripts/movement/sprinting_player_state.gd<>res://Scripts/movement/crouching_player_state.gd<>uid://b8omvn32tbvea::::res://Audios/Player/Flashlight/Click_8.mp3<>uid://dyu6htwcth2a5::::res://Audios/Player/Flashlight/Click_9.mp3<>res://Scripts/movement/sliding_player_state.gd<>uid://c3irxsa5j8yxw::::res://Audios/Player/Flashlight/Click_10.mp3<>res://Scripts/movement/jumping_player_state.gd<>res://Scripts/movement/falling_player_state.gd<>res://Scripts/WeaponViewport.gd<>res://Scripts/WeaponCamera.gd<>uid://t7ppj5xrrqfj::::res://controllers/weapon_manager/Weapon/Amanremu/amanremu.tres<>uid://dr4khi2j5o4j2::::res://controllers/weapon_manager/Weapon/Pistol/pistol.tres<>res://controllers/weapon_manager/weapon_resource.gd<>uid://hcmvusb6x1n1::::res://Scenes/Pause Menu/pause_menu.tscn<>res://Audios/player_audios.gd<>uid://tpf3n7p5bmqv::::res://Audios/Player/Footsteps/Tile/Footsteps_Tile_Walk_01.wav<>uid://dmlq5yqj6gle2::::res://controllers/hud/player_hud.tscn
+::res://controllers/hud/::1732516357
+debug.tscn::PackedScene::1381127062831587352::1732516357::0::1::::<><>::uid://b33d8vlpvjdwl::::res://ui/themes/debug.tres<>res://Scripts/UI/debug.gd
+player_hud.gd::GDScript::-1::1732516357::0::1::::<>Control<>::
+player_hud.tscn::PackedScene::8025262661459627663::1732516357::0::1::::<><>::res://controllers/hud/player_hud.gd<>uid://ciqgiet3fl5y1::::res://controllers/hud/crosshair/crosshair-dot.svg<>uid://v7xvjhfmpqlu::::res://controllers/hud/weapon_select_layout.tscn<>uid://b33d8vlpvjdwl::::res://ui/themes/debug.tres<>res://Scripts/UI/debug.gd<>res://Scripts/UI/HUD.gd<>uid://cheua48yfqomo::::res://models/forestMap/paper/notes.png
+weapon_select_layout.gd::GDScript::-1::1732516357::0::1::::<>MarginContainer<>::
+weapon_select_layout.tscn::PackedScene::1541460280801828194::1732516357::0::1::::<><>::uid://dai4ehxudhad2::::res://controllers/weapon_manager/Weapon/Pistol/pistol.png<>res://controllers/hud/weapon_select_layout.gd
+::res://controllers/hud/crosshair/::1732517356
+crosshair-dot.svg::CompressedTexture2D::5367760989587281450::1732516357::1732517356::1::::<><>::
+::res://controllers/weapon_manager/::1732518120
+melee_weapon_resource.gd::GDScript::-1::1732516357::0::1::::MeleeWeaponResource<>WeaponResource<>::
+weapon_manager.gd::GDScript::-1::1732518120::0::1::::WeaponManager<>Node3D<>::
+weapon_manager.tscn::PackedScene::4613723138240203562::1732516357::0::1::::<><>::res://controllers/weapon_manager/weapon_manager.gd<>uid://dhgbox8tgcnic::::res://controllers/weapon_manager/muzzleflash/muzzle_flash.tscn
+weapon_resource.gd::GDScript::-1::1732516357::0::1::::WeaponResource<>Resource<>::
+::res://controllers/weapon_manager/bloodsplatter/::1732517683
+blood.tres::VisualShader::6015932482936631065::1732517683::0::1::::<><>::
+blood_splatter.tscn::PackedScene::443492535761290837::1732516357::0::1::::<><>::uid://cryfr8t8syueb::::res://controllers/weapon_manager/bloodsplatter/blood.tres
+::res://controllers/weapon_manager/decal/::1732517356
+bulletdecal.png::CompressedTexture2D::1542020322697136609::1732516357::1732517356::1::::<><>::
+bullet_decal.tscn::PackedScene::7594472516431213539::1732516357::0::1::::<><>::uid://v77346yktytd::::res://controllers/weapon_manager/decal/bulletdecal.png
+bullet_decal_pool.gd::GDScript::-1::1732516357::0::1::::BulletDecalPool<>RefCounted<>::
+knifedecal.png::CompressedTexture2D::437399345176441678::1732516357::1732517356::1::::<><>::
+::res://controllers/weapon_manager/muzzleflash/::1732517356
+blacksmoke.png::CompressedTexture2D::8870886770556649680::1732516357::1732517356::1::::<><>::
+bullet_tracer.tscn::PackedScene::3485590692602240889::1732516357::0::1::::<><>::
+muzzle_flash.tscn::PackedScene::7663057201064307542::1732516357::0::1::::<><>::uid://3ecw4ibs0sso::::res://controllers/weapon_manager/muzzleflash/whitesmoke.png
+whitesmoke.png::CompressedTexture2D::1973707389938669506::1732516357::1732517356::1::::<><>::
+::res://controllers/weapon_manager/Weapon/::1732516357
+::res://controllers/weapon_manager/Weapon/Amanremu/::1732517357
+amanremu viewmodel.tscn::PackedScene::7415727779063176718::1732516357::0::1::::<><>::
+amanremu worldmodel.tscn::PackedScene::2936939066307945081::1732516357::0::1::::<><>::
+Amanremu.png::CompressedTexture2D::7371405507405575819::1732516357::1732517357::1::::<><>::
+amanremu.tres::Resource/MeleeWeaponResource::1400586179175301611::1732516357::0::1::::<><>::uid://ve30pm46teic::::res://controllers/weapon_manager/Weapon/Pistol/sfx/equip.wav<>res://controllers/weapon_manager/melee_weapon_resource.gd<>uid://by1walkfehk5k::::res://controllers/weapon_manager/Weapon/Amanremu/sfx/cc0-swoosh.wav<>uid://dda08bk6kw2sl::::res://controllers/weapon_manager/Weapon/Amanremu/Amanremu.png<>uid://ddwh7n0ppw6gg::::res://controllers/weapon_manager/Weapon/Amanremu/amanremu viewmodel.tscn<>uid://bh3w7sw5pao5v::::res://controllers/weapon_manager/Weapon/Amanremu/amanremu worldmodel.tscn<>uid://cxghowxfr7t3j::::res://controllers/weapon_manager/Weapon/Amanremu/sfx/knifehit.wav
+::res://controllers/weapon_manager/Weapon/Amanremu/sfx/::1732517360
+cc0-swoosh.wav::AudioStreamWAV::4125963119890000582::1732516357::1732517360::1::::<><>::
+knifehit.wav::AudioStreamWAV::6400022248944719613::1732516357::1732517360::1::::<><>::
+::res://controllers/weapon_manager/Weapon/Pistol/::1732517357
+metal.tres::StandardMaterial3D::2178764610472094994::1732516453::0::1::::<><>::
+pistol - viewmodel.tscn::PackedScene::2774494310441195612::1732516357::0::1::::<><>::uid://6bn61v5ig01k::::res://controllers/weapon_manager/Weapon/Pistol/metal.tres
+pistol - worldmodel.tscn::PackedScene::7041172342363416203::1732516357::0::1::::<><>::
+pistol.png::CompressedTexture2D::7177545413184573737::1732516357::1732517357::1::::<><>::
+pistol.tres::Resource/WeaponResource::8412959480624699505::1732516357::0::1::::<><>::uid://ve30pm46teic::::res://controllers/weapon_manager/Weapon/Pistol/sfx/equip.wav<>res://controllers/weapon_manager/weapon_resource.gd<>uid://dai4ehxudhad2::::res://controllers/weapon_manager/Weapon/Pistol/pistol.png<>uid://c8a8crvdowftb::::res://controllers/weapon_manager/Weapon/Pistol/sfx/reload.wav<>uid://bfr8rsojsr42k::::res://controllers/weapon_manager/Weapon/Pistol/pistol - viewmodel.tscn<>uid://c7k2cygrtbmad::::res://controllers/weapon_manager/Weapon/Pistol/pistol - worldmodel.tscn<>uid://376vdtyyh8jy::::res://controllers/weapon_manager/Weapon/Pistol/sfx/shot.WAV
+::res://controllers/weapon_manager/Weapon/Pistol/sfx/::1732517360
+equip.wav::AudioStreamWAV::1483968755807713098::1732516357::1732517360::1::::<><>::
+reload.wav::AudioStreamWAV::7091081365284105163::1732516357::1732517360::1::::<><>::
+shot.WAV::AudioStreamWAV::2033267626486752966::1732516357::1732517360::1::::<><>::
+::res://materials/::1732516603
+grass.tres::StandardMaterial3D::8682561229442615136::1732516603::0::1::::<><>::uid://jcw3qp1cgsye::::res://textures/grass/forrest_ground_01_diff_1k.png<>uid://dfo810lm455te::::res://textures/grass/forrest_ground_01_nor_gl_1k.png<>uid://b2jbh7ucue2gm::::res://textures/grass/forrest_ground_01_rough_1k.png
+::res://models/::1732517617
+::res://models/enemies/::1732516359
+::res://models/enemies/tormenter/::1732517617
+BodyPart.gd::GDScript::-1::1732516453::0::1::::<>Area3D<>::
+tormenter.gd::GDScript::-1::1732517617::0::1::::<>CharacterBody3D<>::
+Tormenter.glb::PackedScene::9147581187329302990::1732516604::1732516650::1::::<><>::uid://bio2dxem2jfsc::::res://models/enemies/tormenter/Tormenter_axe_DIF2.png<>uid://sv0xe5sv4ibo::::res://models/enemies/tormenter/Tormenter_axe_NM2.png<>uid://q7rxg610vxo0::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Body_diffuse1.jpg<>uid://blhidwk2artn::::res://models/enemies/tormenter/Tormenter_MaleBruteA_StdNM.png<>uid://1mnuituhrqlm::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Bottom_diffuse1.jpg<>uid://cm7nqwpb58oak::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Bottom_normal.png<>uid://dh3xrd2fe3qjc::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Body_diffuse.png<>uid://p37o6vr4qwa3::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Hair_diffuse.png<>uid://dkfyc8jqkmlan::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Hair_normal.png<>uid://b38f02xgs3tke::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Moustache_diffuse.png<>uid://e2f5mtyqii0::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Moustache_normal.png<>uid://jwt75i3g5c0i::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Shoes_diffuse1.jpg<>uid://dql7cm2a2cv28::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Shoes_normal.png
+tormenter.tscn::PackedScene::8346259754628423922::1732517617::0::1::::<><>::uid://bio2dxem2jfsc::::res://models/enemies/tormenter/Tormenter_axe_DIF2.png<>res://models/enemies/tormenter/tormenter.gd<>uid://sv0xe5sv4ibo::::res://models/enemies/tormenter/Tormenter_axe_NM2.png<>uid://q7rxg610vxo0::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Body_diffuse1.jpg<>uid://blhidwk2artn::::res://models/enemies/tormenter/Tormenter_MaleBruteA_StdNM.png<>uid://1mnuituhrqlm::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Bottom_diffuse1.jpg<>uid://cm7nqwpb58oak::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Bottom_normal.png<>uid://dh3xrd2fe3qjc::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Body_diffuse.png<>uid://p37o6vr4qwa3::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Hair_diffuse.png<>uid://dkfyc8jqkmlan::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Hair_normal.png<>uid://b38f02xgs3tke::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Moustache_diffuse.png<>uid://e2f5mtyqii0::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Moustache_normal.png<>uid://jwt75i3g5c0i::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Shoes_diffuse1.jpg<>uid://dql7cm2a2cv28::::res://models/enemies/tormenter/Tormenter_MaleBruteA_Shoes_normal.png<>res://models/enemies/tormenter/BodyPart.gd
+Tormenter_axe_DIF2.png::CompressedTexture2D::2978478652338543474::1732516604::1732516634::1::::<><>::
+Tormenter_axe_NM2.png::CompressedTexture2D::1308310373683395272::1732516604::1732516634::1::::<><>::
+Tormenter_axe_SPEC.png::CompressedTexture2D::3465618149721792802::1732516604::1732516635::1::::<><>::
+Tormenter_MaleBruteA_Body_diffuse1.jpg::CompressedTexture2D::1190155212719893129::1732516604::1732516634::1::::<><>::
+Tormenter_MaleBruteA_Body_diffuse.png::CompressedTexture2D::7709813582502626932::1732516604::1732516634::1::::<><>::
+Tormenter_MaleBruteA_Bottom_diffuse1.jpg::CompressedTexture2D::1850507954878456186::1732516604::1732516634::1::::<><>::
+Tormenter_MaleBruteA_Bottom_normal.png::CompressedTexture2D::5681986651553554058::1732516604::1732516634::1::::<><>::
+Tormenter_MaleBruteA_Bottom_specular.png::CompressedTexture2D::5673708789638428157::1732516604::1732516634::1::::<><>::
+Tormenter_MaleBruteA_Hair_diffuse.png::CompressedTexture2D::1112604838043912356::1732516604::1732516634::1::::<><>::
+Tormenter_MaleBruteA_Hair_normal.png::CompressedTexture2D::7872934903558739833::1732516604::1732516634::1::::<><>::
+Tormenter_MaleBruteA_Hair_specular.png::CompressedTexture2D::1104470483549008561::1732516604::1732516634::1::::<><>::
+Tormenter_MaleBruteA_Moustache_diffuse.png::CompressedTexture2D::4420182455212180004::1732516604::1732516634::1::::<><>::
+Tormenter_MaleBruteA_Moustache_normal.png::CompressedTexture2D::9907393924598953::1732516604::1732516634::1::::<><>::
+Tormenter_MaleBruteA_Moustache_specular.png::CompressedTexture2D::7094042665023308880::1732516604::1732516635::1::::<><>::
+Tormenter_MaleBruteA_Shoes_diffuse1.jpg::CompressedTexture2D::678328260939457842::1732516604::1732516635::1::::<><>::
+Tormenter_MaleBruteA_Shoes_normal.png::CompressedTexture2D::8306938891964921355::1732516604::1732516635::1::::<><>::
+Tormenter_MaleBruteA_Shoes_specular.png::CompressedTexture2D::5481665605835357148::1732516604::1732516635::1::::<><>::
+Tormenter_MaleBruteA_StdNM.png::CompressedTexture2D::93336496279497543::1732516604::1732516635::1::::<><>::
+::res://models/forestMap/::1732516359
+::res://models/forestMap/gubuk/::1732516648
+gubuk.tscn::PackedScene::3105696619342980776::1732516454::0::1::::<><>::uid://dcdqemmmes81t::::res://models/forestMap/gubuk/roofMetal_poles_concrete.png<>uid://b32n001bidvg8::::res://models/forestMap/gubuk/roofMetal_poles_metal_wall.png<>uid://wda5bef5podl::::res://models/forestMap/gubuk/roofMetal_typeB.glb
+roofMetal_poles.glb::PackedScene::689255646259397808::1732516604::1732516648::1::::<><>::uid://dcdqemmmes81t::::res://models/forestMap/gubuk/roofMetal_poles_concrete.png<>uid://b32n001bidvg8::::res://models/forestMap/gubuk/roofMetal_poles_metal_wall.png
+roofMetal_poles_concrete.png::CompressedTexture2D::7306812136046601947::1732516604::1732516634::1::::<><>::
+roofMetal_poles_metal_wall.png::CompressedTexture2D::4408281823976145145::1732516604::1732516634::1::::<><>::
+roofMetal_typeB.glb::PackedScene::1550401326086479521::1732516604::1732516647::1::::<><>::uid://buqgdx5cn7qdy::::res://models/forestMap/gubuk/roofMetal_typeB_concrete.png<>uid://pvs6b2g56757::::res://models/forestMap/gubuk/roofMetal_typeB_roof.png<>uid://c0lwk7jd5s410::::res://models/forestMap/gubuk/roofMetal_typeB_roof_plates.png
+roofMetal_typeB_concrete.png::CompressedTexture2D::3823598514347723982::1732516604::1732516634::1::::<><>::
+roofMetal_typeB_roof.png::CompressedTexture2D::1097332947433617652::1732516604::1732516634::1::::<><>::
+roofMetal_typeB_roof_plates.png::CompressedTexture2D::6551625940239163025::1732516604::1732516634::1::::<><>::
+::res://models/forestMap/paper/::1732517360
+notes.png::CompressedTexture2D::5273636698977474414::1732516359::1732517360::1::::<><>::
+notes.tscn::PackedScene::6349421021529767653::1732516455::0::1::::<><>::uid://bfj7va33g3w1u::::res://models/forestMap/paper/paper.glb<>res://Scripts/UI/interactable.gd
+paper.glb::PackedScene::2757924791646191008::1732516604::1732516644::1::::<><>::uid://jijvr3a64qhf::::res://models/forestMap/paper/paper_0.png<>uid://da8acqfrb0qtj::::res://models/forestMap/paper/paper_1.png<>uid://cspe80yrix2kk::::res://models/forestMap/paper/paper_2.png
+paper_0.png::CompressedTexture2D::648799505575731723::1732516604::1732516634::1::::<><>::
+paper_1.png::CompressedTexture2D::7227390937423450247::1732516604::1732516634::1::::<><>::
+paper_2.png::CompressedTexture2D::6067509369294697122::1732516604::1732516634::1::::<><>::
+::res://models/forestMap/table/::1732516644
+old_wooden_table.glb::PackedScene::2142962664637233135::1732516604::1732516643::1::::<><>::uid://bjajj3muex2w8::::res://models/forestMap/table/old_wooden_table_0.png<>uid://djkfkkqo8jx0q::::res://models/forestMap/table/old_wooden_table_1.png<>uid://d2t2ybgnw0rfl::::res://models/forestMap/table/old_wooden_table_2.png
+old_wooden_table_0.png::CompressedTexture2D::3018684291621881585::1732516604::1732516634::1::::<><>::
+old_wooden_table_1.png::CompressedTexture2D::7811927414896021974::1732516604::1732516635::1::::<><>::
+old_wooden_table_2.png::CompressedTexture2D::9095266286904964289::1732516604::1732516634::1::::<><>::
+table.tscn::PackedScene::2437053904795623970::1732516455::0::1::::<><>::uid://5scjt8tfjbqt::::res://models/forestMap/table/old_wooden_table.glb
+::res://models/forestMap/trees/::1732516359
+::res://models/forestMap/trees/beech/::1732516637
+beech.tscn::PackedScene::112875477001192080::1732516455::0::1::::<><>::uid://7e088pny7qs3::::res://models/forestMap/trees/beech/beech_tree_0.png<>uid://cweph05idxxxn::::res://models/forestMap/trees/beech/beech_tree_1.png<>uid://c585umepoqon4::::res://models/forestMap/trees/beech/beech_tree_2.png<>uid://chta5amecgw4u::::res://models/forestMap/trees/beech/beech_tree_3.png<>uid://cpk7agc5nsel4::::res://models/forestMap/trees/beech/beech_tree_4.png<>uid://cqnivrusluw::::res://models/forestMap/trees/beech/beech_tree_5.png
+beech_tree_0.png::CompressedTexture2D::2255879120517928992::1732516604::1732516634::1::::<><>::
+beech_tree_1.png::CompressedTexture2D::6326178053684294751::1732516604::1732516634::1::::<><>::
+beech_tree_2.png::CompressedTexture2D::6948489005232543055::1732516604::1732516634::1::::<><>::
+beech_tree_3.png::CompressedTexture2D::5303440042719041046::1732516604::1732516636::1::::<><>::
+beech_tree_4.png::CompressedTexture2D::5848261062876669763::1732516604::1732516637::1::::<><>::
+beech_tree_5.png::CompressedTexture2D::5123896140690330::1732516604::1732516637::1::::<><>::
+::res://models/forestMap/wall/::1732516636
+wall.tscn::PackedScene::8687366787393552111::1732516455::0::1::::<><>::uid://bkqggp8gw6fcv::::res://models/forestMap/wall/wall_09_0.jpg
+wall_09_0.jpg::CompressedTexture2D::3121715019990443589::1732516604::1732516636::1::::<><>::
+::res://models/Industrial Assets/::1732516357
+::res://models/Industrial Assets/Industrial Assets/::1732517371
+Baja2.tscn::PackedScene::6962278471305986572::1732516357::0::1::::<><>::uid://ci607wyllaems::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_3.png<>uid://d4gudx1ldmbnm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_4.png<>uid://bnimk813k1nwi::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_5.png
+Baja.tscn::PackedScene::2167271717579160200::1732516357::0::1::::<><>::uid://ci607wyllaems::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_3.png<>uid://d4gudx1ldmbnm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_4.png<>uid://bnimk813k1nwi::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_5.png
+Beton.tscn::PackedScene::3294785731062545297::1732516358::0::1::::<><>::uid://ci607wyllaems::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_3.png<>uid://d4gudx1ldmbnm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_4.png<>uid://bnimk813k1nwi::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_5.png
+BlueContainer.tscn::PackedScene::1885033369493705766::1732516358::0::1::::<><>::uid://neclgo3su5sv::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_12.png<>uid://bwdqvn8ugqmeq::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_10.png
+BlueDrum.tscn::PackedScene::7743757564741330012::1732516358::0::1::::<><>::uid://o71tvag0ivc1::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_15.png<>uid://bm3fo5jfnyste::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_16.png
+BrokenBlueDrum.tscn::PackedScene::6997816883373665632::1732516358::0::1::::<><>::uid://o71tvag0ivc1::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_15.png<>uid://bm3fo5jfnyste::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_16.png
+BrokenYellowDrum.tscn::PackedScene::4951602675170522812::1732516358::0::1::::<><>::uid://o71tvag0ivc1::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_15.png<>uid://bm3fo5jfnyste::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_16.png
+ConcreteBarrier.tscn::PackedScene::4691637644910620949::1732516358::0::1::::<><>::uid://cyhl5ete4hsql::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_20.png<>uid://callghx4f0m7v::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_21.png
+ConcretePole.tscn::PackedScene::2576772504252842974::1732516358::0::1::::<><>::uid://bt8ob6gh4575n::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_33.png<>uid://brculanv1kqaa::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_34.png
+ConcreteWall2.tscn::PackedScene::7603779022488098348::1732516358::0::1::::<><>::uid://bt8ob6gh4575n::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_33.png<>uid://brculanv1kqaa::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_34.png<>uid://djwcrahwc2tpd::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_6.png<>uid://dqepnwt2bfgqm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_7.png<>uid://dcl20dotrhi8c::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_8.png<>uid://ci607wyllaems::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_3.png<>uid://d4gudx1ldmbnm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_4.png<>uid://bnimk813k1nwi::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_5.png
+ConcreteWall2X.tscn::PackedScene::7335142907085260952::1732516358::0::1::::<><>::uid://bt8ob6gh4575n::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_33.png<>uid://brculanv1kqaa::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_34.png<>uid://ci607wyllaems::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_3.png<>uid://d4gudx1ldmbnm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_4.png<>uid://bnimk813k1nwi::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_5.png<>uid://djwcrahwc2tpd::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_6.png<>uid://dqepnwt2bfgqm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_7.png<>uid://dcl20dotrhi8c::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_8.png
+ConcreteWall3.tscn::PackedScene::8409177491629955655::1732516358::0::1::::<><>::uid://bt8ob6gh4575n::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_33.png<>uid://brculanv1kqaa::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_34.png
+ConcreteWall.tscn::PackedScene::6623828816332829438::1732516358::0::1::::<><>::uid://bt8ob6gh4575n::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_33.png<>uid://brculanv1kqaa::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_34.png<>uid://djwcrahwc2tpd::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_6.png<>uid://dqepnwt2bfgqm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_7.png<>uid://dcl20dotrhi8c::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_8.png<>uid://ci607wyllaems::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_3.png<>uid://d4gudx1ldmbnm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_4.png<>uid://bnimk813k1nwi::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_5.png
+Fence.tscn::PackedScene::7586273310399343729::1732516358::0::1::::<><>::uid://dbjdqbe36ylhm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_22.png<>uid://lyh5x876e828::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_23.png<>uid://y51qmqnpfmxg::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_24.png<>uid://dbnpt27b53mq7::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_25.png
+GrayDrum.tscn::PackedScene::6752335450449649537::1732516358::0::1::::<><>::uid://o71tvag0ivc1::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_15.png<>uid://bm3fo5jfnyste::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_16.png
+GrayLeanDrum.tscn::PackedScene::7387884673450338828::1732516358::0::1::::<><>::uid://o71tvag0ivc1::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_15.png<>uid://bm3fo5jfnyste::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_16.png
+HollowSteel.tscn::PackedScene::1923484432824448077::1732516358::0::1::::<><>::uid://ci607wyllaems::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_3.png<>uid://d4gudx1ldmbnm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_4.png<>uid://bnimk813k1nwi::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_5.png
+HollowSteelX.tscn::PackedScene::7509906631899147655::1732516358::0::1::::<><>::uid://ci607wyllaems::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_3.png<>uid://d4gudx1ldmbnm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_4.png<>uid://bnimk813k1nwi::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_5.png
+HollowSteelXX.tscn::PackedScene::51152131594527222::1732516358::0::1::::<><>::uid://ci607wyllaems::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_3.png<>uid://d4gudx1ldmbnm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_4.png<>uid://bnimk813k1nwi::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_5.png
+industrial_asset_pack_free.glb::PackedScene::985527250055098609::1732516358::1732517371::1::::<><>::uid://ck4xh0fnglmg5::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_0.png<>uid://da7praoq6ljbd::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_1.png<>uid://rxtf48fc5vi0::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_2.png<>uid://ci607wyllaems::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_3.png<>uid://d4gudx1ldmbnm::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_4.png<>uid://bnimk813k1nwi::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_5.png<>uid://djwcrahwc2tpd::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_6.png<>uid://dqepnwt2bfgqm::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_7.png<>uid://dcl20dotrhi8c::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_8.png<>uid://dum1mvh60txuo::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_9.png<>uid://bwdqvn8ugqmeq::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_10.png<>uid://dy5qvt72nux1d::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_11.png<>uid://neclgo3su5sv::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_12.png<>uid://cnsccu3rdbanp::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_13.png<>uid://deyrwhhfw5p1m::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_14.png<>uid://o71tvag0ivc1::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_15.png<>uid://bm3fo5jfnyste::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_16.png<>uid://b85e4o3sen06g::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_17.png<>uid://heau4ng25d5q::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_18.png<>uid://4tuh67ncgd54::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_19.png<>uid://cyhl5ete4hsql::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_20.png<>uid://callghx4f0m7v::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_21.png<>uid://dbjdqbe36ylhm::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_22.png<>uid://lyh5x876e828::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_23.png<>uid://y51qmqnpfmxg::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_24.png<>uid://dbnpt27b53mq7::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_25.png<>uid://b6cm5fub4yhoq::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_26.png<>uid://c6d4chx4qia83::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_27.png<>uid://bjo46587b0n54::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_28.png<>uid://kpwxkf543nn0::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_30.jpg<>uid://12fn3wqiplxg::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_31.png<>uid://b8txnmiyii1lq::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_32.png<>uid://bt8ob6gh4575n::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_33.png<>uid://brculanv1kqaa::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_34.png
+industrial_asset_pack_free_0.png::CompressedTexture2D::5536007071432123058::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_1.png::CompressedTexture2D::7226263274993194001::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_2.png::CompressedTexture2D::1241855156408766061::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_3.png::CompressedTexture2D::5399924090193936074::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_4.png::CompressedTexture2D::9208345729049884986::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_5.png::CompressedTexture2D::3316138909594309272::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_6.png::CompressedTexture2D::7836529758709792453::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_7.png::CompressedTexture2D::8291476216609604892::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_8.png::CompressedTexture2D::7324032077385930924::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_9.png::CompressedTexture2D::8589412643474119514::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_10.png::CompressedTexture2D::3937778085247726056::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_11.png::CompressedTexture2D::8906735653192476323::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_12.png::CompressedTexture2D::920853894093576881::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_13.png::CompressedTexture2D::5722581234325019297::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_14.png::CompressedTexture2D::7490634346806660716::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_15.png::CompressedTexture2D::1050317574255200066::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_16.png::CompressedTexture2D::3286819560390922562::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_17.png::CompressedTexture2D::4764879291769420400::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_18.png::CompressedTexture2D::499616675930052536::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_19.png::CompressedTexture2D::2075928161493907733::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_20.png::CompressedTexture2D::6472545959380452155::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_21.png::CompressedTexture2D::4796228528883979261::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_22.png::CompressedTexture2D::7248241078201793622::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_23.png::CompressedTexture2D::822102199393458315::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_24.png::CompressedTexture2D::1748071450056966012::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_25.png::CompressedTexture2D::7257233958146638288::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_26.png::CompressedTexture2D::4567186063308549048::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_27.png::CompressedTexture2D::6956653422338699422::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_28.png::CompressedTexture2D::3048839345528827237::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_29.png::CompressedTexture2D::5739244337536707825::1732516358::1732517350::1::::<><>::
+industrial_asset_pack_free_30.jpg::CompressedTexture2D::734231484152351287::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_31.png::CompressedTexture2D::1880976439610813624::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_32.png::CompressedTexture2D::4743296050969820590::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_33.png::CompressedTexture2D::3788986640243024169::1732516358::1732517357::1::::<><>::
+industrial_asset_pack_free_34.png::CompressedTexture2D::3584993785707811856::1732516358::1732517357::1::::<><>::
+LTube.tscn::PackedScene::3369213520482862099::1732516358::0::1::::<><>::uid://b6cm5fub4yhoq::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_26.png<>uid://c6d4chx4qia83::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_27.png<>uid://bjo46587b0n54::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_28.png
+LTubeRusty.tscn::PackedScene::1179016303460071504::1732516358::0::1::::<><>::uid://ck4xh0fnglmg5::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_0.png<>uid://da7praoq6ljbd::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_1.png<>uid://rxtf48fc5vi0::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_2.png
+RedContainer.tscn::PackedScene::6772433935209145043::1732516358::0::1::::<><>::uid://dy5qvt72nux1d::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_11.png<>uid://bwdqvn8ugqmeq::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_10.png
+RedDrum.tscn::PackedScene::2417641400152779935::1732516358::0::1::::<><>::uid://o71tvag0ivc1::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_15.png<>uid://bm3fo5jfnyste::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_16.png
+RedDrumHalf2.tscn::PackedScene::8075433282574136043::1732516358::0::1::::<><>::uid://o71tvag0ivc1::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_15.png<>uid://bm3fo5jfnyste::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_16.png
+RedDrumHalf.tscn::PackedScene::4637460243764862970::1732516358::0::1::::<><>::uid://o71tvag0ivc1::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_15.png<>uid://bm3fo5jfnyste::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_16.png
+SandFloor.tscn::PackedScene::2495768478089807147::1732516358::0::1::::<><>::uid://kpwxkf543nn0::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_30.jpg<>uid://12fn3wqiplxg::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_31.png<>uid://b8txnmiyii1lq::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_32.png
+SteelBarrier.tscn::PackedScene::6292761534746984301::1732516358::0::1::::<><>::uid://b85e4o3sen06g::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_17.png<>uid://heau4ng25d5q::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_18.png<>uid://4tuh67ncgd54::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_19.png
+SteelWall2.tscn::PackedScene::5890573784356243249::1732516358::0::1::::<><>::uid://djwcrahwc2tpd::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_6.png<>uid://dqepnwt2bfgqm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_7.png<>uid://dcl20dotrhi8c::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_8.png<>uid://ci607wyllaems::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_3.png<>uid://d4gudx1ldmbnm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_4.png<>uid://bnimk813k1nwi::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_5.png
+SteelWall.tscn::PackedScene::1767125329578019126::1732516358::0::1::::<><>::uid://djwcrahwc2tpd::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_6.png<>uid://dqepnwt2bfgqm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_7.png<>uid://dcl20dotrhi8c::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_8.png<>uid://ci607wyllaems::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_3.png<>uid://d4gudx1ldmbnm::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_4.png<>uid://bnimk813k1nwi::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_5.png
+TTube.tscn::PackedScene::2858537387399029888::1732516358::0::1::::<><>::uid://b6cm5fub4yhoq::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_26.png<>uid://c6d4chx4qia83::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_27.png<>uid://bjo46587b0n54::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_28.png
+TTubeRusty.tscn::PackedScene::6405466896615251678::1732516358::0::1::::<><>::uid://ck4xh0fnglmg5::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_0.png<>uid://da7praoq6ljbd::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_1.png<>uid://rxtf48fc5vi0::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_2.png
+Tube.tscn::PackedScene::2267607917502236917::1732516358::0::1::::<><>::uid://b6cm5fub4yhoq::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_26.png<>uid://c6d4chx4qia83::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_27.png<>uid://bjo46587b0n54::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_28.png
+TubeRusty.tscn::PackedScene::4063517510404088157::1732516358::0::1::::<><>::uid://ck4xh0fnglmg5::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_0.png<>uid://da7praoq6ljbd::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_1.png<>uid://rxtf48fc5vi0::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_2.png
+Wheel2.tscn::PackedScene::5059454384169843489::1732516358::0::1::::<><>::uid://cnsccu3rdbanp::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_13.png<>uid://deyrwhhfw5p1m::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_14.png
+Wheel3.tscn::PackedScene::1112720274688656568::1732516358::0::1::::<><>::uid://cnsccu3rdbanp::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_13.png<>uid://deyrwhhfw5p1m::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_14.png
+Wheel4.tscn::PackedScene::7990942028935481437::1732516358::0::1::::<><>::uid://cnsccu3rdbanp::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_13.png<>uid://deyrwhhfw5p1m::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_14.png
+Wheel5.tscn::PackedScene::707489137725801380::1732516358::0::1::::<><>::uid://cnsccu3rdbanp::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_13.png<>uid://deyrwhhfw5p1m::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_14.png
+Wheel.tscn::PackedScene::306080934219066559::1732516358::0::1::::<><>::uid://cnsccu3rdbanp::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_13.png<>uid://deyrwhhfw5p1m::::res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_14.png
+YellowContainer.tscn::PackedScene::6459896613652435168::1732516358::0::1::::<><>::uid://dum1mvh60txuo::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_9.png<>uid://bwdqvn8ugqmeq::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_10.png
+YellowDrum.tscn::PackedScene::89515996043637882::1732516358::0::1::::<><>::uid://o71tvag0ivc1::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_15.png<>uid://bm3fo5jfnyste::::res://models/Industrial Assets/Industrial Assets/industrial_asset_pack_free_16.png
+::res://models/Industrial Assets/Industrial Assets/Baru/::1732517643
+a.tscn::PackedScene::6413676895904957258::1732516357::0::1::::<><>::
+boat.tscn::PackedScene::1717018098641865989::1732516357::0::1::::<><>::uid://csofixp78mc01::::res://models/Industrial Assets/Industrial Assets/Baru/wooden_boat_0.jpg<>uid://qjoh4d4ofngv::::res://models/Industrial Assets/Industrial Assets/Baru/wooden_boat_1.png<>uid://ei24s6mhai0x::::res://models/Industrial Assets/Industrial Assets/Baru/wooden_boat_2.png
+control_panel.tscn::PackedScene::618921271696689835::1732516357::0::1::::<><>::uid://bf2334d7365pv::::res://models/Industrial Assets/Industrial Assets/Baru/sci-fi_control_panel_0.jpg<>uid://bkxu3b4pt510y::::res://models/Industrial Assets/Industrial Assets/Baru/sci-fi_control_panel_1.png<>uid://dec3p4w3t7654::::res://models/Industrial Assets/Industrial Assets/Baru/sci-fi_control_panel_2.jpg<>uid://ceabgmwa4fda::::res://models/Industrial Assets/Industrial Assets/Baru/sci-fi_control_panel_3.png
+factory_lights.glb::PackedScene::6772319488151200308::1732516357::1732517370::1::::<><>::
+industrial_asset_pack_free_0.png::CompressedTexture2D::1759811313935089293::1732516357::1732517357::1::::<><>::
+industrial_asset_pack_free_1.png::CompressedTexture2D::8535501853935506358::1732516357::1732517357::1::::<><>::
+industrial_asset_pack_free_2.png::CompressedTexture2D::1792295832812228321::1732516357::1732517357::1::::<><>::
+industrial_asset_pack_free_3.png::CompressedTexture2D::9049106034942874557::1732516357::1732517357::1::::<><>::
+industrial_asset_pack_free_4.png::CompressedTexture2D::650102947805778306::1732516357::1732517357::1::::<><>::
+industrial_asset_pack_free_5.png::CompressedTexture2D::2697714022941119763::1732516357::1732517357::1::::<><>::
+industrial_asset_pack_free_6.png::CompressedTexture2D::4858381217653765924::1732516357::1732517357::1::::<><>::
+industrial_asset_pack_free_7.png::CompressedTexture2D::8807574330197360946::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_8.png::CompressedTexture2D::2751094564417821608::1732516357::1732517357::1::::<><>::
+industrial_asset_pack_free_9.png::CompressedTexture2D::6686593869240289687::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_10.png::CompressedTexture2D::4923351559947916331::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_11.png::CompressedTexture2D::5709904299457248524::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_12.png::CompressedTexture2D::5493166272299480984::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_13.png::CompressedTexture2D::4345156683983959552::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_14.png::CompressedTexture2D::1813987933594415517::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_15.png::CompressedTexture2D::8136013454795351964::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_16.png::CompressedTexture2D::8571493501572353201::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_17.png::CompressedTexture2D::1891630805609649893::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_18.png::CompressedTexture2D::6132835420272163536::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_19.png::CompressedTexture2D::6015819774254244372::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_20.png::CompressedTexture2D::2210897859332857206::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_21.png::CompressedTexture2D::4799552819123828799::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_22.png::CompressedTexture2D::3171215268293600342::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_23.png::CompressedTexture2D::8876013011764900162::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_24.png::CompressedTexture2D::7685430299246660982::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_25.png::CompressedTexture2D::7590893972860477223::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_26.png::CompressedTexture2D::1349226062778057430::1732516357::1732517356::1::::<><>::
+industrial_asset_pack_free_27.png::CompressedTexture2D::3954373999328367927::1732516357::1732517355::1::::<><>::
+industrial_asset_pack_free_28.png::CompressedTexture2D::528733274191521967::1732516357::1732517355::1::::<><>::
+industrial_asset_pack_free_29.png::CompressedTexture2D::3204580254472882922::1732516357::1732517355::1::::<><>::
+industrial_asset_pack_free_30.jpg::CompressedTexture2D::9080302251312050068::1732516357::1732517355::1::::<><>::
+industrial_asset_pack_free_31.png::CompressedTexture2D::7134708484591966703::1732516357::1732517355::1::::<><>::
+industrial_asset_pack_free_32.png::CompressedTexture2D::155206762443569476::1732516357::1732517355::1::::<><>::
+industrial_asset_pack_free_33.png::CompressedTexture2D::5748491028166994809::1732516357::1732517355::1::::<><>::
+industrial_asset_pack_free_34.png::CompressedTexture2D::3388378908059468637::1732516357::1732517355::1::::<><>::
+industrial_wasteland_pack.glb::PackedScene::6392475492992007021::1732516357::1732517364::1::::<><>::uid://b740ll4edk8sb::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_3.jpg<>uid://ba0gyqvujvm1u::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_4.png<>uid://c66q87nv6482p::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_5.png<>uid://c2q2emsj8d8vg::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_6.jpg<>uid://bir4bca0ls6hw::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_7.png<>uid://clhp1h6j3s65f::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_8.png<>uid://cx7dbo2rb7vwn::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_0.jpg<>uid://blh6luddevp5y::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_1.png<>uid://cimem3xfeuehf::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_2.png<>uid://ckd26ewp0dqkx::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_15.jpg<>uid://dske548vhy3jn::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_16.png<>uid://dlxvmdqqeno52::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_17.png<>uid://c2pdyl14q6x2r::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_9.jpg<>uid://borp05721bny::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_10.png<>uid://c5uhx8nay5vma::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_11.png<>uid://bxhufmtyyhvx1::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_18.jpg<>uid://d271c6hj4blmp::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_19.png<>uid://de21joltrvbkl::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_20.png<>uid://5oqvfvp17cus::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_12.jpg<>uid://cskejp5nt1c24::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_13.png<>uid://bkg1ekv2g8vj3::::res://models/Industrial Assets/Industrial Assets/Baru/industrial_wasteland_pack_14.png
+industrial_wasteland_pack_0.jpg::CompressedTexture2D::6453429573774706621::1732516357::1732517356::1::::<><>::
+industrial_wasteland_pack_1.png::CompressedTexture2D::3174851533742501464::1732516357::1732517356::1::::<><>::
+industrial_wasteland_pack_2.png::CompressedTexture2D::5359390453454722115::1732516358::1732517356::1::::<><>::
+industrial_wasteland_pack_3.jpg::CompressedTexture2D::4693868826272348457::1732516358::1732517356::1::::<><>::
+industrial_wasteland_pack_4.png::CompressedTexture2D::2438438162290982448::1732516358::1732517356::1::::<><>::
+industrial_wasteland_pack_5.png::CompressedTexture2D::7013723335450595297::1732516358::1732517356::1::::<><>::
+industrial_wasteland_pack_6.jpg::CompressedTexture2D::6702617350198202908::1732516358::1732517356::1::::<><>::
+industrial_wasteland_pack_7.png::CompressedTexture2D::2984788539398537824::1732516358::1732517356::1::::<><>::
+industrial_wasteland_pack_8.png::CompressedTexture2D::5560326893215469485::1732516358::1732517356::1::::<><>::
+industrial_wasteland_pack_9.jpg::CompressedTexture2D::6699131441218011035::1732516358::1732517356::1::::<><>::
+industrial_wasteland_pack_10.png::CompressedTexture2D::100150468899396822::1732516357::1732517356::1::::<><>::
+industrial_wasteland_pack_11.png::CompressedTexture2D::6920262077203835036::1732516357::1732517356::1::::<><>::
+industrial_wasteland_pack_12.jpg::CompressedTexture2D::2135575867029254914::1732516357::1732517356::1::::<><>::
+industrial_wasteland_pack_13.png::CompressedTexture2D::6057144105339053403::1732516357::1732517356::1::::<><>::
+industrial_wasteland_pack_14.png::CompressedTexture2D::3102281730495821482::1732516357::1732517356::1::::<><>::
+industrial_wasteland_pack_15.jpg::CompressedTexture2D::5482617900238625843::1732516357::1732517356::1::::<><>::
+industrial_wasteland_pack_16.png::CompressedTexture2D::8443603031012870719::1732516357::1732517356::1::::<><>::
+industrial_wasteland_pack_17.png::CompressedTexture2D::7980116688835750135::1732516357::1732517356::1::::<><>::
+industrial_wasteland_pack_18.jpg::CompressedTexture2D::4016438661225426164::1732516357::1732517356::1::::<><>::
+industrial_wasteland_pack_19.png::CompressedTexture2D::9122004770321038603::1732516357::1732517356::1::::<><>::
+industrial_wasteland_pack_20.png::CompressedTexture2D::7497351092154687035::1732516358::1732517356::1::::<><>::
+japan_self-defense_forces_military_base_kit.glb::PackedScene::9057392797746622956::1732516358::1732517364::1::::<><>::uid://crqwhyf0lqigo::::res://models/Industrial Assets/Industrial Assets/Baru/japan_self-defense_forces_military_base_kit_0.png<>uid://fvjdyja16wud::::res://models/Industrial Assets/Industrial Assets/Baru/japan_self-defense_forces_military_base_kit_1.png<>uid://dd2rfo2lkj552::::res://models/Industrial Assets/Industrial Assets/Baru/japan_self-defense_forces_military_base_kit_2.png<>uid://dmhbwty2olyar::::res://models/Industrial Assets/Industrial Assets/Baru/japan_self-defense_forces_military_base_kit_3.png<>uid://cx4wvykswll77::::res://models/Industrial Assets/Industrial Assets/Baru/japan_self-defense_forces_military_base_kit_4.png<>uid://cb8omq21410l0::::res://models/Industrial Assets/Industrial Assets/Baru/japan_self-defense_forces_military_base_kit_5.png
+japan_self-defense_forces_military_base_kit_0.png::CompressedTexture2D::6000431297131554698::1732516358::1732517356::1::::<><>::
+japan_self-defense_forces_military_base_kit_1.png::CompressedTexture2D::983079634256916673::1732516358::1732517643::1::::<><>::
+japan_self-defense_forces_military_base_kit_2.png::CompressedTexture2D::7426608676749732375::1732516358::1732517358::1::::<><>::
+japan_self-defense_forces_military_base_kit_3.png::CompressedTexture2D::8016079859737668361::1732516358::1732517358::1::::<><>::
+japan_self-defense_forces_military_base_kit_4.png::CompressedTexture2D::6448426278297676292::1732516358::1732517358::1::::<><>::
+japan_self-defense_forces_military_base_kit_5.png::CompressedTexture2D::4912027027638243859::1732516358::1732517358::1::::<><>::
+large_industrial_storage_tanks.glb::PackedScene::5667535419337980743::1732516358::1732517365::1::::<><>::uid://dx0fpcumemju::::res://models/Industrial Assets/Industrial Assets/Baru/large_industrial_storage_tanks_0.png<>uid://bsu8lt4mtb5kr::::res://models/Industrial Assets/Industrial Assets/Baru/large_industrial_storage_tanks_1.png<>uid://doi1tkroeq3ej::::res://models/Industrial Assets/Industrial Assets/Baru/large_industrial_storage_tanks_2.png<>uid://bxlf6hi7sdx11::::res://models/Industrial Assets/Industrial Assets/Baru/large_industrial_storage_tanks_3.png<>uid://bcjqy5xq800b::::res://models/Industrial Assets/Industrial Assets/Baru/large_industrial_storage_tanks_4.png<>uid://3t1o00dj28uu::::res://models/Industrial Assets/Industrial Assets/Baru/large_industrial_storage_tanks_5.png<>uid://dvl2ok4ctph75::::res://models/Industrial Assets/Industrial Assets/Baru/large_industrial_storage_tanks_6.png<>uid://cyaoknukdw1lj::::res://models/Industrial Assets/Industrial Assets/Baru/large_industrial_storage_tanks_7.png
+large_industrial_storage_tanks_0.png::CompressedTexture2D::259574864910934998::1732516358::1732517358::1::::<><>::
+large_industrial_storage_tanks_1.png::CompressedTexture2D::3693131772066797269::1732516358::1732517358::1::::<><>::
+large_industrial_storage_tanks_2.png::CompressedTexture2D::8160034008077635009::1732516358::1732517358::1::::<><>::
+large_industrial_storage_tanks_3.png::CompressedTexture2D::4023831568737406882::1732516358::1732517358::1::::<><>::
+large_industrial_storage_tanks_4.png::CompressedTexture2D::74893932755787295::1732516358::1732517358::1::::<><>::
+large_industrial_storage_tanks_5.png::CompressedTexture2D::2006115793971936456::1732516358::1732517358::1::::<><>::
+large_industrial_storage_tanks_6.png::CompressedTexture2D::8657600852841693346::1732516358::1732517358::1::::<><>::
+large_industrial_storage_tanks_7.png::CompressedTexture2D::6458242224695657351::1732516358::1732517358::1::::<><>::
+oil_tank.glb::PackedScene::699076252696191594::1732516358::1732517373::1::::<><>::uid://dn574ejc0l7x3::::res://models/Industrial Assets/Industrial Assets/Baru/oil_tank_0.png<>uid://c2n18ph870sbx::::res://models/Industrial Assets/Industrial Assets/Baru/oil_tank_1.png<>uid://guf656fvu7bw::::res://models/Industrial Assets/Industrial Assets/Baru/oil_tank_2.png<>uid://b8ku8te5bk33f::::res://models/Industrial Assets/Industrial Assets/Baru/oil_tank_3.png
+oil_tank.tscn::PackedScene::1312218331746162094::1732516358::0::1::::<><>::uid://joe8qyr1j01t::::res://models/Industrial Assets/Industrial Assets/Baru/oil_tank_0.png<>uid://c2n18ph870sbx::::res://models/Industrial Assets/Industrial Assets/Baru/oil_tank_1.png<>uid://guf656fvu7bw::::res://models/Industrial Assets/Industrial Assets/Baru/oil_tank_2.png<>uid://b8ku8te5bk33f::::res://models/Industrial Assets/Industrial Assets/Baru/oil_tank_3.png
+oil_tank_0.png::CompressedTexture2D::8135643306908675986::1732516358::1732517357::1::::<><>::
+oil_tank_1.png::CompressedTexture2D::6696415429633661481::1732516358::1732517358::1::::<><>::
+oil_tank_2.png::CompressedTexture2D::462781185329778440::1732516358::1732517357::1::::<><>::
+oil_tank_3.png::CompressedTexture2D::4724570577830654157::1732516358::1732517357::1::::<><>::
+old_oil_tank.glb::PackedScene::4798664633086556953::1732516358::1732517366::1::::<><>::uid://bn2klsmjl2886::::res://models/Industrial Assets/Industrial Assets/Baru/old_oil_tank_2.png<>uid://gs8ve2cm4jt1::::res://models/Industrial Assets/Industrial Assets/Baru/old_oil_tank_0.png<>uid://cvtlsapbrcgvo::::res://models/Industrial Assets/Industrial Assets/Baru/old_oil_tank_1.png<>uid://bdwm3qm1ghtdk::::res://models/Industrial Assets/Industrial Assets/Baru/old_oil_tank_3.png<>uid://ddgpgip2hsqy::::res://models/Industrial Assets/Industrial Assets/Baru/old_oil_tank_4.png
+old_oil_tank.tscn::PackedScene::1158424177704627316::1732516358::0::1::::<><>::uid://bn2klsmjl2886::::res://models/Industrial Assets/Industrial Assets/Baru/old_oil_tank_2.png<>uid://gs8ve2cm4jt1::::res://models/Industrial Assets/Industrial Assets/Baru/old_oil_tank_0.png<>uid://cvtlsapbrcgvo::::res://models/Industrial Assets/Industrial Assets/Baru/old_oil_tank_1.png<>uid://bdwm3qm1ghtdk::::res://models/Industrial Assets/Industrial Assets/Baru/old_oil_tank_3.png<>uid://ddgpgip2hsqy::::res://models/Industrial Assets/Industrial Assets/Baru/old_oil_tank_4.png
+old_oil_tank_0.png::CompressedTexture2D::460333275745743980::1732516358::1732517358::1::::<><>::
+old_oil_tank_1.png::CompressedTexture2D::6286730315563042800::1732516358::1732517358::1::::<><>::
+old_oil_tank_2.png::CompressedTexture2D::3355241628390429101::1732516358::1732517358::1::::<><>::
+old_oil_tank_3.png::CompressedTexture2D::2643182991439939476::1732516358::1732517358::1::::<><>::
+old_oil_tank_4.png::CompressedTexture2D::217151081257893832::1732516358::1732517358::1::::<><>::
+sci-fi_control_panel.glb::PackedScene::6693228585064604114::1732516358::1732517371::1::::<><>::uid://bf2334d7365pv::::res://models/Industrial Assets/Industrial Assets/Baru/sci-fi_control_panel_0.jpg<>uid://bkxu3b4pt510y::::res://models/Industrial Assets/Industrial Assets/Baru/sci-fi_control_panel_1.png<>uid://bojxl3pros80o::::res://models/Industrial Assets/Industrial Assets/Baru/sci-fi_control_panel_2.jpg<>uid://ceabgmwa4fda::::res://models/Industrial Assets/Industrial Assets/Baru/sci-fi_control_panel_3.png
+sci-fi_control_panel_0.jpg::CompressedTexture2D::2794854708573847043::1732516358::1732517358::1::::<><>::
+sci-fi_control_panel_1.png::CompressedTexture2D::3137054248532276114::1732516358::1732517358::1::::<><>::
+sci-fi_control_panel_2.jpg::CompressedTexture2D::7445874602307314885::1732516358::1732517643::1::::<><>::
+sci-fi_control_panel_3.png::CompressedTexture2D::148637318764687650::1732516358::1732517358::1::::<><>::
+ventilation_shaft_006.tscn::PackedScene::3209834272076847337::1732516358::0::1::::<><>::
+ventilation_shaft_curved_45_h.tscn::PackedScene::7260959680588670439::1732516358::0::1::::<><>::
+ventilation_shaft_curved_90.tscn::PackedScene::5547108299992600559::1732516358::0::1::::<><>::
+ventilation_shaft_curved_90_h.tscn::PackedScene::6326871213729040380::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_grate.tscn::PackedScene::3012352775476656260::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_grate_001.tscn::PackedScene::1445721980366754767::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_junction_a.tscn::PackedScene::9217938010743567639::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_junction_b.tscn::PackedScene::5264917812799537467::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_junction_c.tscn::PackedScene::3672928721203998531::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_junction_round.tscn::PackedScene::6904176275307533860::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_long.tscn::PackedScene::2073314309376237502::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_long_001.tscn::PackedScene::4728732483269311781::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_round.tscn::PackedScene::1424738842348139318::1732516358::0::1::::<><>::
+ventilation_shaft_round_square.tscn::PackedScene::4026730932560892473::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_short.tscn::PackedScene::4581087296215163705::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_short_001.tscn::PackedScene::3229141135008080524::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_short_002.tscn::PackedScene::2074672942114233815::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_short_003.tscn::PackedScene::4040959621836478598::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_short_004.tscn::PackedScene::3798323886762252175::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_straight_45.tscn::PackedScene::6322204987471949056::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_straigth_45_h.tscn::PackedScene::3028258027813330336::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_straigth_90_h.tscn::PackedScene::9127988139278427459::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+ventilation_shaft_straigt_90.tscn::PackedScene::6087811895020647372::1732516358::0::1::::<><>::uid://boxdcvn4hmphx::::res://models/Pabrik/Vent/vent_collection_0.png
+wooden_boat.glb::PackedScene::5495962369539922368::1732516358::1732517365::1::::<><>::uid://csofixp78mc01::::res://models/Industrial Assets/Industrial Assets/Baru/wooden_boat_0.jpg<>uid://qjoh4d4ofngv::::res://models/Industrial Assets/Industrial Assets/Baru/wooden_boat_1.png<>uid://ei24s6mhai0x::::res://models/Industrial Assets/Industrial Assets/Baru/wooden_boat_2.png
+wooden_boat_0.jpg::CompressedTexture2D::6065460945450320420::1732516358::1732517357::1::::<><>::
+wooden_boat_1.png::CompressedTexture2D::1142464965599236093::1732516358::1732517357::1::::<><>::
+wooden_boat_2.png::CompressedTexture2D::298962537276373305::1732516358::1732517357::1::::<><>::
+::res://models/low poly environment/::1732516604
+anthurium.tscn::PackedScene::1716241293510327519::1732516604::0::1::::<><>::
+bell_flower.tscn::PackedScene::3862844378599286889::1732516604::0::1::::<><>::
+daisy.tscn::PackedScene::3725188812836534965::1732516604::0::1::::<><>::
+grass.tscn::PackedScene::4085427059426845466::1732516604::0::1::::<><>::
+plant.tscn::PackedScene::4131398178590876654::1732516604::0::1::::<><>::
+rock_01.tscn::PackedScene::3488854731509666950::1732516604::0::1::::<><>::
+rock_02.tscn::PackedScene::3169010754336182045::1732516604::0::1::::<><>::
+rock_03.tscn::PackedScene::6913080441095877096::1732516604::0::1::::<><>::
+rock_04.tscn::PackedScene::4620081822305312681::1732516604::0::1::::<><>::
+rock_05.tscn::PackedScene::1954974708253338241::1732516604::0::1::::<><>::
+rock_06.tscn::PackedScene::3863733582824642807::1732516604::0::1::::<><>::
+rose.tscn::PackedScene::5666974423646761559::1732516604::0::1::::<><>::
+trunk_01.tscn::PackedScene::2338277734851052518::1732516604::0::1::::<><>::
+trunk_02.tscn::PackedScene::5011168050809931585::1732516604::0::1::::<><>::
+trunk_03.tscn::PackedScene::4533930678207891173::1732516604::0::1::::<><>::
+::res://models/Rumah/::1732517643
+abandoned_sofa.glb::PackedScene::1643679055566387422::1732516358::1732517373::1::::<><>::uid://cvqc35khi0sjc::::res://models/Rumah/abandoned_sofa_0.jpg<>uid://b5o45o3808gio::::res://models/Rumah/abandoned_sofa_1.png<>uid://bt8hhlecksk72::::res://models/Rumah/abandoned_sofa_2.png
+abandoned_sofa.tscn::PackedScene::3712328922095903926::1732516358::0::1::::<><>::uid://xohfh55841yo::::res://models/Rumah/abandoned_sofa.glb
+abandoned_sofa_0.jpg::CompressedTexture2D::6280010155542999460::1732516358::1732517350::1::::<><>::
+abandoned_sofa_1.png::CompressedTexture2D::4522802428113791086::1732516358::1732517350::1::::<><>::
+abandoned_sofa_2.png::CompressedTexture2D::3788571282247412083::1732516358::1732517350::1::::<><>::
+bed.glb::PackedScene::6303238420861666286::1732516358::1732517369::1::::<><>::uid://dxeh21kptceht::::res://models/Rumah/bed_0.png
+bed.tscn::PackedScene::1474969070622651307::1732516358::0::1::::<><>::uid://cigcskers8xwg::::res://models/Rumah/messy_bed_2_3.png<>uid://ct4mxmjoq8beh::::res://models/Rumah/messy_bed_2_4.png<>uid://c3dld7b6pf2s0::::res://models/Rumah/messy_bed_2_5.png<>uid://s4dldv0ic45x::::res://models/Rumah/messy_bed_2_0.png<>uid://dnle453n7nu03::::res://models/Rumah/messy_bed_2_1.png<>uid://80o1x4ug81gl::::res://models/Rumah/messy_bed_2_2.png
+bed_0.png::CompressedTexture2D::8782337582917237681::1732516358::1732517350::1::::<><>::
+chair.glb::PackedScene::2640602743201033156::1732516358::1732517365::1::::<><>::uid://c62mgpi4m0h1x::::res://models/Rumah/chair_0.png<>uid://b1uy41inuegmh::::res://models/Rumah/chair_1.png<>uid://cj1yu1gj7y7ht::::res://models/Rumah/chair_2.png
+chair_0.png::CompressedTexture2D::7005173839744789327::1732516358::1732517350::1::::<><>::
+chair_1.png::CompressedTexture2D::4254128547795866551::1732516358::1732517350::1::::<><>::
+chair_2.png::CompressedTexture2D::5459709080767133153::1732516358::1732517350::1::::<><>::
+generator.glb::PackedScene::9132851705385424055::1732516358::1732517363::1::::<><>::uid://bf0p1n7ejn27l::::res://models/Rumah/generator_0.png<>uid://cmd2465v1ni32::::res://models/Rumah/generator_1.png<>uid://bbcy3bqyfsvvg::::res://models/Rumah/generator_2.png
+generator.tscn::PackedScene::4100155216498505758::1732516358::0::1::::<><>::uid://bf0p1n7ejn27l::::res://models/Rumah/generator_0.png<>uid://cmd2465v1ni32::::res://models/Rumah/generator_1.png<>uid://c7542y7i13cj7::::res://models/Rumah/generator_2.png
+generator_0.png::CompressedTexture2D::2789932263699386799::1732516358::1732517350::1::::<><>::
+generator_1.png::CompressedTexture2D::5622993446690103323::1732516358::1732517350::1::::<><>::
+generator_2.png::CompressedTexture2D::7082626016044167386::1732516358::1732517643::1::::<><>::
+hand_sculpture.glb::PackedScene::6564937892414606264::1732516358::1732517373::1::::<><>::uid://bighaja1o7i70::::res://models/Rumah/hand_sculpture_0.jpg<>uid://r4wp36hpti6i::::res://models/Rumah/hand_sculpture_1.png<>uid://b4oja15u1lmlq::::res://models/Rumah/hand_sculpture_2.png
+hand_sculpture_0.jpg::CompressedTexture2D::2960743192182533145::1732516358::1732517350::1::::<><>::
+hand_sculpture_1.png::CompressedTexture2D::1254441376345310702::1732516358::1732517350::1::::<><>::
+hand_sculpture_2.png::CompressedTexture2D::4451346303582911278::1732516358::1732517350::1::::<><>::
+hand_sculpture_3.png::CompressedTexture2D::8869634586027221009::1732516358::1732517351::1::::<><>::
+medieval_market_rug_and_crates.glb::PackedScene::8582829937531206740::1732516359::1732517362::1::::<><>::uid://b4ekb1j6p8cfm::::res://models/Rumah/medieval_market_rug_and_crates_0.png<>uid://cwuq5vxil58u8::::res://models/Rumah/medieval_market_rug_and_crates_1.png<>uid://d667a7nhm0di::::res://models/Rumah/medieval_market_rug_and_crates_2.png<>uid://t7ku1ppnovg4::::res://models/Rumah/medieval_market_rug_and_crates_3.png<>uid://bjrmtex7l4imp::::res://models/Rumah/medieval_market_rug_and_crates_4.png<>uid://djq282pfqxt2h::::res://models/Rumah/medieval_market_rug_and_crates_5.png<>uid://dauefq31u1wjb::::res://models/Rumah/medieval_market_rug_and_crates_6.png<>uid://ca1yuy6q3r4nq::::res://models/Rumah/medieval_market_rug_and_crates_7.png<>uid://4nuwkg65kx6u::::res://models/Rumah/medieval_market_rug_and_crates_8.png<>uid://boa1u7nkx3iaw::::res://models/Rumah/medieval_market_rug_and_crates_9.png<>uid://cipcftqhqv6a8::::res://models/Rumah/medieval_market_rug_and_crates_10.png<>uid://dw4kyxq7gvhg2::::res://models/Rumah/medieval_market_rug_and_crates_11.png<>uid://gtl7euoncp60::::res://models/Rumah/medieval_market_rug_and_crates_12.jpg<>uid://b2uhrkwrkhihn::::res://models/Rumah/medieval_market_rug_and_crates_13.png
+medieval_market_rug_and_crates_0.png::CompressedTexture2D::4430764996874035030::1732516359::1732517350::1::::<><>::
+medieval_market_rug_and_crates_1.png::CompressedTexture2D::6359309667105776045::1732516359::1732517350::1::::<><>::
+medieval_market_rug_and_crates_2.png::CompressedTexture2D::276501663504924098::1732516359::1732517350::1::::<><>::
+medieval_market_rug_and_crates_3.png::CompressedTexture2D::1400292392536939165::1732516359::1732517350::1::::<><>::
+medieval_market_rug_and_crates_4.png::CompressedTexture2D::3053977479345484191::1732516359::1732517350::1::::<><>::
+medieval_market_rug_and_crates_5.png::CompressedTexture2D::7825691419442112641::1732516359::1732517350::1::::<><>::
+medieval_market_rug_and_crates_6.png::CompressedTexture2D::7200802287938310363::1732516359::1732517350::1::::<><>::
+medieval_market_rug_and_crates_7.png::CompressedTexture2D::4828009421910676038::1732516359::1732517350::1::::<><>::
+medieval_market_rug_and_crates_8.png::CompressedTexture2D::2063567539578290078::1732516359::1732517350::1::::<><>::
+medieval_market_rug_and_crates_9.png::CompressedTexture2D::3370680553631442182::1732516359::1732517350::1::::<><>::
+medieval_market_rug_and_crates_10.png::CompressedTexture2D::5365449168757229221::1732516359::1732517350::1::::<><>::
+medieval_market_rug_and_crates_11.png::CompressedTexture2D::8763934829181840523::1732516359::1732517350::1::::<><>::
+medieval_market_rug_and_crates_12.jpg::CompressedTexture2D::461081513123772051::1732516359::1732517349::1::::<><>::
+medieval_market_rug_and_crates_13.png::CompressedTexture2D::4323262954452168211::1732516359::1732517349::1::::<><>::
+messy_bed_2.0_with_wall_mounted_backboard.glb::PackedScene::2805068502602542495::1732516359::1732517363::1::::<><>::uid://s4dldv0ic45x::::res://models/Rumah/messy_bed_2_0.png<>uid://dnle453n7nu03::::res://models/Rumah/messy_bed_2_1.png<>uid://80o1x4ug81gl::::res://models/Rumah/messy_bed_2_2.png<>uid://cigcskers8xwg::::res://models/Rumah/messy_bed_2_3.png<>uid://ct4mxmjoq8beh::::res://models/Rumah/messy_bed_2_4.png<>uid://c3dld7b6pf2s0::::res://models/Rumah/messy_bed_2_5.png
+messy_bed_2_0.png::CompressedTexture2D::1323468126221202295::1732516359::1732517349::1::::<><>::
+messy_bed_2_1.png::CompressedTexture2D::8094721449251675718::1732516359::1732517349::1::::<><>::
+messy_bed_2_2.png::CompressedTexture2D::2368739006201256039::1732516359::1732517349::1::::<><>::
+messy_bed_2_3.png::CompressedTexture2D::5346892493501140630::1732516359::1732517349::1::::<><>::
+messy_bed_2_4.png::CompressedTexture2D::6167066673391778203::1732516359::1732517349::1::::<><>::
+messy_bed_2_5.png::CompressedTexture2D::6744997050536214561::1732516359::1732517349::1::::<><>::
+mirror_a.glb::PackedScene::6695666492650262572::1732516359::1732517371::1::::<><>::uid://byq306bdwsx50::::res://models/Rumah/mirror_a_0.png<>uid://kb0u2loe6c58::::res://models/Rumah/mirror_a_1.png<>uid://bamp8yhnb870f::::res://models/Rumah/mirror_a_2.png
+mirror_a_0.png::CompressedTexture2D::4105729325651017729::1732516359::1732517349::1::::<><>::
+mirror_a_1.png::CompressedTexture2D::705507890597608669::1732516359::1732517349::1::::<><>::
+mirror_a_2.png::CompressedTexture2D::2412164174799542991::1732516359::1732517349::1::::<><>::
+oldtv.tscn::PackedScene::5607020683434867055::1732516359::0::1::::<><>::uid://b5qjf55xqc63g::::res://models/Rumah/old_tv_0.jpg<>uid://b8lictg0uiroe::::res://models/Rumah/old_tv_1.png<>uid://j2m3ano170on::::res://models/Rumah/old_tv_2.png<>uid://ucobnltru7mg::::res://models/Rumah/old_tv_3.jpg<>uid://bk47uknrc2jgg::::res://models/Rumah/old_tv_4.png<>uid://cvmj5dvhagk35::::res://models/Rumah/old_tv_5.png<>uid://7x538gb4e5w1::::res://models/Rumah/old_tv_6.jpg<>uid://drhlxsnpupqf6::::res://models/Rumah/old_tv_7.png<>uid://sae0ht7lyh3h::::res://models/Rumah/old_tv_8.png<>uid://dfcc5i41siqwu::::res://models/Rumah/old_tv_9.png<>uid://c8oo8tali4gof::::res://models/Rumah/old_tv_10.png<>uid://c80p2cbqi2glc::::res://models/Rumah/old_tv_11.png<>uid://cvl8o5d3g5nua::::res://models/Rumah/old_tv_12.jpg<>uid://dxrhc6hdqibcx::::res://models/Rumah/old_tv_13.png<>uid://b7rs4lqa0r5jo::::res://models/Rumah/old_tv_14.jpg<>uid://dp7dfqqh5oev0::::res://models/Rumah/old_tv_15.png<>uid://xeewv4emowsj::::res://models/Rumah/old_tv_16.png<>uid://dnq3kq4dn8yn8::::res://models/Rumah/old_tv_17.jpg<>uid://bvijad2w4jxm5::::res://models/Rumah/old_tv_18.png<>uid://bepegbdnk8151::::res://models/Rumah/old_tv_19.png<>uid://d32vdppmp8joq::::res://models/Rumah/old_tv_20.jpg<>uid://dqcti7r1a1ct4::::res://models/Rumah/old_tv_21.png<>uid://cjcjjpdq0tv2j::::res://models/Rumah/old_tv_22.png
+old_china_cabinet.glb::PackedScene::2832280757384446646::1732516359::1732517362::1::::<><>::uid://br1abkwi7ibk6::::res://models/Rumah/old_china_cabinet_0.png<>uid://xf2kbiyaupnr::::res://models/Rumah/old_china_cabinet_1.png<>uid://c3gp3gl38drls::::res://models/Rumah/old_china_cabinet_2.png
+old_china_cabinet_0.png::CompressedTexture2D::3633307192564871351::1732516359::1732517349::1::::<><>::
+old_china_cabinet_1.png::CompressedTexture2D::1626322575161826727::1732516359::1732517349::1::::<><>::
+old_china_cabinet_2.png::CompressedTexture2D::6751476346345679924::1732516359::1732517349::1::::<><>::
+old_china_cabinet_3.png::CompressedTexture2D::1533821345624197716::1732516359::1732517350::1::::<><>::
+old_frying_pan.glb::PackedScene::7148129891280506980::1732516359::1732517366::1::::<><>::uid://bih023yj1uh7f::::res://models/Rumah/old_frying_pan_0.png<>uid://c1esd738s2vqq::::res://models/Rumah/old_frying_pan_1.png<>uid://dp142m6mhhow6::::res://models/Rumah/old_frying_pan_2.png<>uid://ch0h6drhom6qx::::res://models/Rumah/old_frying_pan_3.png<>uid://vxchur018t8i::::res://models/Rumah/old_frying_pan_4.png<>uid://cnwrghbs4t5dj::::res://models/Rumah/old_frying_pan_5.png
+old_frying_pan_0.png::CompressedTexture2D::2963949726503941185::1732516359::1732517349::1::::<><>::
+old_frying_pan_1.png::CompressedTexture2D::6607108801769031580::1732516359::1732517349::1::::<><>::
+old_frying_pan_2.png::CompressedTexture2D::8267578215205012907::1732516359::1732517349::1::::<><>::
+old_frying_pan_3.png::CompressedTexture2D::5316253279433330451::1732516359::1732517349::1::::<><>::
+old_frying_pan_4.png::CompressedTexture2D::1521581417185550526::1732516359::1732517349::1::::<><>::
+old_frying_pan_5.png::CompressedTexture2D::5731755918976025807::1732516359::1732517349::1::::<><>::
+old_tv.glb::PackedScene::743244587732893399::1732516359::1732517362::1::::<><>::uid://b5qjf55xqc63g::::res://models/Rumah/old_tv_0.jpg<>uid://b8lictg0uiroe::::res://models/Rumah/old_tv_1.png<>uid://j2m3ano170on::::res://models/Rumah/old_tv_2.png<>uid://ucobnltru7mg::::res://models/Rumah/old_tv_3.jpg<>uid://bk47uknrc2jgg::::res://models/Rumah/old_tv_4.png<>uid://cvmj5dvhagk35::::res://models/Rumah/old_tv_5.png<>uid://7x538gb4e5w1::::res://models/Rumah/old_tv_6.jpg<>uid://drhlxsnpupqf6::::res://models/Rumah/old_tv_7.png<>uid://sae0ht7lyh3h::::res://models/Rumah/old_tv_8.png<>uid://dfcc5i41siqwu::::res://models/Rumah/old_tv_9.png<>uid://c8oo8tali4gof::::res://models/Rumah/old_tv_10.png<>uid://c80p2cbqi2glc::::res://models/Rumah/old_tv_11.png<>uid://cvl8o5d3g5nua::::res://models/Rumah/old_tv_12.jpg<>uid://dxrhc6hdqibcx::::res://models/Rumah/old_tv_13.png<>uid://b7rs4lqa0r5jo::::res://models/Rumah/old_tv_14.jpg<>uid://dp7dfqqh5oev0::::res://models/Rumah/old_tv_15.png<>uid://xeewv4emowsj::::res://models/Rumah/old_tv_16.png<>uid://dnq3kq4dn8yn8::::res://models/Rumah/old_tv_17.jpg<>uid://bvijad2w4jxm5::::res://models/Rumah/old_tv_18.png<>uid://bepegbdnk8151::::res://models/Rumah/old_tv_19.png<>uid://d32vdppmp8joq::::res://models/Rumah/old_tv_20.jpg<>uid://dqcti7r1a1ct4::::res://models/Rumah/old_tv_21.png<>uid://cjcjjpdq0tv2j::::res://models/Rumah/old_tv_22.png
+old_tv_0.jpg::CompressedTexture2D::4525673041914599978::1732516359::1732517354::1::::<><>::
+old_tv_1.png::CompressedTexture2D::4725850994948194884::1732516359::1732517354::1::::<><>::
+old_tv_2.png::CompressedTexture2D::688216418999025261::1732516359::1732517354::1::::<><>::
+old_tv_3.jpg::CompressedTexture2D::1408758152644617326::1732516359::1732517354::1::::<><>::
+old_tv_4.png::CompressedTexture2D::3150155280679888718::1732516359::1732517354::1::::<><>::
+old_tv_5.png::CompressedTexture2D::6272179833914884046::1732516359::1732517354::1::::<><>::
+old_tv_6.jpg::CompressedTexture2D::2295396939396505230::1732516359::1732517353::1::::<><>::
+old_tv_7.png::CompressedTexture2D::8367632963596142177::1732516359::1732517354::1::::<><>::
+old_tv_8.png::CompressedTexture2D::1263687096787591691::1732516359::1732517353::1::::<><>::
+old_tv_9.png::CompressedTexture2D::7514510498772102432::1732516359::1732517354::1::::<><>::
+old_tv_10.png::CompressedTexture2D::7118884463550980033::1732516359::1732517354::1::::<><>::
+old_tv_11.png::CompressedTexture2D::7141641729949925032::1732516359::1732517354::1::::<><>::
+old_tv_12.jpg::CompressedTexture2D::6271545482571823852::1732516359::1732517354::1::::<><>::
+old_tv_13.png::CompressedTexture2D::8809130106305727935::1732516359::1732517354::1::::<><>::
+old_tv_14.jpg::CompressedTexture2D::4668703398330025680::1732516359::1732517354::1::::<><>::
+old_tv_15.png::CompressedTexture2D::8278346739176692259::1732516359::1732517354::1::::<><>::
+old_tv_16.png::CompressedTexture2D::1622884218115992629::1732516359::1732517354::1::::<><>::
+old_tv_17.jpg::CompressedTexture2D::8106465881503124787::1732516359::1732517355::1::::<><>::
+old_tv_18.png::CompressedTexture2D::3877448075377641002::1732516359::1732517355::1::::<><>::
+old_tv_19.png::CompressedTexture2D::2698395365053737862::1732516359::1732517355::1::::<><>::
+old_tv_20.jpg::CompressedTexture2D::9181569098122530760::1732516359::1732517355::1::::<><>::
+old_tv_21.png::CompressedTexture2D::8287581922200968443::1732516359::1732517355::1::::<><>::
+old_tv_22.png::CompressedTexture2D::5409233033962467931::1732516359::1732517355::1::::<><>::
+old_wooden2.tscn::PackedScene::1105648003537056725::1732516359::0::1::::<><>::uid://caxixrmf2ic45::::res://models/Rumah/old_wooden_bookshelves_0.jpg<>uid://cumu7qh2dmksq::::res://models/Rumah/old_wooden_bookshelves_1.jpg
+old_wooden.tscn::PackedScene::7295899633744847551::1732516359::0::1::::<><>::uid://caxixrmf2ic45::::res://models/Rumah/old_wooden_bookshelves_0.jpg<>uid://cumu7qh2dmksq::::res://models/Rumah/old_wooden_bookshelves_1.jpg
+old_wooden_bookshelves.glb::PackedScene::2884159120197551127::1732516359::1732517365::1::::<><>::uid://caxixrmf2ic45::::res://models/Rumah/old_wooden_bookshelves_0.jpg<>uid://cumu7qh2dmksq::::res://models/Rumah/old_wooden_bookshelves_1.jpg
+old_wooden_bookshelves_0.jpg::CompressedTexture2D::4820849776629702672::1732516359::1732517355::1::::<><>::
+old_wooden_bookshelves_1.jpg::CompressedTexture2D::6202663110874335564::1732516359::1732517355::1::::<><>::
+old_wooden_grandfather_clock.glb::PackedScene::6132179242565718781::1732516359::1732517361::1::::<><>::uid://h4bos7epdtnb::::res://models/Rumah/old_wooden_grandfather_clock_0.png<>uid://d7bfnn77dw3b::::res://models/Rumah/old_wooden_grandfather_clock_1.png<>uid://c00scciyxhxus::::res://models/Rumah/old_wooden_grandfather_clock_2.png<>uid://xkn0c1wb5hsw::::res://models/Rumah/old_wooden_grandfather_clock_3.png
+old_wooden_grandfather_clock_0.png::CompressedTexture2D::7173932878200230460::1732516359::1732517643::1::::<><>::
+old_wooden_grandfather_clock_1.png::CompressedTexture2D::276696969389150825::1732516359::1732517355::1::::<><>::
+old_wooden_grandfather_clock_2.png::CompressedTexture2D::6580268498172736190::1732516359::1732517355::1::::<><>::
+old_wooden_grandfather_clock_3.png::CompressedTexture2D::1635821293182647638::1732516359::1732517355::1::::<><>::
+old_wooden_grandfather_clock_4.png::CompressedTexture2D::5573922329475950712::1732516359::1732517355::1::::<><>::
+old_wooden_table_and_chair.glb::PackedScene::2320249698454917750::1732516359::1732517374::1::::<><>::uid://b8mmgbnyy5t47::::res://models/Rumah/old_wooden_table_and_chair_0.png<>uid://diiwidy5jkon3::::res://models/Rumah/old_wooden_table_and_chair_1.png<>uid://jvpavo5ovlsr::::res://models/Rumah/old_wooden_table_and_chair_2.png<>uid://5jfcv8qa7xah::::res://models/Rumah/old_wooden_table_and_chair_3.png<>uid://bkv560lldanbe::::res://models/Rumah/old_wooden_table_and_chair_4.png<>uid://bn84pnq6vtfil::::res://models/Rumah/old_wooden_table_and_chair_5.png
+old_wooden_table_and_chair_0.png::CompressedTexture2D::4728164449203045878::1732516359::1732517354::1::::<><>::
+old_wooden_table_and_chair_1.png::CompressedTexture2D::7738638078428997678::1732516359::1732517355::1::::<><>::
+old_wooden_table_and_chair_2.png::CompressedTexture2D::675963406469268713::1732516359::1732517354::1::::<><>::
+old_wooden_table_and_chair_3.png::CompressedTexture2D::2124553020176301475::1732516359::1732517354::1::::<><>::
+old_wooden_table_and_chair_4.png::CompressedTexture2D::3133539252883141802::1732516359::1732517354::1::::<><>::
+old_wooden_table_and_chair_5.png::CompressedTexture2D::3368788405528032119::1732516359::1732517354::1::::<><>::
+pool_table.glb::PackedScene::3438496783028027538::1732516359::1732517366::1::::<><>::uid://cq0drw4jb3fta::::res://models/Rumah/pool_table_0.png<>uid://25en2ge77v37::::res://models/Rumah/pool_table_1.png<>uid://qoao0424v4ii::::res://models/Rumah/pool_table_2.png
+pool_table_0.png::CompressedTexture2D::5947686019645290602::1732516359::1732517354::1::::<><>::
+pool_table_1.png::CompressedTexture2D::1957297621765564972::1732516359::1732517351::1::::<><>::
+pool_table_2.png::CompressedTexture2D::1151949147029474596::1732516359::1732517351::1::::<><>::
+refrigerator.glb::PackedScene::1221634012936895069::1732516359::1732517370::1::::<><>::uid://3dx1i01ye6ho::::res://models/Rumah/refrigerator_0.png
+refrigerator_0.png::CompressedTexture2D::1972924136622739992::1732516359::1732517351::1::::<><>::
+simple_wooden_drawer_tables_type_b.glb::PackedScene::3041209123025171856::1732516359::1732517372::1::::<><>::uid://hf1s6goox6md::::res://models/Rumah/simple_wooden_drawer_tables_type_b_0.png<>uid://cgtmiaxhbk2j2::::res://models/Rumah/simple_wooden_drawer_tables_type_b_1.png<>uid://cojnbt65pn0o8::::res://models/Rumah/simple_wooden_drawer_tables_type_b_2.png<>uid://ca4id0bdo21vs::::res://models/Rumah/simple_wooden_drawer_tables_type_b_3.png<>uid://cncx5egd0yfsi::::res://models/Rumah/simple_wooden_drawer_tables_type_b_4.png<>uid://drfsu0paxmlhh::::res://models/Rumah/simple_wooden_drawer_tables_type_b_5.png
+simple_wooden_drawer_tables_type_b_0.png::CompressedTexture2D::6798614260908347885::1732516359::1732517643::1::::<><>::
+simple_wooden_drawer_tables_type_b_1.png::CompressedTexture2D::5233940532656279353::1732516359::1732517351::1::::<><>::
+simple_wooden_drawer_tables_type_b_2.png::CompressedTexture2D::5774856732021300153::1732516359::1732517351::1::::<><>::
+simple_wooden_drawer_tables_type_b_3.png::CompressedTexture2D::4833200730362447004::1732516359::1732517351::1::::<><>::
+simple_wooden_drawer_tables_type_b_4.png::CompressedTexture2D::5690875374372409648::1732516359::1732517351::1::::<><>::
+simple_wooden_drawer_tables_type_b_5.png::CompressedTexture2D::8363924239731087025::1732516359::1732517351::1::::<><>::
+sofa.glb::PackedScene::6031750098839112115::1732516359::1732517374::1::::<><>::uid://cm4qanwxut87d::::res://models/Rumah/sofa_0.png<>uid://bvpokeuk8c7li::::res://models/Rumah/sofa_1.png<>uid://cpo75g6ernpw4::::res://models/Rumah/sofa_2.png<>uid://b4cwpxoru8c3p::::res://models/Rumah/sofa_3.png<>uid://cssxmm2b71eqo::::res://models/Rumah/sofa_4.png<>uid://dl6mgsqnqb75a::::res://models/Rumah/sofa_5.png
+sofa.tscn::PackedScene::3230774895429507706::1732516359::0::1::::<><>::uid://cm4qanwxut87d::::res://models/Rumah/sofa_0.png<>uid://bvpokeuk8c7li::::res://models/Rumah/sofa_1.png<>uid://cpo75g6ernpw4::::res://models/Rumah/sofa_2.png<>uid://b4cwpxoru8c3p::::res://models/Rumah/sofa_3.png<>uid://cssxmm2b71eqo::::res://models/Rumah/sofa_4.png<>uid://dl6mgsqnqb75a::::res://models/Rumah/sofa_5.png
+sofa_0.png::CompressedTexture2D::5675946635656364159::1732516359::1732517351::1::::<><>::
+sofa_1.png::CompressedTexture2D::3892220203728515422::1732516359::1732517351::1::::<><>::
+sofa_2.png::CompressedTexture2D::5856572191333224701::1732516359::1732517351::1::::<><>::
+sofa_3.png::CompressedTexture2D::4427389695918339767::1732516359::1732517351::1::::<><>::
+sofa_4.png::CompressedTexture2D::6074817944883494638::1732516359::1732517350::1::::<><>::
+sofa_5.png::CompressedTexture2D::7996075330899431844::1732516359::1732517351::1::::<><>::
+table1.tscn::PackedScene::1820382010181815534::1732516359::0::1::::<><>::uid://c34kgihyfvtg4::::res://models/Rumah/simple_wooden_drawer_tables_type_b_0.png<>uid://cgtmiaxhbk2j2::::res://models/Rumah/simple_wooden_drawer_tables_type_b_1.png<>uid://cojnbt65pn0o8::::res://models/Rumah/simple_wooden_drawer_tables_type_b_2.png
+table2.tscn::PackedScene::3765872236716577836::1732516359::0::1::::<><>::uid://ca4id0bdo21vs::::res://models/Rumah/simple_wooden_drawer_tables_type_b_3.png<>uid://cncx5egd0yfsi::::res://models/Rumah/simple_wooden_drawer_tables_type_b_4.png<>uid://drfsu0paxmlhh::::res://models/Rumah/simple_wooden_drawer_tables_type_b_5.png
+table3.tscn::PackedScene::8030038645774779502::1732516359::0::1::::<><>::uid://c34kgihyfvtg4::::res://models/Rumah/simple_wooden_drawer_tables_type_b_0.png<>uid://cgtmiaxhbk2j2::::res://models/Rumah/simple_wooden_drawer_tables_type_b_1.png<>uid://cojnbt65pn0o8::::res://models/Rumah/simple_wooden_drawer_tables_type_b_2.png
+table_and_chairs.glb::PackedScene::107209167066578490::1732516359::1732517374::1::::<><>::uid://dganalg2nwlx5::::res://models/Rumah/table_and_chairs_0.png<>uid://cacavu0p1h6nr::::res://models/Rumah/table_and_chairs_1.png<>uid://ci2gnb4ncmyp7::::res://models/Rumah/table_and_chairs_2.png
+table_and_chairs_0.png::CompressedTexture2D::7581185022084146616::1732516359::1732517353::1::::<><>::
+table_and_chairs_1.png::CompressedTexture2D::4777008714370025279::1732516359::1732517353::1::::<><>::
+table_and_chairs_2.png::CompressedTexture2D::5390477931043948894::1732516359::1732517353::1::::<><>::
+victorian_style_sofa.glb::PackedScene::3739268130209524913::1732516359::1732517374::1::::<><>::uid://c4ojci36dk4fn::::res://models/Rumah/victorian_style_sofa_0.png<>uid://bbnmxcmitrqou::::res://models/Rumah/victorian_style_sofa_1.png<>uid://c14odeu0cmkh3::::res://models/Rumah/victorian_style_sofa_2.png
+victorian_style_sofa_0.png::CompressedTexture2D::6837769610822944779::1732516359::1732517353::1::::<><>::
+victorian_style_sofa_1.png::CompressedTexture2D::2484216239280834920::1732516359::1732517353::1::::<><>::
+victorian_style_sofa_2.png::CompressedTexture2D::6658473894251753426::1732516359::1732517353::1::::<><>::
+::res://Scenes/::1732519480
+forest.gd::GDScript::-1::1732517617::0::1::::<>Node3D<>::
+forest.tscn::PackedScene::3677459326211596129::1732519480::0::1::::<><>::res://Scenes/forest.gd<>uid://4cbpynvikrmh::::res://controllers/fps_controller/fps_controller.tscn<>uid://o8bpwey0jmnf::::res://textures/sand/coast_sand_rocks_02_diff_1k.jpg<>uid://b8wf8clhrykfh::::res://Scenes/Main Menu/MainMenuBackground.tres<>uid://buxbpi624u3q::::res://models/forestMap/trees/beech/beech.tscn<>uid://bkiomthxg4233::::res://models/forestMap/gubuk/gubuk.tscn<>res://addons/simplegrasstextured/shaders/grass.gdshader<>uid://dv1hwq8l7bbyt::::res://models/forestMap/wall/wall.tscn<>uid://c4ggdp0kg5wjk::::res://addons/simplegrasstextured/textures/grassbushcc008.png<>res://addons/simplegrasstextured/grass.gd<>uid://bayr6lsu8wc4a::::res://models/forestMap/table/table.tscn<>uid://dq58xcv1vsqj7::::res://models/enemies/tormenter/tormenter.tscn<>uid://cwpybijb5cj4x::::res://models/forestMap/paper/notes.tscn<>res://Scenes/Inventory/Flashlight/flashlight.gd<>res://Scripts/UI/interactable.gd
+locked_door.tscn::PackedScene::9020494233367343167::1732517617::0::1::::<><>::res://Scripts/locked_door.gd<>res://Scripts/UI/interactable.gd<>res://Scripts/door_key.gd<>uid://haf3yd48cmqg::::res://Audios/TestAudio/Item Pick up (Counter Strike Source) - Sound Effect for editing.wav<>uid://1edogo7ul6fk::::res://Audios/TestAudio/Door Open.wav<>uid://nko7h0v2up78::::res://Audios/TestAudio/Door Close.wav<>uid://dmm2jr55ghwd5::::res://Audios/TestAudio/lock_door_sfx.wav<>uid://k4csirlffbdd::::res://Audios/TestAudio/door_unlock_sfx.wav
+MainMenuBackground.tscn::PackedScene::4750260171001869225::1732517617::0::1::::<><>::uid://jcw3qp1cgsye::::res://textures/grass/forrest_ground_01_diff_1k.png<>uid://b8wf8clhrykfh::::res://Scenes/Main Menu/MainMenuBackground.tres<>uid://bkiomthxg4233::::res://models/forestMap/gubuk/gubuk.tscn<>res://addons/simplegrasstextured/shaders/grass.gdshader<>uid://c4ggdp0kg5wjk::::res://addons/simplegrasstextured/textures/grassbushcc008.png<>res://addons/simplegrasstextured/grass.gd<>uid://bayr6lsu8wc4a::::res://models/forestMap/table/table.tscn<>uid://buxbpi624u3q::::res://models/forestMap/trees/beech/beech.tscn<>uid://cwpybijb5cj4x::::res://models/forestMap/paper/notes.tscn<>uid://gapopnjytrv1::::res://Scenes/Inventory/Flashlight/flashlight.tscn<>res://Scenes/Inventory/Flashlight/flashlight.gd<>res://Scripts/UI/interactable.gd<>uid://ddwh7n0ppw6gg::::res://controllers/weapon_manager/Weapon/Amanremu/amanremu viewmodel.tscn<>uid://bfr8rsojsr42k::::res://controllers/weapon_manager/Weapon/Pistol/pistol - viewmodel.tscn
+notes.tscn::PackedScene::7619531988322477526::1732519479::0::1::::<><>::res://Scenes/forest.gd<>res://addons/simplegrasstextured/shaders/grass.gdshader<>uid://c4ggdp0kg5wjk::::res://addons/simplegrasstextured/textures/grassbushcc008.png<>res://addons/simplegrasstextured/grass.gd<>uid://4cbpynvikrmh::::res://controllers/fps_controller/fps_controller.tscn<>uid://o8bpwey0jmnf::::res://textures/sand/coast_sand_rocks_02_diff_1k.jpg<>uid://bkiomthxg4233::::res://models/forestMap/gubuk/gubuk.tscn<>uid://buxbpi624u3q::::res://models/forestMap/trees/beech/beech.tscn<>uid://bayr6lsu8wc4a::::res://models/forestMap/table/table.tscn<>uid://dv1hwq8l7bbyt::::res://models/forestMap/wall/wall.tscn
+Pabrik.tscn::PackedScene::3068933920868923618::1732517617::0::1::::<><>::res://addons/qodot/src/nodes/qodot_map.gd<>uid://4cbpynvikrmh::::res://controllers/fps_controller/fps_controller.tscn<>uid://dgm276g7bw8q5::::res://addons/qodot/game_definitions/fgd/base_classes/target_base_class.tres<>uid://ccdjpf5j25aua::::res://addons/qodot/game_definitions/fgd/base_classes/targetname_base_class.tres<>uid://c5o31v30rw7v5::::res://addons/qodot/game_definitions/fgd/base_classes/light_base_class.tres<>uid://dxp37dladbquv::::res://addons/qodot/game_definitions/fgd/solid_classes/worldspawn_solid_class.tres<>uid://cw4s1hnxqetee::::res://addons/qodot/game_definitions/fgd/solid_classes/func_group_solid_class.tres<>uid://bnbdy0cky2bo::::res://addons/qodot/game_definitions/fgd/solid_classes/group_solid_class.tres<>uid://dy7undvxjvodx::::res://addons/qodot/game_definitions/fgd/solid_classes/illusionary_solid_class.tres<>uid://v3fbh0xn5d2h::::res://addons/qodot/game_definitions/fgd/solid_classes/physics_solid_class.tres<>uid://bu3h1cvdigp1i::::res://addons/qodot/game_definitions/fgd/point_classes/signal_point_class.tres<>uid://dbh35xj5q8gvc::::res://addons/qodot/game_definitions/fgd/point_classes/receiver_point_class.tres<>uid://ccwosedfa8v8d::::res://addons/qodot/game_definitions/fgd/point_classes/light_point_class.tres<>uid://ckg61cpr5p63l::::res://addons/qodot/game_definitions/fgd/solid_classes/button_solid_class.tres<>uid://b8aisardk4k4u::::res://addons/qodot/game_definitions/fgd/solid_classes/detail_solid_class.tres<>uid://b3yn012fy6782::::res://addons/qodot/game_definitions/fgd/solid_classes/mover_solid_class.tres<>uid://de6w02sa4ckl5::::res://addons/qodot/game_definitions/fgd/solid_classes/rotate_solid_class.tres<>uid://b70dbh5v15xno::::res://addons/qodot/game_definitions/fgd/solid_classes/trigger_solid_class.tres<>uid://bu2f3lupsjhfp::::res://addons/qodot/game_definitions/fgd/solid_classes/wall_solid_class.tres<>res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_file.gd<>uid://c1mbbxa8hr5gb::::res://textures/metal_5818.jpg<>uid://o8bpwey0jmnf::::res://textures/sand/coast_sand_rocks_02_diff_1k.jpg<>uid://cmhy2r8vi6ngb::::res://textures/Metal-3082.jpg<>uid://co1mdphbpt2om::::res://textures/Dirt-6939.jpg<>uid://b7f0sv32cq35q::::res://textures/Grunge-1383.jpg<>uid://buxbpi624u3q::::res://models/forestMap/trees/beech/beech.tscn<>uid://daa0ocygi11xb::::res://textures/metal_7310.jpg<>uid://h3joxhs1yykq::::res://textures/Cloth-8145.jpg<>uid://iwry8kxxh01b::::res://textures/wood_7780.jpg<>uid://7kpf215s25cb::::res://models/Industrial Assets/Industrial Assets/Tube.tscn<>res://addons/qodot/game_definitions/fgd/solid_classes/trigger.gd<>uid://dgc32v5jftav6::::res://models/Industrial Assets/Industrial Assets/Fence.tscn<>res://addons/qodot/game_definitions/fgd/solid_classes/button.gd<>uid://cec3qesheetl6::::res://models/Industrial Assets/Industrial Assets/Wheel2.tscn<>res://addons/qodot/game_definitions/fgd/solid_classes/mover.gd<>uid://p4altpi3v8ee::::res://models/Industrial Assets/Industrial Assets/Wheel3.tscn<>uid://c6gtyd4hjrria::::res://models/Industrial Assets/Industrial Assets/Baja2.tscn<>uid://y1p6fsie0dm::::res://models/Industrial Assets/Industrial Assets/HollowSteelXX.tscn<>uid://de84chfnuvq1l::::res://models/Industrial Assets/Industrial Assets/HollowSteelX.tscn<>uid://c3g48i7xovbpx::::res://models/Industrial Assets/Industrial Assets/GrayDrum.tscn<>uid://diles5n13bor1::::res://models/Industrial Assets/Industrial Assets/BlueDrum.tscn<>uid://bapeg265x26vr::::res://models/Industrial Assets/Industrial Assets/RedDrum.tscn<>uid://ccsuf4sy2edr5::::res://models/Industrial Assets/Industrial Assets/BrokenYellowDrum.tscn<>uid://543wbypuenau::::res://models/Industrial Assets/Industrial Assets/Baja.tscn<>uid://c3qu86bxs4sr8::::res://models/Industrial Assets/Industrial Assets/RedContainer.tscn<>uid://14ehvfrqosly::::res://models/Industrial Assets/Industrial Assets/BlueContainer.tscn<>uid://cybhs201u31cu::::res://models/Industrial Assets/Industrial Assets/YellowContainer.tscn<>uid://c6x2a0b6rpxgq::::res://models/Industrial Assets/Industrial Assets/BrokenBlueDrum.tscn<>uid://bjmkyts2558a::::res://models/Industrial Assets/Industrial Assets/YellowDrum.tscn<>uid://cvwi4l0aw11av::::res://models/Industrial Assets/Industrial Assets/SteelBarrier.tscn<>uid://emjdxfl5qt08::::res://models/Industrial Assets/Industrial Assets/Wheel.tscn<>uid://kcyiiumxwhse::::res://models/Industrial Assets/Industrial Assets/Wheel5.tscn<>uid://b7coj7lh8nrty::::res://models/Industrial Assets/Industrial Assets/RedDrumHalf.tscn<>uid://boacpplcv4xhr::::res://models/Industrial Assets/Industrial Assets/LTube.tscn<>uid://bgyxxti5qikn5::::res://models/Industrial Assets/Industrial Assets/TTube.tscn<>uid://bx5nsl5yua6a8::::res://models/Industrial Assets/Industrial Assets/TubeRusty.tscn<>uid://q2ehxs8ppcq7::::res://models/Industrial Assets/Industrial Assets/LTubeRusty.tscn<>uid://bm7av0nqnpah2::::res://models/Industrial Assets/Industrial Assets/Beton.tscn<>uid://c1mvq00bg460i::::res://models/Industrial Assets/Industrial Assets/ConcreteWall.tscn<>uid://cxm3k6tkv6h0u::::res://models/Industrial Assets/Industrial Assets/Baru/a.tscn<>uid://sxwbrdqs1y6a::::res://models/Industrial Assets/Industrial Assets/Baru/oil_tank.tscn<>uid://i22spu5vjmit::::res://models/Industrial Assets/Industrial Assets/Baru/control_panel.tscn<>uid://clbccfekhyq3h::::res://models/Industrial Assets/Industrial Assets/Baru/ventilation_shaft_curved_90.tscn<>uid://qrfcu717p33u::::res://models/Industrial Assets/Industrial Assets/Baru/old_oil_tank.tscn<>uid://yp0bjbdkmy1r::::res://models/Industrial Assets/Industrial Assets/Baru/boat.tscn
+Rumah.tscn::PackedScene::5274527338843575083::1732517617::0::1::::<><>::res://addons/qodot/src/nodes/qodot_map.gd<>uid://dgm276g7bw8q5::::res://addons/qodot/game_definitions/fgd/base_classes/target_base_class.tres<>uid://ccdjpf5j25aua::::res://addons/qodot/game_definitions/fgd/base_classes/targetname_base_class.tres<>uid://c5o31v30rw7v5::::res://addons/qodot/game_definitions/fgd/base_classes/light_base_class.tres<>uid://dxp37dladbquv::::res://addons/qodot/game_definitions/fgd/solid_classes/worldspawn_solid_class.tres<>uid://cw4s1hnxqetee::::res://addons/qodot/game_definitions/fgd/solid_classes/func_group_solid_class.tres<>uid://bnbdy0cky2bo::::res://addons/qodot/game_definitions/fgd/solid_classes/group_solid_class.tres<>uid://dy7undvxjvodx::::res://addons/qodot/game_definitions/fgd/solid_classes/illusionary_solid_class.tres<>uid://v3fbh0xn5d2h::::res://addons/qodot/game_definitions/fgd/solid_classes/physics_solid_class.tres<>uid://bu3h1cvdigp1i::::res://addons/qodot/game_definitions/fgd/point_classes/signal_point_class.tres<>uid://dbh35xj5q8gvc::::res://addons/qodot/game_definitions/fgd/point_classes/receiver_point_class.tres<>uid://ccwosedfa8v8d::::res://addons/qodot/game_definitions/fgd/point_classes/light_point_class.tres<>uid://ckg61cpr5p63l::::res://addons/qodot/game_definitions/fgd/solid_classes/button_solid_class.tres<>uid://b8aisardk4k4u::::res://addons/qodot/game_definitions/fgd/solid_classes/detail_solid_class.tres<>uid://b3yn012fy6782::::res://addons/qodot/game_definitions/fgd/solid_classes/mover_solid_class.tres<>uid://de6w02sa4ckl5::::res://addons/qodot/game_definitions/fgd/solid_classes/rotate_solid_class.tres<>uid://b70dbh5v15xno::::res://addons/qodot/game_definitions/fgd/solid_classes/trigger_solid_class.tres<>uid://bu2f3lupsjhfp::::res://addons/qodot/game_definitions/fgd/solid_classes/wall_solid_class.tres<>res://addons/qodot/src/resources/game-definitions/fgd/qodot_fgd_file.gd<>uid://b7f0sv32cq35q::::res://textures/Grunge-1383.jpg<>uid://cmhy2r8vi6ngb::::res://textures/Metal-3082.jpg<>uid://daa0ocygi11xb::::res://textures/metal_7310.jpg<>uid://4cbpynvikrmh::::res://controllers/fps_controller/fps_controller.tscn<>uid://062oqfsphgug::::res://models/Rumah/table1.tscn<>uid://bmbanjooxyfwk::::res://models/Rumah/sofa.tscn<>uid://bayr6lsu8wc4a::::res://models/forestMap/table/table.tscn<>uid://cl5c2ubvqfsmh::::res://models/Rumah/oldtv.tscn<>uid://db7gnvt3e2bgx::::res://models/Rumah/old_wooden.tscn<>uid://p0t4jn6vcud6::::res://models/Rumah/old_wooden2.tscn<>res://Scripts/locked_door.gd<>res://Scripts/UI/interactable.gd<>res://Scripts/door_key.gd<>uid://haf3yd48cmqg::::res://Audios/TestAudio/Item Pick up (Counter Strike Source) - Sound Effect for editing.wav<>uid://1edogo7ul6fk::::res://Audios/TestAudio/Door Open.wav<>uid://nko7h0v2up78::::res://Audios/TestAudio/Door Close.wav<>uid://dmm2jr55ghwd5::::res://Audios/TestAudio/lock_door_sfx.wav<>uid://k4csirlffbdd::::res://Audios/TestAudio/door_unlock_sfx.wav<>res://Scenes/Inventory/Flashlight/flashlight.gd<>uid://bs5jrrklph8uc::::res://models/Rumah/abandoned_sofa.tscn<>uid://byoe7syxoldhm::::res://models/Rumah/generator.tscn<>uid://vaqr4aowrf8n::::res://models/Rumah/bed.tscn<>uid://b8mmgbnyy5t47::::res://models/Rumah/old_wooden_table_and_chair_0.png<>uid://diiwidy5jkon3::::res://models/Rumah/old_wooden_table_and_chair_1.png<>uid://jvpavo5ovlsr::::res://models/Rumah/old_wooden_table_and_chair_2.png<>uid://5jfcv8qa7xah::::res://models/Rumah/old_wooden_table_and_chair_3.png<>uid://bkv560lldanbe::::res://models/Rumah/old_wooden_table_and_chair_4.png<>uid://bn84pnq6vtfil::::res://models/Rumah/old_wooden_table_and_chair_5.png
+World.tscn::PackedScene::5152642334946950490::1732519479::0::1::::<><>::uid://dvx5rrib5yuge::::res://materials/grass.tres<>uid://4cbpynvikrmh::::res://controllers/fps_controller/fps_controller.tscn<>uid://buxbpi624u3q::::res://models/forestMap/trees/beech/beech.tscn<>uid://ypmijk7hswtb::::res://models/low poly environment/anthurium.tscn<>uid://bvbgqn3a2fnvt::::res://models/low poly environment/bell_flower.tscn<>uid://btcrkyyblty8l::::res://models/low poly environment/daisy.tscn<>uid://byhanfeatk32u::::res://models/low poly environment/grass.tscn<>uid://by4jr3g5ahnb7::::res://models/low poly environment/plant.tscn<>uid://bpya6sok1xw2a::::res://models/low poly environment/rock_01.tscn<>uid://blfde5uykcte0::::res://models/low poly environment/rock_02.tscn<>uid://c5q0opel5oo1m::::res://models/low poly environment/rock_03.tscn<>uid://b63acp65wb4gb::::res://models/low poly environment/rock_04.tscn<>uid://24afa45ucipt::::res://models/low poly environment/rock_05.tscn<>uid://bvbvelruu3u7h::::res://models/low poly environment/rock_06.tscn<>uid://cm0eigmqtgvit::::res://models/low poly environment/rose.tscn<>uid://8kxdfefmv58e::::res://models/low poly environment/trunk_01.tscn<>uid://cdnpg80dsw8rl::::res://models/low poly environment/trunk_02.tscn<>uid://b5ujf8j1y01fl::::res://models/low poly environment/trunk_03.tscn
+::res://Scenes/Inventory/::1732516357
+::res://Scenes/Inventory/Flashlight/::1732517617
+flashlight.gd::GDScript::-1::1732517617::0::1::::<>Node3D<>::
+flashlight.tscn::PackedScene::422069626208827424::1732516357::0::1::::<><>::res://Scripts/Interactables/flashlight.gd<>res://Player/Interact/interactable.gd<>uid://p1pa80kmxdwk::::res://Materials/Grids/orange_grid_mat.tres<>uid://haf3yd48cmqg::::res://Audios/TestAudio/Item Pick up (Counter Strike Source) - Sound Effect for editing.wav
+timers.tscn::PackedScene::7888073663901603448::1732516357::0::1::::<><>::
+torch_holder.tscn::PackedScene::4034679382051986668::1732516357::0::1::::<><>::
+::res://Scenes/Main Menu/::1732517683
+controls_settings.tscn::PackedScene::2210294957323418858::1732516357::0::1::::<><>::res://Scripts/Main Menu/controls_settings.gd<>uid://bxlh2e0iuev0n::::res://Scenes/Main Menu/hotkey_rebind_button.tscn
+graphics.tscn::PackedScene::5525172832640027472::1732517617::0::1::::<><>::res://Scripts/Main Menu/graphics.gd<>uid://3jcqra0eopxk::::res://Scenes/Main Menu/window_mode_button.tscn
+hotkey_rebind_button.tscn::PackedScene::4023945727151204307::1732516357::0::1::::<><>::res://Scripts/Main Menu/hotkey_rebind_button.gd
+MainMenuBackground.tres::Environment::4748431472881448265::1732517683::0::1::::<><>::
+main_menu.tscn::PackedScene::9145227386795880089::1732516357::0::1::::<><>::res://Scripts/Main Menu/main_menu.gd<>uid://bbt5vpvyc2uh4::::res://Scenes/Main Menu/options.tscn<>uid://b8xcddgpq70v2::::res://Scenes/MainMenuBackground.tscn<>uid://c07g0ofxcm0hj::::res://Scenes/Main Menu/Melted Monster.ttf
+Melted Monster.ttf::FontFile::6594032237370258043::1732516357::1732517348::1::::<><>::
+options.tscn::PackedScene::2497692537498618259::1732516357::0::1::::<><>::res://Scripts/Main Menu/options.gd<>uid://b0yt7qppvpf8w::::res://Scenes/Main Menu/sound_options.tscn<>uid://ckyo13pja07mq::::res://Scenes/Main Menu/graphics.tscn<>uid://6qxh8xgldh5k::::res://Scenes/Main Menu/controls_settings.tscn
+options_display_button.tscn::PackedScene::3486480891091699811::1732516357::0::1::::<><>::
+resolution_mode_button.tscn::PackedScene::3515688677509133310::1732516357::0::1::::<><>::uid://bpw43irq71e7d::::res://Scenes/Main Menu/options_display_button.tscn
+sound_options.tscn::PackedScene::4191898473264724212::1732516357::0::1::::<><>::res://Scripts/Main Menu/sound_options.gd
+window_mode_button.tscn::PackedScene::1984017922378207780::1732516357::0::1::::<><>::uid://bpw43irq71e7d::::res://Scenes/Main Menu/options_display_button.tscn<>res://Scripts/Main Menu/window_mode_button.gd
+::res://Scenes/Pause Menu/::1732519479
+background.gdshader::Shader::-1::1732517617::0::1::::<><>::
+pause_menu.tscn::PackedScene::496217844920825348::1732519479::0::1::::<><>::res://Scripts/Pause Menu/pause_menu.gd<>res://Scenes/Pause Menu/background.gdshader<>uid://c07g0ofxcm0hj::::res://Scenes/Main Menu/Melted Monster.ttf
+::res://Scripts/::1732517617
+door_key.gd::GDScript::-1::1732516357::0::1::::<>Node3D<>::
+global.gd::GDScript::-1::1732516603::0::1::::<>Node<>::
+locked_door.gd::GDScript::-1::1732516357::0::1::::<>Node3D<>::
+WeaponCamera.gd::GDScript::-1::1732516603::0::1::::<>Camera3D<>::
+WeaponViewport.gd::GDScript::-1::1732516603::0::1::::<>SubViewport<>::
+::res://Scripts/Main Menu/::1732517617
+controls_settings.gd::GDScript::-1::1732516357::0::1::::ControlSettings<>Control<>::
+graphics.gd::GDScript::-1::1732516357::0::1::::GraphicsSettings<>Control<>::
+hotkey_rebind_button.gd::GDScript::-1::1732516357::0::1::::HotkeyRebindButton<>Control<>::
+main_menu.gd::GDScript::-1::1732517617::0::1::::MainMenu<>Control<>::
+options.gd::GDScript::-1::1732516357::0::1::::OptionsMenu<>Control<>::
+sound_options.gd::GDScript::-1::1732516357::0::1::::SoundOptions<>Control<>::
+window_mode_button.gd::GDScript::-1::1732516357::0::1::::<>Control<>::
+::res://Scripts/movement/::1732516458
+crouching_player_state.gd::GDScript::-1::1732516457::0::1::::CrouchingPlayerState<>PlayerMovementState<>::
+falling_player_state.gd::GDScript::-1::1732516457::0::1::::FallingPlayerState<>PlayerMovementState<>::
+idle_player_state.gd::GDScript::-1::1732516457::0::1::::IdlePlayerState<>PlayerMovementState<>::
+jumping_player_state.gd::GDScript::-1::1732516457::0::1::::JumpingPlayerState<>PlayerMovementState<>::
+PlayerMovementState.gd::GDScript::-1::1732516458::0::1::::PlayerMovementState<>State<>::
+sliding_player_state.gd::GDScript::-1::1732516458::0::1::::SlidingPlayerState<>PlayerMovementState<>::
+sprinting_player_state.gd::GDScript::-1::1732516458::0::1::::SprintingPlayerState<>PlayerMovementState<>::
+state.gd::GDScript::-1::1732516458::0::1::::State<>Node<>::
+state_machine.gd::GDScript::-1::1732516458::0::1::::StateMachine<>PlayerMovementState<>::
+walking_player_state.gd::GDScript::-1::1732516458::0::1::::WalkingPlayerState<>PlayerMovementState<>::
+::res://Scripts/Pause Menu/::1732519479
+pause_menu.gd::GDScript::-1::1732519479::0::1::::<>Control<>::
+::res://Scripts/UI/::1732516458
+debug.gd::GDScript::-1::1732516458::0::1::::<>PanelContainer<>::
+HUD.gd::GDScript::-1::1732516357::0::1::::<>CanvasLayer<>::
+interactable.gd::GDScript::-1::1732516357::0::1::::Interactable<>StaticBody3D<>::
+interact_ray.gd::GDScript::-1::1732516357::0::1::::<>RayCast3D<>::
+::res://textures/::1732517360
+BrickWallPainted-8746.jpg::CompressedTexture2D::4531607292384120542::1732516359::1732517360::1::::<><>::
+brick_7755.jpg::CompressedTexture2D::6395541036101156948::1732516360::1732517353::1::::<><>::
+Cloth-8145.jpg::CompressedTexture2D::549697156333705124::1732516359::1732517354::1::::<><>::
+Dirt-6939.jpg::CompressedTexture2D::5809893759949263932::1732516359::1732517353::1::::<><>::
+Ground.jpg::CompressedTexture2D::8565706080695149884::1732516359::1732517352::1::::<><>::
+Grunge-1383.jpg::CompressedTexture2D::4644336785464854012::1732516359::1732517352::1::::<><>::
+Metal-3082.jpg::CompressedTexture2D::5631064504424402905::1732516359::1732517353::1::::<><>::
+Metal-4992.jpg::CompressedTexture2D::5723815916803145258::1732516360::1732517357::1::::<><>::
+metal_5818.jpg::CompressedTexture2D::6622587547356912477::1732516360::1732517351::1::::<><>::
+metal_7310.jpg::CompressedTexture2D::7160805119419495559::1732516360::1732517352::1::::<><>::
+Plaster_Damaged-0626.jpg::CompressedTexture2D::2198004377729400223::1732516360::1732517354::1::::<><>::
+StoneWall-4239.jpg::CompressedTexture2D::9192875354907188612::1732516360::1732517353::1::::<><>::
+wood_7780.jpg::CompressedTexture2D::608003857418975841::1732516360::1732517352::1::::<><>::
+::res://textures/grass/::1732517353
+forrest_ground_01_ao_1k.png::CompressedTexture2D::45293127099813602::1732516604::1732516630::1::::<><>::
+forrest_ground_01_arm_1k.png::CompressedTexture2D::7928937841984328273::1732516604::1732517353::1::::<><>::
+forrest_ground_01_diff_1k.png::CompressedTexture2D::637214989050529996::1732516604::1732516633::1::::<><>::
+forrest_ground_01_disp_1k.png::CompressedTexture2D::2516498595115279802::1732516604::1732517353::1::::<><>::
+forrest_ground_01_nor_dx_1k.png::CompressedTexture2D::1117331834108475627::1732516604::1732516633::1::::<><>::
+forrest_ground_01_nor_gl_1k.png::CompressedTexture2D::7541158979890918018::1732516604::1732516633::1::::<><>::
+forrest_ground_01_rough_1k.png::CompressedTexture2D::4300173791017693284::1732516604::1732516632::1::::<><>::
+forrest_ground_01_rough_ao_1k.png::CompressedTexture2D::707942997371570301::1732516604::1732516633::1::::<><>::
+::res://textures/sand/::1732517353
+coast_sand_rocks_02_ao_1k.jpg::CompressedTexture2D::6779023499854763858::1732516454::1732517353::1::::<><>::
+coast_sand_rocks_02_arm_1k.jpg::CompressedTexture2D::8178766529808712145::1732516454::1732517353::1::::<><>::
+coast_sand_rocks_02_diff_1k.jpg::CompressedTexture2D::1050856943534913351::1732516453::1732517353::1::::<><>::
+coast_sand_rocks_02_disp_1k.png::CompressedTexture2D::8775304565919904547::1732516453::1732517353::1::::<><>::
+::res://TrenchbroomMaps/::1732517348
+pabrik.map::Resource::1676076167932198387::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+Rumah.map::Resource::2270888539309564486::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+::res://TrenchbroomMaps/autosave/::1732517348
+pabrik.1.map::Resource::6998835246646391377::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+pabrik.2.map::Resource::7655889724202480904::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+pabrik.3.map::Resource::5364679054005536410::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+pabrik.4.map::Resource::227716841260759797::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+Rumah.1.map::Resource::6524681026531091160::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+Rumah.2.map::Resource::8977938549085000384::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+Rumah.3.map::Resource::4008371485376030538::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+Rumah.4.map::Resource::5313011093747666901::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+Rumah.5.map::Resource::6404862325266453405::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+Rumah.6.map::Resource::8873816146009400276::1732516357::1732517348::1::::<><>::res://addons/qodot/src/resources/quake_map_file.gd
+::res://ui/::1732516604
+::res://ui/themes/::1732517683
+debug.tres::Theme::4409753085541996475::1732517683::0::1::::<><>::

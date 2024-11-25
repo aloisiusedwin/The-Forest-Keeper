@@ -1,0 +1,12 @@
+res://controllers/fps_controller/fps_controller.tscn
+res://controllers/weapon_manager/bloodsplatter/blood.tres
+res://ui/themes/debug.tres
+res://Scenes/Main Menu/MainMenuBackground.tres
+res://controllers/fps_controller/fps_controller.gd
+res://Scenes/Pause Menu/pause_menu.tscn
+res://Scenes/notes.tscn
+res://Scenes/World.tscn
+res://Scenes/forest.tscn
+res://Scripts/Pause Menu/pause_menu.gd
+res://controllers/weapon_manager/weapon_manager.gd
+res://Scenes/Main Menu/main_menu.tscn

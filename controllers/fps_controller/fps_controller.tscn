@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=36 format=3 uid="uid://4cbpynvikrmh"]
+=======
+[gd_scene load_steps=40 format=3 uid="uid://4cbpynvikrmh"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://controllers/fps_controller/fps_controller.gd" id="1_0fn47"]
 [ext_resource type="AudioStream" uid="uid://bynj0q5svp4rj" path="res://Audios/Player/Flashlight/Click_1.mp3" id="2_sewi0"]
@@ -23,6 +27,13 @@
 [ext_resource type="Script" path="res://Scripts/movement/falling_player_state.gd" id="12_vs60y"]
 [ext_resource type="Script" path="res://Scripts/WeaponViewport.gd" id="14_mjbge"]
 [ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="Resource" uid="uid://t7ppj5xrrqfj" path="res://controllers/weapon_manager/Weapon/Amanremu/amanremu.tres" id="17_uh4t7"]
+[ext_resource type="Resource" uid="uid://dr4khi2j5o4j2" path="res://controllers/weapon_manager/Weapon/Pistol/pistol.tres" id="24_1ngv6"]
+[ext_resource type="Script" path="res://controllers/weapon_manager/weapon_resource.gd" id="25_ufhcn"]
+[ext_resource type="PackedScene" uid="uid://hcmvusb6x1n1" path="res://Scenes/Pause Menu/pause_menu.tscn" id="30_dlo33"]
+>>>>>>> Stashed changes
 [ext_resource type="Script" path="res://Audios/player_audios.gd" id="30_f5fwt"]
 [ext_resource type="AudioStream" uid="uid://tpf3n7p5bmqv" path="res://Audios/Player/Footsteps/Tile/Footsteps_Tile_Walk_01.wav" id="31_ovj2n"]
 [ext_resource type="PackedScene" uid="uid://dmlq5yqj6gle2" path="res://controllers/hud/player_hud.tscn" id="32_q0axe"]
@@ -467,6 +478,10 @@ MAIN_CAMERA = NodePath("../../../Head/Camera3D")
 [node name="WorldModel" type="Node3D" parent="."]
 
 [node name="WeaponManager" parent="." node_paths=PackedStringArray("player", "bullet_raycast", "view_model_container", "world_model_container") instance=ExtResource("3_ofn50")]
+<<<<<<< Updated upstream
+=======
+equipped_weapons = Array[ExtResource("25_ufhcn")]([ExtResource("24_1ngv6"), ExtResource("17_uh4t7")])
+>>>>>>> Stashed changes
 player = NodePath("..")
 bullet_raycast = NodePath("../Head/Camera3D/RayAim")
 view_model_container = NodePath("../Weapon/SubViewport/Camera3D/ViewModel")
@@ -495,5 +510,10 @@ debug_shape_custom_color = Color(1, 0, 1, 1)
 [node name="PlayerHUD" parent="." node_paths=PackedStringArray("player", "weapon_manager") instance=ExtResource("32_q0axe")]
 player = NodePath("..")
 weapon_manager = NodePath("../WeaponManager")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("30_dlo33")]
 
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]

@@ -67,7 +67,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="Background/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-theme_override_colors/font_color = Color(0.0445781, 1.29727e-08, 7.52043e-10, 1)
+theme_override_colors/font_color = Color(0.287631, 0, 0.0091708, 1)
 theme_override_fonts/font = SubResource("FontVariation_kogrt")
 theme_override_font_sizes/font_size = 103
 text = "THE FOREST

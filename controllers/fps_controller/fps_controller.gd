@@ -1,6 +1,8 @@
 class_name Player
 extends CharacterBody3D
 @export var ANIMATIONPLAYER : AnimationPlayer
+@onready var pause_canvas = $CanvasLayer
+@onready var PAUSEMENU = $"CanvasLayer/Pause Menu"
 
 #Health
 var max_hp = 100
@@ -90,10 +92,12 @@ func _unhandled_input(event):
 		_tilt_input = -event.relative.y * SENSITIVITY
 
 func _input(event):
-	if event is InputEventMouseButton:
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	elif event.is_action_pressed("exit"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	if Input.is_action_just_pressed('pause'):
+		if get_tree().paused:
+			PAUSEMENU.resume()
+		else:
+			PAUSEMENU.pause()
+
 	
 	if can_use_torch:
 		if Input.is_action_just_pressed("toggle_torch") and torch_light.visible == false and torch_timer.is_stopped():
