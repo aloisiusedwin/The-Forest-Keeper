@@ -1,0 +1,105 @@
+[gd_scene load_steps=8 format=3 uid="uid://bbt5vpvyc2uh4"]
+
+[ext_resource type="Script" path="res://Scripts/Main Menu/options.gd" id="1_wvtbr"]
+[ext_resource type="PackedScene" uid="uid://b0yt7qppvpf8w" path="res://Scenes/Main Menu/sound_options.tscn" id="2_ckg0h"]
+[ext_resource type="PackedScene" uid="uid://ckyo13pja07mq" path="res://Scenes/Main Menu/graphics.tscn" id="3_m0ej4"]
+[ext_resource type="PackedScene" uid="uid://6qxh8xgldh5k" path="res://Scenes/Main Menu/controls_settings.tscn" id="4_vy741"]
+
+[sub_resource type="Gradient" id="Gradient_e1lg2"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bqyyf"]
+gradient = SubResource("Gradient_e1lg2")
+fill_to = Vector2(0, 0)
+
+[sub_resource type="SystemFont" id="SystemFont_2gc8j"]
+font_names = PackedStringArray("JetBrainsMono Nerd Font")
+subpixel_positioning = 0
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wvtbr")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_bqyyf")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 182
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 172
+theme_override_constants/margin_bottom = -103
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Sound" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.650128, 0.650128, 0.650128, 1)
+theme_override_fonts/font = SubResource("SystemFont_2gc8j")
+theme_override_font_sizes/font_size = 40
+text = "Sound"
+flat = true
+
+[node name="Display" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.650128, 0.650128, 0.650128, 1)
+theme_override_fonts/font = SubResource("SystemFont_2gc8j")
+theme_override_font_sizes/font_size = 40
+text = "Display"
+flat = true
+
+[node name="Controls" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.650128, 0.650128, 0.650128, 1)
+theme_override_fonts/font = SubResource("SystemFont_2gc8j")
+theme_override_font_sizes/font_size = 40
+text = "Control"
+flat = true
+
+[node name="ExitToMenu" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.650128, 0.650128, 0.650128, 1)
+theme_override_fonts/font = SubResource("SystemFont_2gc8j")
+theme_override_font_sizes/font_size = 40
+text = "Back"
+flat = true
+
+[node name="SoundOptions" parent="." instance=ExtResource("2_ckg0h")]
+visible = false
+layout_mode = 1
+
+[node name="GraphicsSettings" parent="." instance=ExtResource("3_m0ej4")]
+visible = false
+layout_mode = 1
+
+[node name="ControlsSettings" parent="." instance=ExtResource("4_vy741")]
+visible = false
+layout_mode = 1

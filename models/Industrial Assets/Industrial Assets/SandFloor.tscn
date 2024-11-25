@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=4 uid="uid://bbs77bge3t2ol"]
+
+[ext_resource type="Texture2D" uid="uid://kpwxkf543nn0" path="res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_30.jpg" id="1_krrvc"]
+[ext_resource type="Texture2D" uid="uid://12fn3wqiplxg" path="res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_31.png" id="2_1t2i7"]
+[ext_resource type="Texture2D" uid="uid://b8txnmiyii1lq" path="res://models/Pabrik/Industrial Assets/industrial_asset_pack_free_32.png" id="3_20k7r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xrivh"]
+resource_name = "Sand"
+cull_mode = 2
+albedo_texture = ExtResource("1_krrvc")
+metallic_texture = ExtResource("2_1t2i7")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_1t2i7")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_20k7r")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4gmbm"]
+_surfaces = [{
+"aabb": AABB(-1.80748, -1.80748, 0, 3.61496, 3.61496, 1e-05),
+"format": 34359799809,
+"index_count": 6,
+"index_data": PackedByteArray("AAACAAEAAAADAAIA"),
+"name": "Sand",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("d1vnv3db5z8AAAAAd1vnv3db578AAAAAd1vnP3db578AAAAAd1vnP3db5z8AAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1msg0"]
+resource_name = "Sketchfab_Scene_Plane_003_Sand_0"
+_surfaces = [{
+"aabb": AABB(-1.80748, -1.80748, 0, 3.61496, 3.61496, 1e-05),
+"attribute_data": PackedByteArray("AACAPwAAAAAAAMA/AAAAvwAAgD8AAAAAAACAPwAAAAAAAIA/AACAPwAAwD8AAMA/AACAPwAAgD8AAIA/AACAPwAAAAAAAIA/AAAAvwAAwD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAAAAAAAC/AAAAvwAAAAAAAAAAAAAAAAAAAAA="),
+"format": 34359799927,
+"index_count": 6,
+"index_data": PackedByteArray("AAACAAEAAAADAAIA"),
+"material": SubResource("StandardMaterial3D_xrivh"),
+"name": "Sand",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("d1vnv3db5z8AAAAAd1vnv3db578AAAAAd1vnP3db578AAAAAd1vnP3db5z8AAAAA/3//fwAA/7//f/9/AAD/v/9//38AAP+//3//fwAA/78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4gmbm")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_idte7"]
+points = PackedVector3Array(-1.83619, -1.83619, -0.0286905, 1.83619, 1.83619, 0.0286905, 1.83619, 1.83619, -0.0286905, -1.83619, 1.83619, 0.0286905, 1.83619, -1.83619, 0.0286905, 1.83619, -1.83619, -0.0286905, -1.83619, 1.83619, -0.0286905, -1.83619, -1.83619, 0.0286905)
+
+[node name="Plane_003" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+
+[node name="Plane_003_Sand_0" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_1msg0")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Plane_003_Sand_0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane_003_Sand_0/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_idte7")

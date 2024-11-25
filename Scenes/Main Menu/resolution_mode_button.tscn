@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqda448dwrqqw"]
+
+[ext_resource type="PackedScene" uid="uid://bpw43irq71e7d" path="res://Scenes/Main Menu/options_display_button.tscn" id="1_yxnp5"]
+
+[sub_resource type="GDScript" id="GDScript_ytek0"]
+script/source = "extends Control
+
+@onready var optionButton = $HBoxContainer/OptionButton as OptionButton
+
+const RESOLUTION_DICTIONARY : Dictionary = {
+	\"1920x1080\" : Vector2i(1920, 1080),
+	\"1280x720\" : Vector2i(1280,720),
+}
+
+func _ready():
+	optionButton.item_selected.connect(on_resolution_selected)
+	add_resolution_items()
+
+func add_resolution_items() -> void:
+	for resolution_size_text in RESOLUTION_DICTIONARY:
+		optionButton.add_item(resolution_size_text)
+
+func on_resolution_selected(index : int) -> void:
+	DisplayServer.window_set_size(RESOLUTION_DICTIONARY.values()[index])
+"
+
+[node name="resolution_mode_button" instance=ExtResource("1_yxnp5")]
+script = SubResource("GDScript_ytek0")
+
+[node name="Label" parent="HBoxContainer" index="0"]
+text = "Resolution"

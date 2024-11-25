@@ -1,0 +1,577 @@
+[gd_scene load_steps=32 format=3 uid="uid://4cbpynvikrmh"]
+
+[ext_resource type="Script" path="res://controllers/fps_controller/fps_controller.gd" id="1_0fn47"]
+[ext_resource type="PackedScene" uid="uid://crxf2lgtbbrw3" path="res://models/weapons/pistol/pistol.tscn" id="2_bbrno"]
+[ext_resource type="Script" path="res://Scripts/UI/reticle.gd" id="2_qyc3x"]
+[ext_resource type="Script" path="res://Scripts/UI/interact_ray.gd" id="2_y0lgd"]
+[ext_resource type="Theme" uid="uid://b33d8vlpvjdwl" path="res://ui/themes/debug.tres" id="3_la0w7"]
+[ext_resource type="PackedScene" uid="uid://b6y6l08yg5cxe" path="res://controllers/weapon_manager/weapon_manager.tscn" id="3_ofn50"]
+[ext_resource type="Resource" uid="uid://dr4khi2j5o4j2" path="res://controllers/weapon_manager/Weapon/Pistol/pistol.tres" id="4_angro"]
+[ext_resource type="Script" path="res://Scripts/UI/debug.gd" id="4_c544d"]
+[ext_resource type="Script" path="res://Scripts/movement/state_machine.gd" id="5_h3u6d"]
+[ext_resource type="Script" path="res://Scripts/movement/idle_player_state.gd" id="6_cthcc"]
+[ext_resource type="Script" path="res://Scripts/movement/walking_player_state.gd" id="7_uykxy"]
+[ext_resource type="Script" path="res://Scripts/movement/sprinting_player_state.gd" id="8_y64dx"]
+[ext_resource type="Script" path="res://Scripts/movement/crouching_player_state.gd" id="9_mvll2"]
+[ext_resource type="Script" path="res://Scripts/movement/sliding_player_state.gd" id="10_ojgis"]
+[ext_resource type="Script" path="res://Scripts/movement/jumping_player_state.gd" id="11_b4oom"]
+[ext_resource type="Script" path="res://Scripts/movement/falling_player_state.gd" id="12_vs60y"]
+[ext_resource type="Script" path="res://Scripts/WeaponViewport.gd" id="14_mjbge"]
+[ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
+[ext_resource type="Script" path="res://Scripts/UI/HUD.gd" id="16_es48c"]
+[ext_resource type="Script" path="res://models/weapons/pistol/pistol.gd" id="16_iahad"]
+[ext_resource type="Texture2D" uid="uid://lpy6vq78jb23" path="res://models/forestMap/paper/notes.png" id="19_vdg8q"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o26h5"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5uvlm"]
+
+[sub_resource type="Animation" id="Animation_ks4pg"]
+resource_name = "Crouch"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:shape:height")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.25, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.639871, 0), Vector3(0, 0.05, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4r7xp"]
+resource_name = "JumpEnd"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.085, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.639871, 0), Vector3(0, 0.59, 0), Vector3(0, 0.639871, 0)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head:rotation:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0, -0.008, -0.024, -0.025, 0, 0.063, 0.001, 0, -0.256, -0.001, 0, 0),
+"times": PackedFloat32Array(0, 0.085, 0.4)
+}
+
+[sub_resource type="Animation" id="Animation_jyg54"]
+resource_name = "JumpStart"
+length = 0.55
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.55),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.639871, 0), Vector3(0, 0.59, 0), Vector3(0, 0.639871, 0)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head:rotation:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.1, 0, -0.015, -0.1, 0, 0.25, 0, 0, -0.1, 0, 0.1, 0),
+"times": PackedFloat32Array(0, 0.2, 0.55)
+}
+
+[sub_resource type="Animation" id="Animation_coin6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:shape:height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.639871, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Head:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ShapeCast3D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PlayerStateMachine/SlidingPlayerState:SPEED")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Head/Camera3D:fov")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [75.0]
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Head:rotation:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_xvwnn"]
+resource_name = "Sliding"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape3D:shape:height")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [2.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.25, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.6, 0), Vector3(0, 0.1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Head:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 3, 4.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ShapeCast3D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.5, 0), Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PlayerStateMachine/SlidingPlayerState:SPEED")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [6.0, 4.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Head/Camera3D:fov")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.3, 4.33333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [75.0, 95.0, 75.0]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PlayerStateMachine/SlidingPlayerState")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"finish"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tbcgx"]
+_data = {
+"Crouch": SubResource("Animation_ks4pg"),
+"JumpEnd": SubResource("Animation_4r7xp"),
+"JumpStart": SubResource("Animation_jyg54"),
+"RESET": SubResource("Animation_coin6"),
+"Sliding": SubResource("Animation_xvwnn")
+}
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mspl4"]
+
+[sub_resource type="SystemFont" id="SystemFont_styea"]
+font_names = PackedStringArray("MS Gothic")
+font_weight = 650
+subpixel_positioning = 0
+
+[node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("ANIMATIONPLAYER")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+floor_max_angle = 1.22173
+script = ExtResource("1_0fn47")
+ANIMATIONPLAYER = NodePath("AnimationPlayer")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_o26h5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("CapsuleMesh_5uvlm")
+skeleton = NodePath("../..")
+
+[node name="Head" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639871, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+cull_mask = 1047553
+current = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0821928, -0.447035)
+visible = false
+light_energy = 7.009
+spot_range = 27.299
+spot_angle = 35.18
+spot_angle_attenuation = 0.68302
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="Head/Camera3D"]
+update_mode = 1
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+target_position = Vector3(0, 0, -1.505)
+script = ExtResource("2_y0lgd")
+
+[node name="Prompt" type="Label" parent="Head/Camera3D/RayCast3D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.5
+offset_top = -11.5
+offset_right = 33.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Message"
+
+[node name="RayAim" type="RayCast3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.006, -1.5)
+target_position = Vector3(0, 0, -100)
+collision_mask = 2
+collide_with_areas = true
+
+[node name="RayAimEnd" type="Node3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -101.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tbcgx")
+}
+blend_times = [&"JumpEnd", &"JumpStart", 0.1]
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("SphereShape3D_mspl4")
+target_position = Vector3(0, 0.5, 0)
+
+[node name="Crosshair" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Reticle" type="CenterContainer" parent="Crosshair"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_qyc3x")
+
+[node name="DebugPanel" type="PanelContainer" parent="Crosshair"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 50.0
+theme = ExtResource("3_la0w7")
+script = ExtResource("4_c544d")
+
+[node name="MarginContainer" type="MarginContainer" parent="Crosshair/DebugPanel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Crosshair/DebugPanel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PlayerStateMachine" type="Node" parent="." node_paths=PackedStringArray("CURRENT_STATE")]
+script = ExtResource("5_h3u6d")
+CURRENT_STATE = NodePath("IdlePlayerState")
+
+[node name="IdlePlayerState" type="Node" parent="PlayerStateMachine"]
+script = ExtResource("6_cthcc")
+
+[node name="WalkingPlayerState" type="Node" parent="PlayerStateMachine"]
+script = ExtResource("7_uykxy")
+
+[node name="SprintingPlayerState" type="Node" parent="PlayerStateMachine"]
+script = ExtResource("8_y64dx")
+
+[node name="CrouchingPlayerState" type="Node" parent="PlayerStateMachine"]
+script = ExtResource("9_mvll2")
+
+[node name="SlidingPlayerState" type="Node" parent="PlayerStateMachine"]
+script = ExtResource("10_ojgis")
+SPEED = null
+SLIDE_ANIMATION_SPEED = 6.0
+
+[node name="JumpingPlayerState" type="Node" parent="PlayerStateMachine"]
+script = ExtResource("11_b4oom")
+
+[node name="FallingPlayerState" type="Node" parent="PlayerStateMachine"]
+script = ExtResource("12_vs60y")
+
+[node name="Weapon" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="Weapon"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+script = ExtResource("14_mjbge")
+
+[node name="Camera3D" type="Camera3D" parent="Weapon/SubViewport" node_paths=PackedStringArray("MAIN_CAMERA")]
+cull_mask = 1047554
+script = ExtResource("15_c2n5p")
+MAIN_CAMERA = NodePath("../../../Head/Camera3D")
+
+[node name="Pistol" parent="Weapon/SubViewport/Camera3D" instance=ExtResource("2_bbrno")]
+transform = Transform3D(0.0749944, 7.9959e-06, 0.00091624, 0, 0.0749971, -0.00065449, -0.000916274, 0.000654441, 0.0749916, 0.28, -0.296, -0.685)
+visible = false
+script = ExtResource("16_iahad")
+
+[node name="ViewModel" type="Node3D" parent="Weapon/SubViewport/Camera3D"]
+
+[node name="WorldModel" type="Node3D" parent="."]
+
+[node name="WeaponManager" parent="." node_paths=PackedStringArray("player", "bullet_raycast", "view_model_container", "world_model_container") instance=ExtResource("3_ofn50")]
+current_weapon = ExtResource("4_angro")
+player = NodePath("..")
+bullet_raycast = NodePath("../Head/Camera3D/RayAim")
+view_model_container = NodePath("../Weapon/SubViewport/Camera3D/ViewModel")
+world_model_container = NodePath("../WorldModel")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("16_es48c")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 68.0
+offset_right = -43.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+theme = ExtResource("3_la0w7")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="CurrentAmmo" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = SubResource("SystemFont_styea")
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Note" type="TextureRect" parent="CanvasLayer"]
+visible = false
+offset_left = 657.0
+offset_top = 182.0
+offset_right = 1298.0
+offset_bottom = 938.0
+texture = ExtResource("19_vdg8q")
+expand_mode = 1
+
+[node name="HitUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="HitUI"]
+visible = false
+layout_mode = 0
+offset_left = -150.0
+offset_top = -166.0
+offset_right = 2048.0
+offset_bottom = 1208.0
+color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
+[connection signal="update_ammo" from="Weapon/SubViewport/Camera3D/Pistol" to="CanvasLayer" method="_on_pistol_update_ammo"]

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bxqotyoj4xqpg"]
+
+[node name="TorchHolder" type="Node3D"]
+
+[node name="Torchloc" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+
+[node name="Torch" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+top_level = true
+
+[node name="TorchLight" type="SpotLight3D" parent="Torch"]
+visible = false
+light_energy = 3.0
+shadow_enabled = true
+shadow_opacity = 0.8
+spot_range = 15.0
+spot_angle = 40.0
+spot_angle_attenuation = 2.0
