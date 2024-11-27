@@ -8,6 +8,3 @@ func _process(delta: float) -> void:
 		var weapon = weapon_manager.current_weapon
 		CurrentAmmo.set_text(str(weapon.current_ammo) + " | " + str(weapon.reserve_ammo))
 		
-func _on_pistol_update_ammo(current,reserve) -> void:
-	pass
-	#CurrentAmmo.set_text(str(current) + " | " + str(reserve))

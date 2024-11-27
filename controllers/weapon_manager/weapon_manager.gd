@@ -16,6 +16,9 @@ extends Node3D
 var current_weapon_view_model : Node3D
 var current_weapon_world_model : Node3D
 
+var pistol = load("res://controllers/weapon_manager/Weapon/Pistol/pistol.tres") as WeaponResource
+var amanremu = load("res://controllers/weapon_manager/Weapon/Amanremu/amanremu.tres") as WeaponResource
+
 @export var player : CharacterBody3D
 @export var bullet_raycast : RayCast3D
 
@@ -131,8 +134,6 @@ func _unhandled_input(event):
 			current_weapon.reload_pressed()
 
 func _ready() -> void:
-	var pistol = load("res://controllers/weapon_manager/Weapon/Pistol/pistol.tres") as WeaponResource
-	var amanremu = load("res://controllers/weapon_manager/Weapon/Amanremu/amanremu.tres") as WeaponResource
 	var scene_name = get_tree().current_scene.name
 	if scene_name == "Forest" || scene_name == "Pabrik" :
 		equipped_weapons.append(amanremu)
@@ -145,3 +146,7 @@ func _process(delta: float) -> void:
 		current_weapon.on_process(delta)
 	if current_weapon_view_model_muzzle:
 		$ViewMuzzleFlash.global_position = current_weapon_view_model_muzzle.global_position
+
+
+func _hand_found() -> void:
+	equipped_weapons.append(pistol)

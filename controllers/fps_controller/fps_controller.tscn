@@ -346,6 +346,7 @@ click_audios = Array[AudioStream]([ExtResource("2_sewi0"), ExtResource("3_qp17n"
 shape = SubResource("CapsuleShape3D_o26h5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+visible = false
 mesh = SubResource("CapsuleMesh_5uvlm")
 skeleton = NodePath("../..")
 
@@ -496,4 +497,5 @@ debug_shape_custom_color = Color(1, 0, 1, 1)
 player = NodePath("..")
 weapon_manager = NodePath("../WeaponManager")
 
+[connection signal="found" from="Head/Camera3D/RayCast3D" to="WeaponManager" method="_hand_found"]
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]

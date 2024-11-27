@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=4 uid="uid://t6jk3mwfy7m2"]
 
 [ext_resource type="Texture2D" uid="uid://dpe7i1djkx5u8" path="res://models/npc/lee/lee_prisoner_diffuse.png" id="1_cr1n3"]
-[ext_resource type="Script" path="res://models/npc/lee/lee.gd" id="1_wk6iu"]
+[ext_resource type="Script" path="res://models/npc/npc.gd" id="1_wk6iu"]
 [ext_resource type="Texture2D" uid="uid://bbcb7ed3yoayh" path="res://models/npc/lee/lee_prisoner_normal.png" id="2_3p8mm"]
 [ext_resource type="Script" path="res://Scripts/UI/interactable.gd" id="4_otrhs"]
 
@@ -896,9 +896,9 @@ libraries = {
 "": SubResource("AnimationLibrary_7j2m3")
 }
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="lee" type="StaticBody3D" parent="."]
 script = ExtResource("4_otrhs")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="lee"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.04186, 0)
 shape = SubResource("CapsuleShape3D_oe3ni")

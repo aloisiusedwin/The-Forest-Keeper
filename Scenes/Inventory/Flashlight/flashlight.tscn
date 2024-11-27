@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://gapopnjytrv1"]
+[gd_scene load_steps=8 format=3 uid="uid://gapopnjytrv1"]
 
-[ext_resource type="Script" path="res://Scripts/Interactables/flashlight.gd" id="1_amjb7"]
-[ext_resource type="Script" path="res://Player/Interact/interactable.gd" id="2_40o7q"]
-[ext_resource type="Material" uid="uid://p1pa80kmxdwk" path="res://Materials/Grids/orange_grid_mat.tres" id="3_kd8st"]
+[ext_resource type="Script" path="res://Scenes/Inventory/Flashlight/flashlight.gd" id="1_amjb7"]
+[ext_resource type="Script" path="res://Scripts/UI/interactable.gd" id="2_40o7q"]
 [ext_resource type="AudioStream" uid="uid://haf3yd48cmqg" path="res://Audios/TestAudio/Item Pick up (Counter Strike Source) - Sound Effect for editing.wav" id="4_nvoyo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_80u6b"]
@@ -116,12 +115,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.69003, 1.06149, -5.32146)
 script = ExtResource("1_amjb7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-visible = false
 script = ExtResource("2_40o7q")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="StaticBody3D"]
 transform = Transform3D(0.819152, -0.573576, 2.50718e-08, 0, -4.37114e-08, -1, 0.573576, 0.819152, -3.58063e-08, 0, -0.0534077, -0.286068)
-material_override = ExtResource("3_kd8st")
 radius = 0.05
 height = 0.5
 
@@ -133,7 +130,6 @@ shadow_enabled = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(0.819152, 0, -0.573576, 0, 1, 0, 0.573576, 0, 0.819152, 0, -0.0517437, -0.286785)
 shape = SubResource("BoxShape3D_80u6b")
-disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

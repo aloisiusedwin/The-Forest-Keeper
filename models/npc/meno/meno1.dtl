@@ -1,0 +1,12 @@
+Stop right there. What are you doing in this cursed place?
+label back1
+- I’m here to rescue the forest animals.
+	The animals? Hmph. At least you’re not here to strip this place of its last remnants like the others. But do you have any idea what you’ve walked into? This factory is a graveyard. Those who enter often don’t come back.
+	- I can handle myself. I need to find the animals.
+		Bold words. But bravery alone won’t get you far here. The animals that were taken won’t be easy to reach. This place has traps, locked doors, and dangers you can’t predict. I hope you'll make it back.
+	- What do you mean, a graveyard?
+		This factory doesn’t just break machines—it breaks lives. The workers, the animals, the forest itself... all were sacrificed to its greed. The humans who ran it are gone, but their cruelty lingers. If you’re here to help the animals, you’ll have to face the remnants of what they left behind.
+- Who are you, and why are you stopping me?
+	My name is Meno. Let’s just say I know this forest—and this factory—better than most. I’m stopping you because wandering aimlessly in a place like this gets people killed. So, again, what are you doing here?
+	jump meno1/back1
+[signal arg="ended"]
