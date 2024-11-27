@@ -14,6 +14,7 @@ func _ready():
 	handle_connecting_signals()
 	
 func on_start_pressed() -> void:
+	print("pressed")
 	get_tree().change_scene_to_packed(startLevel)
 	
 func on_options_pressed() -> void:

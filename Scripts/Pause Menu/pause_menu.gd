@@ -2,7 +2,7 @@ extends Control
 
 @onready var anim = $AnimationPlayer
 @onready var timer_label = $MarginContainer/VBoxContainer/Timer
-
+@onready var canvas = $".."
 var time : float = 0.0
 var timer_on : bool = true
 
@@ -12,13 +12,16 @@ func _ready():
 	timer_label.visible = false
 
 func resume():
+	canvas.visible = false
 	get_tree().paused = false
 	anim.play_backwards("blur")
 	timer_on = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	timer_label.visible = false
+	
 
 func pause():
+	canvas.visible = true
 	get_tree().paused = true
 	anim.play("blur")
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://bsnnhn2fuq3rp"]
+[gd_scene load_steps=25 format=4 uid="uid://bsnnhn2fuq3rp"]
 
 [ext_resource type="Script" path="res://Scenes/Level/Forest/forest.gd" id="1_b1oyq"]
 [ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller/fps_controller.tscn" id="1_xqpnu"]
@@ -15,7 +15,6 @@
 [ext_resource type="Script" path="res://Scenes/Inventory/Flashlight/flashlight.gd" id="13_lqbtc"]
 [ext_resource type="Script" path="res://Scripts/UI/interactable.gd" id="14_74q1k"]
 [ext_resource type="ArrayOccluder3D" uid="uid://dbfcdmtvc52wx" path="res://Scenes/Level/Forest/forest.occ" id="15_2mcq6"]
-[ext_resource type="PackedScene" uid="uid://hcmvusb6x1n1" path="res://Scenes/Pause Menu/pause_menu.tscn" id="16_l4x42"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pkhja"]
 resource_local_to_scene = true
@@ -845,10 +844,6 @@ shadow_enabled = true
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="."]
 occluder = ExtResource("15_2mcq6")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("16_l4x42")]
 
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_enemy_spawn_timer_timeout"]
 [connection signal="interacted" from="Flashlight/flashy" to="Flashlight" method="_on_static_body_3d_interacted"]
