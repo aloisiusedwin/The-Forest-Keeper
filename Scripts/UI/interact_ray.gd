@@ -1,5 +1,7 @@
 extends RayCast3D
 
+@onready var player = $"../../.."
+
 @onready var object_found = false
 @onready var prompt = $Prompt
 @onready var note = $"../../../PlayerHUD/CanvasLayer/Note"
@@ -35,10 +37,8 @@ func _physics_process(delta: float) -> void:
 			prompt.text = collider.prompt_message
 			if Input.is_action_just_pressed("interact"):
 				if collider.name == "meno":
-					prompt.visible = !prompt.visible
 					Dialogic.start("meno1")
 				elif collider.name == "lee":
-					prompt.visible = !prompt.visible
 					if object_found:
 						collider.queue_free()
 						Dialogic.start("meno2")
@@ -54,5 +54,9 @@ func _physics_process(delta: float) -> void:
 					Notes(collider.isi_notes)  # Mengirim isi_notes ke fungsi Notes
 				
 func DialogicSignal(argument:String):
-	if argument == "ended":
+	if argument == "started":
+		player.stop_input = true
+		prompt.visible = !prompt.visible
+	elif argument == "ended":
+		player.stop_input = false
 		prompt.visible = !prompt.visible

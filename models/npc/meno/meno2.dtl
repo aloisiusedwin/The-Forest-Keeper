@@ -1,3 +1,4 @@
+[signal arg="started"]
 Have you found it?
 - I found it. Your hand. Here.
 	You’ve done it... I can feel it again. After all this time, I’m whole once more. Thank you, truly. But before I go, you must understand what this place is—and what it means for the forest.
@@ -12,3 +13,4 @@ The forest is alive in its own way, and it remembers. If you listen closely, you
 - I’ll do what I can. You have my word.
 - The forest can count on me. Rest easy now.
 Good. That’s all I needed to hear. Thank you, traveler. May the forest guide your path.
+[signal arg="ended"]

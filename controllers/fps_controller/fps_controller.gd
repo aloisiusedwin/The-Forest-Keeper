@@ -1,6 +1,9 @@
 class_name Player
 extends CharacterBody3D
+
 @export var ANIMATIONPLAYER : AnimationPlayer
+@export var VIDEOPLAYER : VideoStreamPlayer
+var video_checked : bool = false
 
 #Health
 var max_hp = 100
@@ -19,10 +22,10 @@ var red_alpha
 @onready var CAMERA_CONTROLLER : Camera3D = $Head/Camera3D
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
-
 @onready var hit_rect = $PlayerHUD/HitUI/ColorRect
 
 #movement
+@export var stop_input : bool = false
 @export var TOGGLE_CROUCH : bool = true
 @onready var CROUCH_SHAPECAST : ShapeCast3D = %ShapeCast3D
 @export_range(5,10, 0.1) var CROUCH_ANIMATION_SPEED : float = 7.0
@@ -31,7 +34,6 @@ const SENSITIVITY = 0.2 # Change only the second float
 var gravity = 12.0
 var air_time = 0.0
 var fall_multiplier = 2.0
-
 const hit_stagger = 8.0
 
 #headbob
@@ -61,10 +63,8 @@ func _step(_is_on_floor:bool) -> bool:
 @onready var torch_click_sfx : AudioStreamPlayer3D = get_node(NodePath("PlayerAudios/TorchClickSfx"))
 @export var torch_sway_speed : float = 15.0
 
-
 func random_torch_click() -> AudioStream:
 	return click_audios[randi() % click_audios.size()]
-
 
 #fov
 const BASE_FOV = 75.0
@@ -79,6 +79,8 @@ var _camera_rotation : Vector3
 var _current_rotation : float
 
 func _ready():
+	play_cutscene()
+	
 	CROUCH_SHAPECAST.add_exception($".")
 	Global.player = self
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -135,6 +137,11 @@ func _headbob(time) -> Vector3:
 	return pos
 
 func _process(delta: float) -> void:
+	if !video_checked:
+		if !VIDEOPLAYER.is_playing():
+			emit_signal("video_finished")
+			video_checked = true
+		
 	regen_hp(delta)
 
 func _physics_process(delta: float) -> void:
@@ -163,6 +170,11 @@ func update_gravity(delta) -> void:
 	velocity.y -= (gravity + gravity * air_time * fall_multiplier) * delta
 
 func update_input(delta: float, speed: float, acceleration: float, deceleration: float) -> void:
+	if stop_input:
+		velocity.x = 0
+		velocity.z = 0
+		return
+		
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	var direction = (head.transform.basis * transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
@@ -213,16 +225,34 @@ func update_hit_effect():
 	hp_percentage = float(current_hp) / max_hp
 	red_alpha = lerp(0.0, 0.4, 1.0 - hp_percentage) 
 	hit_rect.modulate = Color(1.0, 0.2, 0.2, red_alpha)
-	
+
 func die():
 	var scene_name = get_tree().current_scene.name
 	if scene_name == "Forest":
 		print("ded")
-		
 		get_tree().change_scene_to_file("res://Scenes/Level/Rumah/Rumah.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Scenes/Level/Forest/forest.tscn")
 
-
 func _on_escaped_body_entered(_body: Node3D) -> void:
 	get_tree().change_scene_to_file("res://Scenes/Level/Pabrik/Pabrik.tscn")
+
+signal video_finished
+@onready var cutscenecanvas = $Cutscene
+
+func play_cutscene():
+	var scene_name = get_tree().current_scene.name
+	if scene_name == "Forest":
+		VIDEOPLAYER.stream = preload("res://Video/level1.ogv")
+	elif scene_name == "Rumah":
+		VIDEOPLAYER.stream = preload("res://Video/level 2.ogv")
+	elif scene_name == "Pabrik":
+		VIDEOPLAYER.stream = preload("res://Video/level 3.ogv")
+		
+	if VIDEOPLAYER.stream:
+		stop_input = true
+		VIDEOPLAYER.play()
+	
+func _on_video_finished() -> void:
+	cutscenecanvas.visible = false
+	stop_input = false

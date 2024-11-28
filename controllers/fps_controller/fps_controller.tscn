@@ -336,11 +336,12 @@ _data = {
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mspl4"]
 
-[node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("ANIMATIONPLAYER")]
+[node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("ANIMATIONPLAYER", "VIDEOPLAYER")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 floor_max_angle = 1.22173
 script = ExtResource("1_0fn47")
 ANIMATIONPLAYER = NodePath("AnimationPlayer")
+VIDEOPLAYER = NodePath("Cutscene/VideoStreamPlayer")
 click_audios = Array[AudioStream]([ExtResource("2_sewi0"), ExtResource("3_qp17n"), ExtResource("4_drpku"), ExtResource("5_wp6yf"), ExtResource("6_66bgf"), ExtResource("7_cbe42"), ExtResource("8_l1bkm"), ExtResource("9_n138e"), ExtResource("10_cxdcp"), ExtResource("11_a0lwp")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -503,5 +504,12 @@ visible = false
 
 [node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("27_yp45h")]
 
+[node name="Cutscene" type="CanvasLayer" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Cutscene"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="video_finished" from="." to="." method="_on_video_finished"]
 [connection signal="found" from="Head/Camera3D/RayCast3D" to="WeaponManager" method="_hand_found"]
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
