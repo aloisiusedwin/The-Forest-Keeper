@@ -55,7 +55,7 @@ func _step(_is_on_floor:bool) -> bool:
 @export var click_audios: Array[AudioStream]
 @onready var camera_holder : Node3D = get_node(NodePath("Head"))
 
-@export var can_use_torch : bool = false
+@export var can_use_torch : bool = true
 @onready var torchloc : Node3D = get_node(NodePath("Head/TorchHolder/Torchloc"))
 @onready var torch : Node3D = get_node(NodePath("Head/TorchHolder/Torch"))
 @onready var torch_light : Node3D = get_node(NodePath("Head/TorchHolder/Torch/TorchLight"))
