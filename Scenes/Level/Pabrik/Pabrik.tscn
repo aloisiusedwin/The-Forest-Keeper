@@ -6770,7 +6770,7 @@ transform = Transform3D(0.999972, 0, 0.00753979, 0, 1, 0, -0.00753979, 0, 0.9999
 transform = Transform3D(0.999972, 0, 0.00753979, 0, 1, 0, -0.00753979, 0, 0.999972, -20.2889, 1.13, -20.7364)
 
 [node name="Cube_124" parent="Maps/NavigationRegion3D" instance=ExtResource("32_xl54j")]
-transform = Transform3D(-0.0143634, 0, -0.999897, 0, 1, 0, 0.999897, 0, -0.0143634, -49.8688, 1.13, -67.4123)
+transform = Transform3D(0.274899, 0, -0.961473, 0, 1, 0, 0.961473, 0, 0.274899, -49.3427, 1.13, -67.4123)
 
 [node name="Cube_125" parent="Maps/NavigationRegion3D" instance=ExtResource("32_xl54j")]
 transform = Transform3D(-0.0532246, 0, -0.998583, 0, 1, 0, 0.998583, 0, -0.0532246, -53.3871, 1.13, -67.4123)
@@ -9122,6 +9122,307 @@ spot_angle = 62.5882
 [node name="OmniLight3D" type="OmniLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.5287, 7.41297, -31.9159)
 omni_range = 33.1248
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -18.1827, 33.1427, -161.012)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -24.9258, 33.1427, -161.012)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -32.5768, 33.1427, -161.012)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -32.5768, 33.1427, -169.05)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -32.5768, 33.1427, -177.118)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -32.5768, 33.1427, -186.311)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -32.5768, 33.1427, -195.203)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -32.5768, 33.1427, -204.65)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -32.5768, 33.1427, -215.005)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 2.68743, 19.8059, -217.127)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 7.69192, 19.8059, -217.127)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 12.4603, 19.8059, -217.127)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 16.4996, 19.8059, -217.127)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 20.6562, 19.8059, -217.127)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 25.3279, 19.8059, -217.127)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 30.1737, 19.8059, -217.127)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 36.5175, 19.8059, -217.127)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D18" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 41.8806, 19.8059, -217.127)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D19" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 47.1314, 19.8059, -217.127)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D20" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 52.0958, 19.8059, -217.127)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D21" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 38.1189, 21.265, -253.005)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D22" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8343, 19.8059, -215.081)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D23" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -211.313)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D24" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -206.659)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D25" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -202.031)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D26" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -197.172)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D27" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -192.369)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D28" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -187.9)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D29" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -183.123)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D30" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -178.674)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D31" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 2.89081, 21.4254, -167.868)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="A34" parent="." instance=ExtResource("61_h2i82")]
+transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, 20.2054, 20.0017, -195.89)
+
+[node name="A35" parent="." instance=ExtResource("61_h2i82")]
+transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, 17.1869, 20.0017, -195.89)
+
+[node name="A36" parent="." instance=ExtResource("61_h2i82")]
+transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, 14.4343, 20.0017, -195.89)
+
+[node name="A37" parent="." instance=ExtResource("61_h2i82")]
+transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, 11.5796, 20.0017, -195.89)
+
+[node name="A38" parent="." instance=ExtResource("61_h2i82")]
+transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, 8.20268, 20.0017, -195.89)
+
+[node name="A39" parent="." instance=ExtResource("61_h2i82")]
+transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, 4.15234, 20.0017, -195.89)
+
+[node name="A40" parent="." instance=ExtResource("61_h2i82")]
+transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, 0.129219, 20.0017, -195.89)
+
+[node name="SpotLight3D32" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 20.4828, 19.8059, -195.924)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D33" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 17.3877, 19.8059, -195.924)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D34" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 14.7451, 19.8059, -195.924)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D35" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 11.9041, 19.8059, -195.924)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D36" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 8.46709, 19.8059, -195.924)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D37" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 4.40182, 19.8059, -195.924)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="SpotLight3D38" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 0.381838, 19.8059, -195.924)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="Cube_187" parent="." instance=ExtResource("32_xl54j")]
+transform = Transform3D(-0.0143634, 0, -0.999897, 0, 1, 0, 0.999897, 0, -0.0143634, -42.2103, 1.13, -67.4123)
+
+[node name="Cube_188" parent="." instance=ExtResource("32_xl54j")]
+transform = Transform3D(-0.0911191, 0, -0.99584, 0, 1, 0, 0.99584, 0, -0.0911191, -45.6789, 1.13, -67.4123)
+
+[node name="Cylinder_054" parent="." instance=ExtResource("47_mu1fy")]
+transform = Transform3D(0.00537515, -2, -8.74225e-08, 1.73701e-15, -8.74228e-08, 2, -2, -0.00537515, -2.34895e-10, 58.4842, -0.275377, -26.4769)
+
+[node name="Cylinder_055" parent="." instance=ExtResource("47_mu1fy")]
+transform = Transform3D(0.0739151, -1.99864, -8.73631e-08, 2.943e-16, -8.74228e-08, 2, -1.99864, -0.0739151, -3.23086e-09, 47.1913, -0.275377, -30.8166)
+
+[node name="Cylinder_069" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 50.2263, 0.223144, -42.942)
+
+[node name="Cylinder_070" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 49.4075, 0.223144, -42.942)
+
+[node name="Cylinder_071" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 49.7824, 0.223144, -42.1801)
+
+[node name="Cylinder_072" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 49.544, 1.52489, -42.5473)
+
+[node name="Cylinder_073" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 50.2288, 1.52489, -43.0143)
+
+[node name="Cylinder_074" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.744, 0.223144, -42.5031)
+
+[node name="Cylinder_075" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.3235, 0.223144, -43.2057)
+
+[node name="Cylinder_076" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 50.8623, 0.223144, -42.4927)
+
+[node name="Cylinder_077" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.0549, 1.52489, -42.8859)
+
+[node name="Cylinder_078" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.8073, 1.52489, -42.5381)
+
+[node name="Cylinder_079" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 53.5045, 0.223144, -43.1761)
+
+[node name="Cylinder_080" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 53.084, 0.223144, -43.8787)
+
+[node name="Cylinder_081" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 52.6227, 0.223144, -43.1657)
+
+[node name="Cylinder_082" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 52.8154, 1.52489, -43.5588)
+
+[node name="Cylinder_083" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 53.5678, 1.52489, -43.2111)
+
+[node name="Cylinder_084" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.7651, 0.223144, -43.9923)
+
+[node name="Cylinder_085" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.3446, 0.223144, -44.6948)
+
+[node name="Cylinder_086" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 50.8834, 0.223144, -43.9818)
+
+[node name="Cylinder_087" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.076, 1.52489, -44.375)
+
+[node name="Cylinder_088" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.8284, 1.52489, -44.0272)
+
+[node name="Cylinder_089" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 53.7186, 0.223144, -41.9611)
+
+[node name="Cylinder_090" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 53.2981, 0.223144, -42.6636)
+
+[node name="Cylinder_091" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 52.8369, 0.223144, -41.9507)
+
+[node name="Cylinder_092" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 53.0295, 1.52489, -42.3438)
+
+[node name="Cylinder_093" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 53.7819, 1.52489, -41.9961)
+
+[node name="Cylinder_094" parent="." instance=ExtResource("42_w2fed")]
+transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 52.0325, 0.223144, -41.6485)
 
 [connection signal="trigger" from="Maps/NavigationRegion3D/QodotMap/entity_3_button" to="Maps/NavigationRegion3D/QodotMap/entity_2_mover" method="use"]
 [connection signal="trigger" from="Maps/NavigationRegion3D/QodotMap/entity_5_button" to="Maps/NavigationRegion3D/QodotMap/entity_4_mover" method="use"]
