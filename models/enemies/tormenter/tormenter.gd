@@ -3,7 +3,7 @@ extends CharacterBody3D
 @onready var anim_tree = $AnimationTree
 
 var health = 70
-const speed = 4
+const speed = 3.8
 const attack_range = 2.0
 const damage = 20.0
 @onready var nav_agent = $NavigationAgent3D
@@ -51,7 +51,6 @@ func _hit_finished():
 
 
 func _on_area_3d_body_part_hit(dam):
-	print("hit hit")
 	health -= dam
 	if health <= 0:
 		anim_tree.set("parameters/root_motion_track", Vector3.ZERO)
