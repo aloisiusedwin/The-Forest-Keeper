@@ -8,7 +8,7 @@ var video_checked : bool = false
 #Health
 var max_hp = 100
 var current_hp = 100
-@export var regen_delay : float = 5.0
+@export var regen_delay : float = 7.0
 @export var regen_rate : float = 20.0
 @export var damage_taken : float = 0.0
 var last_hit_taken : float = 0.0
@@ -193,8 +193,8 @@ func update_input(delta: float, speed: float, acceleration: float, deceleration:
 func update_velocity() -> void:
 	move_and_slide()
 
-func hit(dir, damage):
-	velocity += dir * 8.0
+func hit(dir, damage, knockback):
+	velocity += dir * knockback
 	damage_taken = damage
 	current_hp -= damage_taken
 	last_hit_taken = 0.0
@@ -234,20 +234,17 @@ func die():
 	else:
 		get_tree().change_scene_to_file("res://Scenes/Level/Forest/forest.tscn")
 
-func _on_escaped_body_entered(_body: Node3D) -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level/Pabrik/Pabrik.tscn")
 
 signal video_finished
 @onready var cutscenecanvas = $Cutscene
 
 func play_cutscene():
-	var scene_name = get_tree().current_scene.name
-	if scene_name == "Forest":
-		VIDEOPLAYER.stream = preload("res://Video/level1.ogv")
-	elif scene_name == "Rumah":
-		VIDEOPLAYER.stream = preload("res://Video/level 2.ogv")
-	elif scene_name == "Pabrik":
-		VIDEOPLAYER.stream = preload("res://Video/level 3.ogv")
+	pass
+	#var scene_name = get_tree().current_scene.name
+	#if scene_name == "Forest":
+		#VIDEOPLAYER.stream = preload("res://Video/level1.ogv")
+	#elif scene_name == "Pabrik":
+		#VIDEOPLAYER.stream = preload("res://Video/level 3.ogv")
 		
 	if VIDEOPLAYER.stream:
 		stop_input = true

@@ -1,7 +1,7 @@
 class_name MeleeWeaponResource
 extends WeaponResource
 
-@export var max_hit_dist = 1
+@export var max_hit_dist = 1.2
 
 @export var miss_sound : AudioStream
 

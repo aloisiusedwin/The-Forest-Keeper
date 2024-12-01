@@ -3,7 +3,7 @@ extends CharacterBody3D
 @onready var anim_tree = $AnimationTree
 
 var health = 70
-const speed = 4
+const speed = 3.8
 const attack_range = 2.0
 const damage = 20.0
 @onready var nav_agent = $NavigationAgent3D
@@ -12,12 +12,10 @@ var state_machine
 var player = null
 @export var player_path := "/root/Forest/Maps/NavigationRegion3D/Player"
 
-
 func _ready():
 	player = get_node(player_path)
 	state_machine = anim_tree.get("parameters/playback")
 	
-
 func _process(delta):
 	velocity = Vector3.ZERO
 	match state_machine.get_current_node():
@@ -38,7 +36,6 @@ func _process(delta):
 	
 	move_and_slide()
 
-
 func _target_in_range():
 	if anim_tree.get("parameters/conditions/attack"):
 		return global_position.distance_to(player.global_position) < 2 * attack_range
@@ -47,11 +44,9 @@ func _target_in_range():
 func _hit_finished():
 	if global_position.distance_to(player.global_position) < attack_range + 1.0:
 		var dir = global_position.direction_to(player.global_position)
-		player.hit(dir, damage)
-
+		player.hit(dir, damage, 8.0)
 
 func _on_area_3d_body_part_hit(dam):
-	print("hit hit")
 	health -= dam
 	if health <= 0:
 		anim_tree.set("parameters/root_motion_track", Vector3.ZERO)

@@ -11,7 +11,6 @@ class_name PlayerAudios
 @export var audio_interacts : Array[Resource]
 
 func _ready() -> void:
-	pass
 	character_controller.stepped.connect(_on_controller_stepped.bind())
 
 func _on_controller_stepped():
