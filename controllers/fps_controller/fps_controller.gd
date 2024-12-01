@@ -8,7 +8,7 @@ var video_checked : bool = false
 #Health
 var max_hp = 100
 var current_hp = 100
-@export var regen_delay : float = 5.0
+@export var regen_delay : float = 7.0
 @export var regen_rate : float = 20.0
 @export var damage_taken : float = 0.0
 var last_hit_taken : float = 0.0
@@ -193,8 +193,8 @@ func update_input(delta: float, speed: float, acceleration: float, deceleration:
 func update_velocity() -> void:
 	move_and_slide()
 
-func hit(dir, damage):
-	velocity += dir * 8.0
+func hit(dir, damage, knockback):
+	velocity += dir * knockback
 	damage_taken = damage
 	current_hp -= damage_taken
 	last_hit_taken = 0.0
@@ -249,10 +249,10 @@ func play_cutscene():
 		#VIDEOPLAYER.stream = preload("res://Video/level 2.ogv")
 	#elif scene_name == "Pabrik":
 		#VIDEOPLAYER.stream = preload("res://Video/level 3.ogv")
-		#
-	#if VIDEOPLAYER.stream:
-		#stop_input = true
-		#VIDEOPLAYER.play()
+		
+	if VIDEOPLAYER.stream:
+		stop_input = true
+		VIDEOPLAYER.play()
 	
 func _on_video_finished() -> void:
 	cutscenecanvas.visible = false
