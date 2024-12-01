@@ -4,6 +4,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_x767w"]
 font_names = PackedStringArray("JetBrainsMono Nerd Font")
+subpixel_positioning = 0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dj4q2"]
 
