@@ -1,0 +1,142 @@
+[gd_scene load_steps=12 format=3 uid="uid://d3kataebbwv4l"]
+
+[ext_resource type="Script" path="res://Scripts/Main Menu/main_menu.gd" id="1_eikdk"]
+[ext_resource type="PackedScene" uid="uid://bbt5vpvyc2uh4" path="res://Scenes/Main Menu/options.tscn" id="2_ba35u"]
+[ext_resource type="PackedScene" uid="uid://b8xcddgpq70v2" path="res://Scenes/Main Menu/MainMenuBackground.tscn" id="3_0f5nt"]
+[ext_resource type="FontFile" uid="uid://c07g0ofxcm0hj" path="res://Scenes/Main Menu/Melted Monster.ttf" id="3_17sxt"]
+[ext_resource type="AudioStream" uid="uid://c0quebvppw0eb" path="res://Sfx/Menu/405158__rayolf__btn_hover_3.wav" id="4_b40dx"]
+[ext_resource type="AudioStream" uid="uid://c4eobvnq5t23a" path="res://BGM/BGM/Tekgame-intro.ogg" id="5_pvs5l"]
+[ext_resource type="AudioStream" uid="uid://cabsoeni20qrm" path="res://Sfx/Menu/707042__vilkas_sound__vs-button-click-05.mp3" id="7_osbvk"]
+
+[sub_resource type="FontVariation" id="FontVariation_kogrt"]
+base_font = ExtResource("3_17sxt")
+
+[sub_resource type="SystemFont" id="SystemFont_g4n3v"]
+font_names = PackedStringArray("JetBrainsMono Nerd Font")
+
+[sub_resource type="SystemFont" id="SystemFont_ubt72"]
+font_names = PackedStringArray("JetBrainsMonoNL Nerd Font")
+
+[sub_resource type="SystemFont" id="SystemFont_ox5rg"]
+font_names = PackedStringArray("JetBrainsMonoNL Nerd Font")
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eikdk")
+
+[node name="Background" type="Node3D" parent="."]
+rotation_order = 0
+
+[node name="Node3D" parent="Background" instance=ExtResource("3_0f5nt")]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="Background/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Background/SubViewportContainer/SubViewport"]
+transform = Transform3D(-0.676419, 0.416068, -0.607737, 0.0521995, 0.850157, 0.523935, 0.734665, 0.322676, -0.596781, -2.19867, 1.91203, -0.0761188)
+
+[node name="MarginContainer" type="MarginContainer" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 182
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 172
+theme_override_constants/margin_bottom = -103
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 85
+
+[node name="Separator" type="Control" parent="Background/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0.0445781, 1.29727e-08, 7.52043e-10, 1)
+theme_override_fonts/font = SubResource("FontVariation_kogrt")
+theme_override_font_sizes/font_size = 103
+text = "THE FOREST
+KEEPER"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Play Button" type="Button" parent="Background/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.650128, 0.650128, 0.650128, 1)
+theme_override_fonts/font = SubResource("SystemFont_g4n3v")
+theme_override_font_sizes/font_size = 40
+text = "Play"
+flat = true
+
+[node name="Options Button" type="Button" parent="Background/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.65098, 0.65098, 0.65098, 1)
+theme_override_fonts/font = SubResource("SystemFont_ubt72")
+theme_override_font_sizes/font_size = 40
+text = "Options"
+flat = true
+
+[node name="Exit Button" type="Button" parent="Background/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.65098, 0.65098, 0.65098, 1)
+theme_override_fonts/font = SubResource("SystemFont_ox5rg")
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+flat = true
+
+[node name="Options" parent="." instance=ExtResource("2_ba35u")]
+visible = false
+layout_mode = 1
+
+[node name="Hover" type="AudioStreamPlayer" parent="Options"]
+
+[node name="Pressed" type="AudioStreamPlayer" parent="Options"]
+
+[node name="BackgroundMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_pvs5l")
+autoplay = true
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_b40dx")
+
+[node name="Pressed" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_osbvk")
+
+[connection signal="mouse_entered" from="Background/MarginContainer/HBoxContainer/VBoxContainer/Play Button" to="." method="_on_play_button_mouse_entered"]
+[connection signal="pressed" from="Background/MarginContainer/HBoxContainer/VBoxContainer/Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="mouse_entered" from="Background/MarginContainer/HBoxContainer/VBoxContainer/Options Button" to="." method="_on_options_button_mouse_entered"]
+[connection signal="pressed" from="Background/MarginContainer/HBoxContainer/VBoxContainer/Options Button" to="." method="_on_options_button_pressed"]
+[connection signal="mouse_entered" from="Background/MarginContainer/HBoxContainer/VBoxContainer/Exit Button" to="." method="_on_exit_button_mouse_entered"]
+[connection signal="pressed" from="Background/MarginContainer/HBoxContainer/VBoxContainer/Exit Button" to="." method="_on_exit_button_pressed"]
+[connection signal="mouse_entered" from="Options" to="Options" method="_on_mouse_entered"]
