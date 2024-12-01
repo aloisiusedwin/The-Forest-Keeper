@@ -7732,17 +7732,11 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.9227
 [node name="A41" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38717, 21.9722, -252.339)
 
-[node name="A43" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.721, 33.3207, -250.688)
-
 [node name="A44" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -76.0984, 39.204, -256.16)
 
 [node name="A45" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -61.1511, -36.7762, -256.524)
-
-[node name="A46" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.0768, 33.3207, -249.525)
 
 [node name="A47" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -50.9768, -36.7762, -256.524)
@@ -9143,15 +9137,15 @@ omni_range = 33.1248
 
 [node name="Notes" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
 transform = Transform3D(0.651052, 0, 0.759033, 0, 1, 0, -0.759033, 0, 0.651052, -7.93295, -5.96062, 15.7221)
-isi_notes = "temukan seseorang yang kehilangan tangannya, dia akan membantu perjalanmu, aku melihatnya di gedung rusak di kiri pabrik ini"
+isi_notes = "Find someone who has lost their arm; they will aid you on your journey. I saw them in a ruined building to the left of this factory."
 
 [node name="Notes2" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
 transform = Transform3D(0.607445, 0, 0.794362, 0, 1, 0, -0.794362, 0, 0.607445, -37.0064, -44.2116, -256.132)
-isi_notes = "bergerak ke kanan adalah pilihan yang bagus"
+isi_notes = "Moving to the right is a good choice."
 
 [node name="Notes3" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
 transform = Transform3D(0.335205, 0, 0.942145, 0, 1, 0, -0.942145, 0, 0.335205, 4.69518, -44.2116, -223.531)
-isi_notes = "didepan mungkin terdapat sesuatu yang kamu cari, tapi ada sesuatu yang berbahaya disana, hati-hati"
+isi_notes = "Ahead, you might find what you're looking for, but there's something dangerous there—proceed with caution."
 
 [node name="Notes4" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
 transform = Transform3D(0.631556, 0, -0.77533, 0, 1, 0, 0.77533, 0, 0.631556, 12.7462, 16.5384, -195.756)
@@ -9159,542 +9153,614 @@ isi_notes = "pintu ini "
 
 [node name="Notes5" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
 transform = Transform3D(0.819992, 0, -0.572375, 0, 1, 0, 0.572375, 0, 0.819992, 1.71102, 16.5384, -175.314)
-isi_notes = "tombol ini mungkin membuka sebuah pintu di bangunan ini"
+isi_notes = "This button might open a door in this building."
 
-[node name="Notes" parent="Maps" instance=ExtResource("68_hro7h")]
+[node name="Notes6" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
 transform = Transform3D(0.900045, 0, 0.435797, 0, 1, 0, -0.435797, 0, 0.900045, -8.39145, 5.0579, -124.493)
-isi_notes = "ada tombol di ruangan bawah untuk membuka pintu besar itu"
+isi_notes = "There is a button in the lower room that opens that big door."
 
-[node name="Notes2" parent="Maps" instance=ExtResource("68_hro7h")]
-transform = Transform3D(0.875439, 0, -0.483328, 0, 1, 0, 0.483328, 0, 0.875439, -21.3891, -5.71163, -152.662)
-isi_notes = "kanan adalah pilihan yang bagus, teruslah mencari jalan ke kanan"
+[node name="Notes7" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
+transform = Transform3D(0.955993, 0, 0.29339, 0, 1, 0, -0.29339, 0, 0.955993, -21.7576, -5.71163, -152.662)
+isi_notes = "The right is a good choice; keep searching for a path in that direction."
 
-[node name="Notes3" parent="Maps" instance=ExtResource("68_hro7h")]
+[node name="Notes8" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
 transform = Transform3D(0.328026, 0, -0.944669, 0, 1, 0, 0.944669, 0, 0.328026, -1.44478, 16.5384, -215.499)
-isi_notes = "cari 3 tombol untuk mengaktifkan lift, lihatlah peta yang terdapat didekat surat ini"
+isi_notes = "Find three buttons to activate the lift. Check the map near this note for guidance."
 
-[node name="Notes4" parent="Maps" instance=ExtResource("68_hro7h")]
+[node name="Notes9" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
 transform = Transform3D(-0.701656, 0, 0.712516, 0, 1, 0, -0.712516, 0, -0.701656, -2.45081, 16.5473, -214.5)
-isi_notes = "ada jalan diatas, cari jalan untuk naik keatas"
+isi_notes = "There's a path above; find a way to climb up."
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
+[node name="Notes10" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
+transform = Transform3D(0.910265, 0, 0.414026, 0, 1, 0, -0.414026, 0, 0.910265, 1.12708, 16.5384, -167.838)
+isi_notes = "This button will make something above move—a pathway, perhaps?"
+
+[node name="Notes11" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
+transform = Transform3D(0.840982, 0, -0.541063, 0, 1, 0, 0.541063, 0, 0.840982, 38.1152, 16.5384, -252.908)
+isi_notes = "This button will make something above move—a pathway, perhaps?"
+
+[node name="Notes12" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
+transform = Transform3D(0.943031, 0, 0.332704, 0, 1, 0, -0.332704, 0, 0.943031, 2.72521, 16.5384, -252.969)
+isi_notes = "This button will make something above move—a pathway, perhaps?"
+
+[node name="Notes13" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
+transform = Transform3D(0.92921, 0, 0.369552, 0, 1, 0, -0.369552, 0, 0.92921, -35.2828, -0.46163, -3.24609)
+isi_notes = "Look at the map; the circle marks your current position, and the X marks what you are looking for."
+
+[node name="Notes14" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
+transform = Transform3D(0.784592, 0, 0.620012, 0, 1, 0, -0.620012, 0, 0.784592, -35.0355, -0.46163, -4.39747)
+isi_notes = "Not everything marked with an X is exactly there; it could be below or above the marked location."
+
+[node name="Notes15" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
+transform = Transform3D(0.97022, 0, -0.242227, 0, 1, 0, 0.242227, 0, 0.97022, -20.7746, -5.71163, -152.77)
+isi_notes = "Sometimes, dark places only lead to confusion."
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -17.9906, 33.1427, -161.012)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+[node name="SpotLight3D7" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -24.9258, 33.1427, -161.012)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+[node name="SpotLight3D8" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -32.5768, 33.1427, -161.012)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D4" type="SpotLight3D" parent="."]
+[node name="SpotLight3D9" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -32.5768, 33.1427, -169.05)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D5" type="SpotLight3D" parent="."]
+[node name="SpotLight3D10" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -32.5768, 33.1427, -177.118)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D6" type="SpotLight3D" parent="."]
+[node name="SpotLight3D11" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -32.5768, 33.1427, -186.311)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D7" type="SpotLight3D" parent="."]
+[node name="SpotLight3D12" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -32.5768, 33.1427, -195.203)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D8" type="SpotLight3D" parent="."]
+[node name="SpotLight3D13" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -32.5768, 33.1427, -204.65)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D9" type="SpotLight3D" parent="."]
+[node name="SpotLight3D14" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, -32.5768, 33.1427, -215.005)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D10" type="SpotLight3D" parent="."]
+[node name="SpotLight3D15" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 2.68743, 19.8059, -217.127)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D11" type="SpotLight3D" parent="."]
+[node name="SpotLight3D16" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 7.69192, 19.8059, -217.127)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D12" type="SpotLight3D" parent="."]
+[node name="SpotLight3D17" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 12.4603, 19.8059, -217.127)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D13" type="SpotLight3D" parent="."]
+[node name="SpotLight3D18" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 16.4996, 19.8059, -217.127)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D14" type="SpotLight3D" parent="."]
+[node name="SpotLight3D19" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 20.6562, 19.8059, -217.127)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D15" type="SpotLight3D" parent="."]
+[node name="SpotLight3D20" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 25.3279, 19.8059, -217.127)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D16" type="SpotLight3D" parent="."]
+[node name="SpotLight3D21" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 30.1737, 19.8059, -217.127)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D17" type="SpotLight3D" parent="."]
+[node name="SpotLight3D22" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 36.5175, 19.8059, -217.127)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D18" type="SpotLight3D" parent="."]
+[node name="SpotLight3D23" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 41.8806, 19.8059, -217.127)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D19" type="SpotLight3D" parent="."]
+[node name="SpotLight3D24" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 47.1314, 19.8059, -217.127)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D20" type="SpotLight3D" parent="."]
+[node name="SpotLight3D25" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 52.0958, 19.8059, -217.127)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D21" type="SpotLight3D" parent="."]
+[node name="SpotLight3D26" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 38.1189, 21.265, -253.005)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D22" type="SpotLight3D" parent="."]
+[node name="SpotLight3D27" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8343, 19.8059, -215.081)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D23" type="SpotLight3D" parent="."]
+[node name="SpotLight3D28" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -211.313)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D24" type="SpotLight3D" parent="."]
+[node name="SpotLight3D29" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -206.659)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D25" type="SpotLight3D" parent="."]
+[node name="SpotLight3D30" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -202.031)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D26" type="SpotLight3D" parent="."]
+[node name="SpotLight3D31" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -197.172)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D27" type="SpotLight3D" parent="."]
+[node name="SpotLight3D32" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -192.369)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D28" type="SpotLight3D" parent="."]
+[node name="SpotLight3D33" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -187.9)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D29" type="SpotLight3D" parent="."]
+[node name="SpotLight3D34" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -183.123)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D30" type="SpotLight3D" parent="."]
+[node name="SpotLight3D35" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 22.8241, 19.8059, -178.674)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D31" type="SpotLight3D" parent="."]
+[node name="SpotLight3D36" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 2.89081, 21.4254, -167.868)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A34" parent="." instance=ExtResource("61_h2i82")]
+[node name="A42" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, 20.2054, 20.0017, -195.89)
 
-[node name="A35" parent="." instance=ExtResource("61_h2i82")]
+[node name="A43" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, 17.1869, 20.0017, -195.89)
 
-[node name="A36" parent="." instance=ExtResource("61_h2i82")]
+[node name="A46" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, 14.4343, 20.0017, -195.89)
 
-[node name="A37" parent="." instance=ExtResource("61_h2i82")]
+[node name="A54" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, 11.5796, 20.0017, -195.89)
 
-[node name="A38" parent="." instance=ExtResource("61_h2i82")]
+[node name="A55" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, 8.20268, 20.0017, -195.89)
 
-[node name="A39" parent="." instance=ExtResource("61_h2i82")]
+[node name="A56" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, 4.15234, 20.0017, -195.89)
 
-[node name="A40" parent="." instance=ExtResource("61_h2i82")]
+[node name="A57" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(0.505, 0, 0, 0, 0.505, 0, 0, 0, 0.505, 0.129219, 20.0017, -195.89)
 
-[node name="SpotLight3D32" type="SpotLight3D" parent="."]
+[node name="SpotLight3D37" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 20.4828, 19.8059, -195.924)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D33" type="SpotLight3D" parent="."]
+[node name="SpotLight3D38" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 17.3877, 19.8059, -195.924)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D34" type="SpotLight3D" parent="."]
+[node name="SpotLight3D39" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 14.7451, 19.8059, -195.924)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D35" type="SpotLight3D" parent="."]
+[node name="SpotLight3D40" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 11.9041, 19.8059, -195.924)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D36" type="SpotLight3D" parent="."]
+[node name="SpotLight3D41" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 8.46709, 19.8059, -195.924)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D37" type="SpotLight3D" parent="."]
+[node name="SpotLight3D42" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 4.40182, 19.8059, -195.924)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D38" type="SpotLight3D" parent="."]
+[node name="SpotLight3D43" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 0.381838, 19.8059, -195.924)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="Cube_187" parent="." instance=ExtResource("32_xl54j")]
+[node name="Cube_386" parent="Maps/NavigationRegion3D" instance=ExtResource("32_xl54j")]
 transform = Transform3D(-0.0143634, 0, -0.999897, 0, 1, 0, 0.999897, 0, -0.0143634, -42.2103, 1.13, -67.4123)
 
-[node name="Cube_188" parent="." instance=ExtResource("32_xl54j")]
+[node name="Cube_387" parent="Maps/NavigationRegion3D" instance=ExtResource("32_xl54j")]
 transform = Transform3D(-0.0911191, 0, -0.99584, 0, 1, 0, 0.99584, 0, -0.0911191, -45.6789, 1.13, -67.4123)
 
-[node name="Cylinder_054" parent="." instance=ExtResource("47_mu1fy")]
+[node name="Cylinder_056" parent="Maps/NavigationRegion3D" instance=ExtResource("47_mu1fy")]
 transform = Transform3D(0.00537515, -2, -8.74225e-08, 1.73701e-15, -8.74228e-08, 2, -2, -0.00537515, -2.34895e-10, 58.4842, -0.275377, -26.4769)
 
-[node name="Cylinder_055" parent="." instance=ExtResource("47_mu1fy")]
+[node name="Cylinder_058" parent="Maps/NavigationRegion3D" instance=ExtResource("47_mu1fy")]
 transform = Transform3D(0.0739151, -1.99864, -8.73631e-08, 2.943e-16, -8.74228e-08, 2, -1.99864, -0.0739151, -3.23086e-09, 47.1913, -0.275377, -30.8166)
 
-[node name="Cylinder_069" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_089" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 50.2263, 0.223144, -42.942)
 
-[node name="Cylinder_070" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_097" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 49.4075, 0.223144, -42.942)
 
-[node name="Cylinder_071" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_098" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 49.7824, 0.223144, -42.1801)
 
-[node name="Cylinder_072" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_099" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 49.544, 1.52489, -42.5473)
 
-[node name="Cylinder_073" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_106" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 50.2288, 1.52489, -43.0143)
 
-[node name="Cylinder_074" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_108" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.744, 0.223144, -42.5031)
 
-[node name="Cylinder_075" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_110" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.3235, 0.223144, -43.2057)
 
-[node name="Cylinder_076" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_117" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 50.8623, 0.223144, -42.4927)
 
-[node name="Cylinder_077" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_118" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.0549, 1.52489, -42.8859)
 
-[node name="Cylinder_078" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_119" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.8073, 1.52489, -42.5381)
 
-[node name="Cylinder_079" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_120" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 53.5045, 0.223144, -43.1761)
 
-[node name="Cylinder_080" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_121" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 53.084, 0.223144, -43.8787)
 
-[node name="Cylinder_081" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_392" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 52.6227, 0.223144, -43.1657)
 
-[node name="Cylinder_082" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_393" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 52.8154, 1.52489, -43.5588)
 
-[node name="Cylinder_083" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_394" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 53.5678, 1.52489, -43.2111)
 
-[node name="Cylinder_084" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_395" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.7651, 0.223144, -43.9923)
 
-[node name="Cylinder_085" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_396" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.3446, 0.223144, -44.6948)
 
-[node name="Cylinder_086" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_397" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 50.8834, 0.223144, -43.9818)
 
-[node name="Cylinder_087" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_398" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.076, 1.52489, -44.375)
 
-[node name="Cylinder_088" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_399" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 51.8284, 1.52489, -44.0272)
 
-[node name="Cylinder_089" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_400" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 53.7186, 0.223144, -41.9611)
 
-[node name="Cylinder_090" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_401" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 53.2981, 0.223144, -42.6636)
 
-[node name="Cylinder_091" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_402" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 52.8369, 0.223144, -41.9507)
 
-[node name="Cylinder_092" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_403" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 53.0295, 1.52489, -42.3438)
 
-[node name="Cylinder_093" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_404" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 53.7819, 1.52489, -41.9961)
 
-[node name="Cylinder_094" parent="." instance=ExtResource("42_w2fed")]
+[node name="Cylinder_405" parent="Maps/NavigationRegion3D" instance=ExtResource("42_w2fed")]
 transform = Transform3D(0.770357, 1.28707, 5.62597e-08, 0, -6.55671e-08, 1.5, 1.28707, -0.770357, -3.36734e-08, 52.0325, 0.223144, -41.6485)
 
-[node name="sidequest" parent="." instance=ExtResource("68_nl8ci")]
+[node name="sidequest" parent="Maps/NavigationRegion3D" instance=ExtResource("68_nl8ci")]
 transform = Transform3D(0.965912, 0, -0.25887, 0, 1, 0, 0.25887, 0, 0.965912, -34.0041, -0.46163, -3.61358)
 
-[node name="map3_pabrik" parent="." instance=ExtResource("68_nl8ci")]
+[node name="map3_pabrik" parent="Maps/NavigationRegion3D" instance=ExtResource("68_nl8ci")]
 transform = Transform3D(-0.58374, 0, -0.811941, 0, 1, 0, 0.811941, 0, -0.58374, -1.2788, 16.5384, -214.34)
 
-[node name="SpotLight3D39" type="SpotLight3D" parent="."]
+[node name="SpotLight3D44" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 2.97505, 21.79, -252.387)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A11" parent="." instance=ExtResource("61_h2i82")]
+[node name="A58" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-7.57763e-09, 0.984859, 0.173356, 4.30496e-08, 0.173356, -0.984859, -1, 0, -4.37114e-08, 38.3447, 37.124, -165.866)
 
-[node name="SpotLight3D40" type="SpotLight3D" parent="."]
+[node name="SpotLight3D45" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 38.3293, 36.8302, -166.701)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A12" parent="." instance=ExtResource("61_h2i82")]
+[node name="A59" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-3.49268e-09, 0.996803, 0.0799032, 4.35716e-08, 0.0799032, -0.996803, -1, 0, -4.37114e-08, 38.3447, 37.124, -177.241)
 
-[node name="SpotLight3D41" type="SpotLight3D" parent="."]
+[node name="SpotLight3D46" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 38.3293, 36.8302, -178.076)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A13" parent="." instance=ExtResource("61_h2i82")]
+[node name="A60" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-8.1862e-09, 0.982307, 0.187278, 4.2938e-08, 0.187278, -0.982307, -1, 0, -4.37114e-08, 38.3447, 37.124, -191.576)
 
-[node name="SpotLight3D42" type="SpotLight3D" parent="."]
+[node name="SpotLight3D47" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 38.3293, 36.8302, -192.411)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A14" parent="." instance=ExtResource("61_h2i82")]
+[node name="A61" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-1.33333e-08, 0.952343, 0.30503, 4.16282e-08, 0.30503, -0.952343, -1, 0, -4.37114e-08, 38.3447, 37.124, -200.877)
 
-[node name="SpotLight3D43" type="SpotLight3D" parent="."]
+[node name="SpotLight3D48" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 38.3293, 36.8302, -201.712)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A15" parent="." instance=ExtResource("61_h2i82")]
+[node name="A62" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-1.70822e-08, 0.920478, 0.390795, 4.02354e-08, 0.390795, -0.920478, -1, 0, -4.37114e-08, 55.5467, 37.124, -208.386)
 
-[node name="SpotLight3D44" type="SpotLight3D" parent="."]
+[node name="SpotLight3D49" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 55.5313, 36.8302, -209.221)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A16" parent="." instance=ExtResource("61_h2i82")]
+[node name="A63" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-3.50789e-09, 0.996775, 0.0802511, 4.35704e-08, 0.0802511, -0.996775, -1, 0, -4.37114e-08, 55.5467, 37.124, -220.844)
 
-[node name="SpotLight3D45" type="SpotLight3D" parent="."]
+[node name="SpotLight3D50" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 55.5313, 36.8302, -221.679)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A17" parent="." instance=ExtResource("61_h2i82")]
+[node name="A64" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-1.05347e-09, 0.99971, 0.0241007, 4.36987e-08, 0.0241007, -0.99971, -1, 0, -4.37114e-08, 55.5467, 38.4249, -232.368)
 
-[node name="SpotLight3D46" type="SpotLight3D" parent="."]
+[node name="SpotLight3D51" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 55.5313, 38.1311, -233.203)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A18" parent="." instance=ExtResource("61_h2i82")]
+[node name="A65" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(2.96771e-10, 0.999977, -0.00678932, 4.37104e-08, -0.00678932, -0.999977, -1, 0, -4.37114e-08, 55.5467, 38.959, -244.018)
 
-[node name="SpotLight3D47" type="SpotLight3D" parent="."]
+[node name="SpotLight3D52" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 55.5313, 38.6652, -244.853)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A19" parent="." instance=ExtResource("61_h2i82")]
+[node name="A66" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-1, 0, -8.74228e-08, 8.45655e-08, 0.253572, -0.967317, 2.2168e-08, -0.967317, -0.253572, 54.1705, 38.5207, -253.65)
 
-[node name="SpotLight3D48" type="SpotLight3D" parent="."]
-transform = Transform3D(-1, 8.72049e-08, -6.16831e-09, 0, 0.0705573, 0.997508, 8.74228e-08, 0.997508, -0.0705573, 53.7408, 38.2269, -253.603)
+[node name="SpotLight3D53" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-1, 8.72049e-08, -6.16832e-09, 0, 0.0705573, 0.997508, 8.74228e-08, 0.997508, -0.0705573, 53.7408, 38.2269, -253.603)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A20" parent="." instance=ExtResource("61_h2i82")]
+[node name="A67" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-1, 0, -8.74228e-08, 8.21051e-08, 0.343447, -0.939172, 3.00251e-08, -0.939172, -0.343447, 45.3804, 38.5207, -253.65)
 
-[node name="SpotLight3D49" type="SpotLight3D" parent="."]
-transform = Transform3D(-1, 8.72049e-08, -6.16831e-09, 0, 0.0705573, 0.997508, 8.74228e-08, 0.997508, -0.0705573, 44.9507, 38.2269, -253.603)
+[node name="SpotLight3D54" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-1, 8.72049e-08, -6.16832e-09, 0, 0.0705573, 0.997508, 8.74228e-08, 0.997508, -0.0705573, 44.9507, 38.2269, -253.603)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A21" parent="." instance=ExtResource("61_h2i82")]
+[node name="A68" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-1, 0, -8.74228e-08, 8.5137e-08, 0.227178, -0.973853, 1.98606e-08, -0.973853, -0.227178, 37.5693, 39.7634, -253.65)
 
-[node name="SpotLight3D50" type="SpotLight3D" parent="."]
-transform = Transform3D(-1, 8.72049e-08, -6.16831e-09, 0, 0.0705573, 0.997508, 8.74228e-08, 0.997508, -0.0705573, 37.1397, 39.4696, -253.603)
+[node name="SpotLight3D55" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-1, 8.72049e-08, -6.16832e-09, 0, 0.0705573, 0.997508, 8.74228e-08, 0.997508, -0.0705573, 37.1397, 39.4696, -253.603)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A22" parent="." instance=ExtResource("61_h2i82")]
+[node name="A69" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-1, 0, -8.74228e-08, 7.60664e-08, 0.492879, -0.870098, 4.30889e-08, -0.870098, -0.492879, 29.2386, 41.293, -253.65)
 
-[node name="SpotLight3D51" type="SpotLight3D" parent="."]
-transform = Transform3D(-1, 8.72049e-08, -6.16831e-09, 0, 0.0705573, 0.997508, 8.74228e-08, 0.997508, -0.0705573, 28.8089, 40.9992, -253.603)
+[node name="SpotLight3D56" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-1, 8.72049e-08, -6.16832e-09, 0, 0.0705573, 0.997508, 8.74228e-08, 0.997508, -0.0705573, 28.8089, 40.9992, -253.603)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A23" parent="." instance=ExtResource("61_h2i82")]
+[node name="A70" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-1, 0, -8.74228e-08, 8.66998e-08, 0.128346, -0.991729, 1.12203e-08, -0.991729, -0.128346, 18.5982, 41.293, -253.65)
 
-[node name="SpotLight3D52" type="SpotLight3D" parent="."]
-transform = Transform3D(-1, 8.72049e-08, -6.16831e-09, 0, 0.0705573, 0.997508, 8.74228e-08, 0.997508, -0.0705573, 18.1685, 40.9992, -253.603)
+[node name="SpotLight3D57" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-1, 8.72049e-08, -6.16832e-09, 0, 0.0705573, 0.997508, 8.74228e-08, 0.997508, -0.0705573, 18.1685, 40.9992, -253.603)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A24" parent="." instance=ExtResource("61_h2i82")]
+[node name="A71" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-1, 0, -8.74228e-08, 8.66905e-08, 0.129159, -0.991624, 1.12914e-08, -0.991624, -0.129159, 4.80565, 39.756, -253.65)
 
-[node name="SpotLight3D53" type="SpotLight3D" parent="."]
-transform = Transform3D(-1, 8.72049e-08, -6.16831e-09, 0, 0.0705573, 0.997508, 8.74228e-08, 0.997508, -0.0705573, 4.37599, 39.4622, -253.603)
+[node name="SpotLight3D58" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-1, 8.72049e-08, -6.16832e-09, 0, 0.0705573, 0.997508, 8.74228e-08, 0.997508, -0.0705573, 4.37599, 39.4622, -253.603)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="Notes" parent="." instance=ExtResource("68_hro7h")]
+[node name="Notes16" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
 transform = Transform3D(0.47252, 0, 0.88132, 0, 1, 0, -0.88132, 0, 0.47252, 21.3093, 23.0384, -168.485)
 isi_notes = "terkadang lampu menandakan adanya kehidupan"
 
-[node name="A41" parent="." instance=ExtResource("61_h2i82")]
+[node name="A72" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.92271, 21.4473, -174.575)
 
-[node name="SpotLight3D54" type="SpotLight3D" parent="."]
+[node name="SpotLight3D59" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 0.0705573, 0.997508, 0, -0.997508, 0.0705573, 2.89081, 21.4254, -175.109)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="Notes2" parent="." instance=ExtResource("68_hro7h")]
-transform = Transform3D(0.910265, 0, 0.414026, 0, 1, 0, -0.414026, 0, 0.910265, 1.12708, 16.5384, -167.838)
-isi_notes = "menekan tombol ini akan memberi jalan diatas, mungkin"
-
-[node name="Notes3" parent="." instance=ExtResource("68_hro7h")]
-transform = Transform3D(0.840982, 0, -0.541063, 0, 1, 0, 0.541063, 0, 0.840982, 38.1152, 16.5384, -252.908)
-isi_notes = "tombol ini akan membuat sesuatu diatas bergerak, sebuah jalan, mungkin?"
-
-[node name="Notes4" parent="." instance=ExtResource("68_hro7h")]
-transform = Transform3D(0.943031, 0, 0.332704, 0, 1, 0, -0.332704, 0, 0.943031, 2.72521, 16.5384, -252.969)
-isi_notes = "aku pernah menekan tombol ini dan melihat ada yang bergerak di atas, mereka menyulitkan sekali"
-
-[node name="Notes5" parent="." instance=ExtResource("68_hro7h")]
-transform = Transform3D(0.92921, 0, 0.369552, 0, 1, 0, -0.369552, 0, 0.92921, -35.2828, -0.46163, -3.24609)
-isi_notes = "lihat pada peta, tanda bulat menandakan posisimu sekarang, dan x adalah sesuatu yang kamu cari"
-
-[node name="Notes6" parent="." instance=ExtResource("68_hro7h")]
-transform = Transform3D(0.784592, 0, 0.620012, 0, 1, 0, -0.620012, 0, 0.784592, -35.0355, -0.46163, -4.39747)
-isi_notes = "tidak semua yang bertanda x berada tepat disana, bisa saja berada di bawah ataupun diatasnya"
-
-[node name="A25" parent="." instance=ExtResource("61_h2i82")]
+[node name="A73" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-2.11664e-08, 0.73566, 0.677351, 3.99292e-08, 0.677351, -0.73566, -1, 1.14748e-08, -4.37114e-08, 22.5301, -36.8114, -255.353)
 
-[node name="SpotLight3D55" type="SpotLight3D" parent="."]
-transform = Transform3D(-5.29926e-08, -0.831276, 0.55586, -1.71482e-08, 0.55586, 0.831276, -1, 3.45194e-08, -4.37114e-08, 22.3535, -36.9858, -256.107)
+[node name="SpotLight3D60" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-5.29926e-08, -0.831276, 0.55586, -1.71482e-08, 0.55586, 0.831276, -1, 3.45195e-08, -4.37114e-08, 22.3535, -36.9858, -256.107)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A26" parent="." instance=ExtResource("61_h2i82")]
+[node name="A74" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(1, -1.14748e-08, 0, 1.05972e-08, 0.923518, -0.383554, 4.40121e-09, 0.383554, 0.923518, 19.9637, -36.8114, -237.327)
 
-[node name="SpotLight3D56" type="SpotLight3D" parent="."]
-transform = Transform3D(1, -3.45194e-08, 0, 1.28904e-08, 0.373425, 0.92766, -3.20223e-08, -0.92766, 0.373425, 20.4792, -36.9858, -237.719)
+[node name="SpotLight3D61" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(1, -3.45194e-08, 1.7623e-14, 1.28904e-08, 0.373425, 0.92766, -3.20223e-08, -0.92766, 0.373425, 20.4792, -36.9858, -237.719)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A27" parent="." instance=ExtResource("61_h2i82")]
+[node name="A75" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(1, -1.14748e-08, 0, 9.19926e-09, 0.801692, -0.597737, 6.85892e-09, 0.597737, 0.801692, 28.1956, -36.8114, -220.643)
 
-[node name="SpotLight3D57" type="SpotLight3D" parent="."]
-transform = Transform3D(1, -3.45194e-08, 0, 1.28904e-08, 0.373425, 0.92766, -3.20223e-08, -0.92766, 0.373425, 28.7111, -36.9858, -221.034)
+[node name="SpotLight3D62" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(1, -3.45194e-08, 1.7623e-14, 1.28904e-08, 0.373425, 0.92766, -3.20223e-08, -0.92766, 0.373425, 28.7111, -36.9858, -221.034)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A28" parent="." instance=ExtResource("61_h2i82")]
+[node name="A76" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-4.40758e-08, -0.461315, -0.887236, -9.98385e-09, 0.887236, -0.461315, 1, -1.14748e-08, -4.37114e-08, -13.5198, -36.8114, -224.636)
 
-[node name="SpotLight3D58" type="SpotLight3D" parent="."]
-transform = Transform3D(-1.16891e-08, 0.92766, -0.373425, 1.28904e-08, 0.373425, 0.92766, 1, 6.02987e-09, -1.63229e-08, -12.9099, -36.9858, -224.419)
+[node name="SpotLight3D63" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-1.16891e-08, 0.92766, -0.373425, 1.28904e-08, 0.373425, 0.92766, 1, 6.02992e-09, -1.63229e-08, -12.9099, -36.9858, -224.419)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D59" type="SpotLight3D" parent="."]
-transform = Transform3D(-1.16891e-08, 0.92766, -0.373425, 1.28904e-08, 0.373425, 0.92766, 1, 6.02987e-09, -1.63229e-08, -5.77812, -36.9858, -215.879)
+[node name="SpotLight3D64" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-1.16891e-08, 0.92766, -0.373425, 1.28904e-08, 0.373425, 0.92766, 1, 6.02992e-09, -1.63229e-08, -5.77812, -36.9858, -215.879)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D60" type="SpotLight3D" parent="."]
-transform = Transform3D(-1.16891e-08, 0.92766, -0.373425, 1.28904e-08, 0.373425, 0.92766, 1, 6.02987e-09, -1.63229e-08, -5.77812, -36.9858, -207.308)
+[node name="SpotLight3D65" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-1.16891e-08, 0.92766, -0.373425, 1.28904e-08, 0.373425, 0.92766, 1, 6.02992e-09, -1.63229e-08, -5.77812, -36.9858, -207.308)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D61" type="SpotLight3D" parent="."]
-transform = Transform3D(-1.16891e-08, 0.92766, -0.373425, 1.28904e-08, 0.373425, 0.92766, 1, 6.02987e-09, -1.63229e-08, -5.77812, -36.9858, -197.716)
+[node name="SpotLight3D66" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-1.16891e-08, 0.92766, -0.373425, 1.28904e-08, 0.373425, 0.92766, 1, 6.02992e-09, -1.63229e-08, -5.77812, -36.9858, -197.716)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D62" type="SpotLight3D" parent="."]
-transform = Transform3D(-1.16891e-08, 0.92766, -0.373425, 1.28904e-08, 0.373425, 0.92766, 1, 6.02987e-09, -1.63229e-08, -5.77812, -36.9858, -187.444)
+[node name="SpotLight3D67" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-1.16891e-08, 0.92766, -0.373425, 1.28904e-08, 0.373425, 0.92766, 1, 6.02992e-09, -1.63229e-08, -5.77812, -36.9858, -187.444)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="SpotLight3D63" type="SpotLight3D" parent="."]
-transform = Transform3D(-1.16891e-08, 0.92766, -0.373425, 1.28904e-08, 0.373425, 0.92766, 1, 6.02987e-09, -1.63229e-08, -5.77812, -36.9858, -177.993)
+[node name="SpotLight3D68" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-1.16891e-08, 0.92766, -0.373425, 1.28904e-08, 0.373425, 0.92766, 1, 6.02992e-09, -1.63229e-08, -5.77812, -36.9858, -177.993)
 spot_range = 17.1614
 spot_angle = 62.5882
 
-[node name="A53" parent="." instance=ExtResource("61_h2i82")]
+[node name="A77" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
 transform = Transform3D(-8.23892e-10, 0.999822, 0.0188485, 4.37036e-08, 0.0188485, -0.999822, -1, 0, -4.37114e-08, 29.7762, -32.141, -91.8896)
 
-[node name="SpotLight3D64" type="SpotLight3D" parent="."]
-transform = Transform3D(-7.57337e-08, -0.92766, 0.373425, 1.28904e-08, 0.373425, 0.92766, -1, 7.50688e-08, -1.63229e-08, 29.9765, -32.3385, -92.3919)
+[node name="SpotLight3D69" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-7.57337e-08, -0.92766, 0.373425, 1.28904e-08, 0.373425, 0.92766, -1, 7.50688e-08, -1.6323e-08, 29.9765, -32.3385, -92.3919)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="Notes17" parent="Maps/NavigationRegion3D" instance=ExtResource("68_hro7h")]
+transform = Transform3D(0.403274, 0, 0.915079, 0, 1, 0, -0.915079, 0, 0.403274, -11.1391, -5.71163, -174.766)
+isi_notes = "Pressing this button seems to open the gate above."
+
+[node name="A78" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4672, -2.33799, -153.001)
+
+[node name="SpotLight3D70" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -15.0597, -2.32111, -153.003)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="A79" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.1331, -2.33799, -163.493)
+
+[node name="SpotLight3D71" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -11.1322, -2.32111, -163.9)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="A80" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.5862, -2.33799, -171.85)
+
+[node name="SpotLight3D72" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -13.5853, -2.32111, -172.257)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="A81" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.99769, -2.33799, -172.549)
+
+[node name="SpotLight3D73" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -8.39228, -2.32111, -172.651)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="A82" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.59271, 0.457397, -175.037)
+
+[node name="SpotLight3D74" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -9.9873, 0.474272, -175.139)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="A83" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8131, -2.33799, -153.001)
+
+[node name="SpotLight3D75" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -21.4056, -2.32111, -153.003)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="A84" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
+transform = Transform3D(-7.14904e-07, -1, -4.37114e-08, -2.93387e-14, -4.37114e-08, 1, -1, 7.14904e-07, 1.91069e-15, -23.3349, 21.4079, -250.639)
+
+[node name="SpotLight3D76" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(4.37114e-08, 3.82137e-15, -1, 8.74228e-08, -1, 0, -1, -8.74228e-08, -4.37114e-08, -23.7646, 21.1141, -250.592)
+spot_range = 17.1614
+spot_angle = 62.5882
+
+[node name="A85" parent="Maps/NavigationRegion3D" instance=ExtResource("61_h2i82")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -43.4918, 21.4079, -262.125)
+
+[node name="SpotLight3D77" type="SpotLight3D" parent="Maps/NavigationRegion3D"]
+transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, 1, 8.74228e-08, 1, -4.37114e-08, -43.0125, 21.2581, -262.078)
 spot_range = 17.1614
 spot_angle = 62.5882
 
