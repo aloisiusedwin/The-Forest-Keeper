@@ -234,8 +234,6 @@ func die():
 	else:
 		get_tree().change_scene_to_file("res://Scenes/Level/Forest/forest.tscn")
 
-func _on_escaped_body_entered(_body: Node3D) -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level/Pabrik/Pabrik.tscn")
 
 signal video_finished
 @onready var cutscenecanvas = $Cutscene

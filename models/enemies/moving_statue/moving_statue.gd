@@ -9,6 +9,7 @@ const OCC_RAY_TARGET_Y_OFFSET = 0.5
 var _occlusion_check_rays : Array[RayCast3D]
 var is_looked_at = true
 var follow_player = false
+var triggered = false
 
 @onready var occlusion_check_rays_parent = $OcclusionCheckRaysParent
 @onready var visible_on_screen_notifier = $VisibleOnScreenNotifier3D
@@ -42,7 +43,8 @@ func _physics_process(_delta):
 	if not follow_player:
 		return
 	
-	is_looked_at = _is_viewed()
+	if triggered:
+		is_looked_at = _is_viewed()
 	
 	if is_looked_at:
 		ANIMATIONPLAYER.pause()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=923 format=4 uid="uid://bjyu5mwi0vdxq"]
+[gd_scene load_steps=930 format=4 uid="uid://bjyu5mwi0vdxq"]
 
 [ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller/fps_controller.tscn" id="1_jbkyf"]
 [ext_resource type="PackedScene" uid="uid://t6jk3mwfy7m2" path="res://models/npc/lee/lee.tscn" id="1_rj3nw"]

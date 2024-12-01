@@ -100,3 +100,11 @@ func _input(event):
 		torch.visible = true
 	else :
 		torch.visible = false
+	
+func _on_escaped_body_entered(body: Node3D) -> void:
+	# Defer the scene change to happen after the physics callback
+	call_deferred("_change_scene")
+	
+func _change_scene() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Level/Pabrik/Pabrik.tscn")
+	
