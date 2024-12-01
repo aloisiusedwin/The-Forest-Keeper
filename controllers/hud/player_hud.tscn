@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmlq5yqj6gle2"]
+[gd_scene load_steps=14 format=3 uid="uid://dmlq5yqj6gle2"]
 
 [ext_resource type="Script" path="res://controllers/hud/player_hud.gd" id="1_a541y"]
 [ext_resource type="Texture2D" uid="uid://ciqgiet3fl5y1" path="res://controllers/hud/crosshair/crosshair-dot.svg" id="2_57b1i"]
@@ -7,6 +7,11 @@
 [ext_resource type="Script" path="res://Scripts/UI/debug.gd" id="4_g5p4y"]
 [ext_resource type="Script" path="res://Scripts/UI/HUD.gd" id="5_y6opg"]
 [ext_resource type="Texture2D" uid="uid://cheua48yfqomo" path="res://models/forestMap/paper/notes.png" id="6_27hqk"]
+[ext_resource type="Texture2D" uid="uid://15qitalo7p1f" path="res://models/map/map2_basement.png" id="8_kb3fd"]
+[ext_resource type="Texture2D" uid="uid://c5vor57ibl2aj" path="res://models/map/map2_lt1.png" id="9_kdmc0"]
+[ext_resource type="Texture2D" uid="uid://d1m5asfx08pqc" path="res://models/map/map2_lt2.png" id="10_fecru"]
+[ext_resource type="Texture2D" uid="uid://bkv2jsb0go30f" path="res://models/map/map3_dalem_pabrik.png" id="11_33qam"]
+[ext_resource type="Texture2D" uid="uid://b3e0nndkdqcu1" path="res://models/map/sidequest.png" id="12_m4623"]
 
 [sub_resource type="SystemFont" id="SystemFont_cy55b"]
 font_names = PackedStringArray("MS Gothic")
@@ -148,6 +153,87 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 23
 text = "JOKOHellooowww JOKOWII KSDAFBNKASHFBKJASDHFJKAHSDFK KAJSDHFKJASBDF KAJSHDFJKAHSDF KHJASDFJKLHASDJF KJASHDFJKADSF"
 autowrap_mode = 1
+
+[node name="map2_basement" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -585.5
+offset_top = -360.5
+offset_right = 585.5
+offset_bottom = 360.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_kb3fd")
+expand_mode = 1
+
+[node name="map2_lt1" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -596.5
+offset_top = -346.0
+offset_right = 596.5
+offset_bottom = 346.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_kdmc0")
+expand_mode = 1
+
+[node name="map2_lt2" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -679.5
+offset_top = -434.0
+offset_right = 679.5
+offset_bottom = 434.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_fecru")
+expand_mode = 1
+
+[node name="map3_pabrik" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -662.0
+offset_top = -407.0
+offset_right = 662.0
+offset_bottom = 407.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_33qam")
+expand_mode = 1
+
+[node name="map3_sidequest" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -694.0
+offset_top = -458.0
+offset_right = 694.0
+offset_bottom = 458.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_m4623")
+expand_mode = 1
 
 [node name="HitUI" type="Control" parent="."]
 layout_mode = 3

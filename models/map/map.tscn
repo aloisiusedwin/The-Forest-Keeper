@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://vujjql0xpeyl"]
+
+[ext_resource type="PackedScene" uid="uid://bfj7va33g3w1u" path="res://models/forestMap/paper/paper.glb" id="1_jrgvh"]
+[ext_resource type="Script" path="res://Scripts/UI/interactable.gd" id="1_nqos8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vld6v"]
+size = Vector3(0.665, 0.04, 0.945)
+
+[node name="map" type="StaticBody3D"]
+script = ExtResource("1_nqos8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_vld6v")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_jrgvh")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00409484, -0.000271633, 0.00690237)

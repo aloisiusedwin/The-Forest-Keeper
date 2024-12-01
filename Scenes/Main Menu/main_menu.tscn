@@ -115,3 +115,6 @@ flat = true
 [node name="Options" parent="." instance=ExtResource("2_ba35u")]
 visible = false
 layout_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true

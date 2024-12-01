@@ -6,7 +6,15 @@ extends RayCast3D
 @onready var prompt = $Prompt
 @onready var note = $"../../../PlayerHUD/CanvasLayer/Note"
 @onready var label2d = $"../../../PlayerHUD/CanvasLayer/Note/Label"
+
+@onready var map2_basement = $"../../../PlayerHUD/CanvasLayer/map2_basement"
+@onready var map2_lt1 = $"../../../PlayerHUD/CanvasLayer/map2_lt1"
+@onready var map2_lt2 = $"../../../PlayerHUD/CanvasLayer/map2_lt2"
+@onready var map3_pabrik = $"../../../PlayerHUD/CanvasLayer/map3_pabrik"
+@onready var sidequest = $"../../../PlayerHUD/CanvasLayer/map3_sidequest"
+
 var showNote = false
+var showMaps = false
 
 signal found
 
@@ -26,6 +34,18 @@ func Notes(isi_notes: String):
 		Engine.time_scale = 0
 	showNote = !showNote
 	if !showNote:
+		prompt.show()
+
+func Maps(map_node):
+	prompt.hide()
+	if showMaps:
+		map_node.hide()
+		Engine.time_scale = 1
+	else:
+		map_node.show()
+		Engine.time_scale = 0
+	showMaps = !showMaps
+	if !showMaps:
 		prompt.show()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -49,6 +69,21 @@ func _physics_process(delta: float) -> void:
 					if collider.name == "hand":
 						object_found = true
 					collider.interact(owner) 
+				elif collider.name == "map_basement":
+					collider.interact(self)
+					Maps(map2_basement)
+				elif collider.name == "map2_lt1":
+					collider.interact(self)
+					Maps(map2_lt1)
+				elif collider.name == "map2_lt2":
+					collider.interact(self)
+					Maps(map2_lt2)
+				elif collider.name == "sidequest":
+					collider.interact(self)
+					Maps(sidequest)
+				elif collider.name == "map3_pabrik":
+					collider.interact(self)
+					Maps(map3_pabrik)
 				else:
 					collider.interact(self)  # Memanggil interact() dari Interactable
 					Notes(collider.isi_notes)  # Mengirim isi_notes ke fungsi Notes
