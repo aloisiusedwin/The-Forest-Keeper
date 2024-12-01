@@ -1,10 +1,10 @@
 extends Node3D
-class_name PlayerAudios
+class_name PlayerAudiosr
 
 @onready var step_stream : AudioStreamPlayer3D = get_node(NodePath("FootstepSfx"))
 @onready var raycast : RayCast3D = get_node(NodePath("GroundCheck"))
 @onready var character_body : CharacterBody3D = get_node(NodePath(".."))
-@onready var character_controller : Player = get_node(NodePath(".."))
+@onready var character_controller : PlayerR = get_node(NodePath(".."))
 
 @export var audio_interact : Resource
 @export var physic_materials : Array[PhysicsMaterial]

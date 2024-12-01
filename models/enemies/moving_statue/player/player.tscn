@@ -1,17 +1,193 @@
-[gd_scene load_steps=3 format=3 uid="uid://dfdjg6qbeunvr"]
+[gd_scene load_steps=20 format=3 uid="uid://dfdjg6qbeunvr"]
 
+[ext_resource type="AudioStream" uid="uid://bynj0q5svp4rj" path="res://Audios/Player/Flashlight/Click_1.mp3" id="2_2iq51"]
+[ext_resource type="Script" path="res://Scripts/UI/interact_ray.gd" id="2_7i3d6"]
 [ext_resource type="Script" path="res://models/enemies/moving_statue/player/player.gd" id="2_10sax"]
+[ext_resource type="AudioStream" uid="uid://bxuyijbggpwnn" path="res://Audios/Player/Flashlight/Click_2.mp3" id="3_joreb"]
+[ext_resource type="Texture2D" uid="uid://ciqgiet3fl5y1" path="res://controllers/hud/crosshair/crosshair-dot.svg" id="3_qkxbs"]
+[ext_resource type="Theme" uid="uid://b33d8vlpvjdwl" path="res://ui/themes/debug.tres" id="4_3tipf"]
+[ext_resource type="AudioStream" uid="uid://c6rkmboqkjtlt" path="res://Audios/Player/Flashlight/Click_3.mp3" id="4_xy3a2"]
+[ext_resource type="Script" path="res://Scripts/UI/debug.gd" id="5_dl7j4"]
+[ext_resource type="AudioStream" uid="uid://dlm3jeouy8hxy" path="res://Audios/Player/Flashlight/Click_4.mp3" id="5_gvfxv"]
+[ext_resource type="AudioStream" uid="uid://ctw54ou2c6kwk" path="res://Audios/Player/Flashlight/Click_5.mp3" id="6_4m3j5"]
+[ext_resource type="AudioStream" uid="uid://cg4j56t2lm2v3" path="res://Audios/Player/Flashlight/Click_6.mp3" id="7_1p3gq"]
+[ext_resource type="Texture2D" uid="uid://cheua48yfqomo" path="res://models/forestMap/paper/notes.png" id="7_qbhui"]
+[ext_resource type="AudioStream" uid="uid://drr6ycqquf6yp" path="res://Audios/Player/Flashlight/Click_7.mp3" id="8_1spen"]
+[ext_resource type="AudioStream" uid="uid://tpf3n7p5bmqv" path="res://Audios/Player/Footsteps/Tile/Footsteps_Tile_Walk_01.wav" id="8_cg837"]
+[ext_resource type="AudioStream" uid="uid://b8omvn32tbvea" path="res://Audios/Player/Flashlight/Click_8.mp3" id="9_taxju"]
+[ext_resource type="AudioStream" uid="uid://dyu6htwcth2a5" path="res://Audios/Player/Flashlight/Click_9.mp3" id="10_xc8t7"]
+[ext_resource type="AudioStream" uid="uid://c3irxsa5j8yxw" path="res://Audios/Player/Flashlight/Click_10.mp3" id="11_bsd33"]
+[ext_resource type="Script" path="res://models/enemies/moving_statue/player/player_audiosr.gd" id="17_qon3n"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bbutj"]
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("VIDEOPLAYER")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("2_10sax")
+VIDEOPLAYER = NodePath("Cutscene/VideoStreamPlayer")
+click_audios = Array[AudioStream]([ExtResource("2_2iq51"), ExtResource("3_joreb"), ExtResource("4_xy3a2"), ExtResource("5_gvfxv"), ExtResource("6_4m3j5"), ExtResource("7_1p3gq"), ExtResource("8_1spen"), ExtResource("9_taxju"), ExtResource("10_xc8t7"), ExtResource("11_bsd33")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_bbutj")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Head" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.754935, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+script = ExtResource("2_7i3d6")
+
+[node name="Prompt" type="Label" parent="Head/Camera3D/RayCast3D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.5
+offset_top = -11.5
+offset_right = 33.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Message"
+
+[node name="TorchHolder" type="Node3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.254735, 0)
+
+[node name="Torchloc" type="Node3D" parent="Head/TorchHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+
+[node name="Torch" type="Node3D" parent="Head/TorchHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+top_level = true
+
+[node name="TorchLight" type="SpotLight3D" parent="Head/TorchHolder/Torch"]
+light_energy = 3.0
+shadow_enabled = true
+shadow_opacity = 0.8
+spot_range = 15.0
+spot_angle = 40.0
+spot_angle_attenuation = 2.0
+
+[node name="PlayerHUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="PlayerHUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dot" type="TextureRect" parent="PlayerHUD/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("3_qkxbs")
+
+[node name="Debug" type="Control" parent="PlayerHUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="DebugPanel" type="PanelContainer" parent="PlayerHUD/Debug"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 50.0
+theme = ExtResource("4_3tipf")
+script = ExtResource("5_dl7j4")
+
+[node name="MarginContainer" type="MarginContainer" parent="PlayerHUD/Debug/DebugPanel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerHUD/Debug/DebugPanel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PlayerHUD"]
+
+[node name="Note" type="TextureRect" parent="PlayerHUD/CanvasLayer"]
+visible = false
+self_modulate = Color(0.623325, 0.601292, 0.582334, 1)
+offset_left = 657.0
+offset_top = 182.0
+offset_right = 1298.0
+offset_bottom = 938.0
+texture = ExtResource("7_qbhui")
+expand_mode = 1
+flip_v = true
+
+[node name="Label" type="Label" parent="PlayerHUD/CanvasLayer/Note"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.5
+offset_top = -107.0
+offset_right = 244.5
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 23
+text = "JOKOHellooowww JOKOWII KSDAFBNKASHFBKJASDHFJKAHSDFK KAJSDHFKJASBDF KAJSHDFJKAHSDF KHJASDFJKLHASDJF KJASHDFJKADSF"
+autowrap_mode = 1
+
+[node name="HitUI" type="Control" parent="PlayerHUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="PlayerHUD/HitUI"]
+visible = false
+layout_mode = 0
+offset_left = -150.0
+offset_top = -166.0
+offset_right = 2048.0
+offset_bottom = 1208.0
+color = Color(0.501961, 0.501961, 0.501961, 1)
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="TorchTimer" type="Timer" parent="Timers"]
+wait_time = 0.3
+one_shot = true
+
+[node name="PlayerAudios" type="Node3D" parent="."]
+script = ExtResource("17_qon3n")
+
+[node name="TorchClickSfx" type="AudioStreamPlayer3D" parent="PlayerAudios"]
+volume_db = -23.0
+
+[node name="FootstepSfx" type="AudioStreamPlayer3D" parent="PlayerAudios"]
+stream = ExtResource("8_cg837")
+attenuation_filter_db = -65.0
+
+[node name="GroundCheck" type="RayCast3D" parent="PlayerAudios"]
+target_position = Vector3(0, -1.5, 0)
+debug_shape_custom_color = Color(1, 0, 1, 1)
+
+[node name="Cutscene" type="CanvasLayer" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Cutscene"]
+offset_right = 40.0
+offset_bottom = 40.0

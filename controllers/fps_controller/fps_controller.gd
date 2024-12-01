@@ -245,8 +245,6 @@ func play_cutscene():
 	#var scene_name = get_tree().current_scene.name
 	#if scene_name == "Forest":
 		#VIDEOPLAYER.stream = preload("res://Video/level1.ogv")
-	#elif scene_name == "Rumah":
-		#VIDEOPLAYER.stream = preload("res://Video/level 2.ogv")
 	#elif scene_name == "Pabrik":
 		#VIDEOPLAYER.stream = preload("res://Video/level 3.ogv")
 		

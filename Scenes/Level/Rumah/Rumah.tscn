@@ -63,7 +63,6 @@ sky_material = SubResource("ProceduralSkyMaterial_yxpy4")
 
 [sub_resource type="Environment" id="Environment_elrk8"]
 background_mode = 2
-background_energy_multiplier = 16.0
 sky = SubResource("Sky_7etjj")
 tonemap_mode = 2
 glow_enabled = true
@@ -2374,9 +2373,6 @@ shadow_enabled = true
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_42rap")
 
-[node name="Player" parent="NavigationRegion3D" instance=ExtResource("1_pwwow")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25116, 1, 10.3416)
-
 [node name="QodotMap" type="Node3D" parent="NavigationRegion3D"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 script = ExtResource("1_ql3uv")
@@ -3884,6 +3880,9 @@ transform = Transform3D(0.691265, 0, -0.494623, 0, 0.85, 0, 0.494623, 0, 0.69126
 
 [node name="Sketchfab_Scene9" parent="NavigationRegion3D" instance=ExtResource("28_4xiio")]
 transform = Transform3D(0.715212, 0, -0.459316, 0, 0.85, 0, 0.459316, 0, 0.715212, -19.3239, -7.33128, 8.0797)
+
+[node name="Player" parent="NavigationRegion3D" instance=ExtResource("1_pwwow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.6095, -5.8129, -3.82882)
 
 [node name="MovingStatue" parent="." node_paths=PackedStringArray("target_player") instance=ExtResource("1_jcvy6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.148623, -2.25, 12.4186)
