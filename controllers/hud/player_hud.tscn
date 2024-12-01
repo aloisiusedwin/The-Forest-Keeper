@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dmlq5yqj6gle2"]
+[gd_scene load_steps=16 format=3 uid="uid://dmlq5yqj6gle2"]
 
 [ext_resource type="Script" path="res://controllers/hud/player_hud.gd" id="1_a541y"]
 [ext_resource type="Texture2D" uid="uid://ciqgiet3fl5y1" path="res://controllers/hud/crosshair/crosshair-dot.svg" id="2_57b1i"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/UI/debug.gd" id="4_g5p4y"]
 [ext_resource type="Script" path="res://Scripts/UI/HUD.gd" id="5_y6opg"]
 [ext_resource type="Texture2D" uid="uid://cheua48yfqomo" path="res://models/forestMap/paper/notes.png" id="6_27hqk"]
+[ext_resource type="FontFile" uid="uid://sny1y4kv5h6t" path="res://models/forestMap/paper/Mocosans-SimpleNote.ttf" id="8_3x752"]
 [ext_resource type="Texture2D" uid="uid://15qitalo7p1f" path="res://models/map/map2_basement.png" id="8_kb3fd"]
 [ext_resource type="Texture2D" uid="uid://c5vor57ibl2aj" path="res://models/map/map2_lt1.png" id="9_kdmc0"]
 [ext_resource type="Texture2D" uid="uid://d1m5asfx08pqc" path="res://models/map/map2_lt2.png" id="10_fecru"]
@@ -17,6 +18,12 @@
 font_names = PackedStringArray("MS Gothic")
 font_weight = 650
 subpixel_positioning = 0
+
+[sub_resource type="FontVariation" id="FontVariation_glm41"]
+base_font = ExtResource("8_3x752")
+variation_embolden = 0.79
+spacing_glyph = 5
+spacing_space = 12
 
 [node name="PlayerHUD" type="Control"]
 layout_mode = 3
@@ -128,6 +135,7 @@ vertical_alignment = 2
 
 [node name="Note" type="TextureRect" parent="CanvasLayer"]
 visible = false
+modulate = Color(0.860369, 0.860369, 0.860369, 1)
 self_modulate = Color(0.623325, 0.601292, 0.582334, 1)
 offset_left = 657.0
 offset_top = 182.0
@@ -144,15 +152,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -243.5
-offset_top = -107.0
-offset_right = 244.5
-offset_bottom = 71.0
+offset_left = -244.0
+offset_top = -89.0
+offset_right = 244.0
+offset_bottom = 89.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_glm41")
 theme_override_font_sizes/font_size = 23
-text = "JOKOHellooowww JOKOWII KSDAFBNKASHFBKJASDHFJKAHSDFK KAJSDHFKJASBDF KAJSHDFJKAHSDF KHJASDFJKLHASDJF KJASHDFJKADSF"
-autowrap_mode = 1
+text = "mereka akan kembali, kalian ingin disini"
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 227
+uppercase = true
 
 [node name="map2_basement" type="TextureRect" parent="CanvasLayer"]
 visible = false

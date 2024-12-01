@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jcw3qp1cgsye"
-path.s3tc="res://.godot/imported/forrest_ground_01_diff_1k.png-67d288b35319f7ecdd5e949ecf1282f3.s3tc.ctex"
+path.s3tc="res://.godot/imported/forrest_ground_01_diff_1k.png-1d7698379bc7856524239447b2ed0ea7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/grass/forrest_ground_01_diff_1k.png"
-dest_files=["res://.godot/imported/forrest_ground_01_diff_1k.png-67d288b35319f7ecdd5e949ecf1282f3.s3tc.ctex"]
+source_file="res://textures/forrest_ground_01_diff_1k.png"
+dest_files=["res://.godot/imported/forrest_ground_01_diff_1k.png-1d7698379bc7856524239447b2ed0ea7.s3tc.ctex"]
 
 [params]
 
