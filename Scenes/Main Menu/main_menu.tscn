@@ -7,6 +7,7 @@
 
 [sub_resource type="FontVariation" id="FontVariation_kogrt"]
 base_font = ExtResource("3_17sxt")
+spacing_glyph = 10
 
 [sub_resource type="SystemFont" id="SystemFont_g4n3v"]
 font_names = PackedStringArray("JetBrainsMono Nerd Font")
@@ -67,7 +68,8 @@ layout_mode = 2
 [node name="Label" type="Label" parent="Background/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-theme_override_colors/font_color = Color(0.0445781, 1.29727e-08, 7.52043e-10, 1)
+theme_override_colors/font_color = Color(0.581033, 0.581033, 0.581033, 1)
+theme_override_colors/font_shadow_color = Color(0.294987, 0.0587885, 6.01634e-08, 1)
 theme_override_fonts/font = SubResource("FontVariation_kogrt")
 theme_override_font_sizes/font_size = 103
 text = "THE FOREST
