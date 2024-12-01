@@ -338,6 +338,8 @@ _data = {
 
 [node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("ANIMATIONPLAYER", "VIDEOPLAYER")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 32769
+collision_mask = 32769
 floor_max_angle = 1.22173
 script = ExtResource("1_0fn47")
 ANIMATIONPLAYER = NodePath("AnimationPlayer")

@@ -68,11 +68,11 @@ func _hit_finished():
 	if !rage:
 		if global_position.distance_to(player.global_position) < attack_range + 1.0:
 			var dir = global_position.direction_to(player.global_position)
-			player.hit(dir, damage, 8.0)
+			player.hit(dir, damage, 12.0)
 	elif rage:
 		if global_position.distance_to(player.global_position) < rage_attack_range + 1.0:
 			var dir = global_position.direction_to(player.global_position)
-			player.hit(dir, rage_damage, 12.0)
+			player.hit(dir, rage_damage, 15.0)
 
 func _on_area_3d_body_part_hit(dam):
 	health -= dam

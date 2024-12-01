@@ -3233,7 +3233,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.95657, 11.1385)
 player_path = NodePath("../Player")
 
 [node name="Player" parent="Maps/NavigationRegion3D" instance=ExtResource("1_jbkyf")]
-transform = Transform3D(0.997942, 0, 0.0641144, 0, 1, 0, -0.0641144, 0, 0.997942, -2.50784, -4.78242, 15.7188)
+transform = Transform3D(0.997942, 0, 0.0641144, 0, 1, 0, -0.0641144, 0, 0.997942, -2.41433, -4.78242, 62.7308)
 
 [node name="QodotMap" type="Node3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.96163, 0)
