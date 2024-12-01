@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dfdjg6qbeunvr"]
+[gd_scene load_steps=27 format=3 uid="uid://dfdjg6qbeunvr"]
 
 [ext_resource type="AudioStream" uid="uid://bynj0q5svp4rj" path="res://Audios/Player/Flashlight/Click_1.mp3" id="2_2iq51"]
 [ext_resource type="Script" path="res://Scripts/UI/interact_ray.gd" id="2_7i3d6"]
@@ -18,6 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://dyu6htwcth2a5" path="res://Audios/Player/Flashlight/Click_9.mp3" id="10_xc8t7"]
 [ext_resource type="AudioStream" uid="uid://c3irxsa5j8yxw" path="res://Audios/Player/Flashlight/Click_10.mp3" id="11_bsd33"]
 [ext_resource type="Texture2D" uid="uid://15qitalo7p1f" path="res://models/map/map2_basement.png" id="17_1hvq0"]
+[ext_resource type="FontFile" uid="uid://sny1y4kv5h6t" path="res://models/forestMap/paper/Mocosans-SimpleNote.ttf" id="17_2ogp6"]
 [ext_resource type="Script" path="res://models/enemies/moving_statue/player/player_audiosr.gd" id="17_qon3n"]
 [ext_resource type="Texture2D" uid="uid://c5vor57ibl2aj" path="res://models/map/map2_lt1.png" id="18_x7rr5"]
 [ext_resource type="Texture2D" uid="uid://d1m5asfx08pqc" path="res://models/map/map2_lt2.png" id="19_pnmsa"]
@@ -25,6 +26,12 @@
 [ext_resource type="Texture2D" uid="uid://b3e0nndkdqcu1" path="res://models/map/sidequest.png" id="21_bt4sn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bbutj"]
+
+[sub_resource type="FontVariation" id="FontVariation_8dpad"]
+base_font = ExtResource("17_2ogp6")
+variation_embolden = 0.79
+spacing_glyph = 5
+spacing_space = 12
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("VIDEOPLAYER")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -147,15 +154,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -243.5
-offset_top = -107.0
-offset_right = 244.5
-offset_bottom = 71.0
+offset_left = -244.0
+offset_top = -89.0
+offset_right = 244.0
+offset_bottom = 89.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_8dpad")
 theme_override_font_sizes/font_size = 23
-text = "JOKOHellooowww JOKOWII KSDAFBNKASHFBKJASDHFJKAHSDFK KAJSDHFKJASBDF KAJSHDFJKAHSDF KHJASDFJKLHASDJF KJASHDFJKADSF"
-autowrap_mode = 1
+text = "mereka akan kembali, kalian ingin disini"
+vertical_alignment = 1
+autowrap_mode = 3
+justification_flags = 227
+uppercase = true
 
 [node name="map2_basement" type="TextureRect" parent="PlayerHUD/CanvasLayer"]
 visible = false

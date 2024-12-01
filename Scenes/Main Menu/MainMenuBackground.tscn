@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=4 uid="uid://b8xcddgpq70v2"]
 
-[ext_resource type="Texture2D" uid="uid://jcw3qp1cgsye" path="res://textures/grass/forrest_ground_01_diff_1k.png" id="1_jjn7e"]
+[ext_resource type="Texture2D" uid="uid://jcw3qp1cgsye" path="res://textures/forrest_ground_01_diff_1k.png" id="1_jjn7e"]
 [ext_resource type="Environment" uid="uid://b8wf8clhrykfh" path="res://Scenes/Main Menu/MainMenuBackground.tres" id="1_mg8w3"]
 [ext_resource type="PackedScene" uid="uid://bkiomthxg4233" path="res://models/forestMap/gubuk/gubuk.tscn" id="2_yr7o6"]
 [ext_resource type="Shader" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="3_cjn6y"]

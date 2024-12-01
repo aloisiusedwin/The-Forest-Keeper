@@ -72,7 +72,7 @@ func _physics_process(delta: float) -> void:
 				elif collider.name == "map_basement":
 					collider.interact(self)
 					Maps(map2_basement)
-				elif collider.name == "map2_lt1":
+				elif collider.name == "map2_lt1" || collider.name == "map2_lt1_2":
 					collider.interact(self)
 					Maps(map2_lt1)
 				elif collider.name == "map2_lt2":

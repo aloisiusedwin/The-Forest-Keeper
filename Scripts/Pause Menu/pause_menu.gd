@@ -36,15 +36,17 @@ func escPress():
 	
 func _process(delta):
 	escPress()
-	
+
 	if !get_tree().paused:
-		time += delta
-	
-	var secs = fmod(time, 60)
-	var mins = fmod(time, 60 * 60) / 60
-	var hrs = fmod(fmod(time, 3600 * 60) / 3600, 24)
-	
-	var time_passed = "%02d:%02d:%02d" % [hrs,mins,secs]
+		var global = get_tree().get_root().get_node("Global")
+		global.total_time += delta
+
+	var global = get_tree().get_root().get_node("Global")
+	var secs = fmod(global.total_time, 60)
+	var mins = fmod(global.total_time, 60 * 60) / 60
+	var hrs = fmod(fmod(global.total_time, 3600 * 60) / 3600, 24)
+
+	var time_passed = "%02d:%02d:%02d" % [hrs, mins, secs]
 	timer_label.text = time_passed
 
 func _on_resume_pressed() -> void:
