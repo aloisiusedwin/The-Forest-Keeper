@@ -158,6 +158,7 @@ var endgame = false
 func _physics_process(delta: float) -> void:
 	if !endgame:
 		if wildbane and onpanel:
+			war_bgm.stop()
 			endgame = true
 			cutscenecanvas.visible = true
 			video_checked = false
