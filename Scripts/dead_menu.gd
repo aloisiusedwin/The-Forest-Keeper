@@ -6,6 +6,7 @@ extends Control
 
 
 func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	handle_connecting_signals()
 
 func _process(delta: float) -> void:

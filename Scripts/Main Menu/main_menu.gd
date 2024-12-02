@@ -1,7 +1,6 @@
 class_name MainMenu
 extends Control
 
-
 @onready var play = $"Background/MarginContainer/HBoxContainer/VBoxContainer/Play Button"
 @onready var options = $"Background/MarginContainer/HBoxContainer/VBoxContainer/Options Button"
 @onready var exit = $"Background/MarginContainer/HBoxContainer/VBoxContainer/Exit Button"
@@ -11,10 +10,10 @@ extends Control
 @onready var subviewport = $Background/SubViewportContainer
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	handle_connecting_signals()
 	
 func on_start_pressed() -> void:
-	print("pressed")
 	get_tree().change_scene_to_packed(startLevel)
 	
 func on_options_pressed() -> void:

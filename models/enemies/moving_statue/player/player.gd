@@ -2,6 +2,7 @@ class_name PlayerR
 extends CharacterBody3D
 
 @export var VIDEOPLAYER : VideoStreamPlayer
+@export var AUDIOPLAYER : AudioStreamPlayer
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -54,6 +55,10 @@ func _on_video_finished() -> void:
 	stop_input = false
 
 func _physics_process(delta):
+	if caught:
+		if !VIDEOPLAYER.is_playing():
+			get_tree().change_scene_to_file("res://Scenes/Dead Menu/dead_menu.tscn")
+			
 	if stop_input:
 		# Add the gravity.
 		if not is_on_floor():
@@ -79,8 +84,10 @@ func _physics_process(delta):
 
 		move_and_slide()
 
+var caught = false
 
 func _input(event):
+		
 	if event is InputEventMouseMotion:
 		rotation_degrees.y += event.relative.x * -mouse_sensitivity
 		cam.rotation_degrees.x += event.relative.y * -mouse_sensitivity
@@ -107,4 +114,17 @@ func _on_escaped_body_entered(body: Node3D) -> void:
 	
 func _change_scene() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Level/Pabrik/Pabrik.tscn")
+	
+
+
+func _on_player_caught() -> void:
+	caught = true
+	cutscenecanvas.visible = true
+	VIDEOPLAYER.stream = preload("res://Video/jumpscare.ogv")
+	AUDIOPLAYER.play()
+	get_tree().create_timer(1.0).timeout
+	if VIDEOPLAYER.stream:
+		stop_input = true
+		VIDEOPLAYER.play()
+		emit_signal("video_finished")
 	

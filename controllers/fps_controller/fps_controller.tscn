@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://4cbpynvikrmh"]
+[gd_scene load_steps=38 format=3 uid="uid://4cbpynvikrmh"]
 
 [ext_resource type="Script" path="res://controllers/fps_controller/fps_controller.gd" id="1_0fn47"]
 [ext_resource type="AudioStream" uid="uid://bynj0q5svp4rj" path="res://Audios/Player/Flashlight/Click_1.mp3" id="2_sewi0"]
@@ -24,6 +24,7 @@
 [ext_resource type="Script" path="res://Scripts/WeaponViewport.gd" id="14_mjbge"]
 [ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
 [ext_resource type="PackedScene" uid="uid://hcmvusb6x1n1" path="res://Scenes/Pause Menu/pause_menu.tscn" id="27_yp45h"]
+[ext_resource type="AudioStream" uid="uid://6wfyma8xt2a2" path="res://Audios/endmusic.WAV" id="29_r1boi"]
 [ext_resource type="Script" path="res://Audios/player_audios.gd" id="30_f5fwt"]
 [ext_resource type="AudioStream" uid="uid://tpf3n7p5bmqv" path="res://Audios/Player/Footsteps/Tile/Footsteps_Tile_Walk_01.wav" id="31_ovj2n"]
 [ext_resource type="PackedScene" uid="uid://dmlq5yqj6gle2" path="res://controllers/hud/player_hud.tscn" id="32_q0axe"]
@@ -336,7 +337,7 @@ _data = {
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mspl4"]
 
-[node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("ANIMATIONPLAYER", "VIDEOPLAYER")]
+[node name="CharacterBody3D" type="CharacterBody3D" node_paths=PackedStringArray("ANIMATIONPLAYER", "VIDEOPLAYER", "endmusic")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 collision_layer = 32769
 collision_mask = 32769
@@ -345,6 +346,7 @@ script = ExtResource("1_0fn47")
 ANIMATIONPLAYER = NodePath("AnimationPlayer")
 VIDEOPLAYER = NodePath("Cutscene/VideoStreamPlayer")
 click_audios = Array[AudioStream]([ExtResource("2_sewi0"), ExtResource("3_qp17n"), ExtResource("4_drpku"), ExtResource("5_wp6yf"), ExtResource("6_66bgf"), ExtResource("7_cbe42"), ExtResource("8_l1bkm"), ExtResource("9_n138e"), ExtResource("10_cxdcp"), ExtResource("11_a0lwp")])
+endmusic = NodePath("Cutscene/AudioStreamPlayer")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_o26h5")
@@ -511,6 +513,10 @@ visible = false
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Cutscene"]
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Cutscene"]
+stream = ExtResource("29_r1boi")
+volume_db = -10.0
 
 [connection signal="video_finished" from="." to="." method="_on_video_finished"]
 [connection signal="found" from="Head/Camera3D/RayCast3D" to="WeaponManager" method="_hand_found"]

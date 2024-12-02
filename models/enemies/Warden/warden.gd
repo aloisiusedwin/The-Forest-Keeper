@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @onready var anim_tree = $AnimationTree
-var health = 400
+var health = 300
 const speed = 5
 const attack_range = 1.5
 const damage = 30.0
@@ -10,9 +10,10 @@ const damage = 30.0
 var triggered = false
 var state_machine
 var player = null
-@export var player_path : NodePath
+@export var player_path := "/root/Pabrik/Maps/NavigationRegion3D/Player"
 
 func _ready():
+	
 	player = get_node(player_path)
 	state_machine = anim_tree.get("parameters/playback")
 	

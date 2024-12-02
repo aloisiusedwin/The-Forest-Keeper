@@ -15,7 +15,6 @@ var triggered = false
 @onready var visible_on_screen_notifier = $VisibleOnScreenNotifier3D
 @onready var nav_agent = $NavigationAgent3D
 
-
 func _ready():
 	# validate that the player target export var is set
 	if not target_player:
@@ -32,14 +31,20 @@ func _ready():
 	
 	_start_following_player.call_deferred()
 
-
 func _start_following_player():
 	# start following player on the next physics frame (NavigationServer has to sync blablabla)
 	await get_tree().physics_frame
 	follow_player = true
 
+signal player_caught
+var caught = false
 
 func _physics_process(_delta):
+	if !caught:
+		if global_position.distance_to(target_player.global_position) < 2:
+			caught = true
+			emit_signal("player_caught")
+	
 	if not follow_player:
 		return
 	
@@ -67,7 +72,6 @@ func _physics_process(_delta):
 	# applying velocity using move direction
 	velocity = direction * SPEED
 	move_and_slide()
-
 
 func _is_viewed() -> bool:
 	var viewed = visible_on_screen_notifier.is_on_screen()

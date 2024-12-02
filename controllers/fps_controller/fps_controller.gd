@@ -137,6 +137,11 @@ func _headbob(time) -> Vector3:
 	return pos
 
 func _process(delta: float) -> void:
+	if endgame:
+		if !VIDEOPLAYER.is_playing():
+			emit_signal("video_finished")
+			video_checked = true
+			get_tree().change_scene_to_file("res://Scenes/Main Menu/main_menu.tscn")
 	if !video_checked:
 		if !VIDEOPLAYER.is_playing():
 			emit_signal("video_finished")
@@ -144,7 +149,21 @@ func _process(delta: float) -> void:
 		
 	regen_hp(delta)
 
+@export var endmusic : AudioStreamPlayer
+var wildbane = false
+var onpanel = false
+var endgame = false
+
 func _physics_process(delta: float) -> void:
+	if !endgame:
+		if wildbane and onpanel:
+			endgame = true
+			cutscenecanvas.visible = true
+			video_checked = false
+			VIDEOPLAYER.stream = preload("res://Video/endcredit.ogv")
+			VIDEOPLAYER.play()
+			endmusic.play()
+	
 	if is_on_floor():
 		air_time = 0.0
 	else:
@@ -232,22 +251,26 @@ func die():
 		print("ded")
 		get_tree().change_scene_to_file("res://Scenes/Level/Rumah/Rumah.tscn")
 	else:
-		get_tree().change_scene_to_file("res://Scenes/Level/Forest/forest.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Dead Menu/dead_menu.tscn")
 
 signal video_finished
 @onready var cutscenecanvas = $Cutscene
 
 func play_cutscene():
 	pass
-	#var scene_name = get_tree().current_scene.name
-	#if scene_name == "Forest":
-		#VIDEOPLAYER.stream = preload("res://Video/level11.ogv")
-	#elif scene_name == "Pabrik":
-		#VIDEOPLAYER.stream = preload("res://Video/level 3.ogv")
-	#if VIDEOPLAYER.stream:
-		#stop_input = true
-		#VIDEOPLAYER.play()
+	var scene_name = get_tree().current_scene.name
+	if scene_name == "Forest":
+		VIDEOPLAYER.stream = preload("res://Video/level11.ogv")
+	elif scene_name == "Pabrik":
+		VIDEOPLAYER.stream = preload("res://Video/level 3.ogv")
+	
+	if VIDEOPLAYER.stream:
+		stop_input = true
+		VIDEOPLAYER.play()
 
 func _on_video_finished() -> void:
 	cutscenecanvas.visible = false
 	stop_input = false
+
+func _on_wildbane_defeated() -> void:
+	wildbane = true

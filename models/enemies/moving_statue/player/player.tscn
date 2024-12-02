@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dfdjg6qbeunvr"]
+[gd_scene load_steps=28 format=3 uid="uid://dfdjg6qbeunvr"]
 
 [ext_resource type="AudioStream" uid="uid://bynj0q5svp4rj" path="res://Audios/Player/Flashlight/Click_1.mp3" id="2_2iq51"]
 [ext_resource type="Script" path="res://Scripts/UI/interact_ray.gd" id="2_7i3d6"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://d1m5asfx08pqc" path="res://models/map/map2_lt2.png" id="19_pnmsa"]
 [ext_resource type="Texture2D" uid="uid://bkv2jsb0go30f" path="res://models/map/map3_dalem_pabrik.png" id="20_e02tj"]
 [ext_resource type="Texture2D" uid="uid://b3e0nndkdqcu1" path="res://models/map/sidequest.png" id="21_bt4sn"]
+[ext_resource type="AudioStream" uid="uid://da5gk1k3vo3o7" path="res://Audios/jumpscare.WAV" id="25_4rref"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bbutj"]
 
@@ -33,12 +34,13 @@ variation_embolden = 0.79
 spacing_glyph = 5
 spacing_space = 12
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("VIDEOPLAYER")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("VIDEOPLAYER", "AUDIOPLAYER")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 collision_layer = 3
 collision_mask = 5
 script = ExtResource("2_10sax")
 VIDEOPLAYER = NodePath("Cutscene/VideoStreamPlayer")
+AUDIOPLAYER = NodePath("Cutscene/AudioStreamPlayer")
 click_audios = Array[AudioStream]([ExtResource("2_2iq51"), ExtResource("3_joreb"), ExtResource("4_xy3a2"), ExtResource("5_gvfxv"), ExtResource("6_4m3j5"), ExtResource("7_1p3gq"), ExtResource("8_1spen"), ExtResource("9_taxju"), ExtResource("10_xc8t7"), ExtResource("11_bsd33")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -290,3 +292,6 @@ debug_shape_custom_color = Color(1, 0, 1, 1)
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Cutscene"]
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Cutscene"]
+stream = ExtResource("25_4rref")

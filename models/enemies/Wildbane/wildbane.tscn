@@ -298,6 +298,7 @@ height = 53.536
 [sub_resource type="Animation" id="Animation_f430g"]
 resource_name = "Attack"
 length = 2.26667
+loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = true
 tracks/0/enabled = true
@@ -2557,7 +2558,7 @@ tracks/0/enabled = true
 tracks/0/path = NodePath("Armature/Skeleton3D:mixamorig_Hips")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0.0711883, -1.01611, -85.3169, 0.0333333, 1, 0.0711883, -1.01611, -85.3169, 0.0666667, 1, 0.0719762, -0.948531, -85.5332, 0.1, 1, 0.0546584, -0.865036, -85.9041, 0.133333, 1, 0.0283571, -0.761781, -86.0156, 0.166667, 1, -0.00484298, -0.636696, -85.4663, 0.2, 1, -0.0146971, -0.508344, -83.8315, 0.233333, 1, -0.0390162, -0.399348, -80.5317, 0.266667, 1, -0.0589685, -0.0218618, -75.9627, 0.3, 1, -0.0704359, 0.888315, -71.153, 0.333333, 1, -0.083672, 2.2667, -66.3101, 0.366667, 1, -0.0998568, 3.9044, -61.7017, 0.4, 1, -0.114135, 5.60992, -57.6589, 0.433333, 1, -0.126197, 7.21413, -54.6444, 0.466667, 1, -0.134673, 8.59236, -53.3483, 0.5, 1, -0.13915, 9.62058, -53.6021, 0.533333, 1, -0.118632, 10.5406, -56.1256, 0.566667, 1, 0.0285883, 19.1252, -75.18, 0.6, 1, 0.0118389, 27.7779, -97.9181, 0.633333, 1, 0.544782, 35.5892, -119.602, 0.666667, 1, 0.332644, 42.8872, -140.933, 0.7, 1, 0.852716, 48.2553, -158.735, 0.766667, 1, 0.680046, 57.931, -191.88, 0.8, 1, 0.766223, 62.2028, -207.437, 0.833333, 1, 1.16802, 66.4791, -221.584, 0.866667, 1, 1.31896, 71.3212, -233.583, 0.9, 1, 1.08948, 76.5287, -243.059, 0.933333, 1, 0.758775, 82.3511, -250.194, 0.966667, 1, 0.624779, 88.6663, -254.969, 1, 1, 0.82947, 94.6237, -257.332, 1.03333, 1, 1.24103, 100.708, -257.598, 1.06667, 1, 1.70472, 106.66, -256.333, 1.1, 1, 1.94404, 111.747, -253.943, 1.13333, 1, 2.06879, 116.384, -250.423, 1.16667, 1, 2.27496, 121.018, -245.673, 1.2, 1, 2.37846, 125.732, -239.604, 1.23333, 1, 2.40068, 130.713, -232.224, 1.26667, 1, 2.50404, 136.035, -223.508, 1.3, 1, 2.70591, 141.65, -212.986, 1.33333, 1, 2.87075, 146.875, -200.162, 1.36667, 1, 3.04209, 151.132, -185.188, 1.4, 1, 3.20129, 154.458, -168.778, 1.43333, 1, 3.39668, 156.99, -151.517, 1.5, 1, 3.7143, 161.347, -117.695, 1.53333, 1, 4.06109, 162.537, -102.368, 1.56667, 1, 4.67542, 163.068, -84.4941, 1.6, 1, 5.16599, 162.731, -67.4103, 1.63333, 1, 5.26566, 163.306, -53.2556, 1.66667, 1, 5.58619, 164.538, -43.2519, 1.7, 1, 6.33303, 166.373, -42.4591, 1.73333, 1, 6.96249, 168.517, -43.1289, 1.76667, 1, 7.24353, 170.434, -44.8368, 1.8, 1, 7.19776, 171.842, -46.9343, 1.83333, 1, 7.10374, 172.938, -49.2419, 1.9, 1, 6.81221, 175.923, -53.9568, 1.93333, 1, 6.53968, 177.292, -56.142, 1.96667, 1, 6.18611, 178.633, -57.9965, 2, 1, 5.7489, 179.829, -59.3988, 2.03333, 1, 5.34301, 180.865, -59.6374, 2.06667, 1, 5.02789, 181.747, -59.7413, 2.1, 1, 4.76108, 182.439, -59.7551, 2.13333, 1, 4.53889, 182.844, -59.6933, 2.16667, 1, 4.38909, 182.901, -59.2654, 2.2, 1, 4.28117, 182.641, -58.4889, 2.23333, 1, 4.18196, 182.137, -57.6354, 2.26667, 1, 4.06951, 180.802, -56.676, 2.3, 1, 3.95174, 179.093, -55.9013, 2.33333, 1, 3.84169, 177.209, -55.3538, 2.36667, 1, 3.73965, 175.388, -55.0241, 2.4, 1, 3.74975, 174.015, -55.0472, 2.43333, 1, 3.78526, 173.219, -55.7223, 2.46667, 1, 3.80928, 172.693, -56.9302, 2.5, 1, 3.87198, 172.238, -58.879, 2.53333, 1, 4.10201, 171.817, -61.1277, 2.6, 1, 4.95023, 170.95, -67.1326, 2.63333, 1, 5.52624, 170.433, -70.1783, 2.7, 1, 6.63795, 169.29, -76.4132, 2.73333, 1, 6.8252, 168.997, -79.7169, 2.76667, 1, 6.83019, 168.931, -83.1639, 2.8, 1, 6.91832, 169.108, -86.6974, 2.83333, 1, 7.20364, 169.268, -89.5313, 2.86667, 1, 7.72897, 169.548, -91.5688, 2.9, 1, 8.4822, 169.934, -92.6103, 2.93333, 1, 9.40574, 170.42, -92.4396, 2.96667, 1, 10.4397, 170.939, -91.5479, 3, 1, 11.5913, 171.474, -89.9122, 3.03333, 1, 12.7169, 171.989, -87.8068, 3.06667, 1, 13.6599, 172.514, -86.0193, 3.1, 1, 14.4371, 173.065, -84.505, 3.13333, 1, 15.1686, 173.341, -83.2388, 3.16667, 1, 15.7147, 173.43, -82.5689, 3.2, 1, 16.1069, 173.377, -82.3519, 3.23333, 1, 16.2997, 173.178, -82.4834, 3.26667, 1, 16.2522, 172.882, -82.9802, 3.3, 1, 16.0896, 172.498, -83.6104, 3.33333, 1, 15.8586, 172.059, -84.2435, 3.36667, 1, 15.5287, 171.614, -84.8423, 3.4, 1, 15.1708, 171.174, -85.3236, 3.43333, 1, 14.832, 170.768, -85.692, 3.46667, 1, 14.5255, 170.574, -85.9598, 3.5, 1, 14.2838, 170.451, -86.1232, 3.53333, 1, 14.1201, 170.384, -86.1951, 3.56667, 1, 14.0265, 170.36, -86.1769, 3.6, 1, 14.0077, 170.367, -86.0572, 3.63333, 1, 14.0663, 170.444, -85.8701, 3.66667, 1, 14.1821, 170.677, -85.6697, 3.7, 1, 14.3353, 171.016, -85.4942, 3.73333, 1, 14.4307, 171.201, -85.3169)
+tracks/0/keys = PackedFloat32Array()
 tracks/1/type = "rotation_3d"
 tracks/1/imported = true
 tracks/1/enabled = true
@@ -5544,6 +5545,9 @@ _data = {
 "Walk": SubResource("Animation_gm678")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xpc7w"]
+animation = &"Attack"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rd4mo"]
 animation = &"Attack"
 
@@ -5552,9 +5556,6 @@ animation = &"Chase"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uwu7h"]
 animation = &"Dying"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xpc7w"]
-animation = &"HeavyAttack"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qwlhd"]
 animation = &"Idle"
@@ -5582,6 +5583,7 @@ advance_mode = 2
 xfade_time = 0.5
 switch_mode = 2
 advance_mode = 2
+advance_condition = &"walk"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_laeej"]
 xfade_time = 0.2
@@ -5633,13 +5635,13 @@ advance_condition = &"dying"
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_liw36"]
 states/Attack/node = SubResource("AnimationNodeAnimation_rd4mo")
 states/Attack/position = Vector2(564, 61)
+"states/Attack 2/node" = SubResource("AnimationNodeAnimation_xpc7w")
+"states/Attack 2/position" = Vector2(725, 171)
 states/Chase/node = SubResource("AnimationNodeAnimation_i18s0")
 states/Chase/position = Vector2(564, 171)
 states/Dying/node = SubResource("AnimationNodeAnimation_uwu7h")
 states/Dying/position = Vector2(564, 278)
 states/End/position = Vector2(1018, 114)
-states/HeavyAttack/node = SubResource("AnimationNodeAnimation_xpc7w")
-states/HeavyAttack/position = Vector2(725, 171)
 states/Idle/node = SubResource("AnimationNodeAnimation_qwlhd")
 states/Idle/position = Vector2(296, 61)
 states/Rage/node = SubResource("AnimationNodeAnimation_cilxv")
@@ -5647,8 +5649,8 @@ states/Rage/position = Vector2(417, 171)
 states/Start/position = Vector2(195, 61)
 states/Walk/node = SubResource("AnimationNodeAnimation_afj0b")
 states/Walk/position = Vector2(417, 61)
-transitions = ["Walk", "Attack", SubResource("AnimationNodeStateMachineTransition_8qh10"), "Attack", "Walk", SubResource("AnimationNodeStateMachineTransition_ywxts"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_mim8e"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_8bcbo"), "Idle", "Rage", SubResource("AnimationNodeStateMachineTransition_laeej"), "Walk", "Rage", SubResource("AnimationNodeStateMachineTransition_p3htu"), "Attack", "Rage", SubResource("AnimationNodeStateMachineTransition_taenp"), "Rage", "Chase", SubResource("AnimationNodeStateMachineTransition_cnwnr"), "Chase", "HeavyAttack", SubResource("AnimationNodeStateMachineTransition_g12jn"), "HeavyAttack", "Chase", SubResource("AnimationNodeStateMachineTransition_3h3qu"), "Rage", "Dying", SubResource("AnimationNodeStateMachineTransition_77vmm"), "Chase", "Dying", SubResource("AnimationNodeStateMachineTransition_1u2g7"), "HeavyAttack", "Dying", SubResource("AnimationNodeStateMachineTransition_gsa7l")]
-graph_offset = Vector2(-137, 15)
+transitions = ["Walk", "Attack", SubResource("AnimationNodeStateMachineTransition_8qh10"), "Attack", "Walk", SubResource("AnimationNodeStateMachineTransition_ywxts"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_mim8e"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_8bcbo"), "Idle", "Rage", SubResource("AnimationNodeStateMachineTransition_laeej"), "Walk", "Rage", SubResource("AnimationNodeStateMachineTransition_p3htu"), "Attack", "Rage", SubResource("AnimationNodeStateMachineTransition_taenp"), "Rage", "Chase", SubResource("AnimationNodeStateMachineTransition_cnwnr"), "Chase", "Attack 2", SubResource("AnimationNodeStateMachineTransition_g12jn"), "Attack 2", "Chase", SubResource("AnimationNodeStateMachineTransition_3h3qu"), "Rage", "Dying", SubResource("AnimationNodeStateMachineTransition_77vmm"), "Chase", "Dying", SubResource("AnimationNodeStateMachineTransition_1u2g7"), "Attack 2", "Dying", SubResource("AnimationNodeStateMachineTransition_gsa7l")]
+graph_offset = Vector2(-113, -3)
 
 [node name="Wildbane" type="CharacterBody3D"]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)

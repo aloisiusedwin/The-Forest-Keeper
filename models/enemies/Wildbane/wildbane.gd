@@ -14,6 +14,7 @@ const rage_damage = 40.0
 
 @onready var nav_agent = $NavigationAgent3D
 
+var triggered = false
 var state_machine
 var player = null
 @export var player_path : NodePath
@@ -43,12 +44,13 @@ func _process(delta):
 			look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
 	
 	#Action Conditions
-	if rage:
-		anim_tree.set("parameters/conditions/heavyattack", _target_in_range())	
-		anim_tree.set("parameters/conditions/chase", !_target_in_range())
-	else:
-		anim_tree.set("parameters/conditions/attack", _target_in_range())
-		anim_tree.set("parameters/conditions/walk", !_target_in_range())
+	if triggered:
+		if rage:
+			anim_tree.set("parameters/conditions/heavyattack", _target_in_range())	
+			anim_tree.set("parameters/conditions/chase", !_target_in_range())
+		else:
+			anim_tree.set("parameters/conditions/attack", _target_in_range())
+			anim_tree.set("parameters/conditions/walk", !_target_in_range())
 	
 	anim_tree.get("parameters/playback")
 	
@@ -68,18 +70,30 @@ func _hit_finished():
 	if !rage:
 		if global_position.distance_to(player.global_position) < attack_range + 1.0:
 			var dir = global_position.direction_to(player.global_position)
-			player.hit(dir, damage, 12.0)
+			player.hit(dir, damage, 10.0)
 	elif rage:
 		if global_position.distance_to(player.global_position) < rage_attack_range + 1.0:
 			var dir = global_position.direction_to(player.global_position)
 			player.hit(dir, rage_damage, 15.0)
 
+signal defeated
+
 func _on_area_3d_body_part_hit(dam):
 	health -= dam
 	print(health)
+	if !triggered:
+		anim_tree.set("parameters/conditions/walk", true)
 	if health <= 1000:
 		anim_tree.set("parameters/conditions/rage", true)
 		rage = true
 	if health <= 0:
 		anim_tree.set("parameters/root_motion_track", Vector3.ZERO)
 		anim_tree.set("parameters/conditions/dying", true)
+		emit_signal("defeated")
+
+
+func _player_entered(body: Node3D) -> void:
+	print("treiggeredfasdfa")
+	if !triggered:
+		anim_tree.set("parameters/conditions/walk", true)
+		triggered = true
