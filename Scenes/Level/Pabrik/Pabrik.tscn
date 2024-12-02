@@ -1,4 +1,4 @@
-[gd_scene load_steps=941 format=4 uid="uid://bjyu5mwi0vdxq"]
+[gd_scene load_steps=943 format=4 uid="uid://bjyu5mwi0vdxq"]
 
 [ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller/fps_controller.tscn" id="1_jbkyf"]
 [ext_resource type="PackedScene" uid="uid://t6jk3mwfy7m2" path="res://models/npc/lee/lee.tscn" id="1_rj3nw"]
@@ -75,6 +75,8 @@
 [ext_resource type="Script" path="res://Scenes/Inventory/Flashlight/flashlight.gd" id="73_7ax1u"]
 [ext_resource type="Script" path="res://Scripts/UI/interactable.gd" id="74_lmeu3"]
 [ext_resource type="AudioStream" uid="uid://haf3yd48cmqg" path="res://Audios/TestAudio/Item Pick up (Counter Strike Source) - Sound Effect for editing.wav" id="75_o1l4k"]
+[ext_resource type="PackedScene" uid="uid://bt7qtjyxjh3c3" path="res://models/animal/harimauu.tscn" id="76_v82p5"]
+[ext_resource type="PackedScene" uid="uid://b8velqbyegqg0" path="res://models/animal/macan.tscn" id="77_inb88"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cuxre"]
 sky_top_color = Color(0.106141, 3.9034e-05, 0.388619, 1)
@@ -9970,6 +9972,168 @@ libraries = {
 [node name="FlashlightSfx" type="AudioStreamPlayer3D" parent="Flashlight"]
 transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0, 0, 0)
 stream = ExtResource("75_o1l4k")
+
+[node name="harimau" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(36.3413, 0, -34.3411, 0, 50, 0, 34.3411, 0, 36.3413, 11.7894, -43.9267, -120.675)
+
+[node name="macan" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.309332, 0, -0.950954, 0, 1, 0, 0.950954, 0, 0.309332, 15.9809, -44.2116, -135.38)
+
+[node name="harimau2" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-4.20302, 0, -49.823, 0, 50, 0, 49.823, 0, -4.20302, 15.7556, -43.9267, -118.199)
+
+[node name="harimau3" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(19.7188, 0, -45.9475, 0, 50, 0, 45.9475, 0, 19.7188, 15.7556, -43.9267, -121.151)
+
+[node name="harimau4" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-42.4739, 0, -26.3812, 0, 50, 0, 26.3812, 0, -42.4739, 20.2969, -43.9267, -132.012)
+
+[node name="macan2" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.309332, 0, -0.950954, 0, 1, 0, 0.950954, 0, 0.309332, 12.1033, -44.2116, -132.382)
+
+[node name="macan3" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(-0.102584, 0, -0.994724, 0, 1, 0, 0.994724, 0, -0.102584, 12.1033, -44.2116, -137.353)
+
+[node name="macan4" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(-0.525323, 0, -0.850903, 0, 1, 0, 0.850903, 0, -0.525323, 12.1033, -44.2116, -117.395)
+
+[node name="macan5" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.31202, 0, -0.950076, 0, 1, 0, 0.950076, 0, 0.31202, 12.1033, -44.2116, -123.36)
+
+[node name="harimau5" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(36.3413, 0, -34.3411, 0, 50, 0, 34.3411, 0, 36.3413, 11.7894, -43.9267, -105.7)
+
+[node name="macan6" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(-0.525323, 0, -0.850903, 0, 1, 0, 0.850903, 0, -0.525323, 12.1033, -44.2116, -101.653)
+
+[node name="macan7" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.117017, 0, -0.99313, 0, 1, 0, 0.99313, 0, 0.117017, 18.9444, -44.2116, -107.618)
+
+[node name="harimau6" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-16.1967, 0, -47.304, 0, 50, 0, 47.304, 0, -16.1967, 11.7894, -43.9267, -108.327)
+
+[node name="harimau7" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-16.1967, 0, -47.304, 0, 50, 0, 47.304, 0, -16.1967, 14.3528, -43.9267, -104.317)
+
+[node name="macan8" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(-0.525323, 0, -0.850903, 0, 1, 0, 0.850903, 0, -0.525323, 18.1531, -44.2116, -101.653)
+
+[node name="harimau8" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(36.3413, 0, -34.3411, 0, 50, 0, 34.3411, 0, 36.3413, 11.7894, -43.9267, -149.618)
+
+[node name="harimau9" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-4.20302, 0, -49.823, 0, 50, 0, 49.823, 0, -4.20302, 15.7556, -43.9267, -147.142)
+
+[node name="harimau10" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(19.7188, 0, -45.9475, 0, 50, 0, 45.9475, 0, 19.7188, 15.7556, -43.9267, -150.094)
+
+[node name="macan9" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(-0.525323, 0, -0.850903, 0, 1, 0, 0.850903, 0, -0.525323, 12.1033, -44.2116, -146.338)
+
+[node name="macan10" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.31202, 0, -0.950076, 0, 1, 0, 0.950076, 0, 0.31202, 12.1033, -44.2116, -152.303)
+
+[node name="harimau11" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-46.5715, 0, 18.1959, 0, 50, 0, -18.1959, 0, -46.5715, -25.9529, -43.9267, -93.6221)
+
+[node name="macan11" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.167664, 0, 0.985844, 0, 1, 0, -0.985844, 0, 0.167664, -27.7624, -44.2116, -97.2557)
+
+[node name="macan12" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(-0.481111, 0, 0.87666, 0, 1, 0, -0.87666, 0, -0.481111, -31.8655, -44.2116, -89.1596)
+
+[node name="harimau12" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-2.73618, 0, 49.9251, 0, 50, 0, -49.9251, 0, -2.73618, -24.967, -43.9267, -91.1865)
+
+[node name="harimau13" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-2.73618, 0, 49.9251, 0, 50, 0, -49.9251, 0, -2.73618, -28.8478, -43.9267, -93.9418)
+
+[node name="macan13" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.167664, 0, 0.985844, 0, 1, 0, -0.985844, 0, 0.167664, -33.3702, -44.2116, -94.9857)
+
+[node name="harimau14" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-43.7314, 0, 24.2397, 0, 50, 0, -24.2397, 0, -43.7314, -24.8987, -43.9267, -122.619)
+
+[node name="macan14" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.297541, 0, 0.954709, 0, 1, 0, -0.954709, 0, 0.297541, -26.2077, -44.2116, -126.462)
+
+[node name="macan15" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(-0.359997, 0, 0.932954, 0, 1, 0, -0.932954, 0, -0.359997, -31.3532, -44.2116, -118.985)
+
+[node name="harimau15" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(3.94122, 0, 49.8444, 0, 50, 0, -49.8444, 0, 3.94122, -24.2461, -43.9267, -120.074)
+
+[node name="harimau16" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(3.94122, 0, 49.8444, 0, 50, 0, -49.8444, 0, 3.94122, -27.7251, -43.9267, -123.322)
+
+[node name="macan16" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.297541, 0, 0.954709, 0, 1, 0, -0.954709, 0, 0.297541, -32.068, -44.2116, -124.959)
+
+[node name="harimau17" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-44.4872, 0, 22.8231, 0, 50, 0, -22.8231, 0, -44.4872, -24.7698, -43.9267, -138.027)
+
+[node name="macan17" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.266734, 0, 0.96377, 0, 1, 0, -0.96377, 0, 0.266734, -26.2016, -44.2116, -141.826)
+
+[node name="macan18" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(-0.389767, 0, 0.920914, 0, 1, 0, -0.920914, 0, -0.389767, -31.1043, -44.2116, -134.187)
+
+[node name="harimau18" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(2.33876, 0, 49.9453, 0, 50, 0, -49.9453, 0, 2.33876, -24.0358, -43.9267, -135.504)
+
+[node name="harimau19" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(2.33876, 0, 49.9453, 0, 50, 0, -49.9453, 0, 2.33876, -27.6173, -43.9267, -138.639)
+
+[node name="macan19" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.266734, 0, 0.96377, 0, 1, 0, -0.96377, 0, 0.266734, -32.0106, -44.2116, -140.136)
+
+[node name="harimau20" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(36.3413, 0, -34.3411, 0, 50, 0, 34.3411, 0, 36.3413, 11.7894, -43.9267, -165.206)
+
+[node name="harimau21" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-4.20302, 0, -49.823, 0, 50, 0, 49.823, 0, -4.20302, 15.7556, -43.9267, -162.73)
+
+[node name="harimau22" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(19.7188, 0, -45.9475, 0, 50, 0, 45.9475, 0, 19.7188, 15.7556, -43.9267, -165.682)
+
+[node name="macan20" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(-0.525323, 0, -0.850903, 0, 1, 0, 0.850903, 0, -0.525323, 12.1033, -44.2116, -161.926)
+
+[node name="macan21" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.31202, 0, -0.950076, 0, 1, 0, 0.950076, 0, 0.31202, 12.1033, -44.2116, -167.891)
+
+[node name="harimau23" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-25.9499, 0, 42.7388, 0, 50, 0, -42.7388, 0, -25.9499, -28.8008, -43.9267, -151.996)
+
+[node name="harimau24" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(17.2469, 0, 46.9313, 0, 50, 0, -46.9313, 0, 17.2469, -31.9698, -43.9267, -155.434)
+
+[node name="harimau25" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-6.84716, 0, 49.5289, 0, 50, 0, -49.5289, 0, -6.84716, -32.7515, -43.9267, -152.587)
+
+[node name="macan22" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.731901, 0, 0.681411, 0, 1, 0, -0.681411, 0, 0.731901, -28.2348, -44.2116, -155.242)
+
+[node name="macan23" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(-0.0492856, 0, 0.998785, 0, 1, 0, -0.998785, 0, -0.0492856, -29.8144, -44.2116, -149.49)
+
+[node name="harimau26" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-47.2651, 0, 16.3098, 0, 50, 0, -16.3098, 0, -47.2651, -24.9213, -43.9267, -108.243)
+
+[node name="macan24" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.127913, 0, 0.991785, 0, 1, 0, -0.991785, 0, 0.127913, -26.8753, -44.2116, -111.801)
+
+[node name="macan25" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(-0.51595, 0, 0.856619, 0, 1, 0, -0.856619, 0, -0.51595, -30.6498, -44.2116, -103.546)
+
+[node name="harimau27" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-4.74017, 0, 49.7748, 0, 50, 0, -49.7748, 0, -4.74017, -23.8383, -43.9267, -105.849)
+
+[node name="harimau28" parent="." instance=ExtResource("76_v82p5")]
+transform = Transform3D(-4.74017, 0, 49.7748, 0, 50, 0, -49.7748, 0, -4.74017, -27.8267, -43.9267, -108.446)
+
+[node name="macan26" parent="." instance=ExtResource("77_inb88")]
+transform = Transform3D(0.127913, 0, 0.991785, 0, 1, 0, -0.991785, 0, 0.127913, -32.3874, -44.2116, -109.307)
 
 [connection signal="trigger" from="Maps/NavigationRegion3D/QodotMap/entity_3_button" to="Maps/NavigationRegion3D/QodotMap/entity_2_mover" method="use"]
 [connection signal="trigger" from="Maps/NavigationRegion3D/QodotMap/entity_5_button" to="Maps/NavigationRegion3D/QodotMap/entity_4_mover" method="use"]
