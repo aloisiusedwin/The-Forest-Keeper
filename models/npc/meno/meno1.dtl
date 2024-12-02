@@ -1,13 +1,13 @@
 [signal arg="started"]
-Stop right there. What are you doing in this cursed place?
+Akhirnya kau sampai juga, aku sudah menunggumu
 label back1
-- I’m here to rescue the forest animals.
-	The animals? Hmph. At least you’re not here to strip this place of its last remnants like the others. But do you have any idea what you’ve walked into? This factory is a graveyard. Those who enter often don’t come back.
-	- I can handle myself. I need to find the animals.
+- Are you Meno?
+	Yes, you’re right. I’m Meno—the one who left those notes for you. I always believed you could make it here. They took them beneath the lake. I’ve prepared notes to guide you on your way there.
+	- Alright, thank you. I’ll head there right away.
 		Bold words. But bravery alone won’t get you far here. The animals that were taken won’t be easy to reach. This place has traps, locked doors, and dangers you can’t predict. I hope you'll make it back.
-	- What do you mean, a graveyard?
-		This factory doesn’t just break machines—it breaks lives. The workers, the animals, the forest itself... all were sacrificed to its greed. The humans who ran it are gone, but their cruelty lingers. If you’re here to help the animals, you’ll have to face the remnants of what they left behind.
-- Who are you, and why are you stopping me?
-	My name is Meno. Let’s just say I know this forest—and this factory—better than most. I’m stopping you because wandering aimlessly in a place like this gets people killed. So, again, what are you doing here?
+	- Very well. Is there anything else you’d like to share before I go?
+		You’ll need a weapon—they’re incredibly strong. There’s a prisoner named Lee who needs your help. Please assist him; in return, he’ll give you something that will aid you on your journey.
+- I can guess, but who are you really, and why are you helping me?
+	I am Meno, a hermit who has lived in the forest for decades. Why am I helping you? Because I see a strong resolve within you, a fire that refuses to be extinguished. Fight them, reclaim what you hold dear, and restore the balance that this place so desperately needs.
 	jump meno1/back1
 [signal arg="ended"]
