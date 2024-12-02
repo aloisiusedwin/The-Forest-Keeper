@@ -25,6 +25,7 @@ var red_alpha
 @onready var hit_rect = $PlayerHUD/HitUI/ColorRect
 
 #movement
+@onready var footsteps = $PlayerAudios/FootstepSfx
 @export var stop_input : bool = false
 @export var TOGGLE_CROUCH : bool = true
 @onready var CROUCH_SHAPECAST : ShapeCast3D = %ShapeCast3D
@@ -258,15 +259,15 @@ signal video_finished
 
 func play_cutscene():
 	pass
-	var scene_name = get_tree().current_scene.name
-	if scene_name == "Forest":
-		VIDEOPLAYER.stream = preload("res://Video/level11.ogv")
-	elif scene_name == "Pabrik":
-		VIDEOPLAYER.stream = preload("res://Video/level 3.ogv")
-	
-	if VIDEOPLAYER.stream:
-		stop_input = true
-		VIDEOPLAYER.play()
+	#var scene_name = get_tree().current_scene.name
+	#if scene_name == "Forest":
+		#VIDEOPLAYER.stream = preload("res://Video/level11.ogv")
+	#elif scene_name == "Pabrik":
+		#VIDEOPLAYER.stream = preload("res://Video/level 3.ogv")
+	#
+	#if VIDEOPLAYER.stream:
+		#stop_input = true
+		#VIDEOPLAYER.play()
 
 func _on_video_finished() -> void:
 	cutscenecanvas.visible = false
@@ -274,3 +275,7 @@ func _on_video_finished() -> void:
 
 func _on_wildbane_defeated() -> void:
 	wildbane = true
+
+@onready var war_bgm = $AudioStreamPlayer
+func _player_entered(body: Node3D) -> void:
+	war_bgm.play()

@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @onready var anim_tree = $AnimationTree
+@onready var audio_player = $AudioStreamPlayer
 
 var health = 2000
 const speed = 3.5
@@ -8,7 +9,7 @@ const attack_range = 2.5
 const damage = 30.0
 
 var rage : bool = false
-const rage_speed = 5.0
+const rage_speed = 5.5
 const rage_attack_range = 3.5
 const rage_damage = 40.0
 
@@ -93,7 +94,6 @@ func _on_area_3d_body_part_hit(dam):
 
 
 func _player_entered(body: Node3D) -> void:
-	print("treiggeredfasdfa")
 	if !triggered:
 		anim_tree.set("parameters/conditions/walk", true)
 		triggered = true

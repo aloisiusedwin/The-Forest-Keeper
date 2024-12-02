@@ -3237,7 +3237,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.5852, -9.78489, -37.9795)
 navigation_mesh = SubResource("NavigationMesh_n73ut")
 
 [node name="Player" parent="Maps/NavigationRegion3D" instance=ExtResource("1_jbkyf")]
-transform = Transform3D(0.997942, 0, 0.0641144, 0, 1, 0, -0.0641144, 0, 0.997942, -2.27896, -4.65654, 58.4582)
+transform = Transform3D(-0.999068, 0, -0.0431488, 0, 1, 0, 0.0431488, 0, -0.999068, -2.27896, -43.2911, -182.095)
 
 [node name="QodotMap" type="Node3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.96163, 0)
@@ -9778,7 +9778,7 @@ script = ExtResource("71_pj686")
 shape = SubResource("BoxShape3D_mwifq")
 
 [node name="Wildbane" parent="." instance=ExtResource("72_svjfn")]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -7.02882, -44.2116, -141.677)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -7.02882, -44.2116, -141.677)
 player_path = NodePath("../Maps/NavigationRegion3D/Player")
 
 [node name="Area3D2" type="Area3D" parent="."]
@@ -9854,4 +9854,5 @@ transform = Transform3D(-0.504814, 0, -0.863228, 0, 1, 0, 0.863228, 0, -0.504814
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
 [connection signal="defeated" from="Wildbane" to="Maps/NavigationRegion3D/Player" method="_on_wildbane_defeated"]
+[connection signal="body_entered" from="Area3D2" to="Maps/NavigationRegion3D/Player" method="_player_entered"]
 [connection signal="body_entered" from="Area3D2" to="Wildbane" method="_player_entered"]

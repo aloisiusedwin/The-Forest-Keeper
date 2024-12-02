@@ -8,6 +8,7 @@ extends Control
 @onready var startLevel = preload("res://Scenes/Level/Forest/forest.tscn") as PackedScene
 @onready var marginContainer = $Background/MarginContainer
 @onready var subviewport = $Background/SubViewportContainer
+@onready var bgm = $AudioStreamPlayer
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

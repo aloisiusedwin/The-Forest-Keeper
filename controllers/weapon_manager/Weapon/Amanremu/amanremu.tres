@@ -2,16 +2,16 @@
 
 [ext_resource type="AudioStream" uid="uid://ve30pm46teic" path="res://controllers/weapon_manager/Weapon/Pistol/sfx/equip.wav" id="1_0gnih"]
 [ext_resource type="Script" path="res://controllers/weapon_manager/melee_weapon_resource.gd" id="1_y1vq2"]
-[ext_resource type="AudioStream" uid="uid://by1walkfehk5k" path="res://controllers/weapon_manager/Weapon/Amanremu/sfx/cc0-swoosh.wav" id="2_1bgde"]
 [ext_resource type="Texture2D" uid="uid://dda08bk6kw2sl" path="res://controllers/weapon_manager/Weapon/Amanremu/Amanremu.png" id="2_jqedy"]
 [ext_resource type="PackedScene" uid="uid://ddwh7n0ppw6gg" path="res://controllers/weapon_manager/Weapon/Amanremu/amanremu viewmodel.tscn" id="2_xmnwj"]
+[ext_resource type="AudioStream" uid="uid://c24ercbpiulef" path="res://controllers/weapon_manager/Weapon/Amanremu/sfx/swing.WAV" id="3_0uet8"]
 [ext_resource type="PackedScene" uid="uid://bh3w7sw5pao5v" path="res://controllers/weapon_manager/Weapon/Amanremu/amanremu worldmodel.tscn" id="3_qtjjd"]
-[ext_resource type="AudioStream" uid="uid://cxghowxfr7t3j" path="res://controllers/weapon_manager/Weapon/Amanremu/sfx/knifehit.wav" id="4_eev7p"]
+[ext_resource type="AudioStream" uid="uid://cld18b7ji7hft" path="res://controllers/weapon_manager/Weapon/Amanremu/sfx/hit.WAV" id="5_evsqp"]
 
 [resource]
 script = ExtResource("1_y1vq2")
-max_hit_dist = 1
-miss_sound = ExtResource("2_1bgde")
+max_hit_dist = 1.5
+miss_sound = ExtResource("3_0uet8")
 name = "Amanremu"
 icon = ExtResource("2_jqedy")
 slot = 3
@@ -29,7 +29,7 @@ view_rack_anim = ""
 view_shoot_anim = "Shoot"
 view_reload_anim = ""
 view_idle_anim = "Idle"
-shoot_sound = ExtResource("4_eev7p")
+shoot_sound = ExtResource("5_evsqp")
 equip_sound = ExtResource("1_0gnih")
 damage = 20
 current_ammo = 1

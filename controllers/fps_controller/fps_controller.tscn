@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://4cbpynvikrmh"]
+[gd_scene load_steps=40 format=3 uid="uid://4cbpynvikrmh"]
 
 [ext_resource type="Script" path="res://controllers/fps_controller/fps_controller.gd" id="1_0fn47"]
 [ext_resource type="AudioStream" uid="uid://bynj0q5svp4rj" path="res://Audios/Player/Flashlight/Click_1.mp3" id="2_sewi0"]
@@ -23,8 +23,10 @@
 [ext_resource type="Script" path="res://Scripts/movement/falling_player_state.gd" id="12_vs60y"]
 [ext_resource type="Script" path="res://Scripts/WeaponViewport.gd" id="14_mjbge"]
 [ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
+[ext_resource type="Resource" uid="uid://dr4khi2j5o4j2" path="res://controllers/weapon_manager/Weapon/Pistol/pistol.tres" id="24_utbou"]
 [ext_resource type="PackedScene" uid="uid://hcmvusb6x1n1" path="res://Scenes/Pause Menu/pause_menu.tscn" id="27_yp45h"]
 [ext_resource type="AudioStream" uid="uid://6wfyma8xt2a2" path="res://Audios/endmusic.WAV" id="29_r1boi"]
+[ext_resource type="AudioStream" uid="uid://3rskckh327dc" path="res://Scenes/Level/Pabrik/bgm/perangin.WAV" id="30_ctqcy"]
 [ext_resource type="Script" path="res://Audios/player_audios.gd" id="30_f5fwt"]
 [ext_resource type="AudioStream" uid="uid://tpf3n7p5bmqv" path="res://Audios/Player/Footsteps/Tile/Footsteps_Tile_Walk_01.wav" id="31_ovj2n"]
 [ext_resource type="PackedScene" uid="uid://dmlq5yqj6gle2" path="res://controllers/hud/player_hud.tscn" id="32_q0axe"]
@@ -474,6 +476,7 @@ MAIN_CAMERA = NodePath("../../../Head/Camera3D")
 [node name="WorldModel" type="Node3D" parent="."]
 
 [node name="WeaponManager" parent="." node_paths=PackedStringArray("player", "bullet_raycast", "view_model_container", "world_model_container") instance=ExtResource("3_ofn50")]
+current_weapon = ExtResource("24_utbou")
 player = NodePath("..")
 bullet_raycast = NodePath("../Head/Camera3D/RayAim")
 view_model_container = NodePath("../Weapon/SubViewport/Camera3D/ViewModel")
@@ -517,6 +520,11 @@ offset_bottom = 40.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Cutscene"]
 stream = ExtResource("29_r1boi")
 volume_db = -10.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_ctqcy")
+bus = &"Music"
+playback_type = 1
 
 [connection signal="video_finished" from="." to="." method="_on_video_finished"]
 [connection signal="found" from="Head/Camera3D/RayCast3D" to="WeaponManager" method="_hand_found"]

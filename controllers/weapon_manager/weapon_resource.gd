@@ -103,6 +103,7 @@ func shot():
 			BulletDecalPool.spawn_bullet_decal(point, normal, object, raycast.global_basis)
 		
 		if raycast.get_collider().is_in_group("enemy"):
+				weapon_manager.play_sound(equip_sound)
 				raycast.get_collider().hit(1)
 	
 	weapon_manager.show_muzzle_flash()

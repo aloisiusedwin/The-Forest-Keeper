@@ -279,9 +279,11 @@ script = ExtResource("17_qon3n")
 
 [node name="TorchClickSfx" type="AudioStreamPlayer3D" parent="PlayerAudios"]
 volume_db = -23.0
+bus = &"Sfx"
 
 [node name="FootstepSfx" type="AudioStreamPlayer3D" parent="PlayerAudios"]
 stream = ExtResource("8_cg837")
+bus = &"Sfx"
 attenuation_filter_db = -65.0
 
 [node name="GroundCheck" type="RayCast3D" parent="PlayerAudios"]

@@ -2329,7 +2329,7 @@ shadow_enabled = true
 navigation_mesh = SubResource("NavigationMesh_42rap")
 
 [node name="Player" parent="NavigationRegion3D" instance=ExtResource("1_pwwow")]
-transform = Transform3D(-0.646177, 0, 0.763187, 0, 1, 0, -0.763187, 0, -0.646177, 2.85346, 1.52839, 15.6962)
+transform = Transform3D(-0.646177, 0, 0.763187, 0, 1, 0, -0.763187, 0, -0.646177, 23.075, -5.98735, -11.8)
 collision_layer = 32771
 collision_mask = 32773
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://d3kataebbwv4l"]
+[gd_scene load_steps=11 format=3 uid="uid://d3kataebbwv4l"]
 
 [ext_resource type="Script" path="res://Scripts/Main Menu/main_menu.gd" id="1_eikdk"]
 [ext_resource type="Script" path="res://Scripts/global.gd" id="2_60xj0"]
 [ext_resource type="PackedScene" uid="uid://bbt5vpvyc2uh4" path="res://Scenes/Main Menu/options.tscn" id="2_ba35u"]
 [ext_resource type="PackedScene" uid="uid://b8xcddgpq70v2" path="res://Scenes/Main Menu/MainMenuBackground.tscn" id="3_0f5nt"]
 [ext_resource type="FontFile" uid="uid://c07g0ofxcm0hj" path="res://Scenes/Main Menu/Melted Monster.ttf" id="3_17sxt"]
+[ext_resource type="AudioStream" uid="uid://b3hap8vtufiwo" path="res://Scenes/Main Menu/mainmenu_bgm.WAV" id="6_2obcw"]
 
 [sub_resource type="FontVariation" id="FontVariation_kogrt"]
 base_font = ExtResource("3_17sxt")
@@ -123,4 +124,7 @@ visible = false
 layout_mode = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_2obcw")
 autoplay = true
+bus = &"Music"
+playback_type = 1

@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 6.5
+const SPEED = 6.0
 const OCC_RAY_TARGET_Y_OFFSET = 0.5
 
 @export var target_player : CharacterBody3D
@@ -41,7 +41,7 @@ var caught = false
 
 func _physics_process(_delta):
 	if !caught:
-		if global_position.distance_to(target_player.global_position) < 2:
+		if global_position.distance_to(target_player.global_position) < 1.8:
 			caught = true
 			emit_signal("player_caught")
 	
