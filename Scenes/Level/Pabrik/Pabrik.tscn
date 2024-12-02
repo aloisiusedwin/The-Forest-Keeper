@@ -3209,7 +3209,7 @@ size = Vector3(15.865, 8.19, 1)
 [node name="Pabrik" type="Node3D"]
 
 [node name="lee" parent="." instance=ExtResource("1_rj3nw")]
-transform = Transform3D(0.956259, 0, 0.292522, 0, 1, 0, -0.292522, 0, 0.956259, 5.79775, -0.47483, -36.8138)
+transform = Transform3D(0.739338, 0, 0.673335, 0, 1, 0, -0.673335, 0, 0.739338, 6.61616, -0.47483, -36.6603)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.208155, -0.611304, -0.763531, 0.767613, -0.381692, 0.514861, -0.60617, -0.693267, 0.389794, 0, 0, 67.2165)
