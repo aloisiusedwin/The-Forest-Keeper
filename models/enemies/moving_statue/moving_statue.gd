@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 12
+const SPEED = 6.5
 const OCC_RAY_TARGET_Y_OFFSET = 0.5
 
 @export var target_player : CharacterBody3D

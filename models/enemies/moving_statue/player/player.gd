@@ -65,8 +65,8 @@ func _physics_process(delta):
 			velocity.y -= gravity * delta
 
 		# Handle jump.
-		if Input.is_action_just_pressed("jump") and is_on_floor():
-			velocity.y = JUMP_VELOCITY
+		#if Input.is_action_just_pressed("jump") and is_on_floor():
+			#velocity.y = JUMP_VELOCITY
 
 		# Get the input direction and handle the movement/deceleration.
 		var input_dir = Input.get_vector("left", "right", "up", "down")
@@ -115,8 +115,6 @@ func _on_escaped_body_entered(body: Node3D) -> void:
 func _change_scene() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Level/Pabrik/Pabrik.tscn")
 	
-
-
 func _on_player_caught() -> void:
 	caught = true
 	cutscenecanvas.visible = true
