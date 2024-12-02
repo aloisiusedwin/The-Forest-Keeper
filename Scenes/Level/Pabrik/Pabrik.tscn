@@ -1,4 +1,4 @@
-[gd_scene load_steps=934 format=4 uid="uid://bjyu5mwi0vdxq"]
+[gd_scene load_steps=941 format=4 uid="uid://bjyu5mwi0vdxq"]
 
 [ext_resource type="PackedScene" uid="uid://4cbpynvikrmh" path="res://controllers/fps_controller/fps_controller.tscn" id="1_jbkyf"]
 [ext_resource type="PackedScene" uid="uid://t6jk3mwfy7m2" path="res://models/npc/lee/lee.tscn" id="1_rj3nw"]
@@ -72,6 +72,9 @@
 [ext_resource type="PackedScene" uid="uid://b6gjvp7snmrsj" path="res://Scenes/Object/hand.tscn" id="68_sxbey"]
 [ext_resource type="Script" path="res://Scenes/Level/Pabrik/onpanel.gd" id="71_pj686"]
 [ext_resource type="PackedScene" uid="uid://c0y658gryqqr0" path="res://models/enemies/Wildbane/wildbane.tscn" id="72_svjfn"]
+[ext_resource type="Script" path="res://Scenes/Inventory/Flashlight/flashlight.gd" id="73_7ax1u"]
+[ext_resource type="Script" path="res://Scripts/UI/interactable.gd" id="74_lmeu3"]
+[ext_resource type="AudioStream" uid="uid://haf3yd48cmqg" path="res://Audios/TestAudio/Item Pick up (Counter Strike Source) - Sound Effect for editing.wav" id="75_o1l4k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cuxre"]
 sky_top_color = Color(0.106141, 3.9034e-05, 0.388619, 1)
@@ -3206,6 +3209,112 @@ size = Vector3(1, 2, 3)
 [sub_resource type="BoxShape3D" id="BoxShape3D_eluw4"]
 size = Vector3(15.865, 8.19, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_80u6b"]
+size = Vector3(0.1, 0.1, 0.6)
+
+[sub_resource type="Animation" id="Animation_l4vu5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D/CollisionShape3D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_0hnyn"]
+resource_name = "pickup"
+length = 0.71
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_audio_play"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_ci_flase"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StaticBody3D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StaticBody3D/CollisionShape3D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1rrwt"]
+_data = {
+"RESET": SubResource("Animation_l4vu5"),
+"pickup": SubResource("Animation_0hnyn")
+}
+
 [node name="Pabrik" type="Node3D"]
 
 [node name="lee" parent="." instance=ExtResource("1_rj3nw")]
@@ -3237,7 +3346,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.5852, -9.78489, -37.9795)
 navigation_mesh = SubResource("NavigationMesh_n73ut")
 
 [node name="Player" parent="Maps/NavigationRegion3D" instance=ExtResource("1_jbkyf")]
-transform = Transform3D(-0.999068, 0, -0.0431488, 0, 1, 0, 0.0431488, 0, -0.999068, -2.27896, -43.2911, -182.095)
+transform = Transform3D(-0.999068, 0, -0.0431488, 0, 1, 0, 0.0431488, 0, -0.999068, -2.63393, -4.86762, 62.8065)
 
 [node name="QodotMap" type="Node3D" parent="Maps/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.96163, 0)
@@ -9832,6 +9941,36 @@ transform = Transform3D(0.965281, 0, -0.261212, 0, 1, 0, 0.261212, 0, 0.965281, 
 [node name="Warden14" parent="." instance=ExtResource("4_bc1qu")]
 transform = Transform3D(-0.504814, 0, -0.863228, 0, 1, 0, 0.863228, 0, -0.504814, -34.1828, 16.5384, -254.857)
 
+[node name="Flashlight" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2614, -5.85666, 18.6289)
+script = ExtResource("73_7ax1u")
+
+[node name="flashy" type="StaticBody3D" parent="Flashlight"]
+script = ExtResource("74_lmeu3")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Flashlight/flashy"]
+transform = Transform3D(0.819152, -0.573576, 2.50718e-08, 0, -4.37114e-08, -1, 0.573576, 0.819152, -3.58063e-08, 0, -0.0534077, -0.286068)
+radius = 0.05
+height = 0.5
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Flashlight/flashy/CSGCylinder3D"]
+transform = Transform3D(0.816035, -0.571394, 0.0871562, -0.0713941, 0.0499908, 0.996195, -0.573576, -0.819152, 5.85292e-08, 0.000876427, -0.233976, 0)
+light_energy = 2.0
+shadow_enabled = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Flashlight/flashy"]
+transform = Transform3D(0.819152, 0, -0.573576, 0, 1, 0, 0.573576, 0, 0.819152, 0, -0.0517437, -0.286785)
+shape = SubResource("BoxShape3D_80u6b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Flashlight"]
+libraries = {
+"": SubResource("AnimationLibrary_1rrwt")
+}
+
+[node name="FlashlightSfx" type="AudioStreamPlayer3D" parent="Flashlight"]
+transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0, 0, 0)
+stream = ExtResource("75_o1l4k")
+
 [connection signal="trigger" from="Maps/NavigationRegion3D/QodotMap/entity_3_button" to="Maps/NavigationRegion3D/QodotMap/entity_2_mover" method="use"]
 [connection signal="trigger" from="Maps/NavigationRegion3D/QodotMap/entity_5_button" to="Maps/NavigationRegion3D/QodotMap/entity_4_mover" method="use"]
 [connection signal="trigger" from="Maps/NavigationRegion3D/QodotMap/entity_7_button" to="Maps/NavigationRegion3D/QodotMap/entity_6_mover" method="use"]
@@ -9856,3 +9995,4 @@ transform = Transform3D(-0.504814, 0, -0.863228, 0, 1, 0, 0.863228, 0, -0.504814
 [connection signal="defeated" from="Wildbane" to="Maps/NavigationRegion3D/Player" method="_on_wildbane_defeated"]
 [connection signal="body_entered" from="Area3D2" to="Maps/NavigationRegion3D/Player" method="_player_entered"]
 [connection signal="body_entered" from="Area3D2" to="Wildbane" method="_player_entered"]
+[connection signal="interacted" from="Flashlight/flashy" to="Flashlight" method="_on_static_body_3d_interacted"]

@@ -258,16 +258,15 @@ signal video_finished
 @onready var cutscenecanvas = $Cutscene
 
 func play_cutscene():
-	pass
-	#var scene_name = get_tree().current_scene.name
-	#if scene_name == "Forest":
-		#VIDEOPLAYER.stream = preload("res://Video/level11.ogv")
-	#elif scene_name == "Pabrik":
-		#VIDEOPLAYER.stream = preload("res://Video/level 3.ogv")
-	#
-	#if VIDEOPLAYER.stream:
-		#stop_input = true
-		#VIDEOPLAYER.play()
+	var scene_name = get_tree().current_scene.name
+	if scene_name == "Forest":
+		VIDEOPLAYER.stream = preload("res://Video/level11.ogv")
+	elif scene_name == "Pabrik":
+		VIDEOPLAYER.stream = preload("res://Video/level 3.ogv")
+	
+	if VIDEOPLAYER.stream:
+		stop_input = true
+		VIDEOPLAYER.play()
 
 func _on_video_finished() -> void:
 	cutscenecanvas.visible = false

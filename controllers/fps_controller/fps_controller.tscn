@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://4cbpynvikrmh"]
+[gd_scene load_steps=39 format=3 uid="uid://4cbpynvikrmh"]
 
 [ext_resource type="Script" path="res://controllers/fps_controller/fps_controller.gd" id="1_0fn47"]
 [ext_resource type="AudioStream" uid="uid://bynj0q5svp4rj" path="res://Audios/Player/Flashlight/Click_1.mp3" id="2_sewi0"]
@@ -23,7 +23,6 @@
 [ext_resource type="Script" path="res://Scripts/movement/falling_player_state.gd" id="12_vs60y"]
 [ext_resource type="Script" path="res://Scripts/WeaponViewport.gd" id="14_mjbge"]
 [ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
-[ext_resource type="Resource" uid="uid://dr4khi2j5o4j2" path="res://controllers/weapon_manager/Weapon/Pistol/pistol.tres" id="24_utbou"]
 [ext_resource type="PackedScene" uid="uid://hcmvusb6x1n1" path="res://Scenes/Pause Menu/pause_menu.tscn" id="27_yp45h"]
 [ext_resource type="AudioStream" uid="uid://6wfyma8xt2a2" path="res://Audios/endmusic.WAV" id="29_r1boi"]
 [ext_resource type="AudioStream" uid="uid://3rskckh327dc" path="res://Scenes/Level/Pabrik/bgm/perangin.WAV" id="30_ctqcy"]
@@ -348,6 +347,7 @@ script = ExtResource("1_0fn47")
 ANIMATIONPLAYER = NodePath("AnimationPlayer")
 VIDEOPLAYER = NodePath("Cutscene/VideoStreamPlayer")
 click_audios = Array[AudioStream]([ExtResource("2_sewi0"), ExtResource("3_qp17n"), ExtResource("4_drpku"), ExtResource("5_wp6yf"), ExtResource("6_66bgf"), ExtResource("7_cbe42"), ExtResource("8_l1bkm"), ExtResource("9_n138e"), ExtResource("10_cxdcp"), ExtResource("11_a0lwp")])
+can_use_torch = false
 endmusic = NodePath("Cutscene/AudioStreamPlayer")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -372,7 +372,7 @@ current = true
 update_mode = 1
 
 [node name="RayCast3D" type="RayCast3D" parent="Head/Camera3D"]
-target_position = Vector3(0, 0, -1.505)
+target_position = Vector3(0, 0, -2)
 script = ExtResource("2_y0lgd")
 
 [node name="Prompt" type="Label" parent="Head/Camera3D/RayCast3D"]
@@ -476,7 +476,6 @@ MAIN_CAMERA = NodePath("../../../Head/Camera3D")
 [node name="WorldModel" type="Node3D" parent="."]
 
 [node name="WeaponManager" parent="." node_paths=PackedStringArray("player", "bullet_raycast", "view_model_container", "world_model_container") instance=ExtResource("3_ofn50")]
-current_weapon = ExtResource("24_utbou")
 player = NodePath("..")
 bullet_raycast = NodePath("../Head/Camera3D/RayAim")
 view_model_container = NodePath("../Weapon/SubViewport/Camera3D/ViewModel")
