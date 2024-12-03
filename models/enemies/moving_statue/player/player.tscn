@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://b3e0nndkdqcu1" path="res://models/map/sidequest.png" id="21_bt4sn"]
 [ext_resource type="AudioStream" uid="uid://da5gk1k3vo3o7" path="res://Audios/jumpscare.WAV" id="25_4rref"]
 [ext_resource type="PackedScene" uid="uid://hcmvusb6x1n1" path="res://Scenes/Pause Menu/pause_menu.tscn" id="26_drlo6"]
-[ext_resource type="VideoStream" path="res://Video/level1_killachieved.ogv" id="26_vhere"]
+[ext_resource type="AudioStream" uid="uid://b63odn2fsp2ln" path="res://Audios/Player/heartbeat.WAV" id="27_f3pnn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bbutj"]
 
@@ -300,12 +300,12 @@ offset_bottom = 40.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Cutscene"]
 stream = ExtResource("25_4rref")
 
-[node name="alternate_path" type="VideoStreamPlayer" parent="Cutscene"]
-offset_right = 40.0
-offset_bottom = 40.0
-stream = ExtResource("26_vhere")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
 
 [node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("26_drlo6")]
+
+[node name="heartbeat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_f3pnn")
+volume_db = -17.0
+stream_paused = true

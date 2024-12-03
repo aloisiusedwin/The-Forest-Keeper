@@ -10,6 +10,7 @@ var _occlusion_check_rays : Array[RayCast3D]
 var is_looked_at = true
 var follow_player = false
 var triggered = false
+var stopping = false
 
 @onready var occlusion_check_rays_parent = $OcclusionCheckRaysParent
 @onready var visible_on_screen_notifier = $VisibleOnScreenNotifier3D
@@ -39,9 +40,13 @@ func _start_following_player():
 signal player_caught
 var caught = false
 
+var distance_to_target = 1
 func _physics_process(_delta):
+	if stopping:
+		ANIMATIONPLAYER.pause()
+	distance_to_target = global_position.distance_to(target_player.global_position)
 	if !caught:
-		if global_position.distance_to(target_player.global_position) < 1.8:
+		if distance_to_target < 1.8:
 			caught = true
 			emit_signal("player_caught")
 	

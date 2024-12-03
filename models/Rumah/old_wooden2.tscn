@@ -7,7 +7,6 @@
 resource_name = "Material"
 cull_mode = 2
 albedo_texture = ExtResource("1_ui6gs")
-roughness = 0.0
 normal_enabled = true
 normal_texture = ExtResource("2_tdw1b")
 

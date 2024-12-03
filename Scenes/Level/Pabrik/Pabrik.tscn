@@ -74,7 +74,7 @@
 [ext_resource type="PackedScene" uid="uid://c0y658gryqqr0" path="res://models/enemies/Wildbane/wildbane.tscn" id="72_svjfn"]
 [ext_resource type="Script" path="res://Scenes/Inventory/Flashlight/flashlight.gd" id="73_7ax1u"]
 [ext_resource type="Script" path="res://Scripts/UI/interactable.gd" id="74_lmeu3"]
-[ext_resource type="AudioStream" uid="uid://haf3yd48cmqg" path="res://Audios/TestAudio/Item Pick up (Counter Strike Source) - Sound Effect for editing.wav" id="75_o1l4k"]
+[ext_resource type="AudioStream" uid="uid://b5wgbsjtdslt" path="res://Audios/TestAudio/pickup.WAV" id="75_puygt"]
 [ext_resource type="PackedScene" uid="uid://bt7qtjyxjh3c3" path="res://models/animal/harimauu.tscn" id="76_v82p5"]
 [ext_resource type="PackedScene" uid="uid://b8velqbyegqg0" path="res://models/animal/macan.tscn" id="77_inb88"]
 
@@ -9971,7 +9971,7 @@ libraries = {
 
 [node name="FlashlightSfx" type="AudioStreamPlayer3D" parent="Flashlight"]
 transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0, 0, 0)
-stream = ExtResource("75_o1l4k")
+stream = ExtResource("75_puygt")
 
 [node name="harimau" parent="." instance=ExtResource("76_v82p5")]
 transform = Transform3D(36.3413, 0, -34.3411, 0, 50, 0, 34.3411, 0, 36.3413, 11.7894, -43.9267, -120.675)

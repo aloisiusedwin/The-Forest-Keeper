@@ -5,6 +5,7 @@ extends Control
 @onready var canvas = $".."
 var time : float = 0.0
 var timer_on : bool = true
+var stop = Engine.time_scale
 
 func _ready():
 	anim.play("RESET")
@@ -29,12 +30,15 @@ func pause():
 	timer_label.visible = true
 
 func escPress():
-	if Input.is_action_just_pressed('pause') and !get_tree().paused:
+	if stop == 0:
+		return
+	elif Input.is_action_just_pressed('pause') and !get_tree().paused:
 		pause()
 	elif Input.is_action_just_pressed('pause') and get_tree().paused:
 		resume()
 	
 func _process(delta):
+	stop = Engine.time_scale
 	escPress()
 
 	if !get_tree().paused:

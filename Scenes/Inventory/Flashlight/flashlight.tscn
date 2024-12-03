@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/Inventory/Flashlight/flashlight.gd" id="1_amjb7"]
 [ext_resource type="Script" path="res://Scripts/UI/interactable.gd" id="2_40o7q"]
-[ext_resource type="AudioStream" uid="uid://haf3yd48cmqg" path="res://Audios/TestAudio/Item Pick up (Counter Strike Source) - Sound Effect for editing.wav" id="4_nvoyo"]
+[ext_resource type="AudioStream" uid="uid://b5wgbsjtdslt" path="res://Audios/TestAudio/pickup.WAV" id="3_e3qyf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_80u6b"]
 size = Vector3(0.1, 0.1, 0.6)
@@ -138,6 +138,6 @@ libraries = {
 
 [node name="FlashlightSfx" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(0.909091, 0, 0, 0, 0.909091, 0, 0, 0, 0.909091, 0, 0, 0)
-stream = ExtResource("4_nvoyo")
+stream = ExtResource("3_e3qyf")
 
 [connection signal="interacted" from="StaticBody3D" to="." method="_on_static_body_3d_interacted"]

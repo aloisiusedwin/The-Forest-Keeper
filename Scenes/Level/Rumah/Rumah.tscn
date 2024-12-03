@@ -35,9 +35,9 @@
 [ext_resource type="Script" path="res://Scripts/locked_door.gd" id="30_bcved"]
 [ext_resource type="Script" path="res://Scripts/UI/interactable.gd" id="31_siptc"]
 [ext_resource type="Script" path="res://Scripts/door_key.gd" id="32_m1oe3"]
-[ext_resource type="AudioStream" uid="uid://haf3yd48cmqg" path="res://Audios/TestAudio/Item Pick up (Counter Strike Source) - Sound Effect for editing.wav" id="33_4yues"]
 [ext_resource type="AudioStream" uid="uid://1edogo7ul6fk" path="res://Audios/TestAudio/Door Open.wav" id="34_l1gh0"]
 [ext_resource type="AudioStream" uid="uid://nko7h0v2up78" path="res://Audios/TestAudio/Door Close.wav" id="35_pyyi2"]
+[ext_resource type="AudioStream" uid="uid://b5wgbsjtdslt" path="res://Audios/TestAudio/pickup.WAV" id="36_2nhj2"]
 [ext_resource type="AudioStream" uid="uid://dmm2jr55ghwd5" path="res://Audios/TestAudio/lock_door_sfx.wav" id="36_meoq8"]
 [ext_resource type="AudioStream" uid="uid://k4csirlffbdd" path="res://Audios/TestAudio/door_unlock_sfx.wav" id="37_y3bo6"]
 [ext_resource type="PackedScene" uid="uid://bs5jrrklph8uc" path="res://models/Rumah/abandoned_sofa.tscn" id="39_4dtgq"]
@@ -3411,7 +3411,9 @@ libraries = {
 }
 
 [node name="PickUpSfx" type="AudioStreamPlayer3D" parent="NavigationRegion3D/BasementDoor/LDoor_Key"]
-stream = ExtResource("33_4yues")
+transform = Transform3D(1.07527, 0, 2.98023e-08, 0, 1.07527, 0, -2.98023e-08, 0, 1.07527, -1.65618, 1.37047, -2.36181)
+stream = ExtResource("36_2nhj2")
+volume_db = -21.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/BasementDoor"]
 libraries = {
@@ -3499,8 +3501,9 @@ libraries = {
 }
 
 [node name="PickUpSfx" type="AudioStreamPlayer3D" parent="NavigationRegion3D/FirstFloorDoor/LDoor_Key"]
-transform = Transform3D(1.07527, 0, -2.98023e-08, 0, 1.07527, 0, 2.98023e-08, 0, 1.07527, 15.0502, -4.10728, -8.68925)
-stream = ExtResource("33_4yues")
+transform = Transform3D(1.07527, 0, 2.98023e-08, 0, 1.07527, 0, -2.98023e-08, 0, 1.07527, 4.68634, -4.58157, -12.5787)
+stream = ExtResource("36_2nhj2")
+volume_db = -21.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/FirstFloorDoor"]
 libraries = {
@@ -3588,7 +3591,9 @@ libraries = {
 }
 
 [node name="PickUpSfx" type="AudioStreamPlayer3D" parent="NavigationRegion3D/SecFloorDoor/LDoor_Key"]
-stream = ExtResource("33_4yues")
+transform = Transform3D(1.07527, 0, -2.98023e-08, 0, 1.07527, 0, 2.98023e-08, 0, 1.07527, 0.279255, -6.94549, 9.24485)
+stream = ExtResource("36_2nhj2")
+volume_db = -21.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/SecFloorDoor"]
 libraries = {
@@ -3682,7 +3687,8 @@ libraries = {
 }
 
 [node name="PickUpSfx" type="AudioStreamPlayer3D" parent="NavigationRegion3D/LockedDoor/LDoor_Key"]
-stream = ExtResource("33_4yues")
+stream = ExtResource("36_2nhj2")
+volume_db = -21.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/LockedDoor"]
 libraries = {

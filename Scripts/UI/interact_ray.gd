@@ -16,6 +16,7 @@ extends RayCast3D
 var showNote = false
 var showMaps = false
 
+
 signal found
 
 # Called when the node enters the scene tree for the first time.

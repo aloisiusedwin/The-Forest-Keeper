@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceabgmwa4fda"
+uid="uid://ck0fyu11udnlp"
 path.s3tc="res://.godot/imported/sci-fi_control_panel_3.png-ba1bab33583e71888a41ab46de5cb4d7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "16bcadceaf81c83b7753f351a3a8921c"
 }
 
 [deps]

@@ -46,9 +46,13 @@ func _hit_finished():
 		var dir = global_position.direction_to(player.global_position)
 		player.hit(dir, damage, 8.0)
 
+signal modar
+var alive = true
 func _on_area_3d_body_part_hit(dam):
 	health -= dam
-	if health <= 0:
+	if health <= 0 and alive:
+		alive = false
+		emit_signal("modar")
 		anim_tree.set("parameters/root_motion_track", Vector3.ZERO)
 		anim_tree.set("parameters/conditions/dying", true)
 		await get_tree().create_timer(4.0).timeout

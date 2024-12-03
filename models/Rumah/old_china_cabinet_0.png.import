@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br1abkwi7ibk6"
+uid="uid://srshmi5n5vvw"
 path.s3tc="res://.godot/imported/old_china_cabinet_0.png-17f225e5fe2f0f19d6bc1cfac4c66798.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "9469036913cae43e0dc840879d5688f1"
 }
 
 [deps]

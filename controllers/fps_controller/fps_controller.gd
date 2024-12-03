@@ -3,10 +3,14 @@ extends CharacterBody3D
 
 @export var ANIMATIONPLAYER : AnimationPlayer
 @export var VIDEOPLAYER : VideoStreamPlayer
+@onready var bgm = $AudioStreamPlayer
 @onready var VIDEOPLAYER_A = $Cutscene/alternate_path
 var video_checked : bool = false
 
 #Health
+@onready var heartbeat = $heartbeat
+const MIN_PITCH: float = 0.9  # Pitch minimum
+const MAX_PITCH: float = 1.25  # Pitch maksimum
 var max_hp = 100
 var current_hp = 100
 @export var regen_delay : float = 7.0
@@ -14,7 +18,7 @@ var current_hp = 100
 @export var damage_taken : float = 0.0
 var last_hit_taken : float = 0.0
 var is_regen_active : bool = false
-var hp_percentage
+var hp_percentage = 1
 var red_alpha
 
 #camera
@@ -43,6 +47,10 @@ const BOB_FREQUENCY = 2.0 #how often footsteps happen
 const BOB_AMP = 0.08 #how far camera go when bobbing
 var t_bob = 0.0
 var disable_headbob: bool = false
+
+#Footstep
+var can_footstep : bool = true
+signal step
 
 #Audio
 signal stepped
@@ -82,6 +90,7 @@ var _current_rotation : float
 
 func _ready():
 	play_cutscene()
+	heartbeat.play()
 	
 	CROUCH_SHAPECAST.add_exception($".")
 	Global.player = self
@@ -95,11 +104,6 @@ func _unhandled_input(event):
 		_tilt_input = -event.relative.y * SENSITIVITY
 
 func _input(event):
-	if event is InputEventMouseButton:
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	elif event.is_action_pressed("pause"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	
 	if can_use_torch:
 		if Input.is_action_just_pressed("toggle_torch") and torch_light.visible == false and torch_timer.is_stopped():
 			torch_light.show()
@@ -136,6 +140,15 @@ func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
 	pos.y = sin(time * BOB_FREQUENCY) * BOB_AMP
 	pos.x = cos(time * BOB_FREQUENCY/2) * BOB_AMP
+	
+	var low_pos = BOB_AMP - 0.05
+	if pos.y > -low_pos:
+		can_footstep = true
+	
+	if pos.y < -low_pos and can_footstep:
+		can_footstep = false
+		emit_signal("step")
+		
 	return pos
 
 func _process(delta: float) -> void:	
@@ -148,8 +161,14 @@ func _process(delta: float) -> void:
 		if !VIDEOPLAYER.is_playing():
 			emit_signal("video_finished")
 			video_checked = true
-		
+			if tormenter_modar:
+				get_tree().change_scene_to_file("res://Scenes/Level/Pabrik/Pabrik.tscn")
+	
+	heartbeat.pitch_scale = lerp(MAX_PITCH, MIN_PITCH, hp_percentage)
+	heartbeat.set_volume_db(linear_to_db(1 - hp_percentage))
+	
 	regen_hp(delta)
+
 
 @export var endmusic : AudioStreamPlayer
 var wildbane = false
@@ -159,7 +178,7 @@ var endgame = false
 func _physics_process(delta: float) -> void:
 	if !endgame:
 		if wildbane and onpanel:
-			war_bgm.stop()
+			bgm.stop()
 			endgame = true
 			cutscenecanvas.visible = true
 			video_checked = false
@@ -228,6 +247,7 @@ func hit(dir, damage, knockback):
 
 func regen_hp(delta):
 	if !is_regen_active:
+		
 		last_hit_taken += delta
 		if last_hit_taken >= regen_delay:
 			is_regen_active = true
@@ -249,6 +269,8 @@ func update_hit_effect():
 	hit_rect.modulate = Color(1.0, 0.2, 0.2, red_alpha)
 
 func die():
+	bgm.stream = preload("res://Audios/Player/died.WAV")
+	bgm.play()
 	var scene_name = get_tree().current_scene.name
 	if scene_name == "Forest":
 		print("ded")
@@ -260,6 +282,7 @@ signal video_finished
 @onready var cutscenecanvas = $Cutscene
 
 func play_cutscene():
+	pass
 	var scene_name = get_tree().current_scene.name
 	if scene_name == "Forest":
 		VIDEOPLAYER.stream = preload("res://Video/level11.ogv")
@@ -277,6 +300,17 @@ func _on_video_finished() -> void:
 func _on_wildbane_defeated() -> void:
 	wildbane = true
 
-@onready var war_bgm = $AudioStreamPlayer
+
 func _player_entered(body: Node3D) -> void:
-	war_bgm.play()
+	bgm.stream = preload("res://Scenes/Level/Pabrik/bgm/perangin.WAV")
+	bgm.play()
+
+var tormenter_modar = false
+func forest_alternate():
+	current_hp = INF
+	tormenter_modar = true
+	cutscenecanvas.visible = true
+	VIDEOPLAYER.stream = preload("res://Video/level1_killachieved.ogv")
+	if VIDEOPLAYER.stream:
+		VIDEOPLAYER.play()
+	video_checked = false

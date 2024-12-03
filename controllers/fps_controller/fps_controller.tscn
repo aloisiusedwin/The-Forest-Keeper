@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://4cbpynvikrmh"]
+[gd_scene load_steps=51 format=3 uid="uid://4cbpynvikrmh"]
 
 [ext_resource type="Script" path="res://controllers/fps_controller/fps_controller.gd" id="1_0fn47"]
 [ext_resource type="AudioStream" uid="uid://bynj0q5svp4rj" path="res://Audios/Player/Flashlight/Click_1.mp3" id="2_sewi0"]
@@ -26,10 +26,21 @@
 [ext_resource type="PackedScene" uid="uid://hcmvusb6x1n1" path="res://Scenes/Pause Menu/pause_menu.tscn" id="27_yp45h"]
 [ext_resource type="VideoStream" path="res://Video/level1_killachieved.ogv" id="29_bdjd2"]
 [ext_resource type="AudioStream" uid="uid://6wfyma8xt2a2" path="res://Audios/endmusic.WAV" id="29_r1boi"]
-[ext_resource type="AudioStream" uid="uid://3rskckh327dc" path="res://Scenes/Level/Pabrik/bgm/perangin.WAV" id="30_ctqcy"]
 [ext_resource type="Script" path="res://Audios/player_audios.gd" id="30_f5fwt"]
+[ext_resource type="AudioStream" uid="uid://b63odn2fsp2ln" path="res://Audios/Player/heartbeat.WAV" id="30_tne07"]
+[ext_resource type="Script" path="res://controllers/fps_controller/footstep_manager.gd" id="31_0hfu0"]
 [ext_resource type="AudioStream" uid="uid://tpf3n7p5bmqv" path="res://Audios/Player/Footsteps/Tile/Footsteps_Tile_Walk_01.wav" id="31_ovj2n"]
+[ext_resource type="AudioStream" uid="uid://c5as7u0q7q736" path="res://Audios/Player/Footsteps/Footsteps/Footsteps_Tile_Walk_01.mp3" id="32_f57dq"]
 [ext_resource type="PackedScene" uid="uid://dmlq5yqj6gle2" path="res://controllers/hud/player_hud.tscn" id="32_q0axe"]
+[ext_resource type="AudioStream" uid="uid://cdd41suemwu3v" path="res://Audios/Player/Footsteps/Footsteps/Footsteps_Tile_Walk_02.mp3" id="33_d4mhy"]
+[ext_resource type="AudioStream" uid="uid://fqkmdde6ws0d" path="res://Audios/Player/Footsteps/Footsteps/Footsteps_Tile_Walk_03.mp3" id="34_137od"]
+[ext_resource type="AudioStream" uid="uid://btns6kninesqi" path="res://Audios/Player/Footsteps/Footsteps/Footsteps_Tile_Walk_04.mp3" id="35_borbf"]
+[ext_resource type="AudioStream" uid="uid://baewasrkofmg1" path="res://Audios/Player/Footsteps/Footsteps/Footsteps_Tile_Walk_05.mp3" id="36_rgnee"]
+[ext_resource type="AudioStream" uid="uid://c0pq7wl5o0p5d" path="res://Audios/Player/Footsteps/Footsteps_dirt/1.mp3" id="40_wwn4m"]
+[ext_resource type="AudioStream" uid="uid://bltvanteths2x" path="res://Audios/Player/Footsteps/Footsteps_dirt/2.mp3" id="41_jmumr"]
+[ext_resource type="AudioStream" uid="uid://gorbu1f6uouc" path="res://Audios/Player/Footsteps/Footsteps_dirt/3.mp3" id="42_pvm1y"]
+[ext_resource type="AudioStream" uid="uid://7pswmjj57jdc" path="res://Audios/Player/Footsteps/Footsteps_dirt/8.mp3" id="47_h67se"]
+[ext_resource type="AudioStream" uid="uid://crsmwoqb2cwbc" path="res://Audios/Player/Footsteps/Footsteps_dirt/11.mp3" id="50_rwau6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o26h5"]
 
@@ -527,9 +538,21 @@ offset_bottom = 40.0
 stream = ExtResource("29_bdjd2")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("30_ctqcy")
 bus = &"Music"
 playback_type = 1
+
+[node name="heartbeat" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_tne07")
+playback_type = 1
+
+[node name="FootstepManager" type="Node3D" parent="." node_paths=PackedStringArray("ground_pos")]
+script = ExtResource("31_0hfu0")
+footstep_sounds = Array[AudioStreamMP3]([ExtResource("32_f57dq"), ExtResource("33_d4mhy"), ExtResource("34_137od"), ExtResource("35_borbf"), ExtResource("36_rgnee")])
+footstep_sounds_dirt = Array[AudioStreamMP3]([ExtResource("40_wwn4m"), ExtResource("41_jmumr"), ExtResource("42_pvm1y"), ExtResource("47_h67se"), ExtResource("50_rwau6")])
+ground_pos = NodePath("GroundPosition")
+
+[node name="GroundPosition" type="Marker3D" parent="FootstepManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [connection signal="video_finished" from="." to="." method="_on_video_finished"]
 [connection signal="found" from="Head/Camera3D/RayCast3D" to="WeaponManager" method="_hand_found"]

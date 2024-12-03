@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq0drw4jb3fta"
+uid="uid://dyg0cj3l1d5xc"
 path.s3tc="res://.godot/imported/pool_table_0.png-1bb12962f90d6111498bcd6bdb67ebb8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "5b497d842956fda24acc809744b7f18f"
 }
 
 [deps]
