@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dfdjg6qbeunvr"]
+[gd_scene load_steps=30 format=3 uid="uid://dfdjg6qbeunvr"]
 
 [ext_resource type="AudioStream" uid="uid://bynj0q5svp4rj" path="res://Audios/Player/Flashlight/Click_1.mp3" id="2_2iq51"]
 [ext_resource type="Script" path="res://Scripts/UI/interact_ray.gd" id="2_7i3d6"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://b3e0nndkdqcu1" path="res://models/map/sidequest.png" id="21_bt4sn"]
 [ext_resource type="AudioStream" uid="uid://da5gk1k3vo3o7" path="res://Audios/jumpscare.WAV" id="25_4rref"]
 [ext_resource type="PackedScene" uid="uid://hcmvusb6x1n1" path="res://Scenes/Pause Menu/pause_menu.tscn" id="26_drlo6"]
+[ext_resource type="VideoStream" path="res://Video/level1_killachieved.ogv" id="26_vhere"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bbutj"]
 
@@ -298,6 +299,11 @@ offset_bottom = 40.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Cutscene"]
 stream = ExtResource("25_4rref")
+
+[node name="alternate_path" type="VideoStreamPlayer" parent="Cutscene"]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("26_vhere")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false

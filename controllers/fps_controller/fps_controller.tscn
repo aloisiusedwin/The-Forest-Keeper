@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://4cbpynvikrmh"]
+[gd_scene load_steps=40 format=3 uid="uid://4cbpynvikrmh"]
 
 [ext_resource type="Script" path="res://controllers/fps_controller/fps_controller.gd" id="1_0fn47"]
 [ext_resource type="AudioStream" uid="uid://bynj0q5svp4rj" path="res://Audios/Player/Flashlight/Click_1.mp3" id="2_sewi0"]
@@ -24,6 +24,7 @@
 [ext_resource type="Script" path="res://Scripts/WeaponViewport.gd" id="14_mjbge"]
 [ext_resource type="Script" path="res://Scripts/WeaponCamera.gd" id="15_c2n5p"]
 [ext_resource type="PackedScene" uid="uid://hcmvusb6x1n1" path="res://Scenes/Pause Menu/pause_menu.tscn" id="27_yp45h"]
+[ext_resource type="VideoStream" path="res://Video/level1_killachieved.ogv" id="29_bdjd2"]
 [ext_resource type="AudioStream" uid="uid://6wfyma8xt2a2" path="res://Audios/endmusic.WAV" id="29_r1boi"]
 [ext_resource type="AudioStream" uid="uid://3rskckh327dc" path="res://Scenes/Level/Pabrik/bgm/perangin.WAV" id="30_ctqcy"]
 [ext_resource type="Script" path="res://Audios/player_audios.gd" id="30_f5fwt"]
@@ -519,6 +520,11 @@ offset_bottom = 40.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Cutscene"]
 stream = ExtResource("29_r1boi")
 volume_db = -10.0
+
+[node name="alternate_path" type="VideoStreamPlayer" parent="Cutscene"]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("29_bdjd2")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("30_ctqcy")

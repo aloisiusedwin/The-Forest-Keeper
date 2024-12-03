@@ -52,4 +52,5 @@ func _on_area_3d_body_part_hit(dam):
 		anim_tree.set("parameters/root_motion_track", Vector3.ZERO)
 		anim_tree.set("parameters/conditions/dying", true)
 		await get_tree().create_timer(4.0).timeout
-		queue_free()	
+		queue_free()
+	

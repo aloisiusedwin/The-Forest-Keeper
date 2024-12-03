@@ -3,6 +3,7 @@ extends CharacterBody3D
 
 @export var ANIMATIONPLAYER : AnimationPlayer
 @export var VIDEOPLAYER : VideoStreamPlayer
+@onready var VIDEOPLAYER_A = $Cutscene/alternate_path
 var video_checked : bool = false
 
 #Health
@@ -137,7 +138,7 @@ func _headbob(time) -> Vector3:
 	pos.x = cos(time * BOB_FREQUENCY/2) * BOB_AMP
 	return pos
 
-func _process(delta: float) -> void:
+func _process(delta: float) -> void:	
 	if endgame:
 		if !VIDEOPLAYER.is_playing():
 			emit_signal("video_finished")
@@ -244,7 +245,7 @@ func update_hit_effect():
 		hit_rect.visible = false
 		
 	hp_percentage = float(current_hp) / max_hp
-	red_alpha = lerp(0.0, 0.4, 1.0 - hp_percentage) 
+	red_alpha = lerp(0.0, 0.4, 1.0 - hp_percentage)
 	hit_rect.modulate = Color(1.0, 0.2, 0.2, red_alpha)
 
 func die():
