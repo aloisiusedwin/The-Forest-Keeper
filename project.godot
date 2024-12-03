@@ -15,6 +15,7 @@ run/main_scene="res://Scenes/Main Menu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/image="res://tfk-icon.png"
 config/icon="res://tfk-icon.svg"
+config/windows_native_icon="res://LOGOMARK.ico"
 
 [autoload]
 
