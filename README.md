@@ -46,7 +46,7 @@ A forest keeper, burdened by guilt for failing to protect Sumatra's rare wildlif
 | Game Director,Programmer        | Akhdan Arif Prayoga       |  
 | Programmer, Game Designer       | A. Edwin Krisandika Putra |  
 | Programmer, Game Designer       | Fathan Andi Kartagama     |  
-| Programmer, Sound Engineer      | Andreas Alvin Yoga Utama  |  
+| Programmer, Sound Engineer      | Andreas Alfin Yoga Utama  |  
 | Sound Engineer                  | Ramon Riping              |  
 
 ## System Requirements
