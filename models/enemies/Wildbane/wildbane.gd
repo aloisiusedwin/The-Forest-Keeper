@@ -4,14 +4,14 @@ extends CharacterBody3D
 @onready var audio_player = $AudioStreamPlayer
 
 var health = 2000
-const speed = 3.5
-const attack_range = 2.5
-const damage = 30.0
+const speed = 4.8
+const attack_range = 3.0
+const damage = 40.0
 
 var rage : bool = false
-const rage_speed = 5.5
-const rage_attack_range = 3.5
-const rage_damage = 40.0
+const rage_speed = 7.2
+const rage_attack_range = 4.5
+const rage_damage = 60.0
 
 @onready var nav_agent = $NavigationAgent3D
 
